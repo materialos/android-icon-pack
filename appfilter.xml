@@ -40,3 +40,4 @@
 	<item component="ComponentInfo{com.estrongs.android.pop/com.estrongs.android.pop.view.FileExplorerActivity}" drawable="ic_com.estrongs.android.pop" />
 	<!-- YouTube -->
 	<item component="ComponentInfo{com.google.android.youtube/com.google.android.youtube.app.honeycomb.Shell$HomeActivity}" drawable="ic_com.google.android.youtube" />
+</resources>
