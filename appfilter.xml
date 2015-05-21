@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- App Drawer -->
+	<item component=":LAUNCHER_ACTION_APP_DRAWER" drawable="ic_allapps" />
+	<!-- Telegram -->
+	<item component="ComponentInfo{org.telegram.messenger/org.telegram.ui.LaunchActivity}" drawable="ic_org.telegram.messenger" />
+	<!-- Play Store -->
+	<item component="ComponentInfo{com.actionlauncher.playstore/com.actionlauncher.ActionLauncherActivity}" drawable="ic_com.actionlauncher.playstore" />
+	<!-- Facebook -->
+	<item component="ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity}" drawable="ic_com.facebook.katana" />
+	<!-- Pushbullet -->
+	<item component="ComponentInfo{com.pushbullet.android/com.pushbullet.android.ui.LaunchActivity}" drawable="ic_com.pushbullet.android" />
+	<!-- Photoshop Touch -->
+	<item component="ComponentInfo{air.com.adobe.pstouchphone/air.com.adobe.pstouchphone.AppEntry}" drawable="ic_air.com.adobe.pstouchphone" />
+	<!-- Clock -->
+	<item component="ComponentInfo{com.google.android.deskclock/com.android.deskclock.DeskClock}" drawable="ic_com.google.android.deskclock" />
+	<!-- Wikipedia -->
+	<item component="ComponentInfo{org.wikipedia/org.wikipedia.page.PageActivity}" drawable="ic_org.wikipedia" />
+	<!-- Authenticator Plus -->
+	<item component="ComponentInfo{com.mufri.authenticatorplus/com.mufri.authenticatorplus.LoginActivity}" drawable="ic_com.mufri.authenticatorplus" />
+	<!-- Fleksy Keyboard -->
+	<item component="ComponentInfo{com.syntellia.fleksy.kb/com.syntellia.fleksy.settings.activities.MainActivity}" drawable="ic_com.syntellia.fleksy.kb" />
+	<!-- Stack Exchange -->
+	<item component="ComponentInfo{com.stackexchange.marvin/com.stackexchange.marvin.ui.LaunchActivity}" drawable="ic_com.stackexchange.marvin" />
+	<!-- Ampere Battery -->
+	<item component="ComponentInfo{com.gombosdev.ampere/com.gombosdev.ampere.MainActivity}" drawable="ic_com.gombosdev.ampere" />
+	<!-- NPR One -->
+	<item component="ComponentInfo{org.npr.one/org.npr.one.HomeActivity}" drawable="ic_org.npr.one" />
+	<!-- Google Play Opnion Rewards -->
+	<item component="ComponentInfo{com.google.android.apps.paidtasks/com.google.android.apps.paidtasks.LaunchActivity}" drawable="ic_com.google.android.apps.paidtasks" />
+	<!-- Google MyTracks -->
+	<item component="ComponentInfo{com.google.android.maps.mytracks/com.google.android.apps.mytracks.TrackListActivity}" drawable="ic_com.google.android.maps.mytracks___com.google.android.apps.mytracks.TrackListActivity" />
+	<!-- iFunny -->
+	<item component="ComponentInfo{mobi.ifunny/mobi.ifunny.main.IFunnyMenuActivity}" drawable="ic_mobi.ifunny___mobi.ifunny.main.IFunnyMenuActivity" />
+	<!-- Imgur -->
+	<item component="ComponentInfo{com.imgur.mobile/com.imgur.mobile.MainActivity}" drawable="ic_com.imgur.mobile___com.imgur.mobile.MainActivity" />
+	<!-- Journey -->
+	<item component="ComponentInfo{com.journey.app/com.journey.app.MainActivity}" drawable="ic_com.journey.app" />
+	<!-- ES FIle Explorer -->
+	<item component="ComponentInfo{com.estrongs.android.pop/com.estrongs.android.pop.view.FileExplorerActivity}" drawable="ic_com.estrongs.android.pop" />
+	<!-- YouTube -->
+	<item component="ComponentInfo{com.google.android.youtube/com.google.android.youtube.app.honeycomb.Shell$HomeActivity}" drawable="ic_com.google.android.youtube" />
