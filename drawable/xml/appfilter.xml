@@ -29,15 +29,23 @@
 	<!-- Google Play Opnion Rewards -->
 	<item component="ComponentInfo{com.google.android.apps.paidtasks/com.google.android.apps.paidtasks.LaunchActivity}" drawable="ic_com.google.android.apps.paidtasks" />
 	<!-- Google MyTracks -->
-	<item component="ComponentInfo{com.google.android.maps.mytracks/com.google.android.apps.mytracks.TrackListActivity}" drawable="ic_com.google.android.maps.mytracks___com.google.android.apps.mytracks.TrackListActivity" />
+	<item component="ComponentInfo{com.google.android.maps.mytracks/com.google.android.apps.mytracks.TrackListActivity}" drawable="ic_com.google.android.maps.mytracks" />
 	<!-- iFunny -->
-	<item component="ComponentInfo{mobi.ifunny/mobi.ifunny.main.IFunnyMenuActivity}" drawable="ic_mobi.ifunny___mobi.ifunny.main.IFunnyMenuActivity" />
+	<item component="ComponentInfo{mobi.ifunny/mobi.ifunny.main.IFunnyMenuActivity}" drawable="ic_mobi.ifunny" />
 	<!-- Imgur -->
-	<item component="ComponentInfo{com.imgur.mobile/com.imgur.mobile.MainActivity}" drawable="ic_com.imgur.mobile___com.imgur.mobile.MainActivity" />
+	<item component="ComponentInfo{com.imgur.mobile/com.imgur.mobile.MainActivity}" drawable="ic_com.imgur.mobile" />
 	<!-- Journey -->
 	<item component="ComponentInfo{com.journey.app/com.journey.app.MainActivity}" drawable="ic_com.journey.app" />
 	<!-- ES FIle Explorer -->
 	<item component="ComponentInfo{com.estrongs.android.pop/com.estrongs.android.pop.view.FileExplorerActivity}" drawable="ic_com.estrongs.android.pop" />
 	<!-- YouTube -->
 	<item component="ComponentInfo{com.google.android.youtube/com.google.android.youtube.app.honeycomb.Shell$HomeActivity}" drawable="ic_com.google.android.youtube" />
+	<!-- CC Cleaner -->
+	<item component="ComponentInfo{com.piriform.ccleaner/com.piriform.ccleaner.ui.activity.MainActivity}" drawable="ic_com.piriform.ccleaner" />
+	<!-- Twitch -->
+	<item component="ComponentInfo{tv.twitch.android.viewer/tv.twitch.android.apps.SplashScreenActivity}" drawable="ic_tv.twitch.android.viewer" />
+	<!-- Galactiv -->
+	<item component="ComponentInfo{com.amqtech.galactiv/com.amqtech.galactiv.MainActivity}" drawable="ic_com.amqtech.galactiv" />
+	<!-- Wikipedia -->
+	<item component="ComponentInfo{org.wikipedia/org.wikipedia.page.PageActivity}" drawable="ic_org.wikipedia" />
 </resources>
