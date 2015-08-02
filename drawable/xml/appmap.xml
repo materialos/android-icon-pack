@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appmap>
+	<!-- <item class="" name="365projects"/> -->
+	<item class="" name="aa"/>
+	<!-- <item class="" name="accountfolder"/> -->
+	<!-- <item class="" name="actionlauncher"/> -->
+	<item class="" name="adaway"/>
+	<item class="" name="adblockplus"/>
+	<item class="" name="aftereffects"/>
+	<!-- <item class="" name="afterlight-alt"/> -->
+	<!-- <item class="" name="afterlight-alt2"/> -->
+	<item class="" name="afterlight"/>
+	<item class="" name="ampere"/>
+	<!-- <item class="" name="androidstudio"/> -->
+	<item class="" name="applock"/>
+	<item class="" name="appsettings"/>
+	<item class="" name="archivemanager"/>
+	<item class="" name="astro"/>
+	<!-- <item class="" name="athuplus-alt"/> -->
+	<item class="" name="athuplus"/>
+	<item class="" name="bang"/>
+	<item class="" name="barcodescanner"/>
+	<item class="" name="bbm"/>
+	<!-- <item class="" name="blankfile-alt"/> -->
+	<!-- <item class="" name="blankfile"/> -->
+	<!-- <item class="" name="blankfilelandscape"/> -->
+	<!-- <item class="" name="blankfilesquare"/> -->
+	<!-- <item class="" name="blender"/> -->
+	<!-- <item class="" name="boombox"/> -->
+	<item class="" name="box"/>
+	<!-- <item class="" name="boxfolder"/> -->
+	<!-- <item class="" name="brackets"/> -->
+	<item class="" name="browser"/>
+	<!-- <item class="" name="catfolder"/> -->
+	<!-- <item class="" name="ccleaner-alt"/> -->
+	<item class="" name="ccleaner"/>
+	<!-- <item class="" name="chrome-alt"/> -->
+	<!-- <item class="" name="chrome-alt2"/> -->
+	<item class="" name="chrome"/>
+	<!-- <item class="" name="chromebeta-alt2"/> -->
+	<!-- <item class="" name="chromedev-alt2"/> -->
+	<!-- <item class="" name="chromium-alt"/> -->
+	<item class="" name="clock"/>
+	<item class="" name="cmthemes"/>
+	<!-- <item class="" name="codefolder"/> -->
+	<item class="" name="contacts"/>
+	<!-- <item class="" name="cortana-alt"/> -->
+	<!-- <item class="" name="cortana-alt2"/> -->
+	<item class="" name="cortana"/>
+	<!-- <item class="" name="creativecloud"/> -->
+	<item class="" name="cymera"/>
+	<!-- <item class="" name="downloadsfolder"/> -->
+	<item class="" name="dropbox"/>
+	<!-- <item class="" name="dropboxfolder"/> -->
+	<item class="" name="duolingo"/>
+	<item class="" name="easytaxi"/>
+	<item class="" name="edjing"/>
+	<item class="" name="email"/>
+	<!-- <item class="" name="esfileexplorer-alt"/> -->
+	<item class="" name="esfileexplorer"/>
+	<item class="" name="evernote"/>
+	<!-- <item class="" name="fab"/> -->
+	<!-- <item class="" name="facebook-alt"/> -->
+	<item class="" name="facebook"/>
+	<item class="" name="facebooklite"/>
+	<item class="" name="facebookpages"/>
+	<!-- <item class="" name="fbmessenger-alt"/> -->
+	<!-- <item class="" name="fbmessenger-alt2"/> -->
+	<item class="" name="fbmessenger"/>
+	<item class="" name="feedly"/>
+	<item class="" name="filemanager"/>
+	<!-- <item class="" name="finderfolder"/> -->
+	<item class="" name="firefox"/>
+	<item class="" name="fleksy"/>
+	<item class="" name="flipboard"/>
+	<item class="" name="foursquare"/>
+	<!-- <item class="" name="galactivlogocolor"/> -->
+	<item class="" name="gallery"/>
+	<item class="" name="geometrydash"/>
+	<item class="" name="gmail"/>
+	<item class="" name="googlefit"/>
+	<item class="" name="googlekeep"/>
+	<item class="" name="googlekeyboard"/>
+	<item class="" name="googlemessenger"/>
+	<item class="" name="googleopinionrewards"/>
+	<!-- <item class="" name="googleplusprofiler-alt"/> -->
+	<!-- <item class="" name="googleplusprofiler"/> -->
+	<!-- <item class="" name="gooogledrive-alt"/> -->
+	<!-- <item class="" name="gooogledrive-alt2"/> -->
+	<item class="" name="gooogledrive"/>
+	<!-- <item class="" name="hardrivedefault"/> -->
+	<!-- <item class="" name="hardrivewindows"/> -->
+	<item class="" name="hotornot"/>
+	<item class="" name="hyperlapse"/>
+	<item class="" name="ifunny"/>
+	<item class="" name="iheartradio"/>
+	<item class="" name="illustrator"/>
+	<item class="" name="imgur"/>
+	<item class="" name="inbox"/>
+	<!-- <item class="" name="ingress-alt"/> -->
+	<item class="" name="ingress"/>
+	<item class="" name="instagram"/>
+	<!-- <item class="" name="journey-alt"/> -->
+	<!-- <item class="" name="journey-alt2"/> -->
+	<item class="" name="journey"/>
+	<item class="" name="kik"/>
+	<item class="" name="kiwi"/>
+	<item class="" name="lapseit"/>
+	<!-- <item class="" name="libreofficewritter"/> -->
+	<item class="" name="line"/>
+	<!-- <item class="" name="lollypop"/> -->
+	<!-- <item class="" name="materialos-alt"/> -->
+	<!-- <item class="" name="materialos-alt2"/> -->
+	<!-- <item class="" name="materialos-alt3"/> -->
+	<!-- <item class="" name="materialos-alt4"/> -->
+	<!-- <item class="" name="materialos-alt5"/> -->
+	<!-- <item class="" name="materialos-alt6"/> -->
+	<!-- <item class="" name="materialos"/> -->
+	<!-- <item class="" name="matlog"/> -->
+	<item class="" name="mediamonkey"/>
+	<item class="" name="mega"/>
+	<!-- <item class="" name="midori"/> -->
+	<item class="" name="mileiq"/>
+	<!-- <item class="" name="minecraft-alt"/> -->
+	<item class="" name="minecraft"/>
+	<item class="" name="multiwindowview"/>
+	<!-- <item class="" name="music-alt"/> -->
+	<!-- <item class="" name="music-alt2"/> -->
+	<item class="" name="music"/>
+	<!-- <item class="" name="musicfolder"/> -->
+	<item class="" name="musicxmatch"/>
+	<item class="" name="myscript"/>
+	<item class="" name="mytracks"/>
+	<item class="" name="nautilus"/>
+	<!-- <item class="" name="netflix-alt"/> -->
+	<item class="" name="netflix"/>
+	<item class="" name="notificationsoff"/>
+	<item class="" name="nprone"/>
+	<item class="" name="onemoreline"/>
+	<item class="" name="oneplus"/>
+	<item class="" name="opinionrewards"/>
+	<!-- <item class="" name="paintnet"/> -->
+	<item class="" name="pandora"/>
+	<!-- <item class="" name="pebble-alt"/> -->
+	<item class="" name="pebble"/>
+	<item class="" name="photoshop"/>
+	<item class="" name="pianotiles"/>
+	<item class="" name="picsart"/>
+	<item class="" name="pinterest"/>
+	<!-- <item class="" name="playstore-alt"/> -->
+	<!-- <item class="" name="playstore-alt2"/> -->
+	<item class="" name="playstore"/>
+	<item class="" name="plex"/>
+	<item class="" name="pocket"/>
+	<!-- <item class="" name="proxy"/> -->
+	<!-- <item class="" name="pstouch"/> -->
+	<!-- <item class="" name="publicfolder-alt"/> -->
+	<!-- <item class="" name="publicfolder"/> -->
+	<item class="" name="pushbullet"/>
+	<!-- <item class="" name="quickpic-alt"/> -->
+	<item class="" name="quickpic"/>
+	<item class="" name="retrica"/>
+	<!-- <item class="" name="router"/> -->
+	<item class="" name="runtastic"/>
+	<item class="" name="settings"/>
+	<item class="" name="shazam"/>
+	<item class="" name="simtoolkit"/>
+	<!-- <item class="" name="skwash"/> -->
+	<item class="" name="skwish"/>
+	<!-- <item class="" name="skykonigicon"/> -->
+	<item class="" name="skype"/>
+	<!-- <item class="" name="snapchat-alt"/> -->
+	<item class="" name="snapchat"/>
+	<item class="" name="soundcloud"/>
+	<item class="" name="soundhound"/>
+	<item class="" name="spotify"/>
+	<item class="" name="stackexchange"/>
+	<!-- <item class="" name="starwarswikia"/> -->
+	<!-- <item class="" name="steam-alt"/> -->
+	<item class="" name="steam"/>
+	<!-- <item class="" name="steamfolder"/> -->
+	<!-- <item class="" name="sublimetext-alt"/> -->
+	<!-- <item class="" name="sublimetext-alt2"/> -->
+	<!-- <item class="" name="sublimetext-alt3"/> -->
+	<!-- <item class="" name="sublimetext-alt4"/> -->
+	<!-- <item class="" name="sublimetext-alt5"/> -->
+	<!-- <item class="" name="sublimetext-alt6"/> -->
+	<!-- <item class="" name="sublimetext-alt7"/> -->
+	<!-- <item class="" name="sublimetext"/> -->
+	<!-- <item class="" name="superbackup-alt"/> -->
+	<item class="" name="superbackup"/>
+	<!-- <item class="" name="supersu-alt"/> -->
+	<item class="" name="supersu"/>
+	<item class="" name="syncme"/>
+	<item class="" name="taggr"/>
+	<item class="" name="target"/>
+	<!-- <item class="" name="telegram-alt"/> -->
+	<!-- <item class="" name="telegram-alt2"/> -->
+	<!-- <item class="" name="telegram-alt3"/> -->
+	<!-- <item class="" name="telegram-alt4"/> -->
+	<!-- <item class="" name="telegram-alt5"/> -->
+	<item class="" name="telegram"/>
+	<!-- <item class="" name="terminal"/> -->
+	<item class="" name="terraria"/>
+	<item class="" name="themediy"/>
+	<item class="" name="theweatherchannel"/>
+	<item class="" name="tinder"/>
+	<!-- <item class="" name="trashfolder"/> -->
+	<item class="" name="trello"/>
+	<item class="" name="tumblr"/>
+	<!-- <item class="" name="tunein-alt"/> -->
+	<item class="" name="tunein"/>
+	<item class="" name="turboeditor"/>
+	<!-- <item class="" name="twitch-alt"/> -->
+	<!-- <item class="" name="twitch-alt2"/> -->
+	<item class="" name="twitch"/>
+	<!-- <item class="" name="twitter-alt"/> -->
+	<item class="" name="twitter"/>
+	<item class="" name="ubby"/>
+	<item class="" name="uber"/>
+	<!-- <item class="" name="unicon-alt"/> -->
+	<item class="" name="unicon"/>
+	<!-- <item class="" name="usbfolder"/> -->
+	<item class="" name="uupurifier"/>
+	<item class="" name="verizonvoicemail"/>
+	<item class="" name="viber"/>
+	<!-- <item class="" name="videofolder"/> -->
+	<item class="" name="vine"/>
+	<item class="" name="visualvoicemail"/>
+	<item class="" name="vlc"/>
+	<item class="" name="vmwareworkstation"/>
+	<item class="" name="vnc"/>
+	<item class="" name="wakelocker"/>
+	<item class="" name="wallsplash"/>
+	<item class="" name="wattpad"/>
+	<item class="" name="webviewbrowser"/>
+	<item class="" name="weheartit"/>
+	<!-- <item class="" name="welgbt-inbetween"/> -->
+	<!-- <item class="" name="welgbt-notfound"/> -->
+	<!-- <item class="" name="welgbt-poor"/> -->
+	<!-- <item class="" name="welgbt"/> -->
+	<!-- <item class="" name="whatsapp-alt"/> -->
+	<!-- <item class="" name="whatsapp-alt2"/> -->
+	<!-- <item class="" name="whatsapp-alt3"/> -->
+	<item class="" name="whatsapp"/>
+	<!-- <item class="" name="wikipedia-alt"/> -->
+	<item class="" name="wikipedia"/>
+	<item class="" name="wolz"/>
+	<item class="" name="wunderlist"/>
+	<item class="" name="xposedinstaller"/>
+	<item class="" name="yaata"/>
+	<item class="" name="youtube"/>
+	<!-- <item class="" name="zipfolder"/> -->
+</appmap>

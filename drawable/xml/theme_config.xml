@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme>
+	<version>1.0</version>
+	<themeName>Material OS</themeName>
+	<themeInfo>Open Source Icons</themeInfo>
+	<string name="preview">preview</string>
+</theme>
