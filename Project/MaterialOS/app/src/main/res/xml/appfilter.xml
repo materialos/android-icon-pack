@@ -12,7 +12,7 @@
 	<!-- <item component="ComponentInfo{}" drawable="actionlauncher"/> -->
 	<item component="ComponentInfo{}" drawable="adaway"/>
 	<item component="ComponentInfo{}" drawable="adblockplus"/>
-	<item component="ComponentInfo{}" drawable="aftereffects"/> -->
+	<!-- <item component="ComponentInfo{}" drawable="aftereffects"/> -->
 	<!-- <item component="ComponentInfo{}" drawable="afterlight-alt"/> -->
 	<!-- <item component="ComponentInfo{}" drawable="afterlight-alt2"/> -->
 	<item component="ComponentInfo{com.fueled.afterlight/com.fueled.afterlight.HomeActivity}" drawable="afterlight"/>
@@ -20,10 +20,10 @@
 	<!-- <item component="ComponentInfo{}" drawable="androidstudio"/> -->
 	<item component="ComponentInfo{}" drawable="applock"/>
 	<item component="ComponentInfo{}" drawable="appsettings"/>
-	<item component="ComponentInfo{}" drawable="archivemanager"/>
+	<!-- <item component="ComponentInfo{}" drawable="archivemanager"/> -->
 	<item component="ComponentInfo{}" drawable="astro"/>
 	<!-- <item component="ComponentInfo{}" drawable="athuplus-alt"/> -->
-	<item component="ComponentInfo{}" drawable="athuplus"/>
+	<item component="ComponentInfo{com.mufri.authenticatorplus/com.mufri.authenticatorplus.LoginActivity}" drawable="athuplus"/>
 	<item component="ComponentInfo{}" drawable="bang"/>
 	<item component="ComponentInfo{}" drawable="barcodescanner"/>
 	<item component="ComponentInfo{}" drawable="bbm"/>
