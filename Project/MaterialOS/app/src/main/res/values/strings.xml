@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <!-- MainActivity Strings -->
+    <string name="app_name">"MaterialOS"</string>
+    <string name="app_long_name">""</string>
+    <string name="package_name">"org.materialos.icons"</string>
+    <string name="theme_description">PaperBoard is a Material Design based Icon Pack. Free and Open-Sourced.</string>
+
+    <!-- Muzei Stuff -->
+    <string name="artsource_name">"MaterialOS"</string>
+    <string name="artsource_desc">"Material Design Wallpapers"</string>
+    <string name="muzei_settings">Muzei Settings</string>
+    <string name="json_file_url">"https://raw.githubusercontent.com/jahirfiquitiva/MinDesigns-Wallpapers/master/JSON-Files/walls_test.json"</string>
+    <!-- Sharing wallpaper from Muzei -->
+    <string name="partone">"My wallpaper for today is "</string>
+    <string name="parttwo">" by "</string>
+    <string name="partthree">" from "</string>
+    <string name="partfour">".\nGet it now at "</string>
+
+    <!-- Developer Account Link -->
+    <string name="play_store_dev_link">https://play.google.com/store/apps/developer?id=</string>
+
+    <!-- Icon Pack designer/owner e-mail -->
+    <string name="email_id">materialopensource@gmail.com</string>
+
+    <!-- Mail subjects for simple e-mail and requests e-mail -->
+    <string name="email_subject">"MaterialOS"</string>
+    <string name="email_request_subject">"MaterialOS - Icon Requests"</string>
+
+    <!-- This are the strings for the cards in the main screen -->
+    <string name="welcome_title">Welcome to MaterialOS</string>
+
+    <!-- Your card in About The App section (In desc you can use html markup)-->
+    <string name="iconpack_designer">MaterialOS Contributors</string>
+    <string name="iconpack_designer_desc">
+        <![CDATA[
+        I\'m a <b>designer</b>. I like <b>Android</b>. I love this <b>dashboard</b>.
+        ]]>
+    </string>
+    <!-- A link to your web page, if you have one -->
+    <string name="dev_link">https://github.com/materialos</string>
+    <string name="dev_gplus_link">"https://plus.google.com/u/0/communities/116971301213762859599"</string>
+
+    <!-- Feature picture that appears above the description -->
+    <string name="theme_feature">icons_banner</string>
+
+    <!-- Previews Pictures Names -->
+    <string name="theme_preview1">preview</string>
+
+    <!-- Tabs Names list -->
+    <string-array name="tabs">
+        <item>NEW</item>
+        <item>ALL</item>
+        <item>GOOGLE</item>
+        <item>GAMES</item>
+    </string-array>
+
+    <!-- Strings for Wallpapers and Requests -->
+    <string name="request_save_location">"/MaterialOS/Requests/"</string>
+    <string name="walls_save_location">"/MaterialOS/Wallpapers/"</string>
+    <string name="walls_prefix_name">"MaterialOS_"</string>
+
+    <!-- Messages shown when using LicenseChecker -->
+    <string name="license_failed">"You haven't downloaded MaterialOS from Google Play Store. You have two options:"</string>
+    <string name="license_success">"Thank you for downloading MaterialOS. If you like it, don't forget to rate and write a review at Google Play Store."</string>
+
+    <!-- Texts you don't want to get when user downloads that wallpapers -->
+    <!-- Examples: the url of the wall, and prefixes, etc. -->
+    <!-- It replaces the texts in the order as shown. I.e. url is
+    https://raw.githubusercontent.com/MinDesigns/MinDesigns-Wallpapers/master/Wallpapers/Lines/Circles/Text/text/whatever/WallpaperName.png"
+     it will delete texts in this order:
+     1. https://raw.githubusercontent.com/MinDesigns/MinDesigns-Wallpapers/master/Wallpapers/
+     2. Lines
+     3. Circles
+     4. Text
+     5. text
+     6. whatever
+     7. (Empty text won't replace anything else).
+     And at the end the only text that will stay is "WallpaperName.png" which will be the final name of downloaded file.
+     -->
+    <string name="replace_one">"https://raw.githubusercontent.com/MinDesigns/MinDesigns-Wallpapers/master/Wallpapers/"</string>
+    <string name="replace_two">"Lines"</string>
+    <string name="replace_three">"Circles"</string>
+    <string name="replace_four">"Text"</string>
+    <string name="replace_five">"text"</string>
+    <string name="replace_six">"whatever"</string>
+    <string name="replace_seven">""</string>
+
+    <!-- These things are needed for some launchers (Feel free to edit, though is not needed) -->
+    <string name="theme_title">@string/app_name</string>
+    <string name="theme_name">@string/theme_title</string>
+    <string name="developer_name">@string/iconpack_designer</string>
+    <string name="developerName">@string/developer_name</string>
+    <string name="theme_author">@string/developer_name</string>
+    <string name="authorName">@string/developer_name</string>
+    <string name="authorLink">@string/dev_link</string>
+    <string name="theme_info">@string/theme_description</string>
+    <string name="theme_ad_msg">@string/theme_description</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+</resources>

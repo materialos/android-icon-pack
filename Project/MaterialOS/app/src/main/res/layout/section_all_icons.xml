@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jahirfiquitiva.paperboard.activities.MainActivity">
+
+    <com.jahirfiquitiva.paperboard.views.SlidingTabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:clipToPadding="false"
+        android:elevation="@dimen/toolbar_elevation"
+        android:paddingLeft="@dimen/tabs_contentInset"
+        android:paddingStart="@dimen/tabs_contentInset"
+        tools:ignore="NewApi,RtlSymmetry,UnusedAttribute" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/no_height"
+        android:layout_weight="1" />
+
+</LinearLayout>

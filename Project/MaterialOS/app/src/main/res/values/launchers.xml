@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string-array name="launchers">
+        <item>Action Launcher|com.actionlauncher.playstore</item>
+        <item>ADW Launcher|org.adw.launcher</item>
+        <item>ADW EX Launcher|org.adwfreak.launcher</item>
+        <item>Apex Launcher|com.anddoes.launcher</item>
+        <item>Atom Launcher|com.dlto.atom.launcher</item>
+        <item>Aviate Launcher|com.tul.aviate</item>
+        <item>CM Theme Engine|org.cyanogenmod.theme.chooser</item>
+        <item>Epic Launcher|com.epic.launcher</item>
+        <item>Go Launcher|com.gau.go.launcherex</item>
+        <item>Google Now Launcher|com.google.android.launcher</item>
+        <item>Holo Launcher|com.mobint.hololauncher</item>
+        <item>Holo Launcher HD|com.mobint.hololauncher.hd</item>
+        <item>Inspire Launcher|com.bam.android.inspirelauncher</item>
+        <item>KK Launcher|com.kk.launcher</item>
+        <item>L Launcher|com.l.launcher</item>
+        <item>LG Home|com.lge.launcher2</item>
+        <item>Lucid Launcher|com.powerpoint45.launcher</item>
+        <item>Mini Launcher|com.jiubang.go.mini.launcher</item>
+        <item>Nemus Launcher|com.nemustech.launcher</item>
+        <item>Next Launcher|com.gtp.nextlauncher</item>
+        <item>Nine Launcher|com.gridappsinc.launcher.free</item>
+        <item>Nova Launcher|com.teslacoilsw.launcher</item>
+        <item>S Launcher|com.s.launcher</item>
+        <item>Smart Launcher|ginlemon.flowerfree</item>
+        <item>Smart Launcher Pro|ginlemon.flowerpro</item>
+        <item>Solo Launcher|home.solo.launcher.free</item>
+        <item>TSF Launcher|com.tsf.shell</item>
+    </string-array>
+
+</resources>

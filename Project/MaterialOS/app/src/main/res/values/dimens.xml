@@ -1,0 +1,55 @@
+<resources>
+    <!-- Toolbar dimensions -->
+    <!-- This is for the guidelines -->
+    <dimen name="toolbar_contentInset">72dp</dimen>
+    <dimen name="tabs_contentInset">57dp</dimen>
+
+    <!-- Elevation of toolbar. Play with values until you find the one you want -->
+    <dimen name="toolbar_elevation">0dp</dimen>
+
+    <!-- 0 values -->
+    <dimen name="no_width">0dp</dimen>
+    <dimen name="no_height">0dp</dimen>
+
+    <!-- Some Margins -->
+    <dimen name="margin_medium_sm">8dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="margin_medium_th">20dp</dimen>
+
+    <!-- Dimensions for some dialogs -->
+    <dimen name="dialog_margin">24dp</dimen>
+    <dimen name="dialog_icon_size">144dp</dimen>
+
+    <!-- Grids -->
+    <dimen name="dividers">1dp</dimen>
+    <dimen name="iconcolumn">70dp</dimen>
+    <dimen name="walls_margin">@dimen/card_corner_radius</dimen>
+
+    <!-- Lists -->
+    <dimen name="list_item_height">@dimen/iconcolumn</dimen>
+    <dimen name="list_item_height_mini">40dp</dimen>
+    <dimen name="list_margin">20dp</dimen>
+    <dimen name="texts_margin">@dimen/cards_elevation</dimen>
+    <dimen name="app_icon_size">36dp</dimen>
+    <dimen name="request_item_padding_left">18dp</dimen>
+
+    <!-- Cards -->
+    <dimen name="cards_padding">16dp</dimen>
+    <dimen name="cards_elevation">3dp</dimen>
+    <dimen name="cards_margin">8dp</dimen>
+    <dimen name="finalcard_margin">10dp</dimen>
+    <dimen name="cards_text_margin">5dp</dimen>
+    <dimen name="mini_margin">2dp</dimen>
+    <dimen name="card_corner_radius">4dp</dimen>
+
+    <!-- Texts Sizes -->
+    <dimen name="text_big">20sp</dimen>
+    <dimen name="text_med">18sp</dimen>
+    <dimen name="text_small">16sp</dimen>
+    <dimen name="text_ultrasmall">14sp</dimen>
+    <dimen name="grid_padding_vertical">8dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

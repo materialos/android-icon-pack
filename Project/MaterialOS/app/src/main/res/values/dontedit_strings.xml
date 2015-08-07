@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <!-- List Of Drawer Sections -->
+    <string name="section_one">Home</string>
+    <string name="section_two">Icons</string>
+    <string name="section_three">Apply</string>
+    <string name="section_four">Wallpapers</string>
+    <string name="section_five">Icon Request</string>
+    <string name="section_six">About The App</string>
+
+    <!-- Wallpapers Activity -->
+    <string name="title_activity_detailed_wallpaper">Detailed Wallpaper</string>
+    <string name="title_ab_detailed_wallpaper" />
+
+    <!-- Muzei Stuff -->
+    <string name="muzeisets_title">Refresh Source every:</string>
+    <string name="minutes">Minutes</string>
+    <string name="hours">Hours</string>
+    <string name="muzei_info">Note: This Settings may affect the update time of the Wallpapers info.</string>
+    <string name="justshare">Share</string>
+
+    <!-- Strings for Dropdown Menu & Requests -->
+    <string name="share">Share theme</string>
+    <string name="share_title">Share via</string>
+    <string name="send_title">Send via</string>
+    <string name="rate">Rate theme</string>
+    <string name="sendemail">Email developer</string>
+    <string name="changelog">See changelog</string>
+
+    <!-- Sharing theme -->
+    <string name="share_one">"Check out this awesome icon pack by "</string>
+    <string name="share_two">.\nGet it now at </string>
+
+    <!-- LauncherNotInstalled Dialog -->
+    <string name="lni_title">" Not Installed"</string>
+    <string name="lni_content">" is currently not installed in your device.\nWould you like to install it from Google Play Store?"</string>
+    <string name="cm_dialog_content">" is part of CyanogenMod (based) roms.\nWould you like to install it in your device?"</string>
+    <string name="gnl_title">Google Now Launcher Not Compatible</string>
+    <string name="gnl_content">Google Now Launcher is NOT compatible with ANY Icon Packs. Please don\'t low rate the pack for this reason. There\'s a workaround that you can try by yourself, and it\'s the use of an external app that will help you apply the icons. Would you like to download it?</string>
+    <string name="extraapp">com.momocode.shortcuts</string>
+    <string name="lni_yes">Yes</string>
+    <string name="lni_no">No</string>
+    <string name="updateninelauncher">Please update Nine Launcher to latest version</string>
+
+    <string name="installed">Installed</string>
+    <string name="noninstalled">Not Installed</string>
+
+    <!-- Changelog Dialog Content -->
+    <string name="changelog_dialog_title">Changelog</string>
+    <string name="nice">great</string>
+
+    <!-- Wallpapers Stuff -->
+    <string name="no_conn_title">No Connection Found</string>
+    <string name="no_conn_content">Wallpapers are stored on Cloud Server. Please connect to Internet and try again.</string>
+    <string name="download">DOWNLOAD</string>
+    <string name="download_done">Download completed successfully Picture is located at </string>
+    <string name="apply">Apply</string>
+    <string name="set_as">Crop picture and set as…</string>
+    <string name="set_wall_title">Wallpaper set</string>
+    <string name="set_wall_content">Please, choose an option. Would you like to crop the picture? Or do you prefer to set it in its actual size?</string>
+    <string name="crop_wall">Crop Wall</string>
+    <string name="set_it">Set it now!</string>
+    <string name="save">Save</string>
+    <string name="done">Done!</string>
+    <string name="progress_dialog_title">Downloading wallpaper</string>
+    <string name="setting_wall_title">Setting pic as wallpaper</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="set_as_wall_done">Picture set as wallpaper successfully Go to Home screen and check it.</string>
+    <string name="error">Error</string>
+    <string name="wall_error">Sorry, previous action wasn\'t actually applied, because it seems there\'s no picture. Check your Internet connection and try again.</string>
+    <string name="json_error_toast">Error while downloading wallpapers info. Try again later.</string>
+
+    <!-- License Check Dialog -->
+    <string name="license_failed_title">License Check Failed</string>
+    <string name="license_success_title">License Check Success</string>
+    <string name="exit">Exit App</string>
+
+    <!-- Some texts for Dialogs and Cards -->
+    <string name="close">Close</string>
+    <string name="advice">Advice</string>
+    <string name="dontshow">Don\'t show again</string>
+    <string name="play">PLAY STORE</string>
+    <string name="web">WEBSITE</string>
+    <string name="gplus">GOOGLE+</string>
+    <string name="ratebtn">RATE</string>
+
+    <!-- Requests -->
+    <string name="loading_unthemed_apps">Loading unthemed apps. This may take a while…</string>
+    <string name="building_request">Building Request…</string>
+    <string name="request_advice">If you do not select any app for the icon request, it will be automatically generated with all your apps.</string>
+    <!-- Content in Request mails before the unthemed apps info -->
+    <string name="request_precontent">These apps are not themed. Thanks in advance.\n\n</string>
+
+</resources>

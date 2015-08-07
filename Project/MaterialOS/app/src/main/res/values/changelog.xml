@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string-array name="fullchangelog">
+        <item>@array/important</item>
+        <item>@array/newstuff</item>
+        <item>@array/improvements</item>
+        <item>@array/fixes</item>
+    </string-array>
+
+    <string-array name="important">
+        <item>The most important:</item>
+        <item>Massive cleanup, re-organization, updates, and repairs.</item>
+        <item>Big code, layouts and performance improvements.</item>
+        <item>All these things made by Aidan Follestad. Big thanks to him.</item>
+    </string-array>
+
+    <string-array name="newstuff">
+        <item>New</item>
+        <item>Updated to Support Library 22.1.</item>
+        <item>ActionBarActivity replaced with AppCompatActivity.</item>
+    </string-array>
+
+    <string-array name="improvements">
+        <item>Improvements</item>
+        <item>Some minor layout improvements.</item>
+        <item>Improved Tabs layout to follow Material Design Guidelines properly.</item>
+    </string-array>
+
+    <string-array name="fixes">
+        <item>Fixes</item>
+        <item>Fixed issue with Toolbar on pre-lollipop devices.</item>
+        <item>Fixed Styles problem after updating to the new Support Lib.</item>
+    </string-array>
+
+</resources>
