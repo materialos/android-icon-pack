@@ -158,7 +158,6 @@
 	<!-- <item component="ComponentInfo{}" drawable="playstore-alt"/> -->
 	<!-- <item component="ComponentInfo{}" drawable="playstore-alt2"/> -->
 	<item component="ComponentInfo{com.android.vending/com.android.vending.AssetBrowserActivity}" drawable="playstore"/>
-	<item component="ComponentInfo{com.actionlauncher.playstore/com.actionlauncher.ActionLauncherActivity}" drawable="playstore"/>
 	<item component="ComponentInfo{com.plexapp.android/com.plexapp.plex.activities.MyPlexActivity}" drawable="plex"/>
 	<item component="ComponentInfo{}" drawable="pocket"/>
 	<!-- <item component="ComponentInfo{}" drawable="proxy"/> -->
