@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(previews).withIcon(GoogleMaterial.Icon.gmd_palette).withIdentifier(2),
                         new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(3),
                         new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withName(credits).withIdentifier(6)
+                        new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(6)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override

@@ -10,5 +10,5 @@
     android:transitionName="actionBar"
     app:contentInsetStart="@dimen/toolbar_contentInset"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    app:theme="@style/MyActionBarTheme"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     tools:ignore="UnusedAttribute" />
