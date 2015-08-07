@@ -51,7 +51,7 @@ public class ChangelogAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(mContext);
-            convertView = inflater.inflate(R.layout.changelog_content, parent, false);
+            convertView = inflater.inflate(R.layout.dialog_changelog_content, parent, false);
         }
 
         TextView versionName = (TextView) convertView.findViewById(R.id.changelog_versionname);

@@ -20,8 +20,8 @@
     </style>
 
     <!-- To switch between light and dark themes, add "dark_" behind all names. I.e., "material_drawer_dark_icons" -->
-	
-     <style name="CustomTheme" parent="MaterialDrawerTheme">
+
+    <style name="CustomTheme" parent="MaterialDrawerTheme">
         <!-- ...and here we setting appcompat’s color theming attrs -->
         <item name="colorPrimary">@color/material_drawer_primary</item>
         <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
@@ -37,7 +37,9 @@
         <item name="material_drawer_divider">@color/material_drawer_divider</item>
         <item name="material_drawer_selected">@color/material_drawer_selected</item>
         <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
-        <item name="material_drawer_header_selection_text">@color/material_drawer_header_selection_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
     </style>
 
 </resources>

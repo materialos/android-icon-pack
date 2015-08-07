@@ -16,22 +16,20 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.materialos.icons.R;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import org.materialos.icons.R;
-
 public class ArtSource extends RemoteMuzeiArtSource {
-
-    private WallsDatabase wdb;
-    private ArrayList<WallpaperInfo> wallslist;
-    private Preferences mPrefs;
 
     private static final String ARTSOURCE_NAME = "Fimbo - Icon Pack";
     private static final String JSON_URL = "https://raw.githubusercontent.com/jahirfiquitiva/MinDesigns-Wallpapers/master/JSON-Files/walls_test.json";
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
     private static final int COMMAND_ID_SHARE = 1337;
+    private WallsDatabase wdb;
+    private ArrayList<WallpaperInfo> wallslist;
+    private Preferences mPrefs;
 
     public ArtSource() {
         super(ARTSOURCE_NAME);

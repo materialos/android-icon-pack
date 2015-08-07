@@ -1,263 +1,547 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-	<!-- <iconback img1="iconback" />
-	<iconmask img1="iconmask" />
-	<iconupon img1="iconupon" />
-	<scale factor=".7" /> -->
+    <!-- <iconback img1="iconback" />
+    <iconmask img1="iconmask" />
+    <iconupon img1="iconupon" />
+    <scale factor=".7" /> -->
 
-	<!-- Apps -->
-	<!-- <item component="ComponentInfo{}" drawable="365projects"/> -->
-	<item component="ComponentInfo{com.aa.generaladaptiveapps/com.aa.generaladaptiveapps.BaseActivity}" drawable="aa"/>
-	<!-- <item component="ComponentInfo{}" drawable="accountfolder"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="actionlauncher"/> -->
-	<item component="ComponentInfo{}" drawable="adaway"/>
-	<item component="ComponentInfo{}" drawable="adblockplus"/>
-	<!-- <item component="ComponentInfo{}" drawable="aftereffects"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="afterlight-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="afterlight-alt2"/> -->
-	<item component="ComponentInfo{com.fueled.afterlight/com.fueled.afterlight.HomeActivity}" drawable="afterlight"/>
-	<item component="ComponentInfo{com.gombosdev.ampere/com.gombosdev.ampere.MainActivity}" drawable="ampere"/>
-	<!-- <item component="ComponentInfo{}" drawable="androidstudio"/> -->
-	<item component="ComponentInfo{com.domobile.applock/com.domobile.applock.LauncherActivity}" drawable="applock"/>
-	<item component="ComponentInfo{com.enlightment.appslocker/com.enlightment.appslocker.MainActivity}" drawable="applock"/>
-	<item component="ComponentInfo{}" drawable="appsettings"/>
-	<!-- <item component="ComponentInfo{}" drawable="archivemanager"/> -->
-	<item component="ComponentInfo{com.metago.astro/com.metago.astro.MainActivity}" drawable="astro"/>
-	<!-- <item component="ComponentInfo{}" drawable="athuplus-alt"/> -->
-	<item component="ComponentInfo{com.mufri.authenticatorplus/com.mufri.authenticatorplus.LoginActivity}" drawable="athuplus"/>
-	<item component="ComponentInfo{}" drawable="bang"/>
-	<item component="ComponentInfo{com.google.zxing.client.android/com.google.zxing.client.android.CaptureActivity}" drawable="barcodescanner"/>
-	<item component="ComponentInfo{}" drawable="bbm"/>
-	<!-- <item component="ComponentInfo{}" drawable="blankfile-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="blankfile"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="blankfilelandscape"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="blankfilesquare"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="blender"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="boombox"/> -->
-	<item component="ComponentInfo{com.box.android/com.box.android.activities.login.SplashScreenActivity}" drawable="box"/>
-	<!-- <item component="ComponentInfo{}" drawable="boxfolder"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="brackets"/> -->
-	<item component="ComponentInfo{}" drawable="browser"/>
-	<!-- <item component="ComponentInfo{}" drawable="catfolder"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="ccleaner-alt"/> -->
-	<item component="ComponentInfo{com.piriform.ccleaner/com.piriform.ccleaner.ui.activity.MainActivity}" drawable="ccleaner"/>
-	<!-- <item component="ComponentInfo{}" drawable="chrome-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="chrome-alt2"/> -->
-	<item component="ComponentInfo{com.android.chrome/com.google.android.apps.chrome.Main}" drawable="chrome"/>
-	<!-- <item component="ComponentInfo{}" drawable="chromebeta-alt2"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="chromedev-alt2"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="chromium-alt"/> -->
-	<item component="ComponentInfo{com.google.android.deskclock/com.android.deskclock.DeskClock}" drawable="clock"/>
-	<item component="ComponentInfo{org.cyanogenmod.theme.chooser/org.cyanogenmod.theme.chooser.ChooserActivity}" drawable="cmthemes"/>
-	<!-- <item component="ComponentInfo{}" drawable="codefolder"/> -->
-	<item component="ComponentInfo{com.google.android.contacts/com.android.contacts.activities.PeopleActivity}" drawable="contacts"/>
-	<!-- <item component="ComponentInfo{}" drawable="cortana-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="cortana-alt2"/> -->
-	<item component="ComponentInfo{}" drawable="cortana"/>
-	<!-- <item component="ComponentInfo{}" drawable="creativecloud"/> -->
-	<item component="ComponentInfo{}" drawable="cymera"/>
-	<!-- <item component="ComponentInfo{}" drawable="downloadsfolder"/> -->
-	<item component="ComponentInfo{com.dropbox.android/com.dropbox.android.activity.DropboxBrowser}" drawable="dropbox"/>
-	<!-- <item component="ComponentInfo{}" drawable="dropboxfolder"/> -->
-	<item component="ComponentInfo{com.duolingo/com.duolingo.app.LoginActivity}" drawable="duolingo"/>
-	<item component="ComponentInfo{br.com.easytaxi/br.com.easytaxi.ui.CallTaxiActivity}" drawable="easytaxi"/>
-	<item component="ComponentInfo{com.edjing.edjingdjturntable/com.edjing.edjingforandroid.MainActivity}" drawable="edjing"/>
-	<item component="ComponentInfo{}" drawable="email"/>
-	<!-- <item component="ComponentInfo{}" drawable="esfileexplorer-alt"/> -->
-	<item component="ComponentInfo{com.estrongs.android.pop/com.estrongs.android.pop.view.FileExplorerActivity}" drawable="esfileexplorer"/>
-	<item component="ComponentInfo{}" drawable="evernote"/>
-	<!-- <item component="ComponentInfo{}" drawable="fab"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="facebook-alt"/> -->
-	<item component="ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity}" drawable="facebook"/>
-	<item component="ComponentInfo{}" drawable="facebooklite"/>
-	<item component="ComponentInfo{}" drawable="facebookpages"/>
-	<!-- <item component="ComponentInfo{}" drawable="fbmessenger-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="fbmessenger-alt2"/> -->
-	<item component="ComponentInfo{com.facebook.orca}" drawable="fbmessenger"/>
-	<item component="ComponentInfo{}" drawable="feedly"/>
-	<item component="ComponentInfo{}" drawable="filemanager"/>
-	<!-- <item component="ComponentInfo{}" drawable="finderfolder"/> -->
-	<item component="ComponentInfo{org.mozilla.firefox_beta/org.mozilla.firefox_beta.App}" drawable="firefox"/>
-	<item component="ComponentInfo{com.syntellia.fleksy.kb/com.syntellia.fleksy.settings.activities.MainActivity}" drawable="fleksy"/>
-	<item component="ComponentInfo{}" drawable="flipboard"/>
-	<item component="ComponentInfo{}" drawable="foursquare"/>
-	<!-- <item component="ComponentInfo{}" drawable="galactivlogocolor"/> -->
-	<item component="ComponentInfo{}" drawable="gallery"/>
-	<item component="ComponentInfo{}" drawable="geometrydash"/>
-	<item component="ComponentInfo{com.google.android.gm/com.google.android.gm.ConversationListActivityGmail}" drawable="gmail"/>
-	<item component="ComponentInfo{com.google.android.apps.fitness/com.google.android.apps.fitness.welcome.WelcomeActivity}" drawable="googlefit"/>
-	<item component="ComponentInfo{com.google.android.keep/com.google.android.keep.activities.BrowseActivity}" drawable="googlekeep"/>
-	<item component="ComponentInfo{}" drawable="googlekeyboard"/>
-	<item component="ComponentInfo{}" drawable="googlemessenger"/>
-	<!-- <item component="ComponentInfo{}" drawable="googleopinionrewards_alt"/> -->
-	<item component="ComponentInfo{com.google.android.apps.paidtasks/com.google.android.apps.paidtasks.LaunchActivity}" drawable="googleopinionrewards"/>
-	<!-- <item component="ComponentInfo{}" drawable="googleplusprofiler-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="googleplusprofiler"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="gooogledrive-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="gooogledrive-alt2"/> -->
-	<item component="ComponentInfo{com.google.android.apps.docs/com.google.android.apps.docs.app.NewMainProxyActivity}" drawable="gooogledrive"/>
-	<!-- <item component="ComponentInfo{}" drawable="hardrivedefault"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="hardrivewindows"/> -->
-	<item component="ComponentInfo{com.hotornot.app/com.badoo.mobile.android.BadooActivity}" drawable="hotornot"/>
-	<item component="ComponentInfo{}" drawable="hyperlapse"/>
-	<item component="ComponentInfo{mobi.ifunny/mobi.ifunny.main.IFunnyMenuActivity}" drawable="ifunny"/>
-	<item component="ComponentInfo{com.clearchannel.iheartradio.controller/com.clearchannel.iheartradio.controller.activities.NavDrawerActivity}" drawable="iheartradio"/>
-	<!-- <item component="ComponentInfo{}" drawable="illustrator"/> -->
-	<item component="ComponentInfo{com.imgur.mobile/com.imgur.mobile.MainActivity}" drawable="imgur"/>
-	<item component="ComponentInfo{com.google.android.apps.inbox/com.google.android.apps.bigtop.activities.InitActivity}" drawable="inbox"/>
-	<!-- <item component="ComponentInfo{}" drawable="ingress-alt"/> -->
-	<item component="ComponentInfo{com.nianticproject.ingress/com.nianticproject.ingress.NemesisActivity}" drawable="ingress"/>
-	<item component="ComponentInfo{com.instagram.android/com.instagram.android.activity.MainTabActivity}" drawable="instagram"/>
-	<!-- <item component="ComponentInfo{}" drawable="journey-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="journey-alt2"/> -->
-	<item component="ComponentInfo{com.journey.app/com.journey.app.MainActivity}" drawable="journey"/>
-	<item component="ComponentInfo{kik.android/kik.android.chat.activity.IntroActivity}" drawable="kik"/>
-	<item component="ComponentInfo{}" drawable="kiwi"/>
-	<item component="ComponentInfo{com.ui.LapseItPro/com.ui.LapseIt.Main}" drawable="lapseit"/>
-	<!-- <item component="ComponentInfo{}" drawable="libreofficewritter"/> -->
-	<item component="ComponentInfo{jp.naver.line.android/jp.naver.line.android.activity.SplashActivity}" drawable="line"/>
-	<!-- <item component="ComponentInfo{}" drawable="lollypop"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="materialos-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="materialos-alt2"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="materialos-alt3"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="materialos-alt4"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="materialos-alt5"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="materialos-alt6"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="materialos"/> -->
-	<item component="ComponentInfo{}" drawable="matlog"/>
-	<item component="ComponentInfo{com.ventismedia.android.mediamonkey/com.ventismedia.android.mediamonkey.StartActivity}" drawable="mediamonkey"/>
-	<item component="ComponentInfo{nz.mega.android/nz.mega.android.ManagerActivity}" drawable="mega"/>
-	<!-- <item component="ComponentInfo{}" drawable="midori"/> -->
-	<item component="ComponentInfo{com.mobiledatalabs.mileiq/com.mobiledatalabs.mileiq.activities.LaunchActivity}" drawable="mileiq"/>
-	<!-- <item component="ComponentInfo{}" drawable="minecraft-alt"/> -->
-	<item component="ComponentInfo{}" drawable="minecraft"/>
-	<item component="ComponentInfo{}" drawable="multiwindowview"/>
-	<!-- <item component="ComponentInfo{}" drawable="music-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="music-alt2"/> -->
-	<item component="ComponentInfo{}" drawable="music"/>
-	<!-- <item component="ComponentInfo{}" drawable="musicfolder"/> -->
-	<item component="ComponentInfo{com.musixmatch.android.lyrify/com.designfuture.music.ui.phone.DashBoardActivity}" drawable="musicxmatch"/>
-	<item component="ComponentInfo{}" drawable="myscript"/>
-	<item component="ComponentInfo{com.google.android.maps.mytracks/com.google.android.apps.mytracks.TrackListActivity}" drawable="mytracks"/>
-	<item component="ComponentInfo{}" drawable="nautilus"/>
-	<!-- <item component="ComponentInfo{}" drawable="netflix-alt"/> -->
-	<item component="ComponentInfo{com.netflix.mediaclient/com.netflix.mediaclient.ui.launch.UIWebViewActivity}" drawable="netflix"/>
-	<item component="ComponentInfo{com.aboutmycode.NotificationsOff/com.aboutmycode.NotificationsOff.MainActivity}" drawable="notificationsoff"/>
-	<item component="ComponentInfo{org.npr.one/org.npr.one.HomeActivity}" drawable="nprone"/>
-	<item component="ComponentInfo{com.smgstudio.onemoreline/com.prime31.UnityPlayerNativeActivity}" drawable="onemoreline"/>
-	<item component="ComponentInfo{}" drawable="oneplus"/>
-	<!-- <item component="ComponentInfo{}" drawable="paintnet"/> -->
-	<item component="ComponentInfo{com.pandora.android/com.pandora.android.Main}" drawable="pandora"/>
-	<!-- <item component="ComponentInfo{}" drawable="pebble-alt"/> -->
-	<item component="ComponentInfo{com.getpebble.android/com.getpebble.android.main.activity.MainActivity}" drawable="pebble"/>
-	<item component="ComponentInfo{}" drawable="photoshop"/>
-	<item component="ComponentInfo{com.sabzira.PianoTiles/com.unity3d.player.UnityPlayerActivity}" drawable="pianotiles"/>
-	<item component="ComponentInfo{com.umonistudio.tile/com.umonistudio.tile.tile}" drawable="pianotiles"/>
-	<item component="ComponentInfo{}" drawable="picsart"/>
-	<item component="ComponentInfo{}" drawable="pinterest"/>
-	<!-- <item component="ComponentInfo{}" drawable="playstore-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="playstore-alt2"/> -->
-	<item component="ComponentInfo{com.android.vending/com.android.vending.AssetBrowserActivity}" drawable="playstore"/>
-	<item component="ComponentInfo{com.plexapp.android/com.plexapp.plex.activities.MyPlexActivity}" drawable="plex"/>
-	<item component="ComponentInfo{}" drawable="pocket"/>
-	<!-- <item component="ComponentInfo{}" drawable="proxy"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="pstouch"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="publicfolder-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="publicfolder"/> -->
-	<item component="ComponentInfo{com.pushbullet.android/com.pushbullet.android.ui.LaunchActivity}" drawable="pushbullet"/>
-	<!-- <item component="ComponentInfo{}" drawable="quickpic-alt"/> -->
-	<item component="ComponentInfo{com.alensw.PicFolder/com.alensw.PicFolder.GalleryActivity}" drawable="quickpic"/>
-	<item component="ComponentInfo{}" drawable="retrica"/>
-	<!-- <item component="ComponentInfo{}" drawable="router"/> -->
-	<item component="ComponentInfo{com.runtastic.android/com.runtastic.android.activities.StartActivity}" drawable="runtastic"/>
-	<item component="ComponentInfo{com.android.settings/com.android.settings.Settings}" drawable="settings"/>
-	<item component="ComponentInfo{com.shazam.android/com.shazam.android.activities.SplashActivity}" drawable="shazam"/>
-	<item component="ComponentInfo{}" drawable="simtoolkit"/>
-	<!-- <item component="ComponentInfo{}" drawable="skwash"/> -->
-	<item component="ComponentInfo{}" drawable="skwish"/>
-	<!-- <item component="ComponentInfo{}" drawable="skykonigicon"/> -->
-	<item component="ComponentInfo{com.skype.raider/com.skype.raider.Main}" drawable="skype"/>
-	<!-- <item component="ComponentInfo{}" drawable="snapchat-alt"/> -->
-	<item component="ComponentInfo{com.snapchat.android/com.snapchat.android.LandingPageActivity}" drawable="snapchat"/>
-	<item component="ComponentInfo{com.soundcloud.android/com.soundcloud.android.main.LauncherActivity}" drawable="soundcloud"/>
-	<item component="ComponentInfo{com.melodis.midomiMusicIdentifier.freemium/com.soundhound.android.appcommon.activity.SplashScreenActivity}" drawable="soundhound"/>
-	<item component="ComponentInfo{com.spotify.music/com.spotify.music.MainActivity}" drawable="spotify"/>
-	<item component="ComponentInfo{com.stackexchange.marvin/com.stackexchange.marvin.ui.LaunchActivity}" drawable="stackexchange"/>
-	<!-- <item component="ComponentInfo{}" drawable="starwarswikia"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="steam-alt"/> -->
-	<item component="ComponentInfo{}" drawable="steam"/>
-	<!-- <item component="ComponentInfo{}" drawable="steamfolder"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="sublimetext-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="sublimetext-alt2"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="sublimetext-alt3"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="sublimetext-alt4"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="sublimetext-alt5"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="sublimetext-alt6"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="sublimetext-alt7"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="sublimetext"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="superbackup-alt"/> -->
-	<item component="ComponentInfo{}" drawable="superbackup"/>
-	<!-- <item component="ComponentInfo{}" drawable="supersu-alt"/> -->
-	<item component="ComponentInfo{eu.chainfire.supersu/eu.chainfire.supersu.MainActivity-Material}" drawable="supersu"/>
-	<item component="ComponentInfo{}" drawable="syncme"/>
-	<item component="ComponentInfo{}" drawable="taggr"/>
-	<item component="ComponentInfo{com.target.ui/com.target.ui.activity.NavigationActivity}" drawable="target"/>
-	<!-- <item component="ComponentInfo{}" drawable="telegram-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="telegram-alt2"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="telegram-alt3"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="telegram-alt4"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="telegram-alt5"/> -->
-	<item component="ComponentInfo{org.telegram.messenger/org.telegram.ui.LaunchActivity}" drawable="telegram"/>
-	<!-- <item component="ComponentInfo{}" drawable="terminal"/> -->
-	<item component="ComponentInfo{}" drawable="terraria"/>
-	<item component="ComponentInfo{}" drawable="themediy"/>
-	<item component="ComponentInfo{com.weather.Weather/com.weather.Weather.app.SplashScreenActivity}" drawable="theweatherchannel"/>
-	<item component="ComponentInfo{com.tinder/com.tinder.activities.ActivitySplashLoading}" drawable="tinder"/>
-	<!-- <item component="ComponentInfo{}" drawable="trashfolder"/> -->
-	<item component="ComponentInfo{}" drawable="trello"/>
-	<item component="ComponentInfo{com.tumblr/com.tumblr.ui.activity.JumpoffActivity}" drawable="tumblr"/>
-	<!-- <item component="ComponentInfo{}" drawable="tunein-alt"/> -->
-	<item component="ComponentInfo{tunein.player/tunein.ui.actvities.TuneInHomeActivity}" drawable="tunein"/>
-	<item component="ComponentInfo{}" drawable="turboeditor"/>
-	<!-- <item component="ComponentInfo{}" drawable="twitch-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="twitch-alt2"/> -->
-	<item component="ComponentInfo{tv.twitch.android.viewer/tv.twitch.android.apps.SplashScreenActivity}" drawable="twitch"/>
-	<!-- <item component="ComponentInfo{}" drawable="twitter-alt"/> -->
-	<item component="ComponentInfo{com.twitter.android/com.twitter.android.StartActivity}" drawable="twitter"/>
-	<item component="ComponentInfo{}" drawable="ubby"/>
-	<item component="ComponentInfo{com.ubercab/com.ubercab.UBUberActivity}" drawable="uber"/>
-	<!-- <item component="ComponentInfo{}" drawable="unicon-alt"/> -->
-	<item component="ComponentInfo{}" drawable="unicon"/>
-	<!-- <item component="ComponentInfo{}" drawable="usbfolder"/> -->
-	<item component="ComponentInfo{}" drawable="uupurifier"/>
-	<item component="ComponentInfo{}" drawable="verizonvoicemail"/>
-	<item component="ComponentInfo{com.viber.voip/com.viber.voip.WelcomeActivity}" drawable="viber"/>
-	<!-- <item component="ComponentInfo{}" drawable="videofolder"/> -->
-	<item component="ComponentInfo{}" drawable="vine"/>
-	<item component="ComponentInfo{}" drawable="visualvoicemail"/>
-	<item component="ComponentInfo{org.videolan.vlc.betav7neon/org.videolan.vlc.betav7neon.gui.MainActivity}" drawable="vlc"/>
-	<item component="ComponentInfo{}" drawable="vmwareworkstation"/>
-	<item component="ComponentInfo{}" drawable="vnc"/>
-	<item component="ComponentInfo{}" drawable="wakelocker"/>
-	<item component="ComponentInfo{}" drawable="wallsplash"/>
-	<item component="ComponentInfo{}" drawable="wattpad"/>
-	<item component="ComponentInfo{com.webviewbrowser/main.java.MainActivity}" drawable="webviewbrowser"/>
-	<item component="ComponentInfo{}" drawable="weheartit"/>
-	<!-- <item component="ComponentInfo{}" drawable="welgbt-inbetween"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="welgbt-notfound"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="welgbt-poor"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="welgbt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="whatsapp-alt"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="whatsapp-alt2"/> -->
-	<!-- <item component="ComponentInfo{}" drawable="whatsapp-alt3"/> -->
-	<item component="ComponentInfo{}" drawable="whatsapp"/>
-	<!-- <item component="ComponentInfo{}" drawable="wikipedia-alt"/> -->
-	<item component="ComponentInfo{org.wikipedia/org.wikipedia.page.PageActivity}" drawable="wikipedia"/>
-	<item component="ComponentInfo{}" drawable="wolz"/>
-	<item component="ComponentInfo{com.wunderkinder.wunderlistandroid/com.wunderkinder.wunderlistandroid.activity.WLMainFragmentActivity}" drawable="wunderlist"/>
-	<item component="ComponentInfo{}" drawable="xposedinstaller"/>
-	<item component="ComponentInfo{rpkandrodev.yaata/rpkandrodev.yaata.activity.ThreadListActivity}" drawable="yaata"/>
-	<item component="ComponentInfo{com.google.android.videos/com.google.android.youtube.videos.EntryPoint}" drawable="youtube"/>
-	<item component="ComponentInfo{com.google.android.youtube/com.google.android.youtube.app.honeycomb.Shell$HomeActivity}" drawable="youtube"/>
-	<!-- <item component="ComponentInfo{}" drawable="zipfolder"/> -->
+    <!-- Apps -->
+    <!-- <item component="ComponentInfo{}" drawable="365projects"/> -->
+    <item
+        component="ComponentInfo{com.aa.generaladaptiveapps/com.aa.generaladaptiveapps.BaseActivity}"
+        drawable="aa" />
+    <!-- <item component="ComponentInfo{}" drawable="accountfolder"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="actionlauncher"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="adaway" />
+    <item
+        component="ComponentInfo{}"
+        drawable="adblockplus" />
+    <!-- <item component="ComponentInfo{}" drawable="aftereffects"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="afterlight-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="afterlight-alt2"/> -->
+    <item
+        component="ComponentInfo{com.fueled.afterlight/com.fueled.afterlight.HomeActivity}"
+        drawable="afterlight" />
+    <item
+        component="ComponentInfo{com.gombosdev.ampere/com.gombosdev.ampere.MainActivity}"
+        drawable="ampere" />
+    <!-- <item component="ComponentInfo{}" drawable="androidstudio"/> -->
+    <item
+        component="ComponentInfo{com.domobile.applock/com.domobile.applock.LauncherActivity}"
+        drawable="applock" />
+    <item
+        component="ComponentInfo{com.enlightment.appslocker/com.enlightment.appslocker.MainActivity}"
+        drawable="applock" />
+    <item
+        component="ComponentInfo{}"
+        drawable="appsettings" />
+    <!-- <item component="ComponentInfo{}" drawable="archivemanager"/> -->
+    <item
+        component="ComponentInfo{com.metago.astro/com.metago.astro.MainActivity}"
+        drawable="astro" />
+    <!-- <item component="ComponentInfo{}" drawable="athuplus-alt"/> -->
+    <item
+        component="ComponentInfo{com.mufri.authenticatorplus/com.mufri.authenticatorplus.LoginActivity}"
+        drawable="athuplus" />
+    <item
+        component="ComponentInfo{}"
+        drawable="bang" />
+    <item
+        component="ComponentInfo{com.google.zxing.client.android/com.google.zxing.client.android.CaptureActivity}"
+        drawable="barcodescanner" />
+    <item
+        component="ComponentInfo{}"
+        drawable="bbm" />
+    <!-- <item component="ComponentInfo{}" drawable="blankfile-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="blankfile"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="blankfilelandscape"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="blankfilesquare"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="blender"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="boombox"/> -->
+    <item
+        component="ComponentInfo{com.box.android/com.box.android.activities.login.SplashScreenActivity}"
+        drawable="box" />
+    <!-- <item component="ComponentInfo{}" drawable="boxfolder"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="brackets"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="browser" />
+    <!-- <item component="ComponentInfo{}" drawable="catfolder"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="ccleaner-alt"/> -->
+    <item
+        component="ComponentInfo{com.piriform.ccleaner/com.piriform.ccleaner.ui.activity.MainActivity}"
+        drawable="ccleaner" />
+    <!-- <item component="ComponentInfo{}" drawable="chrome-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="chrome-alt2"/> -->
+    <item
+        component="ComponentInfo{com.android.chrome/com.google.android.apps.chrome.Main}"
+        drawable="chrome" />
+    <!-- <item component="ComponentInfo{}" drawable="chromebeta-alt2"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="chromedev-alt2"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="chromium-alt"/> -->
+    <item
+        component="ComponentInfo{com.google.android.deskclock/com.android.deskclock.DeskClock}"
+        drawable="clock" />
+    <item
+        component="ComponentInfo{org.cyanogenmod.theme.chooser/org.cyanogenmod.theme.chooser.ChooserActivity}"
+        drawable="cmthemes" />
+    <!-- <item component="ComponentInfo{}" drawable="codefolder"/> -->
+    <item
+        component="ComponentInfo{com.google.android.contacts/com.android.contacts.activities.PeopleActivity}"
+        drawable="contacts" />
+    <!-- <item component="ComponentInfo{}" drawable="cortana-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="cortana-alt2"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="cortana" />
+    <!-- <item component="ComponentInfo{}" drawable="creativecloud"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="cymera" />
+    <!-- <item component="ComponentInfo{}" drawable="downloadsfolder"/> -->
+    <item
+        component="ComponentInfo{com.dropbox.android/com.dropbox.android.activity.DropboxBrowser}"
+        drawable="dropbox" />
+    <!-- <item component="ComponentInfo{}" drawable="dropboxfolder"/> -->
+    <item
+        component="ComponentInfo{com.duolingo/com.duolingo.app.LoginActivity}"
+        drawable="duolingo" />
+    <item
+        component="ComponentInfo{br.com.easytaxi/br.com.easytaxi.ui.CallTaxiActivity}"
+        drawable="easytaxi" />
+    <item
+        component="ComponentInfo{com.edjing.edjingdjturntable/com.edjing.edjingforandroid.MainActivity}"
+        drawable="edjing" />
+    <item
+        component="ComponentInfo{}"
+        drawable="email" />
+    <!-- <item component="ComponentInfo{}" drawable="esfileexplorer-alt"/> -->
+    <item
+        component="ComponentInfo{com.estrongs.android.pop/com.estrongs.android.pop.view.FileExplorerActivity}"
+        drawable="esfileexplorer" />
+    <item
+        component="ComponentInfo{}"
+        drawable="evernote" />
+    <!-- <item component="ComponentInfo{}" drawable="fab"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="facebook-alt"/> -->
+    <item
+        component="ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity}"
+        drawable="facebook" />
+    <item
+        component="ComponentInfo{}"
+        drawable="facebooklite" />
+    <item
+        component="ComponentInfo{}"
+        drawable="facebookpages" />
+    <!-- <item component="ComponentInfo{}" drawable="fbmessenger-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="fbmessenger-alt2"/> -->
+    <item
+        component="ComponentInfo{com.facebook.orca}"
+        drawable="fbmessenger" />
+    <item
+        component="ComponentInfo{}"
+        drawable="feedly" />
+    <item
+        component="ComponentInfo{}"
+        drawable="filemanager" />
+    <!-- <item component="ComponentInfo{}" drawable="finderfolder"/> -->
+    <item
+        component="ComponentInfo{org.mozilla.firefox_beta/org.mozilla.firefox_beta.App}"
+        drawable="firefox" />
+    <item
+        component="ComponentInfo{com.syntellia.fleksy.kb/com.syntellia.fleksy.settings.activities.MainActivity}"
+        drawable="fleksy" />
+    <item
+        component="ComponentInfo{}"
+        drawable="flipboard" />
+    <item
+        component="ComponentInfo{}"
+        drawable="foursquare" />
+    <!-- <item component="ComponentInfo{}" drawable="galactivlogocolor"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="gallery" />
+    <item
+        component="ComponentInfo{}"
+        drawable="geometrydash" />
+    <item
+        component="ComponentInfo{com.google.android.gm/com.google.android.gm.ConversationListActivityGmail}"
+        drawable="gmail" />
+    <item
+        component="ComponentInfo{com.google.android.apps.fitness/com.google.android.apps.fitness.welcome.WelcomeActivity}"
+        drawable="googlefit" />
+    <item
+        component="ComponentInfo{com.google.android.keep/com.google.android.keep.activities.BrowseActivity}"
+        drawable="googlekeep" />
+    <item
+        component="ComponentInfo{}"
+        drawable="googlekeyboard" />
+    <item
+        component="ComponentInfo{}"
+        drawable="googlemessenger" />
+    <!-- <item component="ComponentInfo{}" drawable="googleopinionrewards_alt"/> -->
+    <item
+        component="ComponentInfo{com.google.android.apps.paidtasks/com.google.android.apps.paidtasks.LaunchActivity}"
+        drawable="googleopinionrewards" />
+    <!-- <item component="ComponentInfo{}" drawable="googleplusprofiler-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="googleplusprofiler"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="gooogledrive-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="gooogledrive-alt2"/> -->
+    <item
+        component="ComponentInfo{com.google.android.apps.docs/com.google.android.apps.docs.app.NewMainProxyActivity}"
+        drawable="gooogledrive" />
+    <!-- <item component="ComponentInfo{}" drawable="hardrivedefault"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="hardrivewindows"/> -->
+    <item
+        component="ComponentInfo{com.hotornot.app/com.badoo.mobile.android.BadooActivity}"
+        drawable="hotornot" />
+    <item
+        component="ComponentInfo{}"
+        drawable="hyperlapse" />
+    <item
+        component="ComponentInfo{mobi.ifunny/mobi.ifunny.main.IFunnyMenuActivity}"
+        drawable="ifunny" />
+    <item
+        component="ComponentInfo{com.clearchannel.iheartradio.controller/com.clearchannel.iheartradio.controller.activities.NavDrawerActivity}"
+        drawable="iheartradio" />
+    <!-- <item component="ComponentInfo{}" drawable="illustrator"/> -->
+    <item
+        component="ComponentInfo{com.imgur.mobile/com.imgur.mobile.MainActivity}"
+        drawable="imgur" />
+    <item
+        component="ComponentInfo{com.google.android.apps.inbox/com.google.android.apps.bigtop.activities.InitActivity}"
+        drawable="inbox" />
+    <!-- <item component="ComponentInfo{}" drawable="ingress-alt"/> -->
+    <item
+        component="ComponentInfo{com.nianticproject.ingress/com.nianticproject.ingress.NemesisActivity}"
+        drawable="ingress" />
+    <item
+        component="ComponentInfo{com.instagram.android/com.instagram.android.activity.MainTabActivity}"
+        drawable="instagram" />
+    <!-- <item component="ComponentInfo{}" drawable="journey-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="journey-alt2"/> -->
+    <item
+        component="ComponentInfo{com.journey.app/com.journey.app.MainActivity}"
+        drawable="journey" />
+    <item
+        component="ComponentInfo{kik.android/kik.android.chat.activity.IntroActivity}"
+        drawable="kik" />
+    <item
+        component="ComponentInfo{}"
+        drawable="kiwi" />
+    <item
+        component="ComponentInfo{com.ui.LapseItPro/com.ui.LapseIt.Main}"
+        drawable="lapseit" />
+    <!-- <item component="ComponentInfo{}" drawable="libreofficewritter"/> -->
+    <item
+        component="ComponentInfo{jp.naver.line.android/jp.naver.line.android.activity.SplashActivity}"
+        drawable="line" />
+    <!-- <item component="ComponentInfo{}" drawable="lollypop"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="materialos-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="materialos-alt2"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="materialos-alt3"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="materialos-alt4"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="materialos-alt5"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="materialos-alt6"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="materialos"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="matlog" />
+    <item
+        component="ComponentInfo{com.ventismedia.android.mediamonkey/com.ventismedia.android.mediamonkey.StartActivity}"
+        drawable="mediamonkey" />
+    <item
+        component="ComponentInfo{nz.mega.android/nz.mega.android.ManagerActivity}"
+        drawable="mega" />
+    <!-- <item component="ComponentInfo{}" drawable="midori"/> -->
+    <item
+        component="ComponentInfo{com.mobiledatalabs.mileiq/com.mobiledatalabs.mileiq.activities.LaunchActivity}"
+        drawable="mileiq" />
+    <!-- <item component="ComponentInfo{}" drawable="minecraft-alt"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="minecraft" />
+    <item
+        component="ComponentInfo{}"
+        drawable="multiwindowview" />
+    <!-- <item component="ComponentInfo{}" drawable="music-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="music-alt2"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="music" />
+    <!-- <item component="ComponentInfo{}" drawable="musicfolder"/> -->
+    <item
+        component="ComponentInfo{com.musixmatch.android.lyrify/com.designfuture.music.ui.phone.DashBoardActivity}"
+        drawable="musicxmatch" />
+    <item
+        component="ComponentInfo{}"
+        drawable="myscript" />
+    <item
+        component="ComponentInfo{com.google.android.maps.mytracks/com.google.android.apps.mytracks.TrackListActivity}"
+        drawable="mytracks" />
+    <item
+        component="ComponentInfo{}"
+        drawable="nautilus" />
+    <!-- <item component="ComponentInfo{}" drawable="netflix-alt"/> -->
+    <item
+        component="ComponentInfo{com.netflix.mediaclient/com.netflix.mediaclient.ui.launch.UIWebViewActivity}"
+        drawable="netflix" />
+    <item
+        component="ComponentInfo{com.aboutmycode.NotificationsOff/com.aboutmycode.NotificationsOff.MainActivity}"
+        drawable="notificationsoff" />
+    <item
+        component="ComponentInfo{org.npr.one/org.npr.one.HomeActivity}"
+        drawable="nprone" />
+    <item
+        component="ComponentInfo{com.smgstudio.onemoreline/com.prime31.UnityPlayerNativeActivity}"
+        drawable="onemoreline" />
+    <item
+        component="ComponentInfo{}"
+        drawable="oneplus" />
+    <!-- <item component="ComponentInfo{}" drawable="paintnet"/> -->
+    <item
+        component="ComponentInfo{com.pandora.android/com.pandora.android.Main}"
+        drawable="pandora" />
+    <!-- <item component="ComponentInfo{}" drawable="pebble-alt"/> -->
+    <item
+        component="ComponentInfo{com.getpebble.android/com.getpebble.android.main.activity.MainActivity}"
+        drawable="pebble" />
+    <item
+        component="ComponentInfo{}"
+        drawable="photoshop" />
+    <item
+        component="ComponentInfo{com.sabzira.PianoTiles/com.unity3d.player.UnityPlayerActivity}"
+        drawable="pianotiles" />
+    <item
+        component="ComponentInfo{com.umonistudio.tile/com.umonistudio.tile.tile}"
+        drawable="pianotiles" />
+    <item
+        component="ComponentInfo{}"
+        drawable="picsart" />
+    <item
+        component="ComponentInfo{}"
+        drawable="pinterest" />
+    <!-- <item component="ComponentInfo{}" drawable="playstore-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="playstore-alt2"/> -->
+    <item
+        component="ComponentInfo{com.android.vending/com.android.vending.AssetBrowserActivity}"
+        drawable="playstore" />
+    <item
+        component="ComponentInfo{com.plexapp.android/com.plexapp.plex.activities.MyPlexActivity}"
+        drawable="plex" />
+    <item
+        component="ComponentInfo{}"
+        drawable="pocket" />
+    <!-- <item component="ComponentInfo{}" drawable="proxy"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="pstouch"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="publicfolder-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="publicfolder"/> -->
+    <item
+        component="ComponentInfo{com.pushbullet.android/com.pushbullet.android.ui.LaunchActivity}"
+        drawable="pushbullet" />
+    <!-- <item component="ComponentInfo{}" drawable="quickpic-alt"/> -->
+    <item
+        component="ComponentInfo{com.alensw.PicFolder/com.alensw.PicFolder.GalleryActivity}"
+        drawable="quickpic" />
+    <item
+        component="ComponentInfo{}"
+        drawable="retrica" />
+    <!-- <item component="ComponentInfo{}" drawable="router"/> -->
+    <item
+        component="ComponentInfo{com.runtastic.android/com.runtastic.android.activities.StartActivity}"
+        drawable="runtastic" />
+    <item
+        component="ComponentInfo{com.android.settings/com.android.settings.Settings}"
+        drawable="settings" />
+    <item
+        component="ComponentInfo{com.shazam.android/com.shazam.android.activities.SplashActivity}"
+        drawable="shazam" />
+    <item
+        component="ComponentInfo{}"
+        drawable="simtoolkit" />
+    <!-- <item component="ComponentInfo{}" drawable="skwash"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="skwish" />
+    <!-- <item component="ComponentInfo{}" drawable="skykonigicon"/> -->
+    <item
+        component="ComponentInfo{com.skype.raider/com.skype.raider.Main}"
+        drawable="skype" />
+    <!-- <item component="ComponentInfo{}" drawable="snapchat-alt"/> -->
+    <item
+        component="ComponentInfo{com.snapchat.android/com.snapchat.android.LandingPageActivity}"
+        drawable="snapchat" />
+    <item
+        component="ComponentInfo{com.soundcloud.android/com.soundcloud.android.main.LauncherActivity}"
+        drawable="soundcloud" />
+    <item
+        component="ComponentInfo{com.melodis.midomiMusicIdentifier.freemium/com.soundhound.android.appcommon.activity.SplashScreenActivity}"
+        drawable="soundhound" />
+    <item
+        component="ComponentInfo{com.spotify.music/com.spotify.music.MainActivity}"
+        drawable="spotify" />
+    <item
+        component="ComponentInfo{com.stackexchange.marvin/com.stackexchange.marvin.ui.LaunchActivity}"
+        drawable="stackexchange" />
+    <!-- <item component="ComponentInfo{}" drawable="starwarswikia"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="steam-alt"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="steam" />
+    <!-- <item component="ComponentInfo{}" drawable="steamfolder"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="sublimetext-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="sublimetext-alt2"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="sublimetext-alt3"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="sublimetext-alt4"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="sublimetext-alt5"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="sublimetext-alt6"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="sublimetext-alt7"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="sublimetext"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="superbackup-alt"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="superbackup" />
+    <!-- <item component="ComponentInfo{}" drawable="supersu-alt"/> -->
+    <item
+        component="ComponentInfo{eu.chainfire.supersu/eu.chainfire.supersu.MainActivity-Material}"
+        drawable="supersu" />
+    <item
+        component="ComponentInfo{}"
+        drawable="syncme" />
+    <item
+        component="ComponentInfo{}"
+        drawable="taggr" />
+    <item
+        component="ComponentInfo{com.target.ui/com.target.ui.activity.NavigationActivity}"
+        drawable="target" />
+    <!-- <item component="ComponentInfo{}" drawable="telegram-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="telegram-alt2"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="telegram-alt3"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="telegram-alt4"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="telegram-alt5"/> -->
+    <item
+        component="ComponentInfo{org.telegram.messenger/org.telegram.ui.LaunchActivity}"
+        drawable="telegram" />
+    <!-- <item component="ComponentInfo{}" drawable="terminal"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="terraria" />
+    <item
+        component="ComponentInfo{}"
+        drawable="themediy" />
+    <item
+        component="ComponentInfo{com.weather.Weather/com.weather.Weather.app.SplashScreenActivity}"
+        drawable="theweatherchannel" />
+    <item
+        component="ComponentInfo{com.tinder/com.tinder.activities.ActivitySplashLoading}"
+        drawable="tinder" />
+    <!-- <item component="ComponentInfo{}" drawable="trashfolder"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="trello" />
+    <item
+        component="ComponentInfo{com.tumblr/com.tumblr.ui.activity.JumpoffActivity}"
+        drawable="tumblr" />
+    <!-- <item component="ComponentInfo{}" drawable="tunein-alt"/> -->
+    <item
+        component="ComponentInfo{tunein.player/tunein.ui.actvities.TuneInHomeActivity}"
+        drawable="tunein" />
+    <item
+        component="ComponentInfo{}"
+        drawable="turboeditor" />
+    <!-- <item component="ComponentInfo{}" drawable="twitch-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="twitch-alt2"/> -->
+    <item
+        component="ComponentInfo{tv.twitch.android.viewer/tv.twitch.android.apps.SplashScreenActivity}"
+        drawable="twitch" />
+    <!-- <item component="ComponentInfo{}" drawable="twitter-alt"/> -->
+    <item
+        component="ComponentInfo{com.twitter.android/com.twitter.android.StartActivity}"
+        drawable="twitter" />
+    <item
+        component="ComponentInfo{}"
+        drawable="ubby" />
+    <item
+        component="ComponentInfo{com.ubercab/com.ubercab.UBUberActivity}"
+        drawable="uber" />
+    <!-- <item component="ComponentInfo{}" drawable="unicon-alt"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="unicon" />
+    <!-- <item component="ComponentInfo{}" drawable="usbfolder"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="uupurifier" />
+    <item
+        component="ComponentInfo{}"
+        drawable="verizonvoicemail" />
+    <item
+        component="ComponentInfo{com.viber.voip/com.viber.voip.WelcomeActivity}"
+        drawable="viber" />
+    <!-- <item component="ComponentInfo{}" drawable="videofolder"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="vine" />
+    <item
+        component="ComponentInfo{}"
+        drawable="visualvoicemail" />
+    <item
+        component="ComponentInfo{org.videolan.vlc.betav7neon/org.videolan.vlc.betav7neon.gui.MainActivity}"
+        drawable="vlc" />
+    <item
+        component="ComponentInfo{}"
+        drawable="vmwareworkstation" />
+    <item
+        component="ComponentInfo{}"
+        drawable="vnc" />
+    <item
+        component="ComponentInfo{}"
+        drawable="wakelocker" />
+    <item
+        component="ComponentInfo{}"
+        drawable="wallsplash" />
+    <item
+        component="ComponentInfo{}"
+        drawable="wattpad" />
+    <item
+        component="ComponentInfo{com.webviewbrowser/main.java.MainActivity}"
+        drawable="webviewbrowser" />
+    <item
+        component="ComponentInfo{}"
+        drawable="weheartit" />
+    <!-- <item component="ComponentInfo{}" drawable="welgbt-inbetween"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="welgbt-notfound"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="welgbt-poor"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="welgbt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="whatsapp-alt"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="whatsapp-alt2"/> -->
+    <!-- <item component="ComponentInfo{}" drawable="whatsapp-alt3"/> -->
+    <item
+        component="ComponentInfo{}"
+        drawable="whatsapp" />
+    <!-- <item component="ComponentInfo{}" drawable="wikipedia-alt"/> -->
+    <item
+        component="ComponentInfo{org.wikipedia/org.wikipedia.page.PageActivity}"
+        drawable="wikipedia" />
+    <item
+        component="ComponentInfo{}"
+        drawable="wolz" />
+    <item
+        component="ComponentInfo{com.wunderkinder.wunderlistandroid/com.wunderkinder.wunderlistandroid.activity.WLMainFragmentActivity}"
+        drawable="wunderlist" />
+    <item
+        component="ComponentInfo{}"
+        drawable="xposedinstaller" />
+    <item
+        component="ComponentInfo{rpkandrodev.yaata/rpkandrodev.yaata.activity.ThreadListActivity}"
+        drawable="yaata" />
+    <item
+        component="ComponentInfo{com.google.android.videos/com.google.android.youtube.videos.EntryPoint}"
+        drawable="youtube" />
+    <item
+        component="ComponentInfo{com.google.android.youtube/com.google.android.youtube.app.honeycomb.Shell$HomeActivity}"
+        drawable="youtube" />
+    <!-- <item component="ComponentInfo{}" drawable="zipfolder"/> -->
 </resources>

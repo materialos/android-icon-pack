@@ -10,12 +10,12 @@ import android.net.NetworkInfo;
  */
 public class Util {
 
-    public static String getAppVersion(Context context) {
+    public static int getAppVersion(Context context) {
         try {
-            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
+            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
         } catch (PackageManager.NameNotFoundException e) {
             // this should never happen
-            return "Unknown";
+            return -1;
         }
     }
 

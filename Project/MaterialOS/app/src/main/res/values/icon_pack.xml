@@ -10,9 +10,6 @@
     <string-array name="latest"></string-array>
 
 
-
-
-
     <!-- ALL ICONS -->
     <!-- All of your icons listed here -->
     <string-array name="icon_pack" translatable="false">
@@ -268,7 +265,6 @@
         <item>youtube</item>
         <item>zipfolder</item>
     </string-array>
-
 
 
 </resources>

@@ -21,17 +21,102 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+import org.materialos.icons.R;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import org.materialos.icons.R;
-
 
 public class DetailedWallpaperActivity extends AppCompatActivity {
 
+    private final com.squareup.picasso.Target wallTarget = new com.squareup.picasso.Target() {
+        @Override
+        public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        WallpaperManager wm = WallpaperManager.getInstance(DetailedWallpaperActivity.this);
+                        wm.setBitmap(bitmap);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+        }
+
+        @Override
+        public void onBitmapFailed(Drawable errorDrawable) {
+            showNoPicDialog();
+        }
+
+        @Override
+        public void onPrepareLoad(Drawable placeHolderDrawable) {
+        }
+    };
     public String wall;
     private String saveWallLocation, picName, dialogContent;
+    private final com.squareup.picasso.Target target = new com.squareup.picasso.Target() {
+        @Override
+        public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    File file = new File(saveWallLocation, picName + convertWallName(wall) + ".png");
+                    file.delete();
+                    try {
+                        file.createNewFile();
+                        FileOutputStream ostream = new FileOutputStream(file);
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 100, ostream);
+                        ostream.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+        }
+
+        @Override
+        public void onBitmapFailed(Drawable errorDrawable) {
+            showNoPicDialog();
+        }
+
+        @Override
+        public void onPrepareLoad(Drawable placeHolderDrawable) {
+        }
+    };
+    private final com.squareup.picasso.Target wallCropTarget = new com.squareup.picasso.Target() {
+        @Override
+        public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        ImageView wall = (ImageView) findViewById(R.id.bigwall);
+                        Uri wallUri = getLocalBitmapUri(wall);
+                        if (wallUri != null) {
+                            Intent setWall = new Intent(Intent.ACTION_ATTACH_DATA);
+                            setWall.setDataAndType(wallUri, "image/*");
+                            setWall.putExtra("png", "image/*");
+                            startActivityForResult(Intent.createChooser(setWall, getString(R.string.set_as)), 1);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+        }
+
+        @Override
+        public void onBitmapFailed(Drawable errorDrawable) {
+            showNoPicDialog();
+        }
+
+        @Override
+        public void onPrepareLoad(Drawable placeHolderDrawable) {
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,94 +192,6 @@ public class DetailedWallpaperActivity extends AppCompatActivity {
         }
         return true;
     }
-
-    private final com.squareup.picasso.Target target = new com.squareup.picasso.Target() {
-        @Override
-        public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    File file = new File(saveWallLocation, picName + convertWallName(wall) + ".png");
-                    file.delete();
-                    try {
-                        file.createNewFile();
-                        FileOutputStream ostream = new FileOutputStream(file);
-                        bitmap.compress(Bitmap.CompressFormat.PNG, 100, ostream);
-                        ostream.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
-        }
-
-        @Override
-        public void onBitmapFailed(Drawable errorDrawable) {
-            showNoPicDialog();
-        }
-
-        @Override
-        public void onPrepareLoad(Drawable placeHolderDrawable) {
-        }
-    };
-
-    private final com.squareup.picasso.Target wallTarget = new com.squareup.picasso.Target() {
-        @Override
-        public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        WallpaperManager wm = WallpaperManager.getInstance(DetailedWallpaperActivity.this);
-                        wm.setBitmap(bitmap);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
-        }
-
-        @Override
-        public void onBitmapFailed(Drawable errorDrawable) {
-            showNoPicDialog();
-        }
-
-        @Override
-        public void onPrepareLoad(Drawable placeHolderDrawable) {
-        }
-    };
-
-    private final com.squareup.picasso.Target wallCropTarget = new com.squareup.picasso.Target() {
-        @Override
-        public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        ImageView wall = (ImageView) findViewById(R.id.bigwall);
-                        Uri wallUri = getLocalBitmapUri(wall);
-                        if (wallUri != null) {
-                            Intent setWall = new Intent(Intent.ACTION_ATTACH_DATA);
-                            setWall.setDataAndType(wallUri, "image/*");
-                            setWall.putExtra("png", "image/*");
-                            startActivityForResult(Intent.createChooser(setWall, getString(R.string.set_as)), 1);
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
-        }
-
-        @Override
-        public void onBitmapFailed(Drawable errorDrawable) {
-            showNoPicDialog();
-        }
-
-        @Override
-        public void onPrepareLoad(Drawable placeHolderDrawable) {
-        }
-    };
 
     private String convertWallName(String link) {
         return (link

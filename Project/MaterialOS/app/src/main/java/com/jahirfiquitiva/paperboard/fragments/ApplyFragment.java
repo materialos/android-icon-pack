@@ -20,18 +20,17 @@ import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
+import org.materialos.icons.R;
+
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.materialos.icons.R;
-
 public class ApplyFragment extends Fragment {
 
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
-
-    private String intentString;
     private final List<Launcher> launchers = new ArrayList<>();
+    private String intentString;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -137,6 +136,25 @@ public class ApplyFragment extends Fragment {
                 }).show();
     }
 
+    private void gnlDialog() {
+        final String appLink = MARKET_URL + getResources().getString(R.string.extraapp);
+        new MaterialDialog.Builder(getActivity())
+                .title(R.string.gnl_title)
+                .content(R.string.gnl_content)
+                .positiveText(R.string.lni_yes)
+                .negativeText(R.string.lni_no)
+                .callback(new MaterialDialog.ButtonCallback() {
+                              @Override
+                              public void onPositive(MaterialDialog dialog) {
+                                  super.onPositive(dialog);
+                                  Intent intent = new Intent(Intent.ACTION_VIEW);
+                                  intent.setData(Uri.parse(appLink));
+                                  startActivity(intent);
+                              }
+                          }
+                ).show();
+    }
+
     public class Launcher {
 
         public final String name;
@@ -205,24 +223,5 @@ public class ApplyFragment extends Fragment {
                 isInstalled = (TextView) v.findViewById(R.id.launcherinstalled);
             }
         }
-    }
-
-    private void gnlDialog() {
-        final String appLink = MARKET_URL + getResources().getString(R.string.extraapp);
-        new MaterialDialog.Builder(getActivity())
-                .title(R.string.gnl_title)
-                .content(R.string.gnl_content)
-                .positiveText(R.string.lni_yes)
-                .negativeText(R.string.lni_no)
-                .callback(new MaterialDialog.ButtonCallback() {
-                              @Override
-                              public void onPositive(MaterialDialog dialog) {
-                                  super.onPositive(dialog);
-                                  Intent intent = new Intent(Intent.ACTION_VIEW);
-                                  intent.setData(Uri.parse(appLink));
-                                  startActivity(intent);
-                              }
-                          }
-                ).show();
     }
 }

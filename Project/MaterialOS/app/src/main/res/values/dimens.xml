@@ -5,7 +5,7 @@
     <dimen name="tabs_contentInset">57dp</dimen>
 
     <!-- Elevation of toolbar. Play with values until you find the one you want -->
-    <dimen name="toolbar_elevation">0dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
 
     <!-- 0 values -->
     <dimen name="no_width">0dp</dimen>

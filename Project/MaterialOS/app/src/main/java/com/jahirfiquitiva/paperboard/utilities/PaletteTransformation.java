@@ -18,8 +18,27 @@ public final class PaletteTransformation implements Transformation {
     private static final PaletteTransformation INSTANCE = new PaletteTransformation();
     private static final Map<Bitmap, Palette> CACHE = new WeakHashMap<>();
 
+    private PaletteTransformation() {
+    }
+
     private static Palette getPalette(Bitmap bitmap) {
         return CACHE.get(bitmap);
+    }
+
+    public static PaletteTransformation instance() {
+        return INSTANCE;
+    }
+
+    @Override
+    public final Bitmap transform(Bitmap source) {
+        final Palette palette = new Palette.Builder(source).generate();
+        CACHE.put(source, palette);
+        return source;
+    }
+
+    @Override
+    public String key() {
+        return "";
     }
 
     public static abstract class PaletteCallback implements Callback {
@@ -46,24 +65,5 @@ public final class PaletteTransformation implements Transformation {
             return mImageView.get();
         }
 
-    }
-
-    public static PaletteTransformation instance() {
-        return INSTANCE;
-    }
-
-    @Override
-    public final Bitmap transform(Bitmap source) {
-        final Palette palette = new Palette.Builder(source).generate();
-        CACHE.put(source, palette);
-        return source;
-    }
-
-    @Override
-    public String key() {
-        return "";
-    }
-
-    private PaletteTransformation() {
     }
 }

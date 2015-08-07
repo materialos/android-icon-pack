@@ -14,17 +14,24 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.balysv.materialripple.MaterialRippleLayout;
+
+import org.materialos.icons.R;
 
 import java.util.ArrayList;
 import java.util.Locale;
 
-import org.materialos.icons.R;
-
 public class IconsFragment extends Fragment {
 
-    private String[] iconsnames;
     public IconAdapter icAdapter;
+    private String[] iconsnames;
+
+    public static IconsFragment newInstance(int iconsArray) {
+        IconsFragment fragment = new IconsFragment();
+        Bundle args = new Bundle();
+        args.putInt("iconsArrayId", iconsArray);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,12 +43,24 @@ public class IconsFragment extends Fragment {
         return view;
     }
 
-    public static IconsFragment newInstance(int iconsArray) {
-        IconsFragment fragment = new IconsFragment();
-        Bundle args = new Bundle();
-        args.putInt("iconsArrayId", iconsArray);
-        fragment.setArguments(args);
-        return fragment;
+    private int convertToPixel(int dp) {
+        float px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
+                getActivity().getResources().getDisplayMetrics());
+        return (int) px;
+    }
+
+    private String convertText(String name) {
+        String partialConvertedText = name.replaceAll("_", " ");
+        String[] text = partialConvertedText.split("\\s+");
+        StringBuilder sb = new StringBuilder();
+        if (text[0].length() > 0) {
+            sb.append(Character.toUpperCase(text[0].charAt(0))).append(text[0].subSequence(1, text[0].length()).toString().toLowerCase());
+            for (int i = 1; i < text.length; i++) {
+                sb.append(" ");
+                sb.append(Character.toUpperCase(text[i].charAt(0))).append(text[i].subSequence(1, text[i].length()).toString().toLowerCase());
+            }
+        }
+        return sb.toString();
     }
 
     private class IconAdapter extends BaseAdapter {
@@ -82,7 +101,7 @@ public class IconsFragment extends Fragment {
 
             holder.icon.startAnimation(anim);
             holder.icon.setImageResource(mThumbs.get(position));
-            holder.content.setOnClickListener(new View.OnClickListener() {
+            holder.icon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     View dialogIconView = View.inflate(getActivity(), R.layout.dialog_icon, null);
@@ -98,17 +117,6 @@ public class IconsFragment extends Fragment {
             });
 
             return convertView;
-        }
-
-        class IconsHolder {
-
-            final ImageView icon;
-            final MaterialRippleLayout content;
-
-            IconsHolder(View v) {
-                icon = (ImageView) v.findViewById(R.id.icon_img);
-                content = (MaterialRippleLayout) v.findViewById(R.id.icons_ripple);
-            }
         }
 
         private void loadIcon() {
@@ -130,25 +138,14 @@ public class IconsFragment extends Fragment {
             }
         }
 
-    }
+        class IconsHolder {
 
-    private int convertToPixel(int dp) {
-        float px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
-                getActivity().getResources().getDisplayMetrics());
-        return (int) px;
-    }
+            final ImageView icon;
 
-    private String convertText(String name) {
-        String partialConvertedText = name.replaceAll("_", " ");
-        String[] text = partialConvertedText.split("\\s+");
-        StringBuilder sb = new StringBuilder();
-        if (text[0].length() > 0) {
-            sb.append(Character.toUpperCase(text[0].charAt(0))).append(text[0].subSequence(1, text[0].length()).toString().toLowerCase());
-            for (int i = 1; i < text.length; i++) {
-                sb.append(" ");
-                sb.append(Character.toUpperCase(text[i].charAt(0))).append(text[i].subSequence(1, text[i].length()).toString().toLowerCase());
+            IconsHolder(View v) {
+                icon = (ImageView) v.findViewById(R.id.icon_img);
             }
         }
-        return sb.toString();
+
     }
 }

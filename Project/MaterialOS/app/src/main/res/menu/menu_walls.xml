@@ -4,14 +4,14 @@
     tools:context="com.jahirfiquitiva.paperboard.activities.DetailedWallpaperActivity">
     <item
         android:id="@+id/download"
+        android:icon="@drawable/ic_save"
         android:orderInCategory="100"
         android:title="@string/download"
-        android:icon="@drawable/ic_save"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/apply"
+        android:icon="@drawable/ic_check"
         android:orderInCategory="200"
         android:title="@string/apply"
-        android:icon="@drawable/ic_check"
         app:showAsAction="ifRoom" />
 </menu>

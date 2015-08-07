@@ -22,19 +22,17 @@ import com.jahirfiquitiva.paperboard.utilities.JSONParser;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.materialos.icons.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.materialos.icons.R;
-
 public class WallpapersFragment extends Fragment {
 
-    private static final int DEFAULT_COLUMNS_PORTRAIT = 2;
-    private static final int DEFAULT_COLUMNS_LANDSCAPE = 3;
     public static final String NAME = "name";
     public static final String WALL = "wall";
-
+    private static final int DEFAULT_COLUMNS_PORTRAIT = 2;
+    private static final int DEFAULT_COLUMNS_LANDSCAPE = 3;
     private ArrayList<HashMap<String, String>> arraylist;
     private ViewGroup root;
     private ProgressBar mProgress;

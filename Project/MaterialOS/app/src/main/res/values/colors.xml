@@ -30,8 +30,8 @@
     <color name="transparent">#00ffffff</color>
     <color name="window_bg">@color/primary_dark</color>
     <color name="divider_grey">#d4d4d4</color>
-    
-    
+
+
     <!--The following colors are used to switch the theme of the slide out drawer if you wish it to match the rest of your dashboard better. -->
 
 

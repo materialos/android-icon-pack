@@ -2,7 +2,6 @@ package com.jahirfiquitiva.paperboard.fragments;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,14 +23,14 @@ public class HomeFragment extends Fragment {
 
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
 
-    private String PlayStoreDevAccount, PlayStoreListing, AppOnePackage, AppTwoPackage, AppThreePackage;
+    private String mPlayStoreDevAccount, mPlayStoreListing, mAppOnePackage, mAppTwoPackage, mAppThreePackage;
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.section_home, container, false);
 
-        PlayStoreDevAccount = getResources().getString(R.string.play_store_dev_link);
-        PlayStoreListing = getActivity().getPackageName();
+        mPlayStoreDevAccount = getResources().getString(R.string.play_store_dev_link);
+        mPlayStoreListing = getActivity().getPackageName();
 
         ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null) {
@@ -44,13 +43,13 @@ public class HomeFragment extends Fragment {
         CardView cardone = (CardView) root.findViewById(R.id.cardOne);
         CardView cardtwo = (CardView) root.findViewById(R.id.cardTwo);
         CardView cardthree = (CardView) root.findViewById(R.id.cardThree);
-        if (AppIsInstalled(AppOnePackage)) {
+        if (AppIsInstalled(mAppOnePackage)) {
             cardone.setVisibility((cardone.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE));
         }
-        if (AppIsInstalled(AppTwoPackage)) {
+        if (AppIsInstalled(mAppTwoPackage)) {
             cardtwo.setVisibility((cardtwo.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE));
         }
-        if (AppIsInstalled(AppThreePackage)) {
+        if (AppIsInstalled(mAppThreePackage)) {
             cardthree.setVisibility((cardthree.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE));
         }
 
@@ -59,7 +58,7 @@ public class HomeFragment extends Fragment {
         playbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent devPlay = new Intent(Intent.ACTION_VIEW, Uri.parse(PlayStoreDevAccount));
+                Intent devPlay = new Intent(Intent.ACTION_VIEW, Uri.parse(mPlayStoreDevAccount));
                 startActivity(devPlay);
             }
         });
@@ -68,7 +67,7 @@ public class HomeFragment extends Fragment {
         apponebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent appone = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + AppOnePackage));
+                Intent appone = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + mAppOnePackage));
                 startActivity(appone);
             }
         });
@@ -77,7 +76,7 @@ public class HomeFragment extends Fragment {
         apptwobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent apptwo = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + AppTwoPackage));
+                Intent apptwo = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + mAppTwoPackage));
                 startActivity(apptwo);
             }
         });
@@ -86,7 +85,7 @@ public class HomeFragment extends Fragment {
         appthreebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent appthree = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + AppThreePackage));
+                Intent appthree = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + mAppThreePackage));
                 startActivity(appthree);
             }
         });
@@ -95,7 +94,7 @@ public class HomeFragment extends Fragment {
         ratebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent rate = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + PlayStoreListing));
+                Intent rate = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + mPlayStoreListing));
                 startActivity(rate);
             }
         });
@@ -110,8 +109,8 @@ public class HomeFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) getActivity()).result.setSelectionByIdentifier(3);
-                ((MainActivity) getActivity()).switchFragment(3, getResources().getString(R.string.section_three), "Apply");
+                ((MainActivity) getActivity()).getDrawer().setSelectionByIdentifier(3);
+                ((MainActivity) getActivity()).switchFragment(3, getResources().getString(R.string.section_three), ApplyFragment.class);
             }
         });
 
