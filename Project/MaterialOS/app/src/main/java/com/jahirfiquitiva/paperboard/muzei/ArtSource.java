@@ -23,8 +23,8 @@ import java.util.Random;
 
 public class ArtSource extends RemoteMuzeiArtSource {
 
-    private static final String ARTSOURCE_NAME = "Fimbo - Icon Pack";
-    private static final String JSON_URL = "https://raw.githubusercontent.com/jahirfiquitiva/MinDesigns-Wallpapers/master/JSON-Files/walls_test.json";
+    private static final String ARTSOURCE_NAME = "MaterialOS";
+    private static final String JSON_URL = "https://raw.githubusercontent.com/materialos/Android-Icon-Pack/master/Wallpapers/wallpapers.json";
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
     private static final int COMMAND_ID_SHARE = 1337;
     private WallsDatabase wdb;

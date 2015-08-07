@@ -5,13 +5,13 @@
     <string name="app_name">"MaterialOS"</string>
     <string name="app_long_name">""</string>
     <string name="package_name">"org.materialos.icons"</string>
-    <string name="theme_description">PaperBoard is a Material Design based Icon Pack. Free and Open-Sourced.</string>
+    <string name="theme_description">PaperBoard is a Material Design based Icon Pack. Free and Open-Source.</string>
 
     <!-- Muzei Stuff -->
     <string name="artsource_name">"MaterialOS"</string>
     <string name="artsource_desc">"Material Design Wallpapers"</string>
     <string name="muzei_settings">Muzei Settings</string>
-    <string name="json_file_url">"https://raw.githubusercontent.com/jahirfiquitiva/MinDesigns-Wallpapers/master/JSON-Files/walls_test.json"</string>
+    <string name="json_file_url">"https://raw.githubusercontent.com/materialos/Android-Icon-Pack/master/Wallpapers/wallpapers.json"</string>
     <!-- Sharing wallpaper from Muzei -->
     <string name="partone">"My wallpaper for today is "</string>
     <string name="parttwo">" by "</string>
