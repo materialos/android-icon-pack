@@ -538,9 +538,6 @@
         component="ComponentInfo{rpkandrodev.yaata/rpkandrodev.yaata.activity.ThreadListActivity}"
         drawable="yaata" />
     <item
-        component="ComponentInfo{com.google.android.videos/com.google.android.youtube.videos.EntryPoint}"
-        drawable="youtube" />
-    <item
         component="ComponentInfo{com.google.android.youtube/com.google.android.youtube.app.honeycomb.Shell$HomeActivity}"
         drawable="youtube" />
     <!-- <item component="ComponentInfo{}" drawable="zipfolder"/> -->

@@ -260,6 +260,9 @@
         image="googleopinionrewards" />
     <AppIcon
         name=""
+        image="googleopinionrewards_alt" />
+    <AppIcon
+        name=""
         image="googleplusprofiler" />
     <AppIcon
         name=""
@@ -285,15 +288,6 @@
     <AppIcon
         name=""
         image="hyperlapse" />
-    <AppIcon
-        name=""
-        image="iconback" />
-    <AppIcon
-        name=""
-        image="iconmask" />
-    <AppIcon
-        name=""
-        image="iconupon" />
     <AppIcon
         name=""
         image="ifunny" />
@@ -366,6 +360,9 @@
     <AppIcon
         name=""
         image="materialos_alt6" />
+    <AppIcon
+        name=""
+        image="materialos_alt7" />
     <AppIcon
         name=""
         image="matlog" />

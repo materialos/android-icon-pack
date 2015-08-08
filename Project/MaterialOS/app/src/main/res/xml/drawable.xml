@@ -86,6 +86,7 @@
     <item drawable="googlekeyboard" />
     <item drawable="googlemessenger" />
     <item drawable="googleopinionrewards" />
+    <item drawable="googleopinionrewards_alt" />
     <item drawable="googleplusprofiler" />
     <item drawable="googleplusprofiler_alt" />
     <item drawable="gooogledrive" />
@@ -95,9 +96,6 @@
     <item drawable="hardrivewindows" />
     <item drawable="hotornot" />
     <item drawable="hyperlapse" />
-    <item drawable="iconback" />
-    <item drawable="iconmask" />
-    <item drawable="iconupon" />
     <item drawable="ifunny" />
     <item drawable="iheartradio" />
     <item drawable="illustrator" />
@@ -122,6 +120,7 @@
     <item drawable="materialos_alt4" />
     <item drawable="materialos_alt5" />
     <item drawable="materialos_alt6" />
+    <item drawable="materialos_alt7" />
     <item drawable="matlog" />
     <item drawable="mediamonkey" />
     <item drawable="mega" />
@@ -144,7 +143,6 @@
     <item drawable="nprone" />
     <item drawable="onemoreline" />
     <item drawable="oneplus" />
-    <item drawable="opinionrewards" />
     <item drawable="paintnet" />
     <item drawable="pandora" />
     <item drawable="pebble" />

@@ -3,19 +3,17 @@
 
     <string-array name="fullchangelog">
         <item>@array/important</item>
-        <item>@array/newstuff</item>
+        <!--<item>@array/newstuff</item>
         <item>@array/improvements</item>
-        <item>@array/fixes</item>
+        <item>@array/fixes</item> -->
     </string-array>
 
     <string-array name="important">
-        <item>The most important:</item>
-        <item>Massive cleanup, re-organization, updates, and repairs.</item>
-        <item>Big code, layouts and performance improvements.</item>
-        <item>All these things made by Aidan Follestad. Big thanks to him.</item>
+        <item>Important</item>
+        <item>First Release.</item>
     </string-array>
 
-    <string-array name="newstuff">
+    <!-- <string-array name="newstuff">
         <item>New</item>
         <item>Updated to Support Library 22.1.</item>
         <item>ActionBarActivity replaced with AppCompatActivity.</item>
@@ -31,6 +29,6 @@
         <item>Fixes</item>
         <item>Fixed issue with Toolbar on pre-lollipop devices.</item>
         <item>Fixed Styles problem after updating to the new Support Lib.</item>
-    </string-array>
+    </string-array> -->
 
 </resources>

@@ -251,6 +251,9 @@
         name="googleopinionrewards"
         class="" />
     <item
+        name="googleopinionrewards_alt"
+        class="" />
+    <item
         name="googleplusprofiler"
         class="" />
     <item
@@ -276,15 +279,6 @@
         class="" />
     <item
         name="hyperlapse"
-        class="" />
-    <item
-        name="iconback"
-        class="" />
-    <item
-        name="iconmask"
-        class="" />
-    <item
-        name="iconupon"
         class="" />
     <item
         name="ifunny"
@@ -359,6 +353,9 @@
         name="materialos_alt6"
         class="" />
     <item
+        name="materialos_alt7"
+        class="" />
+    <item
         name="matlog"
         class="" />
     <item
@@ -423,9 +420,6 @@
         class="" />
     <item
         name="oneplus"
-        class="" />
-    <item
-        name="opinionrewards"
         class="" />
     <item
         name="paintnet"
