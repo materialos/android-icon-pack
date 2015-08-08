@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
-    <string name="copyright">Copyright© 2015.\nLicensed under No-License License.</string>
+    <string name="copyright">Copyright 2015.</string>
     <string name="apache_license">Licensed under Apache 2.0 License.</string>
     <string name="mit_license">Licensed under MIT License.</string>
 
@@ -10,8 +10,8 @@
     <string name="dashboard_author_gplus">https://www.google.com/+JahirFiquitivaJDev</string>
     <string name="dashboard_author_desc">
         <![CDATA[
-        This <b>Dashboard App</b> was developed by <b>Jahir Fiquitiva</b>:" Graphic Design and Android Development enthusiast.
-        Official collaborators: <b>Aidan Follestad</b> and <b>Joaquin Cuitiño</b>.
+        This <b>Dashboard App</b> was developed by <b>Jahir Fiquitiva</b>
+        Official collaborators: <b>Aidan Follestad</b> and <b>Joaquin Cuitiño</b>. Assembled for MOS by Vukašin Anđelković.
         ]]>
     </string>
 
