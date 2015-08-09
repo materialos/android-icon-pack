@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private int mCurrentItem = -1;
     private boolean mFirstrun, mEnableFeatures;
     private Preferences mPrefs;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
         mPrefs = new Preferences(MainActivity.this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
 
         final String appName = getResources().getString(R.string.app_name);
         String home = getResources().getString(R.string.section_one);
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
         mDrawer = new DrawerBuilder()
                 .withActivity(this)
-                .withToolbar(toolbar)
+                .withToolbar(mToolbar)
                 .withAccountHeader(headerResult)
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(home).withIcon(GoogleMaterial.Icon.gmd_home).withIdentifier(1),
@@ -160,9 +161,13 @@ public class MainActivity extends AppCompatActivity {
     public void switchFragment(int itemId, String title, Class<? extends Fragment> fragment) {
         if (mCurrentItem == itemId) {
             // Don't allow re-selection of the currently active item
+            if (mDrawer.isDrawerOpen()) {
+                mDrawer.closeDrawer();
+            }
             return;
         }
         mCurrentItem = itemId;
+
         if (getSupportActionBar() != null)
             getSupportActionBar().setTitle(title);
 
@@ -172,6 +177,14 @@ public class MainActivity extends AppCompatActivity {
 
         if (mDrawer.isDrawerOpen()) {
             mDrawer.closeDrawer();
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if (itemId == 1 || itemId == 2) {
+                mToolbar.setElevation(0);
+            } else {
+                mToolbar.setElevation(getResources().getDimension(R.dimen.toolbar_elevation));
+            }
         }
 
     }

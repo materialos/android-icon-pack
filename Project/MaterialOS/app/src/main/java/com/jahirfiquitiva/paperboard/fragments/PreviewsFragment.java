@@ -2,13 +2,11 @@ package com.jahirfiquitiva.paperboard.fragments;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,24 +38,6 @@ public class PreviewsFragment extends Fragment {
         });
 
         return root;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Toolbar appbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
-            appbar.setElevation(0);
-        }
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Toolbar appbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
-            appbar.setElevation((int) getResources().getDimension(R.dimen.toolbar_elevation));
-        }
     }
 
     class MyPagerAdapter extends FragmentStatePagerAdapter {
