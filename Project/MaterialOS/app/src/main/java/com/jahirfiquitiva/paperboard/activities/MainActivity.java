@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.header)
-                .withSelectionFirstLine(getResources().getString(R.string.app_name))
+                .withSelectionFirstLine(appName)
                 .withSelectionSecondLine("v" + Util.getAppVersionName(this))
                 .withSavedInstance(savedInstanceState)
                 .build();

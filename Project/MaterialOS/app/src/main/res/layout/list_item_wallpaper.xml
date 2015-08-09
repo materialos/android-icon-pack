@@ -21,16 +21,15 @@
         android:background="?selectableItemBackground"
         android:scaleType="centerCrop"
         android:transitionName="image"
-        tools:ignore="ContentDescription,UnusedAttribute" />
+        tools:ignore="ContentDescription,UnusedAttribute"
+        tools:src="@drawable/dropbox" />
 
     <LinearLayout
         android:id="@+id/titlebg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:alpha="0.7"
-        android:background="#000"
-        android:elevation="@dimen/toolbar_elevation"
+        android:background="#46000000"
         tools:ignore="UnusedAttribute">
 
         <TextView
@@ -40,7 +39,7 @@
             android:layout_gravity="bottom"
             android:gravity="start"
             android:padding="@dimen/cards_padding"
-            android:textColor="#ffffffff"
+            android:textColor="?android:textColorPrimaryInverse"
             android:textSize="@dimen/text_small"
             tools:text="Title" />
 

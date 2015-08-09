@@ -10,8 +10,9 @@
     <string name="dashboard_author_gplus">https://www.google.com/+JahirFiquitivaJDev</string>
     <string name="dashboard_author_desc">
         <![CDATA[
-        This <b>Dashboard App</b> was developed by <b>Jahir Fiquitiva</b>
-        Official collaborators: <b>Aidan Follestad</b> and <b>Joaquin Cuitiño</b>. Assembled for MOS by Vukašin Anđelković.
+        Developed for MOS by <b>Daniel Ciao</b> and <b>Vukašin Anđelković</b>.<br/>
+        Based on PaperBoard developed by <b>Jahir Fiquitiva</b>.<br/>
+        PaperBoard official collaborators: <b>Aidan Follestad</b> and <b>Joaquin Cuitiño.</b>
         ]]>
     </string>
 
