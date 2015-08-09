@@ -25,7 +25,9 @@
                 android:id="@+id/dashboardauthor_card"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cards_margin"
+                android:layout_marginLeft="@dimen/cards_margin"
+                android:layout_marginRight="@dimen/cards_margin"
+                android:layout_marginTop="@dimen/cards_margin"
                 android:padding="@dimen/cards_padding"
                 card_view:cardBackgroundColor="@color/cardsbg"
                 card_view:cardElevation="@dimen/cards_elevation">
@@ -83,7 +85,7 @@
                             android:id="@+id/dashauthor_web_button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="?selectableItemBackgroundBorderless"
+                            android:background="?selectableItemBackground"
                             android:padding="@dimen/cards_padding"
                             android:text="@string/web"
                             android:textColor="@color/accent"
@@ -94,7 +96,7 @@
                             android:id="@+id/dashauthor_gplus_button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="?selectableItemBackgroundBorderless"
+                            android:background="?selectableItemBackground"
                             android:padding="@dimen/cards_padding"
                             android:text="@string/gplus"
                             android:textColor="@color/accent"
@@ -111,7 +113,9 @@
                 android:id="@+id/dev_card"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cards_margin"
+                android:layout_marginLeft="@dimen/cards_margin"
+                android:layout_marginRight="@dimen/cards_margin"
+                android:layout_marginTop="@dimen/cards_margin"
                 android:padding="@dimen/cards_padding"
                 card_view:cardBackgroundColor="@color/cardsbg"
                 card_view:cardElevation="@dimen/cards_elevation">
@@ -157,7 +161,7 @@
                             android:id="@+id/web_button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="?selectableItemBackgroundBorderless"
+                            android:background="?selectableItemBackground"
                             android:padding="@dimen/cards_padding"
                             android:text="@string/web"
                             android:textColor="@color/accent"
@@ -168,7 +172,7 @@
                             android:id="@+id/gplus_button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="?selectableItemBackgroundBorderless"
+                            android:background="?selectableItemBackground"
                             android:padding="@dimen/cards_padding"
                             android:text="@string/gplus"
                             android:textColor="@color/accent"
@@ -215,7 +219,9 @@
                 android:id="@+id/libtwocard"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cards_margin"
+                android:layout_marginLeft="@dimen/cards_margin"
+                android:layout_marginRight="@dimen/cards_margin"
+                android:layout_marginTop="@dimen/cards_margin"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:padding="@dimen/cards_padding"
@@ -237,7 +243,7 @@
 
                         <TextView
                             android:id="@+id/libtwo_title"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:ellipsize="end"
@@ -249,7 +255,7 @@
 
                         <TextView
                             android:id="@+id/libtwo_author"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/mini_margin"
                             android:layout_weight="2"
@@ -293,7 +299,9 @@
                 android:id="@+id/libthreecard"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cards_margin"
+                android:layout_marginLeft="@dimen/cards_margin"
+                android:layout_marginRight="@dimen/cards_margin"
+                android:layout_marginTop="@dimen/cards_margin"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:padding="@dimen/cards_padding"
@@ -315,7 +323,7 @@
 
                         <TextView
                             android:id="@+id/libthree_title"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:ellipsize="end"
@@ -327,7 +335,7 @@
 
                         <TextView
                             android:id="@+id/libthree_author"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/mini_margin"
                             android:layout_weight="2"
@@ -371,7 +379,9 @@
                 android:id="@+id/libfourcard"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cards_margin"
+                android:layout_marginLeft="@dimen/cards_margin"
+                android:layout_marginRight="@dimen/cards_margin"
+                android:layout_marginTop="@dimen/cards_margin"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:padding="@dimen/cards_padding"
@@ -393,7 +403,7 @@
 
                         <TextView
                             android:id="@+id/libfour_title"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:ellipsize="end"
@@ -405,7 +415,7 @@
 
                         <TextView
                             android:id="@+id/libfour_author"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/mini_margin"
                             android:layout_weight="2"
@@ -446,88 +456,12 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/libninecard"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cards_margin"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:padding="@dimen/cards_padding"
-                card_view:cardBackgroundColor="@color/cardsbg"
-                card_view:cardElevation="@dimen/cards_elevation">
-
-                <RelativeLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/cards_margin">
-
-                    <LinearLayout
-                        android:id="@+id/libnine_titles"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/cards_text_margin"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/libnine_title"
-                            android:layout_width="@dimen/no_width"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:ellipsize="end"
-                            android:maxLines="1"
-                            android:text="@string/materialripples_name"
-                            android:textColor="@color/primary"
-                            android:textSize="@dimen/text_big"
-                            android:textStyle="normal" />
-
-                        <TextView
-                            android:id="@+id/libnine_author"
-                            android:layout_width="@dimen/no_width"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/mini_margin"
-                            android:layout_weight="2"
-                            android:gravity="end"
-                            android:maxLines="2"
-                            android:text="@string/materialripples_author"
-                            android:textColor="@color/dark_grey"
-                            android:textSize="@dimen/text_ultrasmall"
-                            android:textStyle="normal" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/libnine_content"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/libnine_titles"
-                        android:layout_alignStart="@+id/libnine_titles"
-                        android:layout_below="@id/libnine_titles"
-                        android:lineSpacingMultiplier="1.2"
-                        android:textColor="@color/dark_grey"
-                        android:textSize="@dimen/text_small" />
-
-                    <TextView
-                        android:id="@+id/libnine_license"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_below="@id/libnine_content"
-                        android:layout_margin="@dimen/cards_text_margin"
-                        android:text="@string/apache_license"
-                        android:textColor="@color/dark_grey"
-                        android:textSize="@dimen/text_small" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
                 android:id="@+id/libfivecard"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cards_margin"
+                android:layout_marginLeft="@dimen/cards_margin"
+                android:layout_marginRight="@dimen/cards_margin"
+                android:layout_marginTop="@dimen/cards_margin"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:padding="@dimen/cards_padding"
@@ -549,7 +483,7 @@
 
                         <TextView
                             android:id="@+id/libfive_title"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:ellipsize="end"
@@ -561,7 +495,7 @@
 
                         <TextView
                             android:id="@+id/libfive_author"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/mini_margin"
                             android:layout_weight="2"
@@ -605,7 +539,9 @@
                 android:id="@+id/libsevencard"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cards_margin"
+                android:layout_marginLeft="@dimen/cards_margin"
+                android:layout_marginRight="@dimen/cards_margin"
+                android:layout_marginTop="@dimen/cards_margin"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:padding="@dimen/cards_padding"
@@ -627,7 +563,7 @@
 
                         <TextView
                             android:id="@+id/libseven_title"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:ellipsize="end"
@@ -639,7 +575,7 @@
 
                         <TextView
                             android:id="@+id/libseven_author"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/mini_margin"
                             android:layout_weight="2"
@@ -705,7 +641,7 @@
 
                         <TextView
                             android:id="@+id/libeight_title"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:ellipsize="end"
@@ -717,7 +653,7 @@
 
                         <TextView
                             android:id="@+id/libeight_author"
-                            android:layout_width="@dimen/no_width"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/mini_margin"
                             android:layout_weight="2"

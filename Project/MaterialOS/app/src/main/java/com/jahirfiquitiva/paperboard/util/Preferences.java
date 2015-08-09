@@ -1,4 +1,4 @@
-package com.jahirfiquitiva.paperboard.utilities;
+package com.jahirfiquitiva.paperboard.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -62,6 +62,6 @@ public class Preferences {
     }
 
     public void saveVersion() {
-        getSharedPreferences().edit().putInt(PREF_SAVED_VERSION, Util.getAppVersion(context)).apply();
+        getSharedPreferences().edit().putInt(PREF_SAVED_VERSION, Util.getAppVersionCode(context)).apply();
     }
 }

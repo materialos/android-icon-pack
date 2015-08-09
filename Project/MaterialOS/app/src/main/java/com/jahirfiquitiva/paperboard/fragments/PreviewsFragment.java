@@ -1,9 +1,10 @@
 package com.jahirfiquitiva.paperboard.fragments;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -20,14 +21,14 @@ public class PreviewsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.section_all_icons, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_icons, container, false);
 
         ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null)
             toolbar.setTitle(R.string.section_two);
 
         ViewPager mPager = (ViewPager) root.findViewById(R.id.pager);
-        mPager.setAdapter(new MyPagerAdapter(getActivity().getSupportFragmentManager()));
+        mPager.setAdapter(new MyPagerAdapter(getActivity().getFragmentManager()));
 
         SlidingTabLayout mTabs = (SlidingTabLayout) root.findViewById(R.id.tabs);
         mTabs.setViewPager(mPager);
@@ -63,7 +64,7 @@ public class PreviewsFragment extends Fragment {
 
         final String[] tabs;
 
-        public MyPagerAdapter(android.support.v4.app.FragmentManager fm) {
+        public MyPagerAdapter(FragmentManager fm) {
             super(fm);
             tabs = getResources().getStringArray(R.array.tabs);
         }

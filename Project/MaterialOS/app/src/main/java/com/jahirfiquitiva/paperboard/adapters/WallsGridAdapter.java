@@ -17,7 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.jahirfiquitiva.paperboard.fragments.WallpapersFragment;
-import com.jahirfiquitiva.paperboard.utilities.PaletteTransformation;
+import com.jahirfiquitiva.paperboard.util.PaletteTransformation;
 import com.squareup.picasso.Picasso;
 
 import org.materialos.icons.R;
@@ -25,7 +25,7 @@ import org.materialos.icons.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static com.jahirfiquitiva.paperboard.utilities.PaletteTransformation.PaletteCallback;
+import static com.jahirfiquitiva.paperboard.util.PaletteTransformation.PaletteCallback;
 
 public class WallsGridAdapter extends BaseAdapter {
 
@@ -72,7 +72,7 @@ public class WallsGridAdapter extends BaseAdapter {
         final WallsHolder holder;
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(context);
-            convertView = inflater.inflate(R.layout.item_wallpaper, parent, false);
+            convertView = inflater.inflate(R.layout.list_item_wallpaper, parent, false);
             holder = new WallsHolder(convertView);
             convertView.setTag(holder);
         } else {

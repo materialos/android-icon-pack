@@ -24,11 +24,10 @@
                 android:id="@+id/infocard"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/no_height"
                 android:clickable="false"
                 card_view:cardBackgroundColor="@color/primary"
                 card_view:cardCornerRadius="@dimen/card_corner_radius"
-                card_view:cardElevation="@dimen/no_height">
+                card_view:cardElevation="0dp">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -77,18 +76,10 @@
                             android:id="@+id/rate_button"
                             android:layout_width="150dp"
                             android:layout_height="50dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
                             android:layout_gravity="center|bottom"
                             android:layout_marginBottom="@dimen/margin_medium_th"
                             android:layout_marginTop="@dimen/dialog_margin"
-                            android:background="@drawable/rate_button"
-                            android:elegantTextHeight="false"
-                            android:elevation="4dp"
-                            android:padding="@dimen/cards_margin"
-                            android:text="RATE"
-                            android:textColor="@color/navbar"
-                            android:textSize="@dimen/text_med" />
+                            android:text="RATE" />
 
                     </LinearLayout>
 

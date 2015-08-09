@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/txtName"
-        android:layout_width="@dimen/no_width"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/request_item_padding_left"
         android:layout_marginStart="@dimen/request_item_padding_left"

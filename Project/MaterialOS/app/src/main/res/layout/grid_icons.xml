@@ -9,12 +9,10 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:columnWidth="@dimen/iconcolumn"
-        android:dividerHeight="@dimen/dividers"
-        android:gravity="center"
+        android:dividerHeight="0dp"
         android:numColumns="auto_fit"
         android:paddingBottom="@dimen/grid_padding_vertical"
         android:paddingTop="@dimen/grid_padding_vertical"
-        android:scrollbars="none"
-        android:stretchMode="columnWidth" />
+        android:stretchMode="spacingWidth" />
 
 </RelativeLayout>

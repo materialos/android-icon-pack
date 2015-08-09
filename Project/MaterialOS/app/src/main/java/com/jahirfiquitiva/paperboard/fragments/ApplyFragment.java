@@ -1,11 +1,11 @@
 package com.jahirfiquitiva.paperboard.fragments;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -34,7 +34,7 @@ public class ApplyFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.section_apply, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_apply, container, false);
 
         // Splits all launcher arrays by the | delimiter {name}|{package}
         String[] launcherArray = getResources().getStringArray(R.array.launchers);
@@ -171,7 +171,7 @@ public class ApplyFragment extends Fragment {
         final List<Launcher> launchers;
 
         LaunchersAdapter(List<Launcher> launchers) {
-            super(getActivity(), R.layout.item_launcher, R.id.launchername, launchers);
+            super(getActivity(), R.layout.list_item_launcher, R.id.launchername, launchers);
             this.launchers = launchers;
         }
 
@@ -183,7 +183,7 @@ public class ApplyFragment extends Fragment {
 
             if (item == null) {
                 LayoutInflater inflater = LayoutInflater.from(getActivity());
-                item = inflater.inflate(R.layout.item_launcher, parent, false);
+                item = inflater.inflate(R.layout.list_item_launcher, parent, false);
                 holder = new LauncherHolder(item);
                 item.setTag(holder);
             } else {

@@ -1,9 +1,9 @@
 package com.jahirfiquitiva.paperboard.fragments;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -19,7 +19,7 @@ public class CreditsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.section_credits, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_credits, container, false);
 
         ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null)
@@ -48,9 +48,6 @@ public class CreditsFragment extends Fragment {
 
         TextView okhttplib = (TextView) root.findViewById(R.id.libeight_content);
         okhttplib.setText(Html.fromHtml(getString(R.string.okhttp_desc)));
-
-        TextView rippleslib = (TextView) root.findViewById(R.id.libnine_content);
-        rippleslib.setText(Html.fromHtml(getString(R.string.materialripples_desc)));
 
         CardView libtwocard = (CardView) root.findViewById(R.id.libtwocard);
         libtwocard.setOnClickListener(new View.OnClickListener() {
@@ -103,15 +100,6 @@ public class CreditsFragment extends Fragment {
             public void onClick(View v) {
                 Intent libeightweb = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.okhttp_web)));
                 startActivity(libeightweb);
-            }
-        });
-
-        CardView libninecard = (CardView) root.findViewById(R.id.libninecard);
-        libninecard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent libnineweb = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.materialripples_web)));
-                startActivity(libnineweb);
             }
         });
 

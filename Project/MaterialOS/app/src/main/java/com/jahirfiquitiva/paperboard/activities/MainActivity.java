@@ -1,5 +1,6 @@
 package com.jahirfiquitiva.paperboard.activities;
 
+import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -8,7 +9,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -24,8 +24,8 @@ import com.jahirfiquitiva.paperboard.fragments.HomeFragment;
 import com.jahirfiquitiva.paperboard.fragments.PreviewsFragment;
 import com.jahirfiquitiva.paperboard.fragments.RequestFragment;
 import com.jahirfiquitiva.paperboard.fragments.WallpapersFragment;
-import com.jahirfiquitiva.paperboard.utilities.Preferences;
-import com.jahirfiquitiva.paperboard.utilities.Util;
+import com.jahirfiquitiva.paperboard.util.Preferences;
+import com.jahirfiquitiva.paperboard.util.Util;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -86,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.header)
-                .withSelectionFirstLine(getResources().getString(R.string.app_long_name))
-                .withSelectionSecondLine("v" + Util.getAppVersion(this))
+                .withSelectionFirstLine(getResources().getString(R.string.app_name))
+                .withSelectionSecondLine("v" + Util.getAppVersionName(this))
                 .withSavedInstance(savedInstanceState)
                 .build();
 
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null)
             getSupportActionBar().setTitle(title);
 
-        getSupportFragmentManager().beginTransaction()
+        getFragmentManager().beginTransaction()
                 .replace(R.id.main, Fragment.instantiate(MainActivity.this, fragment.getName()))
                 .commit();
 
@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showChangelogDialog() {
-        if (mPrefs.getSavedVersion() != Util.getAppVersion(this))
+        if (mPrefs.getSavedVersion() < Util.getAppVersionCode(this))
             showChangelog();
         mPrefs.saveVersion();
     }

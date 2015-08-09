@@ -2,10 +2,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
     <!-- MainActivity Strings -->
-    <string name="app_name">"MaterialOS"</string>
-    <string name="app_long_name">""</string>
+    <string name="app_name">MaterialOS</string>
     <string name="package_name">"org.materialos.icons"</string>
-    <string name="theme_description">PaperBoard is a Material Design based Icon Pack. Free and Open-Source.</string>
+    <string name="theme_description">MaterialOS is a free and open source Material Design icon pack.</string>
 
     <!-- Muzei Stuff -->
     <string name="artsource_name">"MaterialOS"</string>

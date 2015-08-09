@@ -13,7 +13,7 @@ import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.jahirfiquitiva.paperboard.utilities.Preferences;
+import com.jahirfiquitiva.paperboard.util.Preferences;
 
 import org.materialos.icons.R;
 

@@ -1,4 +1,4 @@
-package com.jahirfiquitiva.paperboard.utilities;
+package com.jahirfiquitiva.paperboard.util;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;

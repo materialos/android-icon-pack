@@ -1,10 +1,10 @@
 package com.jahirfiquitiva.paperboard.fragments;
 
+import android.app.Fragment;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -42,7 +42,7 @@ public class RequestFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.section_icon_request, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_icon_request, container, false);
 
         showNewAdviceDialog();
 
@@ -179,7 +179,7 @@ public class RequestFragment extends Fragment {
 
             if (convertView == null) {
                 LayoutInflater inflater = LayoutInflater.from(getActivity());
-                convertView = inflater.inflate(R.layout.request_item, parent, false);
+                convertView = inflater.inflate(R.layout.list_item_request_icon, parent, false);
 
                 holder = new ViewHolder();
                 holder.imgIcon = (ImageView) convertView.findViewById(R.id.imgIcon);

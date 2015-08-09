@@ -1,10 +1,10 @@
 package com.jahirfiquitiva.paperboard.fragments;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import com.jahirfiquitiva.paperboard.activities.DetailedWallpaperActivity;
 import com.jahirfiquitiva.paperboard.adapters.WallsGridAdapter;
-import com.jahirfiquitiva.paperboard.utilities.JSONParser;
+import com.jahirfiquitiva.paperboard.util.JSONParser;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,7 +41,7 @@ public class WallpapersFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        root = (ViewGroup) inflater.inflate(R.layout.section_wallpapers, container, false);
+        root = (ViewGroup) inflater.inflate(R.layout.fragment_wallpapers, container, false);
         mProgress = (ProgressBar) root.findViewById(R.id.progress);
 
         final ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();

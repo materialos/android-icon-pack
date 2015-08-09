@@ -1,10 +1,10 @@
 package com.jahirfiquitiva.paperboard.fragments;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.section_home, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_home, container, false);
 
         mPlayStoreDevAccount = getResources().getString(R.string.play_store_dev_link);
         mPlayStoreListing = getActivity().getPackageName();

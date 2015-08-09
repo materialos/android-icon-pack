@@ -1,9 +1,8 @@
 package com.jahirfiquitiva.paperboard.fragments;
 
+import android.app.Fragment;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +13,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.jahirfiquitiva.paperboard.util.Util;
 
 import org.materialos.icons.R;
 
@@ -22,31 +22,25 @@ import java.util.Locale;
 
 public class IconsFragment extends Fragment {
 
-    public IconAdapter icAdapter;
-    private String[] iconsnames;
+    private static final String ICON_ARRAY_IDS = "iconsArrayId";
+    private String[] mIconNames;
 
     public static IconsFragment newInstance(int iconsArray) {
         IconsFragment fragment = new IconsFragment();
         Bundle args = new Bundle();
-        args.putInt("iconsArrayId", iconsArray);
+        args.putInt(ICON_ARRAY_IDS, iconsArray);
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        icAdapter = new IconAdapter();
-        View view = inflater.inflate(R.layout.icons_grid, container, false);
+        IconAdapter icAdapter = new IconAdapter();
+        View view = inflater.inflate(R.layout.grid_icons, container, false);
         GridView gridview = (GridView) view.findViewById(R.id.icons_grid);
-        gridview.setColumnWidth(convertToPixel(72) + convertToPixel(4));
+        gridview.setColumnWidth(Util.convertToPixel(getActivity(), 72) + Util.convertToPixel(getActivity(), 4));
         gridview.setAdapter(icAdapter);
         return view;
-    }
-
-    private int convertToPixel(int dp) {
-        float px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
-                getActivity().getResources().getDisplayMetrics());
-        return (int) px;
     }
 
     private String convertText(String name) {
@@ -92,7 +86,7 @@ public class IconsFragment extends Fragment {
 
             if (convertView == null) {
                 LayoutInflater inflater = LayoutInflater.from(getActivity());
-                convertView = inflater.inflate(R.layout.item_icon, parent, false);
+                convertView = inflater.inflate(R.layout.list_item_icon, parent, false);
                 holder = new IconsHolder(convertView);
                 convertView.setTag(holder);
             } else {
@@ -107,7 +101,7 @@ public class IconsFragment extends Fragment {
                     View dialogIconView = View.inflate(getActivity(), R.layout.dialog_icon, null);
                     ImageView dialogIcon = (ImageView) dialogIconView.findViewById(R.id.dialogicon);
                     dialogIcon.setImageResource(mThumbs.get(position));
-                    String name = iconsnames[position].toLowerCase(Locale.getDefault());
+                    String name = mIconNames[position].toLowerCase(Locale.getDefault());
                     new MaterialDialog.Builder(getActivity())
                             .customView(dialogIconView, false)
                             .title(convertText(name))
@@ -123,12 +117,12 @@ public class IconsFragment extends Fragment {
             mThumbs = new ArrayList<>();
             final Resources resources = getResources();
             final String packageName = getActivity().getApplication().getPackageName();
-            addIcon(resources, packageName, getArguments().getInt("iconsArrayId", 0));
+            addIcon(resources, packageName, getArguments().getInt(ICON_ARRAY_IDS, 0));
         }
 
         private void addIcon(Resources resources, String packageName, int list) {
-            iconsnames = resources.getStringArray(list);
-            for (String extra : iconsnames) {
+            mIconNames = resources.getStringArray(list);
+            for (String extra : mIconNames) {
                 int res = resources.getIdentifier(extra, "drawable", packageName);
                 if (res != 0) {
                     final int thumbRes = resources.getIdentifier(extra, "drawable", packageName);

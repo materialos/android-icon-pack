@@ -66,13 +66,4 @@
         ]]>
     </string>
 
-    <string name="materialripples_author">Balys Valentukevicius</string>
-    <string name="materialripples_web">https://github.com/balysv/material-ripple/</string>
-    <string name="materialripples_name">Material Ripples</string>
-    <string name="materialripples_desc">
-        <![CDATA[
-        <b>Material Ripples</b> is a library to provide ripple effects on Android Views.
-        ]]>
-    </string>
-
 </resources>

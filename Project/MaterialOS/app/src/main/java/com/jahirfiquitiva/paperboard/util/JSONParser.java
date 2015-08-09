@@ -1,4 +1,4 @@
-package com.jahirfiquitiva.paperboard.utilities;
+package com.jahirfiquitiva.paperboard.util;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -11,6 +11,7 @@ public class JSONParser {
 
     public static JSONObject getJSONfromURL(String url) {
         try {
+            //TODO: What is up with this deprecated code?
             HttpClient cl = new DefaultHttpClient();
             HttpResponse response = cl.execute(new HttpGet(url));
             if (response.getStatusLine().getStatusCode() == 200) {
