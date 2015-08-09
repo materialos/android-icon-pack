@@ -11,5 +11,15 @@
 			"url": "https://raw.githubusercontent.com/materialos/Illustrations/master/Anas%20Khan/Raster/Mountain%20Portrait.jpg",
 			"name": "Mountain"
 		}
+		{
+			"author": "Testing",
+			"url": "http://image.fg-a.com/backgrounds/black-frost-ripples-1280.jpg",
+			"name": "Black"
+		}
+		{
+			"author": "Testing",
+			"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Flag_of_Taliban_(original).svg/2000px-Flag_of_Taliban_(original).svg.png",
+			"name": "White"
+		}
 	]
 }
