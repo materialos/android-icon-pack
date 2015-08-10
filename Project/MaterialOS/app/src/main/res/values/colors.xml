@@ -10,11 +10,10 @@
     <color name="accent_secondary">@color/accent</color>
     <color name="secondary">#009688</color>
     <color name="secondary_pressed">#26a69a</color>
-    <color name="navbar">#424242</color>
     <!-- Ctrl + H and search for color/cardsbg if you want to customize card colors individually-->
     <color name="cardsbg">#ffffff</color>
     <!-- Color for Backgrounds -->
-    <color name="light_bg">#fafafa</color>
+    <color name="light_bg">@color/background_material_light</color>
     <!-- Color for texts in Dialogs -->
     <color name="dialogcontent">#6d6d6d</color>
     <!-- Color for some ripples -->

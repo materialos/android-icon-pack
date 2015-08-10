@@ -6,140 +6,212 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.text.Html;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.jahirfiquitiva.paperboard.util.Util;
 
 import org.materialos.icons.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CreditsFragment extends Fragment {
+
+    private List<Item> mItems;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_credits, container, false);
+        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.fragment_credits, container, false);
 
         ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null)
             toolbar.setTitle(R.string.section_six);
 
-        TextView authordesc = (TextView) root.findViewById(R.id.dashauthor_info);
-        authordesc.setText(Html.fromHtml(getString(R.string.dashboard_author_desc)));
 
-        TextView designerdesc = (TextView) root.findViewById(R.id.dev_card_content);
-        designerdesc.setText(Html.fromHtml(getString(R.string.iconpack_designer_desc)));
+        mItems = new ArrayList<>();
 
-        TextView fablib = (TextView) root.findViewById(R.id.libtwo_content);
-        fablib.setText(Html.fromHtml(getString(R.string.fab_desc)));
 
-        TextView materialdialogslib = (TextView) root.findViewById(R.id.libthree_content);
-        materialdialogslib.setText(Html.fromHtml(getString(R.string.materialdialogs_desc)));
-
-        TextView materialdrawerlib = (TextView) root.findViewById(R.id.libfour_content);
-        materialdrawerlib.setText(Html.fromHtml(getString(R.string.materialdrawer_desc)));
-
-        TextView picassolib = (TextView) root.findViewById(R.id.libfive_content);
-        picassolib.setText(Html.fromHtml(getString(R.string.picasso_desc)));
-
-        TextView pkiconrequestlib = (TextView) root.findViewById(R.id.libseven_content);
-        pkiconrequestlib.setText(Html.fromHtml(getString(R.string.pkrequestmanager_desc)));
-
-        TextView okhttplib = (TextView) root.findViewById(R.id.libeight_content);
-        okhttplib.setText(Html.fromHtml(getString(R.string.okhttp_desc)));
-
-        CardView libtwocard = (CardView) root.findViewById(R.id.libtwocard);
-        libtwocard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent libtwoweb = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.fab_web)));
-                startActivity(libtwoweb);
+        for (int i = 1; ; i++) {
+            int id = getCreditsStringResource("" + i);
+            if (id == 0) {
+                break;
             }
-        });
+            Item item = new Item();
+            item.name = getString(id);
 
-        CardView libthreecard = (CardView) root.findViewById(R.id.libthreecard);
-        libthreecard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent libthreeweb = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.materialdialogs_web)));
-                startActivity(libthreeweb);
+            int subtitle = getCreditsStringResource(i + "_subtitle");
+            if (subtitle != 0) {
+                //Not a subheader
+                item.subtitle = getString(subtitle);
+                item.desc = getString(getCreditsStringResource(i + "_desc"));
+
+                int website = getCreditsStringResource(i + "_website");
+                if (website != 0) {
+                    item.website = getString(website);
+                }
+
+                int gplus = getCreditsStringResource(i + "_gplus");
+                if (gplus != 0) {
+                    item.gplus = getString(gplus);
+                }
+            } else {
+                item.header = true;
             }
-        });
 
-        CardView libfourcard = (CardView) root.findViewById(R.id.libfourcard);
-        libfourcard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent libfourweb = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.materialdrawer_web)));
-                startActivity(libfourweb);
+            mItems.add(item);
+        }
+
+        recyclerView.setAdapter(new CreditsRecyclerAdapter());
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setHasFixedSize(true);
+
+        return recyclerView;
+    }
+
+    private int getCreditsStringResource(String i) {
+        return getResources().getIdentifier("credits_item" + i, "string", getActivity().getPackageName());
+    }
+
+    private class Item {
+        boolean header;
+
+        String name;
+        String subtitle;
+        String desc;
+
+        String website;
+        String gplus;
+    }
+
+    private class CreditsRecyclerAdapter extends RecyclerView.Adapter<CreditsRecyclerAdapter.ViewHolder> {
+
+        @Override
+        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            if (viewType == 1) {
+                View view = getActivity().getLayoutInflater().inflate(R.layout.list_item_credits, parent, false);
+                return new ViewHolder(view, false);
+            } else {
+                View view = getActivity().getLayoutInflater().inflate(R.layout.list_item_credits_subheader, parent, false);
+                return new ViewHolder(view, true);
             }
-        });
+        }
 
-        CardView libfivecard = (CardView) root.findViewById(R.id.libfivecard);
-        libfivecard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent libfiveweb = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.picasso_web)));
-                startActivity(libfiveweb);
+        @Override
+        public void onBindViewHolder(ViewHolder holder, int position) {
+            final Item item = mItems.get(position);
+
+            if (item.header) {
+                holder.name.setText(item.name);
+                return;
             }
-        });
 
-        CardView libsevencard = (CardView) root.findViewById(R.id.libsevencard);
-        libsevencard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent libsevenweb = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.pkrequestmanager_web)));
-                startActivity(libsevenweb);
+            holder.name.setText(item.name);
+            holder.subtitle.setText(item.subtitle);
+            holder.desc.setText(item.desc);
+
+
+            if (item.gplus == null && item.website == null) {
+                holder.actionButtonBar.setVisibility(View.GONE);
+                holder.desc.setPadding(0, 0, 0, Util.convertToPixel(getActivity(), 24));
+            } else {
+                holder.actionButtonBar.setVisibility(View.VISIBLE);
+                holder.desc.setPadding(0, 0, 0, Util.convertToPixel(getActivity(), 16));
+
+                if (item.website != null) {
+                    holder.website.setVisibility(View.VISIBLE);
+                    holder.website.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Intent.ACTION_VIEW,
+                                    Uri.parse(item.website));
+                            startActivity(intent);
+                        }
+                    });
+                } else {
+                    holder.website.setVisibility(View.GONE);
+                }
+
+                if (item.gplus != null) {
+                    holder.gplus.setVisibility(View.VISIBLE);
+                    holder.gplus.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Intent.ACTION_SENDTO,
+                                    Uri.fromParts(
+                                            "mailto", item.gplus, null));
+                            startActivity(intent);
+                        }
+                    });
+                } else {
+                    holder.gplus.setVisibility(View.GONE);
+                }
             }
-        });
 
-        CardView libeightcard = (CardView) root.findViewById(R.id.libeightcard);
-        libeightcard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent libeightweb = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.okhttp_web)));
-                startActivity(libeightweb);
+        }
+
+        @Override
+        public int getItemViewType(int position) {
+            return mItems.get(position).header ? 0 : 1;
+        }
+
+        @Override
+        public int getItemCount() {
+            return mItems.size();
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+            private TextView name;
+            private TextView subtitle;
+            private TextView desc;
+            private Button website;
+            private Button gplus;
+            private LinearLayout actionButtonBar;
+
+            public ViewHolder(View itemView, boolean header) {
+                super(itemView);
+                if (header) {
+                    name = (TextView) itemView;
+                    return;
+                }
+
+                name = (TextView) itemView.findViewById(R.id.list_item_credits_title);
+
+
+                subtitle = (TextView) itemView.findViewById(R.id.list_item_credits_subtitle);
+                desc = (TextView) itemView.findViewById(R.id.list_item_credits_desc);
+                website = (Button) itemView.findViewById(R.id.list_item_credits_website_button);
+                gplus = (Button) itemView.findViewById(R.id.list_item_credits_gplus_button);
+                actionButtonBar = (LinearLayout) itemView.findViewById(R.id.list_item_credits_actions);
+
+                View.OnClickListener l = new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String website = mItems.get(getLayoutPosition()).website;
+                        if (website != null) {
+                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(website));
+                            startActivity(i);
+                        }
+                    }
+                };
+                itemView.setOnClickListener(l);
+                website.setOnClickListener(l);
+                gplus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String gplus = mItems.get(getLayoutPosition()).gplus;
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(gplus));
+                        startActivity(i);
+                    }
+                });
             }
-        });
-
-        TextView dashauthorweb = (TextView) root.findViewById(R.id.dashauthor_web_button);
-        dashauthorweb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent dashauthorweb = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.dashboard_author_link)));
-                startActivity(dashauthorweb);
-            }
-        });
-
-        TextView dashauthorgoogleplus = (TextView) root.findViewById(R.id.dashauthor_gplus_button);
-        dashauthorgoogleplus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent dashauthorgplus = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.dashboard_author_gplus)));
-                startActivity(dashauthorgplus);
-            }
-        });
-
-        TextView web = (TextView) root.findViewById(R.id.web_button);
-        web.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent devweb = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.dev_link)));
-                startActivity(devweb);
-            }
-        });
-
-        TextView googleplus = (TextView) root.findViewById(R.id.gplus_button);
-        googleplus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent devgplus = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.dev_gplus_link)));
-                startActivity(devgplus);
-            }
-        });
-
-        return root;
+        }
     }
 
 }

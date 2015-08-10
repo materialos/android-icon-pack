@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="list_item_credits_website_button" type="id" />
+    <item name="list_item_credits_gplus_button" type="id" />
+    <item name="list_item_credits_desc" type="id" />
+    <item name="list_item_credits_subtitle" type="id" />
+    <item name="list_item_credits_title" type="id" />
+    <item name="list_item_credits_actions" type="id" />
+</resources>

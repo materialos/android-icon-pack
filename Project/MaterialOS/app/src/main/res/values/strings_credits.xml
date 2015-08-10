@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="credits_item1">Material Open Source Project</string>
+    <string name="credits_item1_subtitle">Daniel Hickman and Corbin Crutchley</string>
+    <string name="credits_item1_website">http://materialos.com</string>
+    <string name="credits_item1_gplus">https://plus.google.com/communities/116971301213762859599</string>
+    <string name="credits_item1_desc">
+        MaterialOS is a place for all designers to contribute their Material Design or Material Inspired icons for others to use.
+        We make the icons available in as many formats as possible including all available vectors, showcases, and icon packs, such as this one.
+
+        \n\nCheck out the full list of contributors at the website.
+    </string>
+
+    <string name="credits_item2">Dashboard Developer</string>
+    <string name="credits_item2_subtitle">Daniel Ciao</string>
+    <string name="credits_item2_website">http://www.pluscubed.com/</string>
+    <string name="credits_item2_gplus">https://www.google.com/+DanielCiao</string>
+    <string name="credits_item2_desc">Modified and built the MaterialOS dashboard on top of Paperboard.</string>
+
+    <string name="credits_item3">Paperboard</string>
+    <string name="credits_item3_subtitle">Jahir Fiquitiva\n(Collaborators: Aidan Follestad and Joaquin Cuitiño)</string>
+    <string name="credits_item3_website">http://www.jahirfiquitiva.net/</string>
+    <string name="credits_item3_gplus">https://www.google.com/+JahirFiquitivaJDev</string>
+    <string name="credits_item3_desc">
+        This dashboard is built on PaperBoard, an open source icon pack dashboard template.
+
+        \n\nLicensed under the Creative Commons Attribution-ShareAlike 4.0 International Public License
+        \nCopyright 2015
+    </string>
+
+    <string name="credits_item4">Open Source Libraries:</string>
+
+    <string name="credits_item5_subtitle">Oleksandr Melnykov</string>
+    <string name="credits_item5_website">https://github.com/makovkastar/floatingactionbutton</string>
+    <string name="credits_item5">Floating Action Button</string>
+    <string name="credits_item5_desc">
+        Floating Action Button is yet another library for drawing Material Design promoted actions.
+        \n\nLicensed under the Apache 2.0 License.
+    </string>
+
+    <string name="credits_item6_subtitle">Aidan Follestad</string>
+    <string name="credits_item6_website">https://github.com/afollestad/material­dialogs</string>
+    <string name="credits_item6">Material Dialogs</string>
+    <string name="credits_item6_desc">
+        Material Dialogs is a beautiful, easy-to-use, and customizable dialogs API, enabling you to use Material designed dialogs down to API 8.
+        \n\nLicensed under the MIT License.
+    </string>
+
+    <string name="credits_item7_subtitle">Pkmmte Xeleon</string>
+    <string name="credits_item7_website">https://github.com/pkmmte/PkRequestManager</string>
+    <string name="credits_item7">PkRequestManager</string>
+    <string name="credits_item7_desc">
+		PkRequestManager is a helpful, yet simple, tool which makes it easy to load and send application icon requests for Android.
+        \n\nLicensed under the MIT License.
+    </string>
+
+    <string name="credits_item8_subtitle">Square</string>
+    <string name="credits_item8">Picasso</string>
+    <string name="credits_item8_desc">
+        Picasso is a powerful image downloading and caching library for Android.
+        \n\nLicensed under the Apache 2.0 License.
+    </string>
+    <string name="credits_item8_website">http://square.github.io/picasso/</string>
+
+    <string name="credits_item9_subtitle">Square</string>
+    <string name="credits_item9">OkHttp</string>
+    <string name="credits_item9_desc">
+        OkHttp is an HTTP and SPDY client for Android and Java applications.
+        \n\nLicensed under the Apache 2.0 License.
+    </string>
+    <string name="credits_item9_website">https://github.com/square/okhttp</string>
+
+    <string name="credits_item10_subtitle">Mike Penz</string>
+    <string name="credits_item10_website">https://github.com/mikepenz/MaterialDrawer</string>
+    <string name="credits_item10">MaterialDrawer</string>
+    <string name="credits_item10_desc">
+        The MaterialDrawer library aims to provide the easiest possible implementation of a navigation drawer for your application.
+        \n\nLicensed under the Apache 2.0 License.
+    </string>
+
+</resources>
