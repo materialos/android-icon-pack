@@ -52,7 +52,7 @@
         component="ComponentInfo{com.google.zxing.client.android/com.google.zxing.client.android.CaptureActivity}"
         drawable="barcodescanner" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.bbm/com.bbm.ui.activities.StartupActivity}"
         drawable="bbm" />
     <!-- <item component="ComponentInfo{}" drawable="blankfile-alt"/> -->
     <!-- <item component="ComponentInfo{}" drawable="blankfile"/> -->
@@ -133,12 +133,12 @@
         component="ComponentInfo{}"
         drawable="facebooklite" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.facebook.pages.app/com.facebook.pages.app.activity.PagesManagerLoginActivity}"
         drawable="facebookpages" />
     <!-- <item component="ComponentInfo{}" drawable="fbmessenger-alt"/> -->
     <!-- <item component="ComponentInfo{}" drawable="fbmessenger-alt2"/> -->
     <item
-        component="ComponentInfo{com.facebook.orca}"
+        component="ComponentInfo{com.facebook.orca/com.facebook.orca.auth.StartScreenActivity}"
         drawable="fbmessenger" />
     <item
         component="ComponentInfo{}"
@@ -157,14 +157,17 @@
         component="ComponentInfo{}"
         drawable="flipboard" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.joelapenna.foursquared/com.joelapenna.foursquared.MainActivity}"
         drawable="foursquare" />
     <!-- <item component="ComponentInfo{}" drawable="galactivlogocolor"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.android.gallery3d/com.android.gallery3d.app.GalleryActivity}"
         drawable="gallery" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.motorola.MotGallery2/com.android.gallery3d.app.GalleryActivity}"
+        drawable="gallery" />
+    <item
+        component="ComponentInfo{com.robtopx.geometryjumplite/com.robtopx.geometryjumplite.GeometryDashLite}"
         drawable="geometrydash" />
     <item
         component="ComponentInfo{com.google.android.gm/com.google.android.gm.ConversationListActivityGmail}"
@@ -179,7 +182,7 @@
         component="ComponentInfo{}"
         drawable="googlekeyboard" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.google.android.apps.messaging/com.google.android.apps.messaging.ui.ConversationListActivity}"
         drawable="googlemessenger" />
     <!-- <item component="ComponentInfo{}" drawable="googleopinionrewards_alt"/> -->
     <item
@@ -198,7 +201,7 @@
         component="ComponentInfo{com.hotornot.app/com.badoo.mobile.android.BadooActivity}"
         drawable="hotornot" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.microsoft.hyperlapsemobile/hyperlapsemobile.android.startpage}"
         drawable="hyperlapse" />
     <item
         component="ComponentInfo{mobi.ifunny/mobi.ifunny.main.IFunnyMenuActivity}"
@@ -261,7 +264,7 @@
         drawable="mileiq" />
     <!-- <item component="ComponentInfo{}" drawable="minecraft-alt"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.mojang.minecraftpe/com.mojang.minecraftpe.MainActivity}"
         drawable="minecraft" />
     <item
         component="ComponentInfo{}"
@@ -309,7 +312,7 @@
         component="ComponentInfo{com.getpebble.android/com.getpebble.android.main.activity.MainActivity}"
         drawable="pebble" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{air.com.adobe.pstouchphone/air.com.adobe.pstouchphone.AppEntry}"
         drawable="photoshop" />
     <item
         component="ComponentInfo{com.sabzira.PianoTiles/com.unity3d.player.UnityPlayerActivity}"
@@ -318,10 +321,10 @@
         component="ComponentInfo{com.umonistudio.tile/com.umonistudio.tile.tile}"
         drawable="pianotiles" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.picsart.studio/com.socialin.android.photo.picsinphoto.MainPagerActivity}"
         drawable="picsart" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.pinterest/com.pinterest.activity.PinterestActivity}"
         drawable="pinterest" />
     <!-- <item component="ComponentInfo{}" drawable="playstore-alt"/> -->
     <!-- <item component="ComponentInfo{}" drawable="playstore-alt2"/> -->
@@ -346,7 +349,7 @@
         component="ComponentInfo{com.alensw.PicFolder/com.alensw.PicFolder.GalleryActivity}"
         drawable="quickpic" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.venticake.retrica/com.venticake.retrica.MainActivity}"
         drawable="retrica" />
     <!-- <item component="ComponentInfo{}" drawable="router"/> -->
     <item
@@ -388,7 +391,7 @@
     <!-- <item component="ComponentInfo{}" drawable="starwarswikia"/> -->
     <!-- <item component="ComponentInfo{}" drawable="steam-alt"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.valvesoftware.android.steam.community/com.valvesoftware.android.steam.community.activity.MainActivity}"
         drawable="steam" />
     <!-- <item component="ComponentInfo{}" drawable="steamfolder"/> -->
     <!-- <item component="ComponentInfo{}" drawable="sublimetext-alt"/> -->
@@ -449,12 +452,15 @@
         component="ComponentInfo{tunein.player/tunein.ui.actvities.TuneInHomeActivity}"
         drawable="tunein" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.maskyn.fileeditor/com.maskyn.fileeditor.HomeActivity}"
         drawable="turboeditor" />
     <!-- <item component="ComponentInfo{}" drawable="twitch-alt"/> -->
     <!-- <item component="ComponentInfo{}" drawable="twitch-alt2"/> -->
     <item
         component="ComponentInfo{tv.twitch.android.viewer/tv.twitch.android.apps.SplashScreenActivity}"
+        drawable="twitch" />
+    <item
+        component="ComponentInfo{tv.twitch.android.app/tv.twitch.android.apps.SplashScreenActivity}"
         drawable="twitch" />
     <!-- <item component="ComponentInfo{}" drawable="twitter-alt"/> -->
     <item
@@ -472,10 +478,10 @@
         drawable="unicon" />
     <!-- <item component="ComponentInfo{}" drawable="usbfolder"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.uusafe.appmaster/com.uusafe.appmaster.ui.activity.PermissionScanActivity}"
         drawable="uupurifier" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.motorola.visualvoicemail/com.motorola.visualvoicemail.ui.VvmMainActivity}"
         drawable="verizonvoicemail" />
     <item
         component="ComponentInfo{com.viber.voip/com.viber.voip.WelcomeActivity}"
