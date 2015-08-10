@@ -13,10 +13,10 @@
     <!-- <item component="ComponentInfo{}" drawable="accountfolder"/> -->
     <!-- <item component="ComponentInfo{}" drawable="actionlauncher"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{org.adaway/org.adaway.ui.BaseActivity}"
         drawable="adaway" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{org.adblockplus.android/org.adblockplus.android.Preferences}"
         drawable="adblockplus" />
     <!-- <item component="ComponentInfo{}" drawable="aftereffects"/> -->
     <!-- <item component="ComponentInfo{}" drawable="afterlight-alt"/> -->
@@ -34,9 +34,9 @@
     <item
         component="ComponentInfo{com.enlightment.appslocker/com.enlightment.appslocker.MainActivity}"
         drawable="applock" />
-    <item
+    <!-- <item
         component="ComponentInfo{}"
-        drawable="appsettings" />
+        drawable="appsettings" /> -->
     <!-- <item component="ComponentInfo{}" drawable="archivemanager"/> -->
     <item
         component="ComponentInfo{com.metago.astro/com.metago.astro.MainActivity}"
@@ -46,7 +46,7 @@
         component="ComponentInfo{com.mufri.authenticatorplus/com.mufri.authenticatorplus.LoginActivity}"
         drawable="athuplus" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.noodlecake.rsb/com.apportable.activity.VerdeActivity}"
         drawable="bang" />
     <item
         component="ComponentInfo{com.google.zxing.client.android/com.google.zxing.client.android.CaptureActivity}"
@@ -94,11 +94,11 @@
     <!-- <item component="ComponentInfo{}" drawable="cortana-alt"/> -->
     <!-- <item component="ComponentInfo{}" drawable="cortana-alt2"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.microsoft.cortana/com.microsoft.bing.dss.SplashActivity}"
         drawable="cortana" />
     <!-- <item component="ComponentInfo{}" drawable="creativecloud"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.cyworld.camera/com.cyworld.cymera.CameraMain}"
         drawable="cymera" />
     <!-- <item component="ComponentInfo{}" drawable="downloadsfolder"/> -->
     <item
@@ -122,7 +122,7 @@
         component="ComponentInfo{com.estrongs.android.pop/com.estrongs.android.pop.view.FileExplorerActivity}"
         drawable="esfileexplorer" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.evernote/com.evernote.ui.HomeActivity}"
         drawable="evernote" />
     <!-- <item component="ComponentInfo{}" drawable="fab"/> -->
     <!-- <item component="ComponentInfo{}" drawable="facebook-alt"/> -->
@@ -141,7 +141,7 @@
         component="ComponentInfo{com.facebook.orca/com.facebook.orca.auth.StartScreenActivity}"
         drawable="fbmessenger" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.devhd.feedly/com.devhd.feedly.Main}"
         drawable="feedly" />
     <item
         component="ComponentInfo{}"
@@ -154,7 +154,7 @@
         component="ComponentInfo{com.syntellia.fleksy.kb/com.syntellia.fleksy.settings.activities.MainActivity}"
         drawable="fleksy" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{flipboard.app/flipboard.activities.LaunchActivityAlias}"
         drawable="flipboard" />
     <item
         component="ComponentInfo{com.joelapenna.foursquared/com.joelapenna.foursquared.MainActivity}"
@@ -175,12 +175,12 @@
     <item
         component="ComponentInfo{com.google.android.apps.fitness/com.google.android.apps.fitness.welcome.WelcomeActivity}"
         drawable="googlefit" />
-    <item
+    <!-- <item
         component="ComponentInfo{com.google.android.keep/com.google.android.keep.activities.BrowseActivity}"
-        drawable="googlekeep" />
-    <item
+        drawable="googlekeep" /> -->
+    <!-- <item
         component="ComponentInfo{}"
-        drawable="googlekeyboard" />
+        drawable="googlekeyboard" /> -->
     <item
         component="ComponentInfo{com.google.android.apps.messaging/com.google.android.apps.messaging.ui.ConversationListActivity}"
         drawable="googlemessenger" />
@@ -232,7 +232,7 @@
         component="ComponentInfo{kik.android/kik.android.chat.activity.IntroActivity}"
         drawable="kik" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.chatous.pointblank/com.chatous.pointblank.LauncherActivity}"
         drawable="kiwi" />
     <item
         component="ComponentInfo{com.ui.LapseItPro/com.ui.LapseIt.Main}"
@@ -249,9 +249,9 @@
     <!-- <item component="ComponentInfo{}" drawable="materialos-alt5"/> -->
     <!-- <item component="ComponentInfo{}" drawable="materialos-alt6"/> -->
     <!-- <item component="ComponentInfo{}" drawable="materialos"/> -->
-    <item
-        component="ComponentInfo{}"
-        drawable="matlog" />
+    <!-- <item
+        component="ComponentInfo{com.pluscubed.logcat/com.pluscubed.logcat.ui.LogcatActivity}"
+        drawable="matlog" /> -->
     <item
         component="ComponentInfo{com.ventismedia.android.mediamonkey/com.ventismedia.android.mediamonkey.StartActivity}"
         drawable="mediamonkey" />
@@ -266,9 +266,9 @@
     <item
         component="ComponentInfo{com.mojang.minecraftpe/com.mojang.minecraftpe.MainActivity}"
         drawable="minecraft" />
-    <item
+    <!-- <item
         component="ComponentInfo{}"
-        drawable="multiwindowview" />
+        drawable="multiwindowview" /> -->
     <!-- <item component="ComponentInfo{}" drawable="music-alt"/> -->
     <!-- <item component="ComponentInfo{}" drawable="music-alt2"/> -->
     <item
@@ -284,9 +284,9 @@
     <item
         component="ComponentInfo{com.google.android.maps.mytracks/com.google.android.apps.mytracks.TrackListActivity}"
         drawable="mytracks" />
-    <item
+    <!-- <item
         component="ComponentInfo{}"
-        drawable="nautilus" />
+        drawable="nautilus" /> -->
     <!-- <item component="ComponentInfo{}" drawable="netflix-alt"/> -->
     <item
         component="ComponentInfo{com.netflix.mediaclient/com.netflix.mediaclient.ui.launch.UIWebViewActivity}"
@@ -301,7 +301,7 @@
         component="ComponentInfo{com.smgstudio.onemoreline/com.prime31.UnityPlayerNativeActivity}"
         drawable="onemoreline" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{net.oneplus.two.vrlaunch/net.oneplus.two.vrlaunch.activities.CardboardVideoActivity}"
         drawable="oneplus" />
     <!-- <item component="ComponentInfo{}" drawable="paintnet"/> -->
     <item
@@ -335,7 +335,7 @@
         component="ComponentInfo{com.plexapp.android/com.plexapp.plex.activities.MyPlexActivity}"
         drawable="plex" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.ideashower.readitlater.pro/com.ideashower.readitlater.activity.AppCacheCheckActivity}"
         drawable="pocket" />
     <!-- <item component="ComponentInfo{}" drawable="proxy"/> -->
     <!-- <item component="ComponentInfo{}" drawable="pstouch"/> -->
@@ -352,9 +352,12 @@
         component="ComponentInfo{com.venticake.retrica/com.venticake.retrica.MainActivity}"
         drawable="retrica" />
     <!-- <item component="ComponentInfo{}" drawable="router"/> -->
-    <item
+    <!-- <item
         component="ComponentInfo{com.runtastic.android/com.runtastic.android.activities.StartActivity}"
-        drawable="runtastic" />
+        drawable="runtastic" /> -->
+    <!-- <item
+        component="ComponentInfo{com.runtastic.android.pro2/com.runtastic.android.activities.StartActivity}"
+        drawable="runtastic" /> -->
     <item
         component="ComponentInfo{com.android.settings/com.android.settings.Settings}"
         drawable="settings" />
@@ -365,9 +368,9 @@
         component="ComponentInfo{}"
         drawable="simtoolkit" />
     <!-- <item component="ComponentInfo{}" drawable="skwash"/> -->
-    <item
+    <!-- <item
         component="ComponentInfo{}"
-        drawable="skwish" />
+        drawable="skwish" /> -->
     <!-- <item component="ComponentInfo{}" drawable="skykonigicon"/> -->
     <item
         component="ComponentInfo{com.skype.raider/com.skype.raider.Main}"
@@ -404,17 +407,17 @@
     <!-- <item component="ComponentInfo{}" drawable="sublimetext"/> -->
     <!-- <item component="ComponentInfo{}" drawable="superbackup-alt"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.idea.backup.smscontacts/com.idea.backup.smscontacts.main}"
         drawable="superbackup" />
     <!-- <item component="ComponentInfo{}" drawable="supersu-alt"/> -->
     <item
         component="ComponentInfo{eu.chainfire.supersu/eu.chainfire.supersu.MainActivity-Material}"
         drawable="supersu" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.syncme.syncmeapp/com.syncme.activities.SplashActivity}"
         drawable="syncme" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{id.ridsatrio.taggr/id.ridsatrio.taggr.activities.MusicPickerActivity}"
         drawable="taggr" />
     <item
         component="ComponentInfo{com.target.ui/com.target.ui.activity.NavigationActivity}"
@@ -429,10 +432,10 @@
         drawable="telegram" />
     <!-- <item component="ComponentInfo{}" drawable="terminal"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.and.games505.Terraria/com.and.games505.Terraria.Terraria}"
         drawable="terraria" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{net.darkion.theme.maker/net.darkion.theme.maker.MainActivity}"
         drawable="themediy" />
     <item
         component="ComponentInfo{com.weather.Weather/com.weather.Weather.app.SplashScreenActivity}"
@@ -442,7 +445,7 @@
         drawable="tinder" />
     <!-- <item component="ComponentInfo{}" drawable="trashfolder"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.trello/com.trello.home.HomeActivity}"
         drawable="trello" />
     <item
         component="ComponentInfo{com.tumblr/com.tumblr.ui.activity.JumpoffActivity}"
@@ -466,9 +469,9 @@
     <item
         component="ComponentInfo{com.twitter.android/com.twitter.android.StartActivity}"
         drawable="twitter" />
-    <item
+    <!-- <item
         component="ComponentInfo{}"
-        drawable="ubby" />
+        drawable="ubby" /> -->
     <item
         component="ComponentInfo{com.ubercab/com.ubercab.UBUberActivity}"
         drawable="uber" />
@@ -488,7 +491,7 @@
         drawable="viber" />
     <!-- <item component="ComponentInfo{}" drawable="videofolder"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{co.vine.android/co.vine.android.StartActivity}"
         drawable="vine" />
     <item
         component="ComponentInfo{}"
@@ -496,26 +499,29 @@
     <item
         component="ComponentInfo{org.videolan.vlc.betav7neon/org.videolan.vlc.betav7neon.gui.MainActivity}"
         drawable="vlc" />
-    <item
+    <!-- <item
         component="ComponentInfo{}"
-        drawable="vmwareworkstation" />
+        drawable="vmwareworkstation" /> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.realvnc.viewer.android/com.realvnc.viewer.android.ConnectionChooserActivity}"
         drawable="vnc" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{android.androidVNC/android.androidVNC.androidVNC}"
+        drawable="vnc" />
+    <item
+        component="ComponentInfo{com.uzumapps.wakelockdetector/com.uzumapps.wakelockdetector.activity.IntroActivity}"
         drawable="wakelocker" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.mikepenz.unsplash/com.mikepenz.unsplash.activities.MainActivity}"
         drawable="wallsplash" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{wp.wattpad/wp.wattpad.ui.activities.LoginActivity}"
         drawable="wattpad" />
     <item
         component="ComponentInfo{com.webviewbrowser/main.java.MainActivity}"
         drawable="webviewbrowser" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.weheartit/com.weheartit.app.MainActivity}"
         drawable="weheartit" />
     <!-- <item component="ComponentInfo{}" drawable="welgbt-inbetween"/> -->
     <!-- <item component="ComponentInfo{}" drawable="welgbt-notfound"/> -->
@@ -525,7 +531,7 @@
     <!-- <item component="ComponentInfo{}" drawable="whatsapp-alt2"/> -->
     <!-- <item component="ComponentInfo{}" drawable="whatsapp-alt3"/> -->
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.whatsapp/com.whatsapp.Main}"
         drawable="whatsapp" />
     <!-- <item component="ComponentInfo{}" drawable="wikipedia-alt"/> -->
     <item
@@ -538,8 +544,11 @@
         component="ComponentInfo{com.wunderkinder.wunderlistandroid/com.wunderkinder.wunderlistandroid.activity.WLMainFragmentActivity}"
         drawable="wunderlist" />
     <item
+        component="ComponentInfo{com.wunderkinder.wunderlistandroidedu/com.wunderkinder.wunderlistandroid.activity.WLMainFragmentActivity}"
+        drawable="wunderlist" />
+    <!-- <item
         component="ComponentInfo{}"
-        drawable="xposedinstaller" />
+        drawable="xposedinstaller" /> -->
     <item
         component="ComponentInfo{rpkandrodev.yaata/rpkandrodev.yaata.activity.ThreadListActivity}"
         drawable="yaata" />
