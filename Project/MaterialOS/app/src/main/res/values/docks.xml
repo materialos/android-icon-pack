@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-
-    <string-array name="dock_backgroundlist">
-        <item>dock_a</item>
-        <item>dock_b</item>
-    </string-array>
-
-</resources>

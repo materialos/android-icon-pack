@@ -9,23 +9,22 @@
     <!-- All of your Latest icons listed here -->
     <string-array name="latest"></string-array>
 
-
     <!-- ALL ICONS -->
     <!-- All of your icons listed here -->
-    <string-array name="icon_pack" translatable="false">
-        <item>projects365</item>
+    <string-array name="icon_pack_names" translatable="false">
+        <item>Projects365</item>
         <item>aa</item>
-        <item>accountfolder</item>
-        <item>actionlauncher</item>
-        <item>adaway</item>
-        <item>adblockplus</item>
-        <item>aftereffects</item>
-        <item>afterlight_alt</item>
-        <item>afterlight_alt2</item>
-        <item>afterlight</item>
-        <item>ampere</item>
-        <item>androidstudio</item>
-        <item>applock</item>
+        <item>Account Folder</item>
+        <item>Action Launcher</item>
+        <item>AdAway</item>
+        <item>Adblock Plus</item>
+        <item>After Effects</item>
+        <item>Afterlight Alt</item>
+        <item>Afterlight Alt2</item>
+        <item>Afterlight</item>
+        <item>Ampere</item>
+        <item>Android Studio</item>
+        <item>AppLock</item>
         <item>appsettings</item>
         <item>archivemanager</item>
         <item>astro</item>

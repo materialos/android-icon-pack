@@ -57,7 +57,7 @@ public class PreviewsFragment extends Fragment {
                     f = IconsFragment.newInstance(R.array.latest);
                     break;
                 case 1:
-                    f = IconsFragment.newInstance(R.array.icon_pack);
+                    f = IconsFragment.newInstance(R.array.icon_pack_names);
                     break;
 
             }
