@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-
     <!-- These sections below are for your "Previews" section -->
-    <!-- These names should match YOUR actual icon names
-    	 the names used below are just for sampling purposes -->
 
     <!-- LATEST ICONS -->
     <!-- All of your Latest icons listed here -->
@@ -12,25 +9,25 @@
     <!-- ALL ICONS -->
     <!-- All of your icons listed here -->
     <string-array name="icon_pack_names" translatable="false">
-        <item>Projects365</item>
-        <item>aa</item>
-        <item>Account Folder</item>
-        <item>Action Launcher</item>
-        <item>AdAway</item>
-        <item>Adblock Plus</item>
-        <item>After Effects</item>
+        <item>Projects365,Daniel Hickman</item>
+        <item>aa,Greg Ives</item>
+        <item>Account Folder,accountfolder,Wayne Kosimoto</item>
+        <item>Action Launcher,actionlauncher,Jahir Fiquitiva & Corbin Crutchley</item>
+        <item>AdAway,Createme</item>
+        <item>Adblock Plus,Greg Ives</item>
+        <item>After Effects,Alex Mueller</item>
         <item>Afterlight Alt</item>
         <item>Afterlight Alt 2</item>
         <item>Afterlight</item>
         <item>Ampere</item>
         <item>Android Studio</item>
         <item>AppLock</item>
-        <item>App Settings</item>
+        <item>App Settings,Greg Ives</item>
         <item>Archive Manager</item>
         <item>Astro</item>
         <item>Authenticator Plus,athuplus,Daniel Hickman</item>
         <item>Authenticator Plus Alt</item>
-        <item>Bang</item>
+        <item>Bang,Greg Ives</item>
         <item>Barcode Scanner</item>
         <item>BBM</item>
         <item>Blank File</item>
@@ -40,62 +37,62 @@
         <item>Blender</item>
         <item>Boombox</item>
         <item>Box</item>
-        <item>Box Folder</item>
-        <item>Brackets</item>
+        <item>Box Folder,boxfolder,Wayne Kosimoto</item>
+        <item>Brackets,Corbin Crutchley</item>
         <item>Browser</item>
-        <item>Cat Folder</item>
-        <item>CCleaner Alt</item>
-        <item>CCleaner</item>
+        <item>Cat Folder,catfolder,Wayne Kosimoto</item>
+        <item>CCleaner Alt,Corbin Crutchley</item>
+        <item>CCleaner,Corbin Crutchley</item>
         <item>Chrome</item>
         <item>Chrome Beta Alt 2</item>
         <item>Chrome Dev Alt 2</item>
         <item>Chrome Alt</item>
         <item>Chrome Alt 2</item>
         <item>Chromium Alt</item>
-        <item>Clock</item>
-        <item>CM Themes</item>
-        <item>Code Folder</item>
+        <item>Clock,Greg Ives</item>
+        <item>CM Themes,Greg Ives</item>
+        <item>Code Folder,codefolder,Wayne Kosimoto</item>
         <item>Contacts</item>
-        <item>Cortana</item>
+        <item>Cortana,Corbin Crutchley</item>
         <item>Cortana Alt</item>
-        <item>Cortana Alt 2</item>
-        <item>Creative Cloud</item>
+        <item>Cortana Alt 2,Corbin Crutchley</item>
+        <item>Creative Cloud,Alex Mueller</item>
         <item>Cymera</item>
-        <item>Downloads Folder</item>
+        <item>Downloads Folder,downloadsfolder,Wayne Kosimoto</item>
         <item>Dropbox</item>
-        <item>Dropbox Folder</item>
+        <item>Dropbox Folder,dropboxfolder,Wayne Kosimoto</item>
         <item>Duolingo</item>
         <item>Easy Taxi</item>
         <item>Edjing</item>
         <item>Email</item>
-        <item>ES File Explorer</item>
+        <item>ES File Explorer,Greg Ives</item>
         <item>ES File Explorer Alt</item>
         <item>Evernote</item>
         <item>FAB</item>
         <item>Facebook</item>
         <item>Facebook Lite</item>
         <item>Facebook Pages</item>
-        <item>Facebook Alt</item>
-        <item>Facebook Messenger</item>
-        <item>Facebook Messenger Alt</item>
+        <item>Facebook Alt,Greg Ives</item>
+        <item>Facebook Messenger,Alex Mueller</item>
+        <item>Facebook Messenger Alt,Greg Ives</item>
         <item>Facebook Messenger Alt 2</item>
-        <item>Feedly</item>
+        <item>Feedly,Createme</item>
         <item>File Manager</item>
-        <item>Finder Folder</item>
+        <item>Finder Folder,finderfolder,Wayne Kosimoto</item>
         <item>Firefox</item>
         <item>Fleksy</item>
         <item>Flipboard</item>
         <item>Foursquare</item>
-        <item>Galactiv</item>
-        <item>Gallery</item>
+        <item>Galactiv,Corbin Crutchley</item>
+        <item>Gallery,Createme</item>
         <item>Geometry Dash</item>
         <item>Gmail</item>
         <item>Google Fit</item>
-        <item>Google Keep</item>
+        <item>Google Keep,Corbin Crutchley</item>
         <item>Google Keyboard</item>
         <item>Google Messenger</item>
         <item>Google Opinion Rewards</item>
-        <item>Google Opinion Rewards Alt</item>
+        <item>Google Opinion Rewards Alt,,Createme</item>
         <item>Google Plus Renamer</item>
         <item>Google Plus Renamer Alt</item>
         <item>Gooogle Drive</item>
@@ -104,10 +101,10 @@
         <item>Hardrive</item>
         <item>Hardrive Windows</item>
         <item>Hot or Not</item>
-        <item>Hyperlapse</item>
+        <item>Hyperlapse,Alex Mueller</item>
         <item>iFunny</item>
         <item>iHeart Radio</item>
-        <item>Illustrator</item>
+        <item>Illustrator,Alex Mueller</item>
         <item>Imgur</item>
         <item>Inbox</item>
         <item>Ingress</item>
@@ -116,10 +113,10 @@
         <item>Journey Alt</item>
         <item>Journey</item>
         <item>Journey Alt 2</item>
-        <item>Kik</item>
+        <item>Kik,Christopher Bravata</item>
         <item>Kiwi</item>
         <item>Lapse It</item>
-        <item>Libre Office Writter</item>
+        <item>Libre Office Writer,libreofficewritter,Corbin Crutchley</item>
         <item>Line</item>
         <item>Lollypop</item>
         <item>MaterialOS</item>
@@ -131,15 +128,15 @@
         <item>MaterialOS Alt 6</item>
         <item>MaterialOS Alt 7</item>
         <item>MatLog,Daniel Ciao</item>
-        <item>Media Monkey</item>
+        <item>Media Monkey,Corbin Crutchley</item>
         <item>Mega</item>
         <item>Midori</item>
         <item>MileIQ</item>
         <item>Minecraft</item>
         <item>Minecraft Alt</item>
-        <item>MultiWindow View</item>
-        <item>Music</item>
-        <item>Music Folder</item>
+        <item>MultiWindow View,Corbin Crutchley</item>
+        <item>Music,Greg Ives</item>
+        <item>Music Folder,musicfolder,Wayne Kosimoto</item>
         <item>MusixMatch</item>
         <item>Music Alt</item>
         <item>Music Alt 2</item>
@@ -148,64 +145,64 @@
         <item>Nautilus</item>
         <item>Netflix</item>
         <item>Netflix Alt</item>
-        <item>Notifications Off</item>
+        <item>Notifications Off,Greg Ives</item>
         <item>NPR One</item>
-        <item>One More Line</item>
-        <item>One Plus</item>
+        <item>One More Line,Greg Ives</item>
+        <item>One Plus,Alex Mueller</item>
         <item>Paint.Net</item>
         <item>Pandora</item>
-        <item>Pebble</item>
-        <item>Pebble Alt</item>
-        <item>Photoshop</item>
-        <item>Piano Tiles</item>
+        <item>Pebble,Corbin Crutchley</item>
+        <item>Pebble Alt,Brian Medina</item>
+        <item>Photoshop,Alex Mueller</item>
+        <item>Piano Tiles,Greg Ives</item>
         <item>Picsart</item>
         <item>Pinterest</item>
-        <item>Play Store</item>
+        <item>Play Store,Greg Ives</item>
         <item>Play Store Alt</item>
         <item>Play Store Alt 2</item>
         <item>Plex</item>
         <item>Pocket</item>
         <item>Proxy</item>
-        <item>PS Touch</item>
-        <item>Public Folder</item>
+        <item>PS Touch,Greg Ives</item>
+        <item>Public Folder,publicfolder,Wayne Kosimoto</item>
         <item>Public Folder Alt</item>
-        <item>Pushbullet</item>
-        <item>Quickpic</item>
+        <item>Pushbullet,Greg Ives</item>
+        <item>Quickpic,Greg Ives</item>
         <item>Quickpic Alt</item>
         <item>Retrica</item>
-        <item>Router</item>
+        <item>Router,Corbin Crutchley</item>
         <item>Runtastic</item>
-        <item>Settings</item>
+        <item>Settings,Corbin Crutchley</item>
         <item>Shazam</item>
-        <item>SIM Toolkit</item>
-        <item>Skwash</item>
-        <item>Skwish</item>
+        <item>SIM Toolkit,Createme</item>
+        <item>Skwash,Corbin Crutchley</item>
+        <item>Skwish,Corbin Crutchley</item>
         <item>Sky Konig</item>
         <item>Skype</item>
-        <item>Snapchat</item>
+        <item>Snapchat,Greg Ives</item>
         <item>Snapchat Alt</item>
         <item>SoundCloud</item>
         <item>SoundHound</item>
         <item>Spotify</item>
         <item>Stack Exchange</item>
-        <item>Star Wars Wikia</item>
-        <item>Steam</item>
-        <item>Steam Folder</item>
-        <item>Steam Alt</item>
-        <item>Sublime Text</item>
-        <item>Sublime Text Alt</item>
-        <item>Sublime Text Alt 2</item>
-        <item>Sublime Text Alt 3</item>
-        <item>Sublime Text Alt 4</item>
-        <item>Sublime Text Alt 5</item>
-        <item>Sublime Text Alt 6</item>
-        <item>Sublime Text Alt 7</item>
+        <item>Star Wars Wikia,Alex Mueller</item>
+        <item>Steam,Zachary Pierson</item>
+        <item>Steam Folder,steamfolder,Wayne Kosimoto</item>
+        <item>Steam Alt,steam_alt,Zachary Pierson</item>
+        <item>Sublime Text,sublimetext,Eduardo Pratti</item>
+        <item>Sublime Text Alt,sublimetext_alt,Eduardo Pratti</item>
+        <item>Sublime Text Alt 2,sublimetext_alt2,Eduardo Pratti</item>
+        <item>Sublime Text Alt 3,sublimetext_alt3,Eduardo Pratti</item>
+        <item>Sublime Text Alt 4,sublimetext_alt4,Eduardo Pratti</item>
+        <item>Sublime Text Alt 5,sublimetext_alt5,Eduardo Pratti</item>
+        <item>Sublime Text Alt 6,sublimetext_alt6,Eduardo Pratti</item>
+        <item>Sublime Text Alt 7,sublimetext_alt7,Eduardo Pratti</item>
         <item>Super Backup</item>
         <item>Super Backup Alt</item>
         <item>SuperSU</item>
-        <item>SuperSU Alt</item>
-        <item>SyncMe</item>
-        <item>Taggr</item>
+        <item>SuperSU Alt,Createme</item>
+        <item>Sync.ME,syncme,Greg Ives</item>
+        <item>Taggr,Greg Ives</item>
         <item>Target</item>
         <item>Telegram</item>
         <item>Telegram Alt</item>
@@ -213,38 +210,38 @@
         <item>Telegram Alt 3</item>
         <item>Telegram Alt 4</item>
         <item>Telegram Alt 5</item>
-        <item>Terminal</item>
+        <item>Terminal,Corbin Crutchley</item>
         <item>Terraria</item>
-        <item>ThemeDIY</item>
+        <item>ThemeDIY,Greg Ives</item>
         <item>The Weather Channel</item>
         <item>Tinder</item>
-        <item>Trash Folder</item>
+        <item>Trash Folder,trashfolder,Wayne Kosimoto</item>
         <item>Trello</item>
         <item>Tumblr</item>
         <item>TuneIn</item>
-        <item>TuneIn Alt</item>
+        <item>TuneIn Alt,Createme</item>
         <item>Turbo Editor</item>
         <item>Twitch</item>
         <item>Twitch Alt</item>
-        <item>Twitch Alt 2</item>
+        <item>Twitch Alt 2,Corbin Crutchley</item>
         <item>Twitter</item>
         <item>Twitter Alt</item>
-        <item>Ubby</item>
+        <item>Ubby,Corbin Crutchley</item>
         <item>Uber</item>
-        <item>Unicon</item>
-        <item>Unicon Alt</item>
-        <item>USB Folder</item>
+        <item>Unicon,Createme</item>
+        <item>Unicon Alt,Greg Ives</item>
+        <item>USB Folder,usbfolder,Wayne Kosimoto</item>
         <item>UU Purifier</item>
         <item>Verizon Voicemail</item>
         <item>Viber</item>
-        <item>Video Folder</item>
+        <item>Video Folder,videofolder,Wayne Kosimoto</item>
         <item>Vine</item>
         <item>Visual Voicemail</item>
         <item>VLC</item>
-        <item>VMWare Workstation</item>
-        <item>VNC</item>
-        <item>WakeLocker</item>
-        <item>Wallsplash</item>
+        <item>VMWare Workstation,Corbin Crutchley</item>
+        <item>VNC,Corbin Crutchley</item>
+        <item>WakeLocker,Corbin Crutchley</item>
+        <item>Wallsplash,Greg Ives</item>
         <item>Wattpad</item>
         <item>Webview Browser</item>
         <item>WeHeartIt</item>
@@ -252,18 +249,18 @@
         <item>WeLGBT Inbetween</item>
         <item>WeLGBT Not Found</item>
         <item>WeLGBT Poor</item>
-        <item>WhatsApp</item>
+        <item>WhatsApp,Greg Ives</item>
         <item>WhatsApp Alt</item>
-        <item>WhatsApp Alt 2</item>
+        <item>WhatsApp Alt 2,Createme</item>
         <item>WhatsApp Alt 3</item>
         <item>Wikipedia</item>
-        <item>Wikipedia Alt</item>
-        <item>Wolz</item>
+        <item>Wikipedia Alt,Createme</item>
+        <item>Wolz,Greg Ives</item>
         <item>Wunderlist</item>
-        <item>Xposed Installer</item>
-        <item>Yaata</item>
-        <item>Youtube</item>
-        <item>Zip Folder</item>
+        <item>Xposed Installer,Greg Ives</item>
+        <item>Yaata,Corbin Crutchley</item>
+        <item>Youtube,Greg Ives</item>
+        <item>Zip Folder,zipfolder,Wayne Kosimoto</item>
     </string-array>
 
 
