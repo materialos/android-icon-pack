@@ -43,14 +43,37 @@ public class IconsFragment extends Fragment {
         return view;
     }
 
+    private String getUiName(String name) {
+        if (name.contains(",")) {
+            return name.substring(0, name.indexOf(","));
+        } else {
+            return name;
+        }
+    }
+
     private String getDrawableName(String name) {
-        String partialConvertedText = name.toLowerCase();
-        String[] words = partialConvertedText.split("\\s+");
+        String lowerCase = name.toLowerCase();
+
+        if (lowerCase.contains(",")) {
+            int first = lowerCase.indexOf(",") + 1;
+            int last = lowerCase.lastIndexOf(",");
+            if (lowerCase.lastIndexOf(",") != lowerCase.indexOf(",")) {
+                return lowerCase.substring(first, last);
+            } else {
+                lowerCase = lowerCase.substring(0, lowerCase.indexOf(",") - 2);
+            }
+        }
+
+        String[] words = lowerCase.split("\\s+");
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < words.length; i++) {
             String word = words[i];
-            if (i == words.length - 1 && word.startsWith("alt")) {
+            if (word.equals("alt")) {
                 sb.append("_").append(word);
+                if (words.length > i + 1) {
+                    sb.append(words[i + 1]);
+                }
+                i++;
             } else {
                 sb.append(word);
             }
@@ -102,7 +125,7 @@ public class IconsFragment extends Fragment {
                     View dialogIconView = View.inflate(getActivity(), R.layout.dialog_icon, null);
                     ImageView dialogIcon = (ImageView) dialogIconView.findViewById(R.id.dialogicon);
                     dialogIcon.setImageResource(mThumbs.get(position));
-                    String name = mIconNames[position];
+                    String name = getUiName(mIconNames[position]);
                     new MaterialDialog.Builder(getActivity())
                             .customView(dialogIconView, false)
                             .title(name)
