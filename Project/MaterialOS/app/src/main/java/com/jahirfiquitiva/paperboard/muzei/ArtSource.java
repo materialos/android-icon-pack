@@ -84,7 +84,7 @@ public class ArtSource extends RemoteMuzeiArtSource {
                             getString(R.string.partthree) + iconPackName +
                             getString(R.string.partfour) + storeUrl);
 
-            shareWall = Intent.createChooser(shareWall, getString(R.string.share_title));
+            shareWall = Intent.createChooser(shareWall, getString(R.string.share_via));
             shareWall.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(shareWall);
         }

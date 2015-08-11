@@ -21,8 +21,8 @@
 
     <!-- Strings for Dropdown Menu & Requests -->
     <string name="share">Share theme</string>
-    <string name="share_title">Share via</string>
-    <string name="send_title">Send via</string>
+    <string name="share_via">Share via</string>
+    <string name="send_via">Send via</string>
     <string name="rate">Rate theme</string>
     <string name="sendemail">Email developer</string>
     <string name="changelog">See changelog</string>

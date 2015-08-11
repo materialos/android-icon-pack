@@ -235,11 +235,11 @@ public class MainActivity extends AppCompatActivity {
                 sharingIntent.setType("text/plain");
                 String shareBody =
                         getResources().getString(R.string.share_one) +
-                                getResources().getString(R.string.iconpack_designer) +
+                                getResources().getString(R.string.share_name) +
                                 getResources().getString(R.string.share_two) +
                                 MARKET_URL + getPackageName();
                 sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
-                startActivity(Intent.createChooser(sharingIntent, (getResources().getString(R.string.share_title))));
+                startActivity(Intent.createChooser(sharingIntent, (getResources().getString(R.string.share_via))));
                 break;
 
             case R.id.sendemail:
@@ -264,7 +264,7 @@ public class MainActivity extends AppCompatActivity {
                 emailBuilder.append("\nApp Version Code: ").append(appInfo.versionCode);
 
                 intent.putExtra(Intent.EXTRA_TEXT, emailBuilder.toString());
-                startActivity(Intent.createChooser(intent, (getResources().getString(R.string.send_title))));
+                startActivity(Intent.createChooser(intent, (getResources().getString(R.string.send_via))));
                 break;
 
             case R.id.changelog:

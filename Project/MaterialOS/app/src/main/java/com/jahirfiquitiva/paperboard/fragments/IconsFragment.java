@@ -11,6 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.jahirfiquitiva.paperboard.util.Util;
@@ -81,6 +82,14 @@ public class IconsFragment extends Fragment {
         return sb.toString();
     }
 
+    private String getDesignerName(String name) {
+        if (name.contains(",")) {
+            return name.substring(name.lastIndexOf(",") + 1, name.length());
+        } else {
+            return null;
+        }
+    }
+
     private class IconAdapter extends BaseAdapter {
         private ArrayList<Integer> mThumbs;
 
@@ -123,11 +132,20 @@ public class IconsFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     View dialogIconView = View.inflate(getActivity(), R.layout.dialog_icon, null);
-                    ImageView dialogIcon = (ImageView) dialogIconView.findViewById(R.id.dialogicon);
+                    ImageView dialogIcon = (ImageView) dialogIconView.findViewById(R.id.dialog_icon_image);
                     dialogIcon.setImageResource(mThumbs.get(position));
+
+                    TextView designer = (TextView) dialogIconView.findViewById(R.id.dialog_icon_designer_text);
+                    String designerName = getDesignerName(mIconNames[position]);
+                    if (designerName != null) {
+                        designer.setText(getString(R.string.designer) + designerName);
+                    } else {
+                        designer.setVisibility(View.GONE);
+                    }
+
                     String name = getUiName(mIconNames[position]);
                     new MaterialDialog.Builder(getActivity())
-                            .customView(dialogIconView, false)
+                            .customView(dialogIconView, true)
                             .title(name)
                             .positiveText(R.string.close)
                             .show();
