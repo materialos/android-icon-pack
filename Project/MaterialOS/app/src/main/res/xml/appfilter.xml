@@ -11,7 +11,9 @@
         component="ComponentInfo{com.aa.generaladaptiveapps/com.aa.generaladaptiveapps.BaseActivity}"
         drawable="aa" />
     <!-- <item component="ComponentInfo{}" drawable="accountfolder"/> -->
-    <!-- <item component="ComponentInfo{}" drawable="actionlauncher"/> -->
+    <item
+        component="ComponentInfo{com.actionlauncher.playstore/com.actionlauncher.ActionLauncherActivity}"
+        drawable="actionlauncher" />
     <item
         component="ComponentInfo{org.adaway/org.adaway.ui.BaseActivity}"
         drawable="adaway" />
@@ -96,7 +98,9 @@
     <item
         component="ComponentInfo{com.microsoft.cortana/com.microsoft.bing.dss.SplashActivity}"
         drawable="cortana" />
-    <!-- <item component="ComponentInfo{}" drawable="creativecloud"/> -->
+    <item
+        component="ComponentInfo{com.adobe.cc/com.adobe.cc.SplashScreen}"
+        drawable="creativecloud" />
     <item
         component="ComponentInfo{com.cyworld.camera/com.cyworld.cymera.CameraMain}"
         drawable="cymera" />
@@ -151,7 +155,13 @@
         component="ComponentInfo{org.mozilla.firefox_beta/org.mozilla.firefox_beta.App}"
         drawable="firefox" />
     <item
+        component="ComponentInfo{org.mozilla.firefox/org.mozilla.firefox.App}"
+        drawable="firefox" />
+    <item
         component="ComponentInfo{com.syntellia.fleksy.kb/com.syntellia.fleksy.settings.activities.MainActivity}"
+        drawable="fleksy" />
+    <item
+        component="ComponentInfo{com.syntellia.fleksy.keyboard/com.syntellia.fleksy.settings.activities.MainActivity}"
         drawable="fleksy" />
     <item
         component="ComponentInfo{flipboard.app/flipboard.activities.LaunchActivityAlias}"
@@ -212,6 +222,9 @@
     <!-- <item component="ComponentInfo{}" drawable="illustrator"/> -->
     <item
         component="ComponentInfo{com.imgur.mobile/com.imgur.mobile.MainActivity}"
+        drawable="imgur" />
+    <item
+        component="ComponentInfo{com.imgur.mobile/com.imgur.mobile.Launcher}"
         drawable="imgur" />
     <item
         component="ComponentInfo{com.google.android.apps.inbox/com.google.android.apps.bigtop.activities.InitActivity}"
@@ -456,6 +469,9 @@
         drawable="tunein" />
     <item
         component="ComponentInfo{com.maskyn.fileeditor/com.maskyn.fileeditor.HomeActivity}"
+        drawable="turboeditor" />
+    <item
+        component="ComponentInfo{com.maskyn.fileeditor/com.maskyn.fileeditor.FabricEditorActivity}"
         drawable="turboeditor" />
     <!-- <item component="ComponentInfo{}" drawable="twitch-alt"/> -->
     <!-- <item component="ComponentInfo{}" drawable="twitch-alt2"/> -->
