@@ -44,9 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static final boolean WITH_LICENSE_CHECKER = false;
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
+
     public String version;
     private Drawer mDrawer = null;
-    private int mCurrentItem = -1;
+    private int mCurrentSelectedPosition = -1;
     private boolean mFirstrun, mEnableFeatures;
     private Preferences mPrefs;
     private Toolbar mToolbar;
@@ -149,9 +150,17 @@ public class MainActivity extends AppCompatActivity {
         runLicenseChecker();
 
         if (savedInstanceState == null) {
-            mCurrentItem = -1;
+            mCurrentSelectedPosition = -1;
             mDrawer.setSelectionByIdentifier(1);
+        } else {
+            mCurrentSelectedPosition = mDrawer.getCurrentSelection();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mDrawer.setSelection(mCurrentSelectedPosition);
     }
 
     public Drawer getDrawer() {
@@ -159,21 +168,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void switchFragment(int itemId, String title, Class<? extends Fragment> fragment) {
-        if (mCurrentItem == itemId) {
-            // Don't allow re-selection of the currently active item
-            if (mDrawer.isDrawerOpen()) {
-                mDrawer.closeDrawer();
-            }
-            return;
-        }
-        mCurrentItem = itemId;
-
-        if (getSupportActionBar() != null)
-            getSupportActionBar().setTitle(title);
-
-        getFragmentManager().beginTransaction()
-                .replace(R.id.main, Fragment.instantiate(MainActivity.this, fragment.getName()))
-                .commit();
 
         if (mDrawer.isDrawerOpen()) {
             mDrawer.closeDrawer();
@@ -186,6 +180,21 @@ public class MainActivity extends AppCompatActivity {
                 mToolbar.setElevation(getResources().getDimension(R.dimen.toolbar_elevation));
             }
         }
+
+        if (mCurrentSelectedPosition == itemId) {
+            // Don't allow re-selection of the currently active item
+            return;
+        }
+
+        mCurrentSelectedPosition = mDrawer.getPositionFromIdentifier(itemId);
+
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle(title);
+
+        getFragmentManager().beginTransaction()
+                .replace(R.id.main, Fragment.instantiate(MainActivity.this, fragment.getName()))
+                .commit();
+
 
     }
 
@@ -321,7 +330,7 @@ public class MainActivity extends AppCompatActivity {
                 .callback(new MaterialDialog.ButtonCallback() {
                     @Override
                     public void onPositive(MaterialDialog dialog) {
-                        int nSelection = mCurrentItem - 1;
+                        int nSelection = mCurrentSelectedPosition - 1;
                         if (mDrawer != null)
                             mDrawer.setSelection(nSelection);
                     }
