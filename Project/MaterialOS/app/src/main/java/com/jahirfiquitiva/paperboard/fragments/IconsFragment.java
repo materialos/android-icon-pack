@@ -61,7 +61,7 @@ public class IconsFragment extends Fragment {
             if (lowerCase.lastIndexOf(",") != lowerCase.indexOf(",")) {
                 return lowerCase.substring(first, last);
             } else {
-                lowerCase = lowerCase.substring(0, lowerCase.indexOf(",") - 2);
+                lowerCase = lowerCase.substring(0, lowerCase.indexOf(","));
             }
         }
 
