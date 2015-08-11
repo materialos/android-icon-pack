@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if (mCurrentSelectedPosition == itemId) {
+        if (mCurrentSelectedPosition == mDrawer.getPositionFromIdentifier(itemId)) {
             // Don't allow re-selection of the currently active item
             return;
         }
