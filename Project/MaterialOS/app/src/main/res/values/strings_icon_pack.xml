@@ -9,7 +9,7 @@
     <!-- ALL ICONS -->
     <!-- All of your icons listed here -->
     <string-array name="icon_pack_names" translatable="false">
-        <item>Projects 365,Daniel Hickman</item>
+        <item>365 Projects,projects365,Daniel Hickman</item>
         <item>aa,Greg Ives</item>
         <item>Account Folder,Wayne Kosimoto</item>
         <item>Action Launcher,Jahir Fiquitiva &amp; Corbin Crutchley</item>
@@ -26,8 +26,8 @@
         <item>Archive Manager,Wayne Kosimoto</item>
         <item>Astro,Gabriel Zegarra</item>
         <item>Authenticator Plus,athuplus,Daniel Hickman</item>
-        <item>Authenticator Plus Alt,athuplus_alt,</item>
-        <item>Bang,Greg Ives</item>
+        <item>Authenticator Plus Alt,athuplus_alt,Daniel Hickman</item>
+        <item>Ready Steady Bang,bang,Greg Ives</item>
         <item>Barcode Scanner,Wayne Kosimoto</item>
         <item>BBM,Gabriel Zegarra</item>
         <item>Blank File,Daniel Hickman</item>
@@ -83,7 +83,7 @@
         <item>Fleksy,Daniel Hickman</item>
         <item>Flipboard,Gabriel Zegarra</item>
         <item>Foursquare,Gabriel Zegarra</item>
-        <item>Galactiv,Corbin Crutchley</item>
+        <item>Galactiv,galactivlogocolor,Corbin Crutchley</item>
         <item>Gallery,Createme</item>
         <item>Geometry Dash,Vukasin Andelkovic</item>
         <item>Gmail,Eduardo Pratti</item>
@@ -98,7 +98,7 @@
         <item>Gooogle Drive,Daniel Hickman</item>
         <item>Gooogle Drive Alt,Daniel Hickman</item>
         <item>Gooogle Drive Alt 2,Daniel Hickman</item>
-        <item>Hardrive,hardrivedefault,</item>
+        <item>Hardrive,hardrivedefault,Daniel Hickman</item>
         <item>Hardrive Windows,Daniel Hickman</item>
         <item>Hot or Not,Daniel Hickman</item>
         <item>Hyperlapse,Alex Mueller</item>
@@ -246,9 +246,9 @@
         <item>Webview Browser,Daniel Hickman</item>
         <item>WeHeartIt,Gabriel Zegarra</item>
         <item>WeLGBT,Daniel Hickman</item>
-        <item>WeLGBT Inbetween,Daniel Hickman</item>
-        <item>WeLGBT Not Found,Daniel Hickman</item>
-        <item>WeLGBT Poor,Daniel Hickman</item>
+        <item>WeLGBT Inbetween,welgbt_inbetween,Daniel Hickman</item>
+        <item>WeLGBT Not Found,welgbt_notfound,Daniel Hickman</item>
+        <item>WeLGBT Poor,welgbt_poor,Daniel Hickman</item>
         <item>WhatsApp,Greg Ives</item>
         <item>WhatsApp Alt,Sky Konig</item>
         <item>WhatsApp Alt 2,Createme</item>
