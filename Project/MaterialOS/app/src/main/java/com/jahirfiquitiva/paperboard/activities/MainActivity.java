@@ -169,9 +169,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void switchFragment(int itemId, String title, Class<? extends Fragment> fragment) {
 
-        if (mDrawer.isDrawerOpen()) {
-            mDrawer.closeDrawer();
-        }
+        mDrawer.getListView().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (mDrawer.isDrawerOpen()) {
+                    mDrawer.closeDrawer();
+                }
+            }
+        }, 50);
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (itemId == 1 || itemId == 2) {
