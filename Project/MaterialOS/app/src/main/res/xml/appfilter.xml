@@ -119,7 +119,7 @@
         component="ComponentInfo{com.edjing.edjingdjturntable/com.edjing.edjingforandroid.MainActivity}"
         drawable="edjing" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.android.email/com.android.email.activity.Welcome}"
         drawable="email" />
     <!-- <item component="ComponentInfo{}" drawable="esfileexplorer-alt"/> -->
     <item
@@ -193,6 +193,9 @@
         drawable="googlekeyboard" /> -->
     <item
         component="ComponentInfo{com.google.android.apps.messaging/com.google.android.apps.messaging.ui.ConversationListActivity}"
+        drawable="googlemessenger" />
+    <item
+        component="ComponentInfo{com.android.mms/com.android.mms.ui.ConversationList}"
         drawable="googlemessenger" />
     <!-- <item component="ComponentInfo{}" drawable="googleopinionrewards_alt"/> -->
     <item
