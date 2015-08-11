@@ -5,7 +5,7 @@
     <versionCode>1</versionCode>
     <themeName>Material OS</themeName>
     <!-- Default Component Color -->
-    <themePointColor>#512da8</themePointColor>
+    <themePointColor>#1976d2</themePointColor>
     <themePreview img1="preview" />
     <preview img1="preview" />
 </themeInfo>
