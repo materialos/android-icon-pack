@@ -17,9 +17,6 @@
     <string name="partthree">" from "</string>
     <string name="partfour">".\nGet it now at "</string>
 
-    <!-- Developer Account Link -->
-    <string name="play_store_dev_link">https://play.google.com/store/apps/developer?id=</string>
-
     <!-- Icon Pack designer/owner e-mail -->
     <string name="email_id">materialopensource@gmail.com</string>
 

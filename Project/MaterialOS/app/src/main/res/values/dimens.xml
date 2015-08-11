@@ -10,7 +10,6 @@
     <!-- Some Margins -->
     <dimen name="margin_medium_sm">8dp</dimen>
     <dimen name="margin_medium">10dp</dimen>
-    <dimen name="margin_medium_th">20dp</dimen>
 
     <!-- Dimensions for some dialogs -->
     <dimen name="dialog_margin">24dp</dimen>
@@ -33,7 +32,6 @@
     <dimen name="cards_padding">16dp</dimen>
     <dimen name="cards_elevation">2dp</dimen>
     <dimen name="cards_margin">8dp</dimen>
-    <dimen name="cards_text_margin">8dp</dimen>
     <dimen name="mini_margin">2dp</dimen>
     <dimen name="card_corner_radius">2dp</dimen>
 
