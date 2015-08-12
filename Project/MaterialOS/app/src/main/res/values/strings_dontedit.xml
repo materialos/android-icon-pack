@@ -81,6 +81,7 @@
     <string name="dontshow">Don\'t show again</string>
     <string name="play">PLAY STORE</string>
     <string name="web">WEBSITE</string>
+    <string name="github">GITHUB</string>
     <string name="gplus">GOOGLE+</string>
     <string name="ratebtn">RATE</string>
 
@@ -89,6 +90,6 @@
     <string name="building_request">Building Request…</string>
     <string name="request_advice">If you do not select any app for the icon request, it will be automatically generated with all your apps.</string>
     <!-- Content in Request mails before the unthemed apps info -->
-    <string name="request_precontent">These apps are not themed. Thanks in advance.\n\n</string>
+    <string name="request_precontent">These apps are not themed.\n\n</string>
 
 </resources>
