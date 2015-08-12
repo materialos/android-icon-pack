@@ -5,7 +5,6 @@
     <iconupon img1="iconupon" />
     <scale factor=".7" /> -->
 
-    <!-- Apps -->
     <!-- <item component="ComponentInfo{}" drawable="365projects"/> -->
     <item
         component="ComponentInfo{com.aa.generaladaptiveapps/com.aa.generaladaptiveapps.BaseActivity}"

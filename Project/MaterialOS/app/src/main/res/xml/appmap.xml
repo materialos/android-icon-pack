@@ -1,761 +1,574 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <appmap>
 
+    <!-- <item class="" name="365projects"/> -->
+    <item
+        class="com.aa.generaladaptiveapps.BaseActivity"
+        name="aa" />
+    <!-- <item class="" name="accountfolder"/> -->
+    <item
+        class="com.actionlauncher.ActionLauncherActivity"
+        name="actionlauncher" />
+    <item
+        class="org.adaway.ui.BaseActivity"
+        name="adaway" />
+    <item
+        class="org.adblockplus.android.Preferences"
+        name="adblockplus" />
+    <!-- <item class="" name="aftereffects"/> -->
+    <!-- <item class="" name="afterlight-alt"/> -->
+    <!-- <item class="" name="afterlight-alt2"/> -->
+    <item
+        class="com.fueled.afterlight.HomeActivity"
+        name="afterlight" />
     <item
-        name="365projects"
-        class="" />
+        class="com.gombosdev.ampere.MainActivity"
+        name="ampere" />
+    <!-- <item class="" name="androidstudio"/> -->
+    <item
+        class="com.domobile.applock.LauncherActivity"
+        name="applock" />
+    <item
+        class="com.enlightment.appslocker.MainActivity"
+        name="applock" />
+    <!-- <item
+        class=""
+        name="appsettings" /> -->
+    <!-- <item class="" name="archivemanager"/> -->
+    <item
+        class="com.metago.astro.MainActivity"
+        name="astro" />
+    <!-- <item class="" name="athuplus-alt"/> -->
+    <item
+        class="com.mufri.authenticatorplus.LoginActivity"
+        name="athuplus" />
+    <item
+        class="com.apportable.activity.VerdeActivity"
+        name="bang" />
     <item
-        name="aa"
-        class="" />
+        class="com.google.zxing.client.android.CaptureActivity"
+        name="barcodescanner" />
     <item
-        name="accountfolder"
-        class="" />
+        class="com.bbm.ui.activities.StartupActivity"
+        name="bbm" />
+    <!-- <item class="" name="blankfile-alt"/> -->
+    <!-- <item class="" name="blankfile"/> -->
+    <!-- <item class="" name="blankfilelandscape"/> -->
+    <!-- <item class="" name="blankfilesquare"/> -->
+    <!-- <item class="" name="blender"/> -->
+    <!-- <item class="" name="boombox"/> -->
     <item
-        name="actionlauncher"
-        class="" />
+        class="com.box.android.activities.login.SplashScreenActivity"
+        name="box" />
+    <!-- <item class="" name="boxfolder"/> -->
+    <!-- <item class="" name="brackets"/> -->
     <item
-        name="adaway"
-        class="" />
+        class=""
+        name="browser" />
+    <!-- <item class="" name="catfolder"/> -->
+    <!-- <item class="" name="ccleaner-alt"/> -->
     <item
-        name="adblockplus"
-        class="" />
+        class="com.piriform.ccleaner.ui.activity.MainActivity"
+        name="ccleaner" />
+    <!-- <item class="" name="chrome-alt"/> -->
+    <!-- <item class="" name="chrome-alt2"/> -->
     <item
-        name="aftereffects"
-        class="" />
+        class="com.google.android.apps.chrome.Main"
+        name="chrome" />
+    <!-- <item class="" name="chromebeta-alt2"/> -->
+    <!-- <item class="" name="chromedev-alt2"/> -->
+    <!-- <item class="" name="chromium-alt"/> -->
     <item
-        name="afterlight_alt"
-        class="" />
+        class="com.android.deskclock.DeskClock"
+        name="clock" />
     <item
-        name="afterlight_alt2"
-        class="" />
+        class="org.cyanogenmod.theme.chooser.ChooserActivity"
+        name="cmthemes" />
+    <!-- <item class="" name="codefolder"/> -->
     <item
-        name="afterlight"
-        class="" />
+        class="com.android.contacts.activities.PeopleActivity"
+        name="contacts" />
+    <!-- <item class="" name="cortana-alt"/> -->
+    <!-- <item class="" name="cortana-alt2"/> -->
     <item
-        name="ampere"
-        class="" />
+        class="com.microsoft.bing.dss.SplashActivity"
+        name="cortana" />
     <item
-        name="androidstudio"
-        class="" />
+        class="com.adobe.cc.SplashScreen"
+        name="creativecloud" />
     <item
-        name="applock"
-        class="" />
+        class="com.cyworld.cymera.CameraMain"
+        name="cymera" />
+    <!-- <item class="" name="downloadsfolder"/> -->
     <item
-        name="appsettings"
-        class="" />
+        class="com.dropbox.android.activity.DropboxBrowser"
+        name="dropbox" />
+    <!-- <item class="" name="dropboxfolder"/> -->
     <item
-        name="archivemanager"
-        class="" />
+        class="com.duolingo.app.LoginActivity"
+        name="duolingo" />
     <item
-        name="astro"
-        class="" />
+        class="br.com.easytaxi.ui.CallTaxiActivity"
+        name="easytaxi" />
     <item
-        name="athuplus"
-        class="" />
+        class="com.edjing.edjingforandroid.MainActivity"
+        name="edjing" />
     <item
-        name="athuplus_alt"
-        class="" />
+        class="com.android.email.activity.Welcome"
+        name="email" />
+    <!-- <item class="" name="esfileexplorer-alt"/> -->
     <item
-        name="bang"
-        class="" />
+        class="com.estrongs.android.pop.view.FileExplorerActivity"
+        name="esfileexplorer" />
     <item
-        name="barcodescanner"
-        class="" />
+        class="com.evernote.ui.HomeActivity"
+        name="evernote" />
+    <!-- <item class="" name="fab"/> -->
+    <!-- <item class="" name="facebook-alt"/> -->
     <item
-        name="bbm"
-        class="" />
+        class="com.facebook.katana.LoginActivity"
+        name="facebook" />
     <item
-        name="blankfile"
-        class="" />
+        class=""
+        name="facebooklite" />
     <item
-        name="blankfilelandscape"
-        class="" />
+        class="com.facebook.pages.app.activity.PagesManagerLoginActivity"
+        name="facebookpages" />
+    <!-- <item class="" name="fbmessenger-alt"/> -->
+    <!-- <item class="" name="fbmessenger-alt2"/> -->
     <item
-        name="blankfilesquare"
-        class="" />
+        class="com.facebook.orca.auth.StartScreenActivity"
+        name="fbmessenger" />
     <item
-        name="blankfile_alt"
-        class="" />
+        class="com.devhd.feedly.Main"
+        name="feedly" />
     <item
-        name="blender"
-        class="" />
+        class=""
+        name="filemanager" />
+    <!-- <item class="" name="finderfolder"/> -->
     <item
-        name="boombox"
-        class="" />
+        class="org.mozilla.firefox_beta.App"
+        name="firefox" />
     <item
-        name="box"
-        class="" />
+        class="org.mozilla.firefox.App"
+        name="firefox" />
     <item
-        name="boxfolder"
-        class="" />
+        class="com.syntellia.fleksy.settings.activities.MainActivity"
+        name="fleksy" />
     <item
-        name="brackets"
-        class="" />
+        class="com.syntellia.fleksy.settings.activities.MainActivity"
+        name="fleksy" />
     <item
-        name="browser"
-        class="" />
+        class="flipboard.activities.LaunchActivityAlias"
+        name="flipboard" />
     <item
-        name="catfolder"
-        class="" />
+        class="com.joelapenna.foursquared.MainActivity"
+        name="foursquare" />
+    <!-- <item class="" name="galactivlogocolor"/> -->
     <item
-        name="ccleaner_alt"
-        class="" />
+        class="com.android.gallery3d.app.GalleryActivity"
+        name="gallery" />
     <item
-        name="ccleaner"
-        class="" />
+        class="com.android.gallery3d.app.GalleryActivity"
+        name="gallery" />
     <item
-        name="chrome"
-        class="" />
+        class="com.robtopx.geometryjumplite.GeometryDashLite"
+        name="geometrydash" />
     <item
-        name="chromebeta_alt2"
-        class="" />
+        class="com.google.android.gm.ConversationListActivityGmail"
+        name="gmail" />
     <item
-        name="chromedev_alt2"
-        class="" />
+        class="com.google.android.apps.fitness.welcome.WelcomeActivity"
+        name="googlefit" />
+    <!-- <item
+        class="com.google.android.keep.activities.BrowseActivity"
+        name="googlekeep" /> -->
+    <!-- <item
+        class=""
+        name="googlekeyboard" /> -->
+    <item
+        class="com.google.android.apps.messaging.ui.ConversationListActivity"
+        name="googlemessenger" />
     <item
-        name="chrome_alt"
-        class="" />
+        class="com.android.mms.ui.ConversationList"
+        name="googlemessenger" />
+    <!-- <item class="" name="googleopinionrewards_alt"/> -->
     <item
-        name="chrome_alt2"
-        class="" />
+        class="com.google.android.apps.paidtasks.LaunchActivity"
+        name="googleopinionrewards" />
+    <!-- <item class="" name="googleplusprofiler-alt"/> -->
+    <!-- <item class="" name="googleplusprofiler"/> -->
+    <!-- <item class="" name="gooogledrive-alt"/> -->
+    <!-- <item class="" name="gooogledrive-alt2"/> -->
     <item
-        name="chromium_alt"
-        class="" />
+        class="com.google.android.apps.docs.app.NewMainProxyActivity"
+        name="gooogledrive" />
+    <!-- <item class="" name="hardrivedefault"/> -->
+    <!-- <item class="" name="hardrivewindows"/> -->
     <item
-        name="clock"
-        class="" />
+        class="com.badoo.mobile.android.BadooActivity"
+        name="hotornot" />
     <item
-        name="cmthemes"
-        class="" />
+        class="hyperlapsemobile.android.startpage"
+        name="hyperlapse" />
     <item
-        name="codefolder"
-        class="" />
+        class="mobi.ifunny.main.IFunnyMenuActivity"
+        name="ifunny" />
     <item
-        name="contacts"
-        class="" />
+        class="com.clearchannel.iheartradio.controller.activities.NavDrawerActivity"
+        name="iheartradio" />
+    <!-- <item class="" name="illustrator"/> -->
     <item
-        name="cortana"
-        class="" />
+        class="com.imgur.mobile.MainActivity"
+        name="imgur" />
     <item
-        name="cortana_alt"
-        class="" />
+        class="com.imgur.mobile.Launcher"
+        name="imgur" />
     <item
-        name="cortana_alt2"
-        class="" />
+        class="com.google.android.apps.bigtop.activities.InitActivity"
+        name="inbox" />
+    <!-- <item class="" name="ingress-alt"/> -->
     <item
-        name="creativecloud"
-        class="" />
+        class="com.nianticproject.ingress.NemesisActivity"
+        name="ingress" />
     <item
-        name="cymera"
-        class="" />
+        class="com.instagram.android.activity.MainTabActivity"
+        name="instagram" />
+    <!-- <item class="" name="journey-alt"/> -->
+    <!-- <item class="" name="journey-alt2"/> -->
     <item
-        name="downloadsfolder"
-        class="" />
+        class="com.journey.app.MainActivity"
+        name="journey" />
     <item
-        name="dropbox"
-        class="" />
+        class="kik.android.chat.activity.IntroActivity"
+        name="kik" />
     <item
-        name="dropboxfolder"
-        class="" />
+        class="com.chatous.pointblank.LauncherActivity"
+        name="kiwi" />
     <item
-        name="duolingo"
-        class="" />
+        class="com.ui.LapseIt.Main"
+        name="lapseit" />
+    <!-- <item class="" name="libreofficewritter"/> -->
     <item
-        name="easytaxi"
-        class="" />
+        class="jp.naver.line.android.activity.SplashActivity"
+        name="line" />
+    <!-- <item class="" name="lollypop"/> -->
+    <!-- <item class="" name="materialos-alt"/> -->
+    <!-- <item class="" name="materialos-alt2"/> -->
+    <!-- <item class="" name="materialos-alt3"/> -->
+    <!-- <item class="" name="materialos-alt4"/> -->
+    <!-- <item class="" name="materialos-alt5"/> -->
+    <!-- <item class="" name="materialos-alt6"/> -->
+    <!-- <item class="" name="materialos"/> -->
+    <!-- <item
+        class="com.pluscubed.logcat.ui.LogcatActivity"
+        name="matlog" /> -->
     <item
-        name="edjing"
-        class="" />
+        class="com.ventismedia.android.mediamonkey.StartActivity"
+        name="mediamonkey" />
     <item
-        name="email"
-        class="" />
+        class="nz.mega.android.ManagerActivity"
+        name="mega" />
+    <!-- <item class="" name="midori"/> -->
     <item
-        name="esfileexplorer"
-        class="" />
+        class="com.mobiledatalabs.mileiq.activities.LaunchActivity"
+        name="mileiq" />
+    <!-- <item class="" name="minecraft-alt"/> -->
     <item
-        name="esfileexplorer_alt"
-        class="" />
+        class="com.mojang.minecraftpe.MainActivity"
+        name="minecraft" />
+    <!-- <item
+        class=""
+        name="multiwindowview" /> -->
+    <!-- <item class="" name="music-alt"/> -->
+    <!-- <item class="" name="music-alt2"/> -->
+    <item
+        class=""
+        name="music" />
+    <!-- <item class="" name="musicfolder"/> -->
+    <item
+        class="com.designfuture.music.ui.phone.DashBoardActivity"
+        name="musicxmatch" />
     <item
-        name="evernote"
-        class="" />
+        class=""
+        name="myscript" />
     <item
-        name="fab"
-        class="" />
+        class="com.google.android.apps.mytracks.TrackListActivity"
+        name="mytracks" />
+    <!-- <item
+        class=""
+        name="nautilus" /> -->
+    <!-- <item class="" name="netflix-alt"/> -->
     <item
-        name="facebook"
-        class="" />
+        class="com.netflix.mediaclient.ui.launch.UIWebViewActivity"
+        name="netflix" />
     <item
-        name="facebooklite"
-        class="" />
+        class="com.aboutmycode.NotificationsOff.MainActivity"
+        name="notificationsoff" />
     <item
-        name="facebookpages"
-        class="" />
+        class="org.npr.one.HomeActivity"
+        name="nprone" />
     <item
-        name="facebook_alt"
-        class="" />
+        class="com.prime31.UnityPlayerNativeActivity"
+        name="onemoreline" />
+    <item
+        class="net.oneplus.two.vrlaunch.activities.CardboardVideoActivity"
+        name="oneplus" />
+    <!-- <item class="" name="paintnet"/> -->
+    <item
+        class="com.pandora.android.Main"
+        name="pandora" />
+    <!-- <item class="" name="pebble-alt"/> -->
+    <item
+        class="com.getpebble.android.main.activity.MainActivity"
+        name="pebble" />
+    <item
+        class="air.com.adobe.pstouchphone.AppEntry"
+        name="photoshop" />
+    <item
+        class="com.unity3d.player.UnityPlayerActivity"
+        name="pianotiles" />
+    <item
+        class="com.umonistudio.tile.tile"
+        name="pianotiles" />
+    <item
+        class="com.socialin.android.photo.picsinphoto.MainPagerActivity"
+        name="picsart" />
+    <item
+        class="com.pinterest.activity.PinterestActivity"
+        name="pinterest" />
+    <!-- <item class="" name="playstore-alt"/> -->
+    <!-- <item class="" name="playstore-alt2"/> -->
+    <item
+        class="com.android.vending.AssetBrowserActivity"
+        name="playstore" />
+    <item
+        class="com.plexapp.plex.activities.MyPlexActivity"
+        name="plex" />
+    <item
+        class="com.ideashower.readitlater.activity.AppCacheCheckActivity"
+        name="pocket" />
+    <!-- <item class="" name="proxy"/> -->
+    <!-- <item class="" name="pstouch"/> -->
+    <!-- <item class="" name="publicfolder-alt"/> -->
+    <!-- <item class="" name="publicfolder"/> -->
+    <item
+        class="com.pushbullet.android.ui.LaunchActivity"
+        name="pushbullet" />
+    <!-- <item class="" name="quickpic-alt"/> -->
+    <item
+        class="com.alensw.PicFolder.GalleryActivity"
+        name="quickpic" />
+    <item
+        class="com.venticake.retrica.MainActivity"
+        name="retrica" />
+    <!-- <item class="" name="router"/> -->
+    <!-- <item
+        class="com.runtastic.android.activities.StartActivity"
+        name="runtastic" /> -->
+    <!-- <item
+        class="com.runtastic.android.activities.StartActivity"
+        name="runtastic" /> -->
     <item
-        name="fbmessenger"
-        class="" />
+        class="com.android.settings.Settings"
+        name="settings" />
+    <item
+        class="com.shazam.android.activities.SplashActivity"
+        name="shazam" />
+    <item
+        class=""
+        name="simtoolkit" />
+    <!-- <item class="" name="skwash"/> -->
+    <!-- <item
+        class=""
+        name="skwish" /> -->
+    <!-- <item class="" name="skykonigicon"/> -->
+    <item
+        class="com.skype.raider.Main"
+        name="skype" />
+    <!-- <item class="" name="snapchat-alt"/> -->
+    <item
+        class="com.snapchat.android.LandingPageActivity"
+        name="snapchat" />
+    <item
+        class="com.soundcloud.android.main.LauncherActivity"
+        name="soundcloud" />
+    <item
+        class="com.soundhound.android.appcommon.activity.SplashScreenActivity"
+        name="soundhound" />
+    <item
+        class="com.spotify.music.MainActivity"
+        name="spotify" />
+    <item
+        class="com.stackexchange.marvin.ui.LaunchActivity"
+        name="stackexchange" />
+    <!-- <item class="" name="starwarswikia"/> -->
+    <!-- <item class="" name="steam-alt"/> -->
+    <item
+        class="com.valvesoftware.android.steam.community.activity.MainActivity"
+        name="steam" />
+    <!-- <item class="" name="steamfolder"/> -->
+    <!-- <item class="" name="sublimetext-alt"/> -->
+    <!-- <item class="" name="sublimetext-alt2"/> -->
+    <!-- <item class="" name="sublimetext-alt3"/> -->
+    <!-- <item class="" name="sublimetext-alt4"/> -->
+    <!-- <item class="" name="sublimetext-alt5"/> -->
+    <!-- <item class="" name="sublimetext-alt6"/> -->
+    <!-- <item class="" name="sublimetext-alt7"/> -->
+    <!-- <item class="" name="sublimetext"/> -->
+    <!-- <item class="" name="superbackup-alt"/> -->
     <item
-        name="fbmessenger_alt"
-        class="" />
+        class="com.idea.backup.smscontacts.main"
+        name="superbackup" />
+    <!-- <item class="" name="supersu-alt"/> -->
     <item
-        name="fbmessenger_alt2"
-        class="" />
+        class="eu.chainfire.supersu.MainActivity-Material"
+        name="supersu" />
     <item
-        name="feedly"
-        class="" />
+        class="com.syncme.activities.SplashActivity"
+        name="syncme" />
     <item
-        name="filemanager"
-        class="" />
+        class="id.ridsatrio.taggr.activities.MusicPickerActivity"
+        name="taggr" />
     <item
-        name="finderfolder"
-        class="" />
+        class="com.target.ui.activity.NavigationActivity"
+        name="target" />
+    <!-- <item class="" name="telegram-alt"/> -->
+    <!-- <item class="" name="telegram-alt2"/> -->
+    <!-- <item class="" name="telegram-alt3"/> -->
+    <!-- <item class="" name="telegram-alt4"/> -->
+    <!-- <item class="" name="telegram-alt5"/> -->
     <item
-        name="firefox"
-        class="" />
+        class="org.telegram.ui.LaunchActivity"
+        name="telegram" />
+    <!-- <item class="" name="terminal"/> -->
+    <item
+        class="com.and.games505.Terraria.Terraria"
+        name="terraria" />
     <item
-        name="fleksy"
-        class="" />
+        class="net.darkion.theme.maker.MainActivity"
+        name="themediy" />
+    <item
+        class="com.weather.Weather.app.SplashScreenActivity"
+        name="theweatherchannel" />
+    <item
+        class="com.tinder.activities.ActivitySplashLoading"
+        name="tinder" />
+    <!-- <item class="" name="trashfolder"/> -->
     <item
-        name="flipboard"
-        class="" />
+        class="com.trello.home.HomeActivity"
+        name="trello" />
     <item
-        name="foursquare"
-        class="" />
+        class="com.tumblr.ui.activity.JumpoffActivity"
+        name="tumblr" />
+    <!-- <item class="" name="tunein-alt"/> -->
+    <item
+        class="tunein.ui.actvities.TuneInHomeActivity"
+        name="tunein" />
     <item
-        name="galactivlogocolor"
-        class="" />
+        class="com.maskyn.fileeditor.HomeActivity"
+        name="turboeditor" />
     <item
-        name="gallery"
-        class="" />
-    <item
-        name="geometrydash"
-        class="" />
-    <item
-        name="gmail"
-        class="" />
-    <item
-        name="googlefit"
-        class="" />
-    <item
-        name="googlekeep"
-        class="" />
-    <item
-        name="googlekeyboard"
-        class="" />
-    <item
-        name="googlemessenger"
-        class="" />
-    <item
-        name="googleopinionrewards"
-        class="" />
-    <item
-        name="googleopinionrewards_alt"
-        class="" />
-    <item
-        name="googleplusprofiler"
-        class="" />
-    <item
-        name="googleplusprofiler_alt"
-        class="" />
-    <item
-        name="gooogledrive"
-        class="" />
-    <item
-        name="gooogledrive_alt"
-        class="" />
-    <item
-        name="gooogledrive_alt2"
-        class="" />
-    <item
-        name="hardrivedefault"
-        class="" />
-    <item
-        name="hardrivewindows"
-        class="" />
-    <item
-        name="hotornot"
-        class="" />
-    <item
-        name="hyperlapse"
-        class="" />
-    <item
-        name="ifunny"
-        class="" />
-    <item
-        name="iheartradio"
-        class="" />
-    <item
-        name="illustrator"
-        class="" />
-    <item
-        name="imgur"
-        class="" />
-    <item
-        name="inbox"
-        class="" />
-    <item
-        name="ingress"
-        class="" />
-    <item
-        name="ingress_alt"
-        class="" />
-    <item
-        name="instagram"
-        class="" />
-    <item
-        name="journey_alt"
-        class="" />
-    <item
-        name="journey"
-        class="" />
-    <item
-        name="journey_alt2"
-        class="" />
-    <item
-        name="kik"
-        class="" />
-    <item
-        name="kiwi"
-        class="" />
-    <item
-        name="lapseit"
-        class="" />
-    <item
-        name="libreofficewritter"
-        class="" />
-    <item
-        name="line"
-        class="" />
-    <item
-        name="lollypop"
-        class="" />
-    <item
-        name="materialos"
-        class="" />
-    <item
-        name="materialos_alt"
-        class="" />
-    <item
-        name="materialos_alt2"
-        class="" />
-    <item
-        name="materialos_alt3"
-        class="" />
-    <item
-        name="materialos_alt4"
-        class="" />
-    <item
-        name="materialos_alt5"
-        class="" />
-    <item
-        name="materialos_alt6"
-        class="" />
-    <item
-        name="materialos_alt7"
-        class="" />
-    <item
-        name="matlog"
-        class="" />
-    <item
-        name="mediamonkey"
-        class="" />
-    <item
-        name="mega"
-        class="" />
-    <item
-        name="midori"
-        class="" />
-    <item
-        name="mileiq"
-        class="" />
-    <item
-        name="minecraft"
-        class="" />
-    <item
-        name="minecraft_alt"
-        class="" />
-    <item
-        name="multiwindowview"
-        class="" />
-    <item
-        name="music"
-        class="" />
-    <item
-        name="musicfolder"
-        class="" />
-    <item
-        name="musicxmatch"
-        class="" />
-    <item
-        name="music_alt"
-        class="" />
-    <item
-        name="music_alt2"
-        class="" />
-    <item
-        name="myscript"
-        class="" />
-    <item
-        name="mytracks"
-        class="" />
-    <item
-        name="nautilus"
-        class="" />
-    <item
-        name="netflix"
-        class="" />
-    <item
-        name="netflix_alt"
-        class="" />
-    <item
-        name="notificationsoff"
-        class="" />
-    <item
-        name="nprone"
-        class="" />
-    <item
-        name="onemoreline"
-        class="" />
-    <item
-        name="oneplus"
-        class="" />
-    <item
-        name="paintnet"
-        class="" />
-    <item
-        name="pandora"
-        class="" />
-    <item
-        name="pebble"
-        class="" />
-    <item
-        name="pebble_alt"
-        class="" />
-    <item
-        name="photoshop"
-        class="" />
-    <item
-        name="pianotiles"
-        class="" />
-    <item
-        name="picsart"
-        class="" />
-    <item
-        name="pinterest"
-        class="" />
-    <item
-        name="playstore"
-        class="" />
-    <item
-        name="playstore_alt"
-        class="" />
-    <item
-        name="playstore_alt2"
-        class="" />
-    <item
-        name="plex"
-        class="" />
-    <item
-        name="pocket"
-        class="" />
-    <item
-        name="proxy"
-        class="" />
-    <item
-        name="pstouch"
-        class="" />
-    <item
-        name="publicfolder"
-        class="" />
-    <item
-        name="publicfolder_alt"
-        class="" />
-    <item
-        name="pushbullet"
-        class="" />
-    <item
-        name="quickpic"
-        class="" />
-    <item
-        name="quickpic_alt"
-        class="" />
-    <item
-        name="retrica"
-        class="" />
-    <item
-        name="router"
-        class="" />
-    <item
-        name="runtastic"
-        class="" />
-    <item
-        name="settings"
-        class="" />
-    <item
-        name="shazam"
-        class="" />
-    <item
-        name="simtoolkit"
-        class="" />
-    <item
-        name="skwash"
-        class="" />
-    <item
-        name="skwish"
-        class="" />
-    <item
-        name="skykonigicon"
-        class="" />
-    <item
-        name="skype"
-        class="" />
-    <item
-        name="snapchat"
-        class="" />
-    <item
-        name="snapchat_alt"
-        class="" />
-    <item
-        name="soundcloud"
-        class="" />
-    <item
-        name="soundhound"
-        class="" />
-    <item
-        name="spotify"
-        class="" />
-    <item
-        name="stackexchange"
-        class="" />
-    <item
-        name="starwarswikia"
-        class="" />
-    <item
-        name="steam"
-        class="" />
-    <item
-        name="steamfolder"
-        class="" />
-    <item
-        name="steam_alt"
-        class="" />
-    <item
-        name="sublimetext"
-        class="" />
-    <item
-        name="sublimetext_alt"
-        class="" />
-    <item
-        name="sublimetext_alt2"
-        class="" />
-    <item
-        name="sublimetext_alt3"
-        class="" />
-    <item
-        name="sublimetext_alt4"
-        class="" />
-    <item
-        name="sublimetext_alt5"
-        class="" />
-    <item
-        name="sublimetext_alt6"
-        class="" />
-    <item
-        name="sublimetext_alt7"
-        class="" />
-    <item
-        name="superbackup"
-        class="" />
-    <item
-        name="superbackup_alt"
-        class="" />
-    <item
-        name="supersu"
-        class="" />
-    <item
-        name="supersu_alt"
-        class="" />
-    <item
-        name="syncme"
-        class="" />
-    <item
-        name="taggr"
-        class="" />
-    <item
-        name="target"
-        class="" />
-    <item
-        name="telegram"
-        class="" />
-    <item
-        name="telegram_alt"
-        class="" />
-    <item
-        name="telegram_alt2"
-        class="" />
-    <item
-        name="telegram_alt3"
-        class="" />
-    <item
-        name="telegram_alt4"
-        class="" />
-    <item
-        name="telegram_alt5"
-        class="" />
-    <item
-        name="terminal"
-        class="" />
-    <item
-        name="terraria"
-        class="" />
-    <item
-        name="themediy"
-        class="" />
-    <item
-        name="theweatherchannel"
-        class="" />
-    <item
-        name="tinder"
-        class="" />
-    <item
-        name="trashfolder"
-        class="" />
-    <item
-        name="trello"
-        class="" />
-    <item
-        name="tumblr"
-        class="" />
-    <item
-        name="tunein"
-        class="" />
-    <item
-        name="tunein_alt"
-        class="" />
-    <item
-        name="turboeditor"
-        class="" />
-    <item
-        name="twitch"
-        class="" />
-    <item
-        name="twitch_alt"
-        class="" />
-    <item
-        name="twitch_alt2"
-        class="" />
-    <item
-        name="twitter"
-        class="" />
-    <item
-        name="twitter_alt"
-        class="" />
-    <item
-        name="ubby"
-        class="" />
-    <item
-        name="uber"
-        class="" />
-    <item
-        name="unicon"
-        class="" />
-    <item
-        name="unicon_alt"
-        class="" />
-    <item
-        name="usbfolder"
-        class="" />
-    <item
-        name="uupurifier"
-        class="" />
-    <item
-        name="verizonvoicemail"
-        class="" />
-    <item
-        name="viber"
-        class="" />
-    <item
-        name="videofolder"
-        class="" />
-    <item
-        name="vine"
-        class="" />
-    <item
-        name="visualvoicemail"
-        class="" />
-    <item
-        name="vlc"
-        class="" />
-    <item
-        name="vmwareworkstation"
-        class="" />
-    <item
-        name="vnc"
-        class="" />
-    <item
-        name="wakelocker"
-        class="" />
-    <item
-        name="wallsplash"
-        class="" />
-    <item
-        name="wattpad"
-        class="" />
-    <item
-        name="webviewbrowser"
-        class="" />
-    <item
-        name="weheartit"
-        class="" />
-    <item
-        name="welgbt"
-        class="" />
-    <item
-        name="welgbt_inbetween"
-        class="" />
-    <item
-        name="welgbt_notfound"
-        class="" />
-    <item
-        name="welgbt_poor"
-        class="" />
-    <item
-        name="whatsapp"
-        class="" />
-    <item
-        name="whatsapp_alt"
-        class="" />
-    <item
-        name="whatsapp_alt2"
-        class="" />
-    <item
-        name="whatsapp_alt3"
-        class="" />
-    <item
-        name="wikipedia"
-        class="" />
-    <item
-        name="wikipedia_alt"
-        class="" />
-    <item
-        name="wolz"
-        class="" />
-    <item
-        name="wunderlist"
-        class="" />
-    <item
-        name="xposedinstaller"
-        class="" />
-    <item
-        name="yaata"
-        class="" />
-    <item
-        name="youtube"
-        class="" />
-    <item
-        name="zipfolder"
-        class="" />
+        class="com.maskyn.fileeditor.FabricEditorActivity"
+        name="turboeditor" />
+    <!-- <item class="" name="twitch-alt"/> -->
+    <!-- <item class="" name="twitch-alt2"/> -->
+    <item
+        class="tv.twitch.android.apps.SplashScreenActivity"
+        name="twitch" />
+    <item
+        class="tv.twitch.android.apps.SplashScreenActivity"
+        name="twitch" />
+    <!-- <item class="" name="twitter-alt"/> -->
+    <item
+        class="com.twitter.android.StartActivity"
+        name="twitter" />
+    <!-- <item
+        class=""
+        name="ubby" /> -->
+    <item
+        class="com.ubercab.UBUberActivity"
+        name="uber" />
+    <!-- <item class="" name="unicon-alt"/> -->
+    <item
+        class=""
+        name="unicon" />
+    <!-- <item class="" name="usbfolder"/> -->
+    <item
+        class="com.uusafe.appmaster.ui.activity.PermissionScanActivity"
+        name="uupurifier" />
+    <item
+        class="com.motorola.visualvoicemail.ui.VvmMainActivity"
+        name="verizonvoicemail" />
+    <item
+        class="com.viber.voip.WelcomeActivity"
+        name="viber" />
+    <!-- <item class="" name="videofolder"/> -->
+    <item
+        class="co.vine.android.StartActivity"
+        name="vine" />
+    <item
+        class=""
+        name="visualvoicemail" />
+    <item
+        class="org.videolan.vlc.betav7neon.gui.MainActivity"
+        name="vlc" />
+    <!-- <item
+        class=""
+        name="vmwareworkstation" /> -->
+    <item
+        class="com.realvnc.viewer.android.ConnectionChooserActivity"
+        name="vnc" />
+    <item
+        class="android.androidVNC.androidVNC"
+        name="vnc" />
+    <item
+        class="com.uzumapps.wakelockdetector.activity.IntroActivity"
+        name="wakelocker" />
+    <item
+        class="com.mikepenz.unsplash.activities.MainActivity"
+        name="wallsplash" />
+    <item
+        class="wp.wattpad.ui.activities.LoginActivity"
+        name="wattpad" />
+    <item
+        class="main.java.MainActivity"
+        name="webviewbrowser" />
+    <item
+        class="com.weheartit.app.MainActivity"
+        name="weheartit" />
+    <!-- <item class="" name="welgbt-inbetween"/> -->
+    <!-- <item class="" name="welgbt-notfound"/> -->
+    <!-- <item class="" name="welgbt-poor"/> -->
+    <!-- <item class="" name="welgbt"/> -->
+    <!-- <item class="" name="whatsapp-alt"/> -->
+    <!-- <item class="" name="whatsapp-alt2"/> -->
+    <!-- <item class="" name="whatsapp-alt3"/> -->
+    <item
+        class="com.whatsapp.Main"
+        name="whatsapp" />
+    <!-- <item class="" name="wikipedia-alt"/> -->
+    <item
+        class="org.wikipedia.page.PageActivity"
+        name="wikipedia" />
+    <item
+        class=""
+        name="wolz" />
+    <item
+        class="com.wunderkinder.wunderlistandroid.activity.WLMainFragmentActivity"
+        name="wunderlist" />
+    <item
+        class="com.wunderkinder.wunderlistandroid.activity.WLMainFragmentActivity"
+        name="wunderlist" />
+    <!-- <item
+        class=""
+        name="xposedinstaller" /> -->
+    <item
+        class="rpkandrodev.yaata.activity.ThreadListActivity"
+        name="yaata" />
+    <item
+        class="com.google.android.youtube.app.honeycomb.Shell$HomeActivity"
+        name="youtube" />
+    <!-- <item class="" name="zipfolder"/> -->
 
 </appmap>
