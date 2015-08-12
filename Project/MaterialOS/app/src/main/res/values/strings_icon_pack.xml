@@ -4,7 +4,7 @@
 
     <!-- LATEST ICONS -->
     <!-- All of your Latest icons listed here -->
-    <string-array name="latest"></string-array>
+    <string-array name="latest" translatable="false"></string-array>
 
     <!-- ALL ICONS -->
     <!-- All of your icons listed here -->
