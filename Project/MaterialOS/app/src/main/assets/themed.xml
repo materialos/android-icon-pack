@@ -132,4 +132,130 @@
     <item component="ComponentInfo{com.wunderkinder.wunderlistandroidedu/com.wunderkinder.wunderlistandroid.activity.WLMainFragmentActivity}" drawable="wunderlist" />
     <item component="ComponentInfo{rpkandrodev.yaata/rpkandrodev.yaata.activity.ThreadListActivity}" drawable="yaata" />
     <item component="ComponentInfo{com.google.android.youtube/com.google.android.youtube.app.honeycomb.Shell$HomeActivity}" drawable="youtube" />
+
+    <!-- No Request -->
+    <!-- Amaze -->
+    <item component="ComponentInfo{com.amaze.filemanager/com.amaze.filemanager.activities.MainActivity}" drawable="amaze"/>
+    <!-- Apex Launcher -->
+    <item component="ComponentInfo{com.anddoes.launcher/com.anddoes.launcher.Launcher}" drawable="apex_launcher"/>
+    <!-- Cabinet -->
+    <item component="ComponentInfo{com.afollestad.cabinet/com.afollestad.cabinet.ui.MainActivity}" drawable="cabinet"/>
+    <!-- Cake Pop Icons -->
+    <item component="ComponentInfo{com.rem.cakepopicons/com.rem.cakepopicons.HomeActivity}" drawable="cake_pop_icons"/>
+    <!-- Calculator -->
+    <item component="ComponentInfo{com.android.calculator2/com.android.calculator2.Calculator}" drawable="calculator"/>
+    <!-- Calendar -->
+    <item component="ComponentInfo{com.google.android.calendar/com.android.calendar.AllInOneActivity}" drawable="calendar"/>
+    <!-- Camera -->
+    <item component="ComponentInfo{com.motorola.camera/com.motorola.camera.Camera}" drawable="camera"/>
+    <!-- Camera -->
+    <item component="ComponentInfo{com.google.android.GoogleCamera/com.android.camera.CameraLauncher}" drawable="camera"/>
+    <!-- CandyCons -->
+    <item component="ComponentInfo{com.zavukodlak.candycons/com.zavukodlak.candycons.HomeActivity}" drawable="candycons"/>
+    <!-- Docs -->
+    <item component="ComponentInfo{com.google.android.apps.docs.editors.docs/com.google.android.apps.docs.app.NewMainProxyActivity}" drawable="docs"/>
+    <!-- Documents -->
+    <item component="ComponentInfo{com.alexandrepiveteau.filemanager/com.alexandrepiveteau.filemanager.ui.MainActivity}" drawable="documents"/>
+    <!-- DootDootPls -->
+    <item component="ComponentInfo{mabeedesigns.alpha/mabeedesigns.alpha.MainActivity}" drawable="dootdootpls"/>
+    <!-- Downloads -->
+    <item component="ComponentInfo{com.android.providers.downloads.ui/com.android.providers.downloads.ui.DownloadList}" drawable="downloads"/>
+    <!-- Droidddle -->
+    <item component="ComponentInfo{org.goodev.droidddle/org.goodev.droidddle.MainActivity}" drawable="droidddle"/>
+    <!-- Emergency Alerts -->
+    <item component="ComponentInfo{com.android.cellbroadcastreceiver/com.android.cellbroadcastreceiver.CBR_Launcher}" drawable="emergency_alerts"/>
+    <!-- Focus -->
+    <item component="ComponentInfo{com.franco.focus/com.franco.focus.activities.MainActivity}" drawable="focus"/>
+    <!-- Frames -->
+    <item component="ComponentInfo{jahirfiquitiva.walls.frames/jahirfiquitiva.walls.frames.Home}" drawable="frames"/>
+    <!-- GitSkarios -->
+    <item component="ComponentInfo{com.alorma.github/com.alorma.github.ui.activity.LoginActivity}" drawable="gitskarios"/>
+    <!-- Google App -->
+    <item component="ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.SearchActivity}" drawable="google_app"/>
+    <!-- Google I/O 2015 -->
+    <item component="ComponentInfo{com.google.samples.apps.iosched/com.google.samples.apps.iosched.explore.ExploreIOActivity}" drawable="google_io_2015"/>
+    <!-- Google Now Launcher -->
+    <item component="ComponentInfo{com.google.android.launcher/com.google.android.launcher.StubApp}" drawable="google_now_launcher"/>
+    <!-- Google Play Books -->
+    <item component="ComponentInfo{com.google.android.apps.books/com.google.android.apps.books.app.BooksActivity}" drawable="google_play_books"/>
+    <!-- Google Play Games -->
+    <item component="ComponentInfo{com.google.android.play.games/com.google.android.gms.games.ui.destination.main.MainActivity}" drawable="google_play_games"/>
+    <!-- Google Play Movies & TV -->
+    <item component="ComponentInfo{com.google.android.videos/com.google.android.youtube.videos.EntryPoint}" drawable="google_play_movies__tv"/>
+    <!-- Google Play Music -->
+    <item component="ComponentInfo{com.google.android.music/com.android.music.activitymanagement.TopLevelActivity}" drawable="google_play_music"/>
+    <!-- Google Play Newsstand -->
+    <item component="ComponentInfo{com.google.android.apps.magazines/com.google.apps.dots.android.app.activity.CurrentsStartActivity}" drawable="google_play_newsstand"/>
+    <!-- Google+ -->
+    <item component="ComponentInfo{com.google.android.apps.plus/com.google.android.apps.plus.phone.HomeActivity}" drawable="google"/>
+    <!-- Hangouts -->
+    <item component="ComponentInfo{com.google.android.talk/com.google.android.talk.SigningInActivity}" drawable="hangouts"/>
+    <!-- Icon Showcase -->
+    <item component="ComponentInfo{jahirfiquitiva.apps.iconshowcase/jahirfiquitiva.apps.iconshowcase.activities.HomeActivity}" drawable="icon_showcase"/>
+    <!-- Icon Showcase -->
+    <item component="ComponentInfo{jahirfiquitiva.iconshowcase/jahirfiquitiva.iconshowcase.activities.SplashActivity}" drawable="icon_showcase"/>
+    <!-- Imagine -->
+    <item component="ComponentInfo{com.imagine/com.imagine.MainActivity}" drawable="imagine"/>
+    <!-- Impression -->
+    <item component="ComponentInfo{com.afollestad.impression/com.afollestad.impression.ui.MainActivity}" drawable="impression"/>
+    <!-- Keep -->
+    <item component="ComponentInfo{com.google.android.keep/com.google.android.keep.activities.BrowseActivity}" drawable="keep"/>
+    <!-- KMZ -->
+    <item component="ComponentInfo{com.kmzdsgns.kmz/com.kmzdsgns.kmz.HomeActivity}" drawable="kmz"/>
+    <!-- Maps -->
+    <item component="ComponentInfo{com.google.android.apps.maps/com.google.android.maps.MapsActivity}" drawable="maps"/>
+    <!-- MaterialOS -->
+    <item component="ComponentInfo{org.materialos.icons/org.materialos.icons.HomeActivity}" drawable="materialos"/>
+    <!-- ML Manager -->
+    <item component="ComponentInfo{com.javiersantos.mlmanager/com.javiersantos.mlmanager.activities.MainActivity}" drawable="ml_manager"/>
+    <!-- Monospace -->
+    <item component="ComponentInfo{com.underwood.monospace/com.underwood.monospace.LibraryActivity}" drawable="monospace"/>
+    <!-- Moonshine -->
+    <item component="ComponentInfo{nexbit.icons.moonshine/nexbit.icons.moonshine.MainActivity}" drawable="moonshine"/>
+    <!-- Nova Launcher -->
+    <item component="ComponentInfo{com.teslacoilsw.launcher/com.teslacoilsw.launcher.NovaShortcutHandler}" drawable="nova_launcher"/>
+    <!-- PaperBoard -->
+    <item component="ComponentInfo{com.jahirfiquitiva.dashboardsample/com.jahirfiquitiva.dashboardsample.Home}" drawable="paperboard"/>
+    <!-- Phonograph -->
+    <item component="ComponentInfo{com.kabouzeid.gramophone/com.kabouzeid.gramophone.ui.activities.MainActivity}" drawable="phonograph"/>
+    <!-- Pipette -->
+    <item component="ComponentInfo{com.ochs.pipette/com.ochs.pipette.StartActivity}" drawable="pipette"/>
+    <!-- Planets -->
+    <item component="ComponentInfo{com.andrewq.planets/com.andrewq.planets.NavDrawerActivity}" drawable="planets"/>
+    <!-- Portal -->
+    <item component="ComponentInfo{com.pushbullet.android.portal/com.pushbullet.android.portal.ui.LaunchActivity}" drawable="portal"/>
+    <!-- Remote Desktop -->
+    <item component="ComponentInfo{com.google.chromeremotedesktop/org.chromium.chromoting.Chromoting}" drawable="remote_desktop"/>
+    <!-- Screener -->
+    <item component="ComponentInfo{de.toastcode.screener/de.toastcode.screener.MainActivity}" drawable="screener"/>
+    <!-- Setup Wizard -->
+    <item component="ComponentInfo{com.motorola.setupwizard.devicesetup/com.motorola.setupwizard.devicesetup.VzwDeviceSetup}" drawable="setup_wizard"/>
+    <!-- Sheets -->
+    <item component="ComponentInfo{com.google.android.apps.docs.editors.sheets/com.google.android.apps.docs.app.NewMainProxyActivity}" drawable="sheets"/>
+    <!-- Shuttle -->
+    <item component="ComponentInfo{another.music.player/com.simplecity.amp_library.ui.activities.MainActivity}" drawable="shuttle"/>
+    <!-- SimpleWeather -->
+    <item component="ComponentInfo{com.tanmay.simpleweather/com.tanmay.simpleweather.Activities.MainActivity}" drawable="simpleweather"/>
+    <!-- Slide for Reddit -->
+    <item component="ComponentInfo{me.ccrama.redditslide/me.ccrama.slideforreddit.Overview}" drawable="slide_for_reddit"/>
+    <!-- Slides -->
+    <item component="ComponentInfo{com.google.android.apps.docs.editors.slides/com.google.android.apps.docs.app.NewMainProxyActivity}" drawable="slides"/>
+    <!-- Smoothie Recipes -->
+    <item component="ComponentInfo{com.skykonig.smoothierecipes/com.skykonig.smoothierecipes.LicenseActivity}" drawable="smoothie_recipes"/>
+    <!-- Snapseed -->
+    <item component="ComponentInfo{com.niksoftware.snapseed/com.google.android.apps.snapseed.MainActivity}" drawable="snapseed"/>
+    <!-- Sync Pro -->
+    <item component="ComponentInfo{com.laurencedawson.reddit_sync.pro/com.laurencedawson.reddit_sync.ui.activities.HomeActivity}" drawable="sync_pro"/>
+    <!-- Translate -->
+    <item component="ComponentInfo{com.google.android.apps.translate/com.google.android.apps.translate.TranslateActivity}" drawable="translate"/>
+    <!-- Units -->
+    <item component="ComponentInfo{com.calintat.units/com.calintat.units.Convert}" drawable="units"/>
+    <!-- URL Shortener -->
+    <item component="ComponentInfo{com.tdevaux.googleurlshortener/com.tdevaux.googleurlshortener.ui.HomeActivity}" drawable="url_shortener"/>
+    <!-- Wallet -->
+    <item component="ComponentInfo{com.google.android.apps.walletnfcrel/com.google.android.apps.wallet.entrypoint.WalletRootActivity}" drawable="wallet"/>
+    <!-- WordPress -->
+    <item component="ComponentInfo{org.wordpress.android/org.wordpress.android.ui.WPLaunchActivity}" drawable="wordpress"/>
+    <!-- YouTube Gaming -->
+    <item component="ComponentInfo{com.google.android.apps.youtube.gaming/com.google.android.apps.youtube.gaming.watchwhile.activity.WatchWhileActivity}" drawable="youtube_gaming"/>
 </resources>
