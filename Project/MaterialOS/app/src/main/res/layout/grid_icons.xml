@@ -10,6 +10,7 @@
         android:clipToPadding="false"
         android:columnWidth="@dimen/iconcolumn"
         android:dividerHeight="0dp"
+        android:listSelector="@null"
         android:numColumns="auto_fit"
         android:paddingBottom="@dimen/grid_padding_vertical"
         android:paddingTop="@dimen/grid_padding_vertical"

@@ -13,6 +13,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/light_bg"
-        android:divider="@color/transparent" />
+        android:clipToPadding="false"
+        android:divider="@color/transparent"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" />
 
 </RelativeLayout>

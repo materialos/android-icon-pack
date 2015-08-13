@@ -1,44 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/launcher_item"
-    android:layout_width="fill_parent"
-    android:layout_height="@dimen/list_item_height"
-    android:layout_weight="1.0"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
     android:background="@drawable/ripple_bg"
-    android:orientation="horizontal">
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 
     <ImageView
         android:id="@+id/launchericon"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_marginLeft="@dimen/list_margin"
-        android:layout_marginStart="@dimen/list_margin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:src="@drawable/ic_launcher"
         tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="@dimen/list_margin"
-        android:layout_marginStart="@dimen/list_margin"
-        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/launchername"
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:textColor="@color/dark_grey"
-            android:textSize="@dimen/text_med" />
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            tools:text="A Launcher" />
 
         <TextView
             android:id="@+id/launcherinstalled"
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_marginTop="@dimen/cards_elevation"
-            android:textSize="@dimen/text_ultrasmall" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/secondary_text_default_material_light"
+            android:textSize="14sp"
+            tools:text="Installed. Maybe." />
 
     </LinearLayout>
 

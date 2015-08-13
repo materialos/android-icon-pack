@@ -130,7 +130,7 @@ public class IconsFragment extends Fragment {
 
             holder.icon.startAnimation(anim);
             holder.icon.setImageResource(mThumbs.get(position));
-            holder.icon.setOnClickListener(new View.OnClickListener() {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     View dialogIconView = View.inflate(getActivity(), R.layout.dialog_icon, null);
@@ -178,11 +178,12 @@ public class IconsFragment extends Fragment {
         }
 
         class IconsHolder {
-
+            final View itemView;
             final ImageView icon;
             final TextView title;
 
             IconsHolder(View v) {
+                itemView = v;
                 icon = (ImageView) v.findViewById(R.id.icon_img);
                 title = (TextView) v.findViewById(R.id.list_item_icon_name_text);
                 if (!getResources().getBoolean(R.bool.config_icon_name_displayed)) {
