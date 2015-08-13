@@ -15,6 +15,7 @@
         android:background="@color/light_bg"
         android:clipToPadding="false"
         android:divider="@color/transparent"
+        android:listSelector="@null"
         android:paddingBottom="8dp"
         android:paddingTop="8dp" />
 
