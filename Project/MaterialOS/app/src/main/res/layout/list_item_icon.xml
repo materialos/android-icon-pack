@@ -20,11 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:ellipsize="middle"
+        android:ellipsize="end"
         android:fontFamily="sans-serif-condensed"
         android:paddingBottom="8dp"
         android:singleLine="true"
         android:textSize="12sp"
-        tools:text="MatLog" />
+        tools:text="MatLog Alt 2345678" />
 
 </LinearLayout>

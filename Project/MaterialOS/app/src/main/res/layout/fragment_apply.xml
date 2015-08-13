@@ -14,8 +14,8 @@
         android:layout_alignParentTop="true"
         android:background="@color/light_bg"
         android:clipToPadding="false"
-        android:divider="@color/transparent"
-        android:listSelector="@null"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:paddingBottom="8dp"
         android:paddingTop="8dp" />
 
