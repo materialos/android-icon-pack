@@ -126,6 +126,8 @@ public class IconsFragment extends Fragment {
                 holder = (IconsHolder) convertView.getTag();
             }
 
+            holder.title.setText(getUiName(mIconNames[position]));
+
             holder.icon.startAnimation(anim);
             holder.icon.setImageResource(mThumbs.get(position));
             holder.icon.setOnClickListener(new View.OnClickListener() {
@@ -178,9 +180,14 @@ public class IconsFragment extends Fragment {
         class IconsHolder {
 
             final ImageView icon;
+            final TextView title;
 
             IconsHolder(View v) {
                 icon = (ImageView) v.findViewById(R.id.icon_img);
+                title = (TextView) v.findViewById(R.id.list_item_icon_name_text);
+                if (!getResources().getBoolean(R.bool.config_icon_name_displayed)) {
+                    title.setVisibility(View.GONE);
+                }
             }
         }
 

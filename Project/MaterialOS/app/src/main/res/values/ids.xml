@@ -8,4 +8,5 @@
     <item name="list_item_credits_actions" type="id" />
     <item name="dialog_icon_designer_text" type="id" />
     <item name="dialog_icon_image" type="id"/>
+    <item name="list_item_icon_name_text" type="id" />
 </resources>

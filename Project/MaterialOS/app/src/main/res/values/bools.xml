@@ -8,6 +8,8 @@
     <bool name="config_fadeDrawerLabels">false</bool>
     <bool name="config_desktop_indicator">false</bool>
 
+    <bool name="config_icon_name_displayed">true</bool>
+
     <!-- Apex Theme settings -->
     <bool name="config_apexskin">true</bool>
     <bool name="config_iconpack">true</bool>
