@@ -7,6 +7,7 @@
     <string name="section_four">Wallpapers</string>
     <string name="section_five">Icon Request</string>
     <string name="section_six">About</string>
+    <string name="section_seven">Donate</string>
 
     <!-- Wallpapers Activity -->
     <string name="title_activity_detailed_wallpaper">Detailed Wallpaper</string>

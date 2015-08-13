@@ -82,4 +82,7 @@
     <string name="designer">"Designer: "</string>
     <string name="share_name">the MaterialOS project</string>
 
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

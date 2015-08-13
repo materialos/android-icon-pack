@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         final String wallpapers = getResources().getString(R.string.section_four);
         final String iconRequest = getResources().getString(R.string.section_five);
         final String credits = getResources().getString(R.string.section_six);
+        final String donate = getResources().getString(R.string.section_seven);
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -107,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(3),
                         new DividerDrawerItem(),
                         new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(6)
+                        new PrimaryDrawerItem().withName(donate).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(7)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -134,6 +136,9 @@ public class MainActivity extends AppCompatActivity {
                                     break;
                                 case 6:
                                     switchFragment(6, credits, CreditsFragment.class);
+                                    break;
+                                case 7:
+                                    switchFragment(6, donate, DonateFragment.class);
                                     break;
                             }
 
