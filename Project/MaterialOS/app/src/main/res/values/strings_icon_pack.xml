@@ -4,7 +4,9 @@
 
     <!-- LATEST ICONS -->
     <!-- All of your Latest icons listed here -->
-    <string-array name="latest" translatable="false"></string-array>
+    <string-array name="latest" translatable="false">
+        <item>MaterialOS,Eduardo Pratti</item>
+    </string-array>
 
     <!-- ALL ICONS -->
     <!-- All of your icons listed here -->
@@ -261,6 +263,47 @@
         <item>Yaata,Corbin Crutchley</item>
         <item>YouTube,Greg Ives</item>
         <item>Zip Folder,Wayne Kosimoto</item>
+    </string-array>
+
+    <!-- GOOGLE ICONS -->
+    <!-- All of your Google icons listed here -->
+    <string-array name="google" translatable="false">
+        <item>Android Studio,Wayne Kosimoto</item>
+        <item>Chrome,Eduardo Pratti</item>
+        <item>Chrome Alt,Wayne Kosimoto</item>
+        <item>Chrome Alt 2,Corbin Crutchley</item>
+        <item>Chrome Beta Alt 2,Corbin Crutchley</item>
+        <item>Chrome Dev Alt 2,Corbin Crutchley</item>
+        <item>Chromium Alt,Wayne Kosimoto</item>
+        <item>Clock,Greg Ives</item>
+        <item>Gmail,Eduardo Pratti</item>
+        <item>Google Fit,Eduardo Pratti</item>
+        <item>Google Keep,Corbin Crutchley</item>
+        <item>Google Keyboard,Eduardo Pratti</item>
+        <item>Google Messenger,Eduardo Pratti</item>
+        <item>Google Opinion Rewards,Createme</item>
+        <item>Google Opinion Rewards Alt,Greg Ives</item>
+        <item>Gooogle Drive,Daniel Hickman</item>
+        <item>Gooogle Drive Alt,Daniel Hickman</item>
+        <item>Gooogle Drive Alt 2,Daniel Hickman</item>
+        <item>Inbox,Eduardo Pratti</item>
+        <item>My Tracks,Daniel Hickman</item>
+        <item>Play Store,Greg Ives</item>
+        <item>Play Store Alt,Daniel Hickman</item>
+        <item>Play Store Alt 2,Daniel Hickman</item>
+        <item>YouTube,Greg Ives</item>
+    </string-array>
+
+    <!-- GAMES ICONS -->
+    <!-- All of your Games icons listed here -->
+    <string-array name="games" translatable="false">
+        <item>Ready Steady Bang,bang,Greg Ives</item>
+        <item>Geometry Dash,Vukasin Andelkovic</item>
+        <item>Ingress,Daniel Hickman</item>
+        <item>Ingress Alt,Daniel Hickman</item>
+        <item>Minecraft,Daniel Hickman</item>
+        <item>Minecraft Alt,Daniel Hickman</item>
+        <item>Terraria,Daniel Hickman</item>
     </string-array>
 
 
