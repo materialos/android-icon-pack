@@ -16,9 +16,9 @@
         <item>AdAway,Createme</item>
         <item>Adblock Plus,Greg Ives</item>
         <item>After Effects,Alex Mueller</item>
+        <item>Afterlight,Daniel Hickman</item>
         <item>Afterlight Alt,Daniel Hickman</item>
         <item>Afterlight Alt 2,Daniel Hickman</item>
-        <item>Afterlight,Daniel Hickman</item>
         <item>Ampere,Daniel Hickman</item>
         <item>Android Studio,Wayne Kosimoto</item>
         <item>AppLock,Gabriel Zegarra</item>
@@ -31,9 +31,9 @@
         <item>Barcode Scanner,Wayne Kosimoto</item>
         <item>BBM,Gabriel Zegarra</item>
         <item>Blank File,Daniel Hickman</item>
+        <item>Blank File Alt,Wayne Kosimoto</item>
         <item>Blank File Landscape,Daniel Hickman</item>
         <item>Blank File Square,Daniel Hickman</item>
-        <item>Blank File Alt,Wayne Kosimoto</item>
         <item>Blender,Wayne Kosimoto</item>
         <item>Boombox,Oscar E</item>
         <item>Box,Daniel Hickman</item>
@@ -41,13 +41,13 @@
         <item>Brackets,Corbin Crutchley</item>
         <item>Browser,Wayne Kosimoto</item>
         <item>Cat Folder,Wayne Kosimoto</item>
-        <item>CCleaner Alt,Corbin Crutchley</item>
         <item>CCleaner,Corbin Crutchley</item>
+        <item>CCleaner Alt,Corbin Crutchley</item>
         <item>Chrome,Eduardo Pratti</item>
-        <item>Chrome Beta Alt 2,Corbin Crutchley</item>
-        <item>Chrome Dev Alt 2,Corbin Crutchley</item>
         <item>Chrome Alt,Wayne Kosimoto</item>
         <item>Chrome Alt 2,Corbin Crutchley</item>
+        <item>Chrome Beta Alt 2,Corbin Crutchley</item>
+        <item>Chrome Dev Alt 2,Corbin Crutchley</item>
         <item>Chromium Alt,Wayne Kosimoto</item>
         <item>Clock,Greg Ives</item>
         <item>CM Themes,Greg Ives</item>
@@ -70,9 +70,9 @@
         <item>Evernote,Gabriel Zegarra</item>
         <item>FAB,Daniel Hickman</item>
         <item>Facebook,Gabriel Zegarra</item>
+        <item>Facebook Alt,Greg Ives</item>
         <item>Facebook Lite,Gabriel Zegarra</item>
         <item>Facebook Pages,Gabriel Zegarra</item>
-        <item>Facebook Alt,Greg Ives</item>
         <item>Facebook Messenger,fbmessenger,Alex Mueller</item>
         <item>Facebook Messenger Alt,fbmessenger_alt,Greg Ives</item>
         <item>Facebook Messenger Alt 2,fbmessenger_alt2,Gabriel Zegarra</item>
@@ -110,8 +110,8 @@
         <item>Ingress,Daniel Hickman</item>
         <item>Ingress Alt,Daniel Hickman</item>
         <item>Instagram,Gabriel Zegarra</item>
-        <item>Journey Alt,Daniel Hickman</item>
         <item>Journey,Gabriel Zegarra</item>
+        <item>Journey Alt,Daniel Hickman</item>
         <item>Journey Alt 2,Daniel Hickman</item>
         <item>Kik,Christopher Bravata</item>
         <item>Kiwi,Gabriel Zegarra</item>
@@ -136,10 +136,10 @@
         <item>Minecraft Alt,Daniel Hickman</item>
         <item>MultiWindow View,Corbin Crutchley</item>
         <item>Music,Greg Ives</item>
-        <item>Music Folder,Wayne Kosimoto</item>
-        <item>MusixMatch,musicxmatch,Gabriel Zegarra</item>
         <item>Music Alt,Jireh Mark Morilla</item>
         <item>Music Alt 2,Zachary Pierson</item>
+        <item>Music Folder,Wayne Kosimoto</item>
+        <item>MusixMatch,musicxmatch,Gabriel Zegarra</item>
         <item>MyScript,Gabriel Zegarra</item>
         <item>My Tracks,Daniel Hickman</item>
         <item>Nautilus,Wayne Kosimoto &amp; Corbin Crutchley</item>
@@ -187,8 +187,8 @@
         <item>Stack Exchange,Daniel Hickman</item>
         <item>Star Wars Wikia,Alex Mueller</item>
         <item>Steam,Zachary Pierson</item>
-        <item>Steam Folder,steamfolder,Wayne Kosimoto</item>
         <item>Steam Alt,steam_alt,Zachary Pierson</item>
+        <item>Steam Folder,steamfolder,Wayne Kosimoto</item>
         <item>Sublime Text,Eduardo Pratti</item>
         <item>Sublime Text Alt,Eduardo Pratti</item>
         <item>Sublime Text Alt 2,Eduardo Pratti</item>
