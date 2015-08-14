@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(3),
                         new DividerDrawerItem(),
                         new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(6),
-                        new PrimaryDrawerItem().withName(donate).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(7)
+                        new PrimaryDrawerItem().withName(donate).withIcon(GoogleMaterial.Icon.gmd_attach_money).withIdentifier(7)
                 ).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
