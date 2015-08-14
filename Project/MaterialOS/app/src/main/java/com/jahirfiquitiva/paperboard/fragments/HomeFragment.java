@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ((MainActivity) getActivity()).getDrawer().setSelectionByIdentifier(3);
-                ((MainActivity) getActivity()).switchFragment(3, getResources().getString(R.string.section_three), ApplyFragment.class);
+                ((MainActivity) getActivity()).switchFragment(3, getResources().getString(R.string.apply), ApplyFragment.class);
             }
         });
 

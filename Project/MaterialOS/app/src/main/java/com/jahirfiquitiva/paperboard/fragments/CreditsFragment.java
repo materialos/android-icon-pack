@@ -28,11 +28,11 @@ public class CreditsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.fragment_credits, container, false);
+        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.fragment_cards_recycler, container, false);
 
         ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null)
-            toolbar.setTitle(R.string.section_six);
+            toolbar.setTitle(R.string.about);
 
 
         mItems = new ArrayList<>();

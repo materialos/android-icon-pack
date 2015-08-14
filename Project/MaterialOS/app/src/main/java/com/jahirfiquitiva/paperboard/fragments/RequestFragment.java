@@ -48,7 +48,7 @@ public class RequestFragment extends Fragment {
 
         ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null)
-            toolbar.setTitle(R.string.section_five);
+            toolbar.setTitle(R.string.icon_request);
 
         // Populate your ListView with your apps
         mList = (ListView) root.findViewById(R.id.appList);

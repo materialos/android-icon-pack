@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="level1">
+        Over 9000
+    </string>
+
+    <string-array name="level1_donators">
+        <item>Daniel Hickman</item>
+        <item>Corbin Crutchley</item>
+        <item>Daniel Ciao</item>
+        <item>Chuck Norris</item>
+        <item>Mario Luigi</item>
+        <item>Chewie</item>
+    </string-array>
+
+    <string name="level1_amount" formatted="false" translateable="false">
+        $100 000 000+
+    </string>
+
+    <!--TODO: Link shortener?-->
+    <string name="level1_link" formatted="false" translateable="false">
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=ZJVX83UFWRFJ8&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP-DonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+    </string>
+
+
+    <string name="level2">
+        Under 9000
+    </string>
+
+    <string-array name="level2_donators">
+        <item>Imaginary Friend</item>
+        <item>Ghost in the Closet</item>
+        <item>Your Mom</item>
+        <item>The Laughing Man</item>
+    </string-array>
+
+    <string name="level2_link" formatted="false" translateable="false">
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=ZJVX83UFWRFJ8&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP-DonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+    </string>
+
+    <string name="level2_amount" formatted="false" translateable="false">
+        $50 000 000 - $99 999 999
+    </string>
+</resources>

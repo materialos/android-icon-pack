@@ -20,6 +20,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.jahirfiquitiva.paperboard.adapters.ChangelogAdapter;
 import com.jahirfiquitiva.paperboard.fragments.ApplyFragment;
 import com.jahirfiquitiva.paperboard.fragments.CreditsFragment;
+import com.jahirfiquitiva.paperboard.fragments.DonateFragment;
 import com.jahirfiquitiva.paperboard.fragments.HomeFragment;
 import com.jahirfiquitiva.paperboard.fragments.PreviewsFragment;
 import com.jahirfiquitiva.paperboard.fragments.RequestFragment;
@@ -79,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
 
         final String appName = getResources().getString(R.string.app_name);
-        String home = getResources().getString(R.string.section_one);
-        final String previews = getResources().getString(R.string.section_two);
-        final String apply = getResources().getString(R.string.section_three);
-        final String wallpapers = getResources().getString(R.string.section_four);
-        final String iconRequest = getResources().getString(R.string.section_five);
-        final String credits = getResources().getString(R.string.section_six);
-        final String donate = getResources().getString(R.string.section_seven);
+        String home = getResources().getString(R.string.home);
+        final String previews = getResources().getString(R.string.icons);
+        final String apply = getResources().getString(R.string.apply);
+        final String wallpapers = getResources().getString(R.string.wallpapers);
+        final String iconRequest = getResources().getString(R.string.icon_request);
+        final String credits = getResources().getString(R.string.about);
+        final String donate = getResources().getString(R.string.donate);
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -107,10 +108,9 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(previews).withIcon(GoogleMaterial.Icon.gmd_palette).withIdentifier(2),
                         new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(3),
                         new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(6)
+                        new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(6),
                         new PrimaryDrawerItem().withName(donate).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(7)
-                )
-                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                ).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
                         if (drawerItem != null) {
@@ -281,8 +281,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addItemsToDrawer() {
-        final String wallpapers = getResources().getString(R.string.section_four);
-        final String iconRequest = getResources().getString(R.string.section_five);
+        final String wallpapers = getResources().getString(R.string.wallpapers);
+        final String iconRequest = getResources().getString(R.string.icon_request);
         IDrawerItem walls = new PrimaryDrawerItem().withName(wallpapers).withIcon(GoogleMaterial.Icon.gmd_image).withIdentifier(4);
         IDrawerItem request = new PrimaryDrawerItem().withName(iconRequest).withIcon(GoogleMaterial.Icon.gmd_content_paste).withIdentifier(5);
         if (mEnableFeatures) {

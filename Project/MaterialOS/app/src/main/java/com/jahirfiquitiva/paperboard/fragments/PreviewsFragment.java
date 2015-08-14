@@ -23,7 +23,7 @@ public class PreviewsFragment extends Fragment {
 
         ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null)
-            toolbar.setTitle(R.string.section_two);
+            toolbar.setTitle(R.string.icons);
 
         ViewPager mPager = (ViewPager) root.findViewById(R.id.pager);
         mPager.setAdapter(new MyPagerAdapter(getActivity().getFragmentManager()));

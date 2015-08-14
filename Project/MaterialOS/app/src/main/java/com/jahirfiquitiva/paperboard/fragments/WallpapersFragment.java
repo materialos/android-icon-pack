@@ -46,7 +46,7 @@ public class WallpapersFragment extends Fragment {
 
         final ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null)
-            toolbar.setTitle(R.string.section_four);
+            toolbar.setTitle(R.string.wallpapers);
 
         final boolean isLandscape = isLandscape();
         int mColumnCountPortrait = DEFAULT_COLUMNS_PORTRAIT;

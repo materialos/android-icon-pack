@@ -43,7 +43,7 @@ public class ApplyFragment extends Fragment {
 
         ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null)
-            toolbar.setTitle(R.string.section_three);
+            toolbar.setTitle(R.string.apply);
 
         ListView launcherslist = (ListView) root.findViewById(R.id.launcherslist);
 

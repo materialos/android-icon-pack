@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- List Of Drawer Sections -->
-    <string name="section_one">Home</string>
-    <string name="section_two">Icons</string>
-    <string name="section_three">Apply</string>
-    <string name="section_four">Wallpapers</string>
-    <string name="section_five">Icon Request</string>
-    <string name="section_six">About</string>
-    <string name="section_seven">Donate</string>
+    <string name="home">Home</string>
+    <string name="icons">Icons</string>
+    <string name="apply">Apply</string>
+    <string name="wallpapers">Wallpapers</string>
+    <string name="icon_request">Icon Request</string>
+    <string name="about">About</string>
+    <string name="donate">Donate</string>
 
     <!-- Wallpapers Activity -->
     <string name="title_activity_detailed_wallpaper">Detailed Wallpaper</string>
@@ -55,7 +55,6 @@
     <string name="no_conn_content">Wallpapers are stored on Cloud Server. Please connect to Internet and try again.</string>
     <string name="download">DOWNLOAD</string>
     <string name="download_done">Download completed successfully Picture is located at </string>
-    <string name="apply">Apply</string>
     <string name="set_as">Crop picture and set as…</string>
     <string name="set_wall_title">Wallpaper set</string>
     <string name="set_wall_content">Please, choose an option. Would you like to crop the picture? Or do you prefer to set it in its actual size?</string>
