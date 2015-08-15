@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
+    android:background="@drawable/chip_background"
+    android:orientation="horizontal">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:riv_oval="true"
+        tools:src="#08b8d2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingEnd="12dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="12dp"
+        android:paddingStart="8dp"
+        android:textColor="@color/secondary_text_default_material_light"
+        tools:ignore="NewApi"
+        tools:text="Daniel Ciao" />
+
+
+</LinearLayout>
