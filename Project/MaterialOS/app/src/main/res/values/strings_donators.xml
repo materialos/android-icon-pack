@@ -24,7 +24,7 @@
 
 
     <string name="level2">
-        Cost of a Smoothie
+        Smoothie or Coffee
     </string>
 
     <string-array name="level2_donators">
@@ -40,5 +40,64 @@
 
     <string name="level2_amount" formatted="false" translateable="false">
         $5+
+    </string>
+
+
+    <string name="level3">
+        Server Costs for a Month
+    </string>
+
+    <string-array name="level3_donators">
+        <item>Imaginary Friend</item>
+        <item>Ghost in the Closet</item>
+        <item>Your Mom</item>
+        <item>The Laughing Man</item>
+    </string-array>
+
+    <string name="level3_link" formatted="false" translateable="false">
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+    </string>
+
+    <string name="level3_amount" formatted="false" translateable="false">
+        $10+
+    </string>
+
+
+    <string name="level4">
+        Domain Costs for a Year
+    </string>
+
+    <string-array name="level4_donators">
+        <item>Imaginary Friend</item>
+        <item>Ghost in the Closet</item>
+        <item>Your Mom</item>
+        <item>The Laughing Man</item>
+    </string-array>
+
+    <string name="level4_link" formatted="false" translateable="false">
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+    </string>
+
+    <string name="level4_amount" formatted="false" translateable="false">
+        $15+
+    </string>
+
+    <string name="level5">
+        1 Copy of Illustrator for a Month
+    </string>
+
+    <string-array name="level5_donators">
+        <item>Imaginary Friend</item>
+        <item>Ghost in the Closet</item>
+        <item>Your Mom</item>
+        <item>The Laughing Man</item>
+    </string-array>
+
+    <string name="level5_link" formatted="false" translateable="false">
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+    </string>
+
+    <string name="level5_amount" formatted="false" translateable="false">
+        $20+
     </string>
 </resources>
