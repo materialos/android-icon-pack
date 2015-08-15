@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                                     switchFragment(6, credits, CreditsFragment.class);
                                     break;
                                 case 7:
-                                    switchFragment(6, donate, DonateFragment.class);
+                                    switchFragment(7, donate, DonateFragment.class);
                                     break;
                             }
 

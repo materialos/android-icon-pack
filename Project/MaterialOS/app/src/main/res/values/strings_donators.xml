@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="level1">
-        Over 9000
+        \'Buy\' the App
     </string>
 
     <string-array name="level1_donators">
@@ -14,7 +14,7 @@
     </string-array>
 
     <string name="level1_amount" formatted="false" translateable="false">
-        $100 000 000+
+        $1+
     </string>
 
     <!--TODO: Link shortener?-->
@@ -24,7 +24,7 @@
 
 
     <string name="level2">
-        Under 9000
+        Cost of a Smoothie
     </string>
 
     <string-array name="level2_donators">
@@ -39,6 +39,6 @@
     </string>
 
     <string name="level2_amount" formatted="false" translateable="false">
-        $50 000 000 - $99 999 999
+        $5+
     </string>
 </resources>
