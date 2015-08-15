@@ -19,7 +19,7 @@
 
     <!--TODO: Link shortener?-->
     <string name="level1_link" formatted="false" translateable="false">
-        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=ZJVX83UFWRFJ8&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP-DonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
     </string>
 
 
@@ -35,7 +35,7 @@
     </string-array>
 
     <string name="level2_link" formatted="false" translateable="false">
-        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=ZJVX83UFWRFJ8&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP-DonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
     </string>
 
     <string name="level2_amount" formatted="false" translateable="false">
