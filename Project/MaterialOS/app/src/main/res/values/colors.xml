@@ -15,7 +15,6 @@
     <color name="launcher_not_installed_text">#f44336</color>
     <color name="launcher_installed_text">#4caf50</color>
     <color name="white">#ffffff</color>
-    <color name="transparent">#00ffffff</color>
     <color name="window_bg">@color/primary_dark</color>
     <color name="divider_grey">#d4d4d4</color>
 

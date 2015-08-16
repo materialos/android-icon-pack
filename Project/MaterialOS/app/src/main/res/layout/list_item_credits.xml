@@ -33,7 +33,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:paddingBottom="16dp"
-            android:textColor="@color/abc_secondary_text_material_light"
+            android:textColor="@color/secondary_text_default_material_light"
             android:textSize="14sp"
             tools:text="Designers of Open Source Icons" />
 

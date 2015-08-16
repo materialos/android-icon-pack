@@ -48,8 +48,8 @@
         <item>Chrome,Eduardo Pratti</item>
         <item>Chrome Alt,Wayne Kosimoto</item>
         <item>Chrome Alt 2,Corbin Crutchley</item>
-        <item>Chrome Beta Alt 2,Corbin Crutchley</item>
-        <item>Chrome Dev Alt 2,Corbin Crutchley</item>
+        <item>Chrome Beta Alt,chromebeta_alt2,Corbin Crutchley</item>
+        <item>Chrome Dev Alt,chromedev_alt2,Corbin Crutchley</item>
         <item>Chromium Alt,Wayne Kosimoto</item>
         <item>Clock,Greg Ives</item>
         <item>CM Themes,Greg Ives</item>
@@ -100,8 +100,8 @@
         <item>Gooogle Drive,Daniel Hickman</item>
         <item>Gooogle Drive Alt,Daniel Hickman</item>
         <item>Gooogle Drive Alt 2,Daniel Hickman</item>
-        <item>Hardrive,hardrivedefault,Daniel Hickman</item>
-        <item>Hardrive Windows,Daniel Hickman</item>
+        <item>Hard Drive,hardrivedefault,Daniel Hickman</item>
+        <item>Hard Drive Windows,Daniel Hickman</item>
         <item>Hot or Not,Daniel Hickman</item>
         <item>Hyperlapse,Alex Mueller</item>
         <item>iFunny,Daniel Hickman</item>

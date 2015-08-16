@@ -19,7 +19,7 @@
             android:gravity="center"
             android:lineSpacingMultiplier="1.6"
             android:text="@string/loading_unthemed_apps"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <ProgressBar
             style="?progressBarStyle"
@@ -34,7 +34,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:divider="@color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:fitsSystemWindows="true"
         android:paddingBottom="8dp"
         android:paddingTop="8dp" />
