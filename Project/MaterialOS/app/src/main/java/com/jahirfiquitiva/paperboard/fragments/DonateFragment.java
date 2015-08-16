@@ -12,9 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.apmem.tools.layouts.FlowLayout;
 import org.materialos.icons.R;
 
 import java.util.ArrayList;
@@ -81,7 +81,7 @@ public class DonateFragment extends Fragment {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = getActivity().getLayoutInflater().inflate(R.layout.list_item_credits, parent, false);
+            View view = getActivity().getLayoutInflater().inflate(R.layout.list_item_donate, parent, false);
             return new ViewHolder(view);
         }
 
@@ -93,7 +93,11 @@ public class DonateFragment extends Fragment {
             holder.subtitle.setText(item.amount);
 
             for (String donator : item.donators) {
-                holder.desc.append(donator + "; ");
+                View chip = LayoutInflater.from(getActivity()).inflate(R.layout.list_item_chip, holder.desc, false);
+                TextView view = (TextView) chip.findViewById(R.id.list_item_chip_text);
+                view.setText(donator);
+
+                holder.desc.addView(chip);
             }
 
             holder.website.setText("Donate This Level");
@@ -108,23 +112,17 @@ public class DonateFragment extends Fragment {
         public class ViewHolder extends RecyclerView.ViewHolder {
             private TextView name;
             private TextView subtitle;
-            private TextView desc;
+            private FlowLayout desc;
             private Button website;
-            private Button gplus;
-            private LinearLayout actionButtonBar;
 
             public ViewHolder(View itemView) {
                 super(itemView);
-                name = (TextView) itemView.findViewById(R.id.list_item_credits_title);
+                name = (TextView) itemView.findViewById(R.id.list_item_donate_title);
 
-                subtitle = (TextView) itemView.findViewById(R.id.list_item_credits_subtitle);
-                desc = (TextView) itemView.findViewById(R.id.list_item_credits_desc);
+                subtitle = (TextView) itemView.findViewById(R.id.list_item_donate_subtitle);
+                desc = (FlowLayout) itemView.findViewById(R.id.list_item_donate_donators_flow);
 
-                website = (Button) itemView.findViewById(R.id.list_item_credits_website_button);
-                gplus = (Button) itemView.findViewById(R.id.list_item_credits_gplus_button);
-                gplus.setVisibility(View.GONE);
-
-                actionButtonBar = (LinearLayout) itemView.findViewById(R.id.list_item_credits_actions);
+                website = (Button) itemView.findViewById(R.id.list_item_donate_button);
 
                 View.OnClickListener l = new View.OnClickListener() {
                     @Override
