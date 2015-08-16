@@ -96,6 +96,8 @@ public class DonateFragment extends Fragment {
                 View chip = LayoutInflater.from(getActivity()).inflate(R.layout.list_item_chip, holder.desc, false);
                 TextView view = (TextView) chip.findViewById(R.id.list_item_chip_text);
                 view.setText(donator);
+                TextView initial = (TextView) chip.findViewById(R.id.list_item_chip_image_initial);
+                initial.setText(donator.substring(0, 1).toUpperCase());
 
                 holder.desc.addView(chip);
             }

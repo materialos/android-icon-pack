@@ -10,12 +10,29 @@
     android:background="@drawable/chip_background"
     android:orientation="horizontal">
 
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@id/list_item_chip_image"
+    <RelativeLayout
         android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:src="#08b8d2"
-        app:riv_oval="true" />
+        android:layout_height="32dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@id/list_item_chip_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="#2196f3"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@id/list_item_chip_image_initial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            tools:text="D" />
+
+    </RelativeLayout>
+
 
     <TextView
         android:id="@id/list_item_chip_text"
@@ -26,9 +43,9 @@
         android:paddingLeft="8dp"
         android:paddingRight="12dp"
         android:paddingStart="8dp"
-        android:text="Daniel Ciao"
         android:textColor="@color/secondary_text_default_material_light"
-        tools:ignore="NewApi" />
+        tools:ignore="NewApi"
+        tools:text="Daniel Ciao" />
 
 
 </LinearLayout>

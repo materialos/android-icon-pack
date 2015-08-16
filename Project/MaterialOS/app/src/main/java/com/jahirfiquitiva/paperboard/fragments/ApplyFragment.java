@@ -202,10 +202,10 @@ public class ApplyFragment extends Fragment {
 
             if (LauncherIsInstalled(launchers.get(position).packageName)) {
                 holder.isInstalled.setText(R.string.installed);
-                holder.isInstalled.setTextColor(getResources().getColor(R.color.green));
+                holder.isInstalled.setTextColor(getResources().getColor(R.color.launcher_installed_text));
             } else {
                 holder.isInstalled.setText(R.string.noninstalled);
-                holder.isInstalled.setTextColor(getResources().getColor(R.color.red));
+                holder.isInstalled.setTextColor(getResources().getColor(R.color.launcher_not_installed_text));
             }
 
             return item;

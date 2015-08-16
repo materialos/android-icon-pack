@@ -16,7 +16,6 @@
         android:clickable="false"
         android:lineSpacingMultiplier="1.6"
         android:paddingTop="@dimen/cards_padding"
-        android:textColor="@color/dialogcontent"
         android:textSize="@dimen/text_small"
         android:textStyle="bold" />
 
@@ -27,7 +26,6 @@
         android:clickable="false"
         android:lineSpacingMultiplier="1.6"
         android:paddingTop="@dimen/cards_padding"
-        android:textColor="@color/dialogcontent"
         android:textSize="@dimen/text_small" />
 
 </LinearLayout>

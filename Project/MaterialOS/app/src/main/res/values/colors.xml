@@ -3,28 +3,17 @@
 
     <color name="primary">#2196F3</color>
     <color name="primary_dark">#1976D2</color>
-    <color name="primary_pressed">#C5CAE9</color>
     <color name="accent">#FF5252</color>
-    <color name="ripple_accent">#80FF5252</color>
-    <color name="accent_pressed">#FF5252</color>
-    <color name="accent_secondary">@color/accent</color>
-    <color name="secondary">#009688</color>
-    <color name="secondary_pressed">#26a69a</color>
-    <!-- Ctrl + H and search for color/cardsbg if you want to customize card colors individually-->
-    <color name="cardsbg">#ffffff</color>
-    <!-- Color for Backgrounds -->
-    <color name="light_bg">@color/background_material_light</color>
-    <!-- Color for texts in Dialogs -->
-    <color name="dialogcontent">#6d6d6d</color>
+    <!-- <color name="accent_secondary">@color/accent</color>-->
+
     <!-- Color for some ripples -->
     <color name="semitransparent_white">#80ffffff</color>
     <!-- Color for texts -->
     <color name="dark_grey">#4d4d4d</color>
 
 
-    <!-- Don't edit -->
-    <color name="red">#f44336</color>
-    <color name="green">#4caf50</color>
+    <color name="launcher_not_installed_text">#f44336</color>
+    <color name="launcher_installed_text">#4caf50</color>
     <color name="white">#ffffff</color>
     <color name="transparent">#00ffffff</color>
     <color name="window_bg">@color/primary_dark</color>

@@ -44,8 +44,7 @@ public class HomeFragment extends Fragment {
 
         FloatingActionButton fab = (FloatingActionButton) root.findViewById(R.id.apply_btn);
         fab.setColorNormal(getResources().getColor(R.color.accent));
-        fab.setColorPressed(getResources().getColor(R.color.accent_pressed));
-        fab.setColorRipple(getResources().getColor(R.color.semitransparent_white));
+        fab.setColorRipple(getResources().getColor(R.color.ripple_material_light));
         fab.show(true);
 
         fab.setOnClickListener(new View.OnClickListener() {

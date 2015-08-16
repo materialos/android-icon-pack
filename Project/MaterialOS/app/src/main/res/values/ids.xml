@@ -15,4 +15,5 @@
     <item name="list_item_donate_donators_flow" type="id" />
     <item name="list_item_chip_text" type="id" />
     <item name="list_item_chip_image" type="id" />
+    <item name="list_item_chip_image_initial" type="id" />
 </resources>
