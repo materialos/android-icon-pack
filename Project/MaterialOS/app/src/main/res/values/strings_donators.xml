@@ -120,11 +120,11 @@
 
     <!-- Dialogs -->
     <!-- Names & Anonymous Donations -->
-    <string name="lni_title">"Note About Names"</string>
-    <string name="lni_content">"Names will be taken from your PayPal name by default. If you would like to use another name or to remain anonymous, please specify in the \"Special Instructions\" after donation. All Names must be real or an appropriate pseudonym."</string>
+    <string name="name_title">"Note About Names"</string>
+    <string name="name_content">"Names will be taken from your PayPal name by default. If you would like to use another name or to remain anonymous, please specify in the \"Special Instructions\" after donation. All Names must be real or an appropriate pseudonym."</string>
 
     <!-- Profile Pictures and Links -->
-    <string name="lni_title">"Note About Links"</string>
-    <string name="lni_content">"Please leave your social link, personal website, or GitHub in the \"Special Instructions\". Associated Names will be taken from your PayPal name by default. Profile pictures will be taken from the link unless specified. All pictures and links must be appropriate."</string>
+    <string name="links_title">"Note About Links"</string>
+    <string name="links_content">"Please leave your social link, personal website, or GitHub in the \"Special Instructions\". Associated Names will be taken from your PayPal name by default. Profile pictures will be taken from the link unless specified. All pictures and links must be appropriate."</string>
 
 </resources>
