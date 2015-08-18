@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Pin This as "Most Popular" -->
     <string name="level1">
-        \'Buy\' the App
+       Bronze
     </string>
 
     <string-array name="level1_donators">
@@ -17,14 +19,14 @@
         $1+
     </string>
 
-    <!--TODO: Link shortener?-->
     <string name="level1_link" formatted="false" translateable="false">
-        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;amount=1%2e00&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
     </string>
 
 
+    <!-- Sort Highest to Smallest After Here -->
     <string name="level2">
-        Smoothie or Coffee
+        Silver
     </string>
 
     <string-array name="level2_donators">
@@ -35,7 +37,7 @@
     </string-array>
 
     <string name="level2_link" formatted="false" translateable="false">
-        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;amount=5%2e00&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
     </string>
 
     <string name="level2_amount" formatted="false" translateable="false">
@@ -44,7 +46,7 @@
 
 
     <string name="level3">
-        Server Costs for a Month
+        Gold
     </string>
 
     <string-array name="level3_donators">
@@ -55,7 +57,7 @@
     </string-array>
 
     <string name="level3_link" formatted="false" translateable="false">
-        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;amount=10%2e00&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
     </string>
 
     <string name="level3_amount" formatted="false" translateable="false">
@@ -64,7 +66,7 @@
 
 
     <string name="level4">
-        Domain Costs for a Year
+        Diamond
     </string>
 
     <string-array name="level4_donators">
@@ -75,7 +77,7 @@
     </string-array>
 
     <string name="level4_link" formatted="false" translateable="false">
-        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;amount=15%2e00&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
     </string>
 
     <string name="level4_amount" formatted="false" translateable="false">
@@ -83,7 +85,7 @@
     </string>
 
     <string name="level5">
-        1 Copy of Illustrator for a Month
+        Platinum
     </string>
 
     <string-array name="level5_donators">
@@ -94,10 +96,35 @@
     </string-array>
 
     <string name="level5_link" formatted="false" translateable="false">
-        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;amount=20%2e00&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
     </string>
 
     <string name="level5_amount" formatted="false" translateable="false">
         $20+
     </string>
+
+
+    <!-- Variable Addition, Not Level -->
+    <string name="variable">
+        Enter the Amount
+    </string>
+
+    <string name="variable_link" formatted="false" translateable="false">
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=materialopensource%40gmail%2ecom&amp;lc=US&amp;item_name=MaterialOS&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+    </string>
+
+    <string name="variable_amount" formatted="false" translateable="false">
+        We\'ll add you to the appropriate level.
+    </string>
+
+
+    <!-- Dialogs -->
+    <!-- Names & Anonymous Donations -->
+    <string name="lni_title">"Note About Names"</string>
+    <string name="lni_content">"Names will be taken from your PayPal name by default. If you would like to use another name or to remain anonymous, please specify in the \"Special Instructions\" after donation. All Names must be real or an appropriate pseudonym."</string>
+
+    <!-- Profile Pictures and Links -->
+    <string name="lni_title">"Note About Links"</string>
+    <string name="lni_content">"Please leave your social link, personal website, or GitHub in the \"Special Instructions\". Associated Names will be taken from your PayPal name by default. Profile pictures will be taken from the link unless specified. All pictures and links must be appropriate."</string>
+
 </resources>
