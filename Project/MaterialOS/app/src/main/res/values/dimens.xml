@@ -17,28 +17,18 @@
 
     <!-- Grids -->
     <dimen name="iconcolumn">80dp</dimen>
-    <dimen name="walls_margin">@dimen/card_corner_radius</dimen>
     <dimen name="grid_padding_vertical">8dp</dimen>
 
     <!-- Lists -->
     <dimen name="list_item_height">@dimen/iconcolumn</dimen>
     <dimen name="list_item_height_mini">40dp</dimen>
     <dimen name="list_margin">20dp</dimen>
-    <dimen name="texts_margin">@dimen/cards_elevation</dimen>
     <dimen name="app_icon_size">36dp</dimen>
     <dimen name="request_item_padding_left">18dp</dimen>
-
-    <!-- Cards -->
-    <dimen name="cards_padding">16dp</dimen>
-    <dimen name="cards_elevation">2dp</dimen>
-    <dimen name="cards_margin">8dp</dimen>
-    <dimen name="mini_margin">2dp</dimen>
-    <dimen name="card_corner_radius">2dp</dimen>
 
     <!-- Texts Sizes -->
     <dimen name="text_big">20sp</dimen>
     <dimen name="text_med">18sp</dimen>
     <dimen name="text_small">16sp</dimen>
-    <dimen name="text_ultrasmall">14sp</dimen>
 
 </resources>

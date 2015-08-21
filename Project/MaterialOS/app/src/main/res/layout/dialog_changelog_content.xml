@@ -5,7 +5,7 @@
     android:background="@android:color/transparent"
     android:clickable="false"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/cards_padding"
+    android:paddingBottom="16dp"
     android:paddingLeft="@dimen/dialog_margin"
     android:paddingRight="@dimen/dialog_margin">
 
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:clickable="false"
         android:lineSpacingMultiplier="1.6"
-        android:paddingTop="@dimen/cards_padding"
+        android:paddingTop="16dp"
         android:textSize="@dimen/text_small"
         android:textStyle="bold" />
 
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:clickable="false"
         android:lineSpacingMultiplier="1.6"
-        android:paddingTop="@dimen/cards_padding"
+        android:paddingTop="16dp"
         android:textSize="@dimen/text_small" />
 
 </LinearLayout>

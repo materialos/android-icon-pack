@@ -17,7 +17,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:clipToPadding="false"
         android:numColumns="auto_fit"
-        android:padding="@dimen/walls_margin" />
+        android:padding="2dp" />
 
 </RelativeLayout>

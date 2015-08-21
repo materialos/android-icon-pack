@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:gravity="start"
-            android:padding="@dimen/cards_padding"
+            android:padding="16dp"
             android:textColor="?android:textColorPrimaryInverse"
             android:textSize="@dimen/text_small"
             tools:text="Title" />
