@@ -19,18 +19,18 @@
     <string name="credits_item2_gplus">https://www.google.com/+DanielCiao</string>
     <string name="credits_item2_desc">Modified and built the MaterialOS dashboard on top of Paperboard.</string>
 
-    <string name="credits_item3">Paperboard</string>
-    <string name="credits_item3_subtitle">Jahir Fiquitiva\n(Collaborators: Aidan Follestad and Joaquin Cuitiño)</string>
-    <string name="credits_item3_website">http://www.jahirfiquitiva.net/</string>
-    <string name="credits_item3_gplus">https://www.google.com/+JahirFiquitivaJDev</string>
-    <string name="credits_item3_desc">
+    <string name="credits_item3">Open Source Libraries:</string>
+
+    <string name="credits_item4">Paperboard</string>
+    <string name="credits_item4_subtitle">Jahir Fiquitiva\n(Collaborators: Aidan Follestad and Joaquin Cuitiño)</string>
+    <string name="credits_item4_website">http://www.jahirfiquitiva.net/</string>
+    <string name="credits_item4_gplus">https://www.google.com/+JahirFiquitivaJDev</string>
+    <string name="credits_item4_desc">
         This dashboard is built on PaperBoard, an open source icon pack dashboard template.
 
         \n\nLicensed under the CC BY-SA 4.0 License
         \nCopyright 2015
     </string>
-
-    <string name="credits_item4">Open Source Libraries:</string>
 
     <string name="credits_item5_subtitle">Oleksandr Melnykov</string>
     <string name="credits_item5_website">https://github.com/makovkastar/floatingactionbutton</string>

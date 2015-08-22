@@ -9,6 +9,7 @@
     android:background="?selectableItemBackground"
     android:fontFamily="@string/font_fontFamily_medium"
     android:gravity="center"
+    android:minWidth="72dp"
     android:paddingLeft="12dp"
     android:paddingRight="12dp"
     android:textAllCaps="true"
