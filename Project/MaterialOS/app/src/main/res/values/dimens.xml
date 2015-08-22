@@ -2,7 +2,7 @@
     <!-- Toolbar dimensions -->
     <!-- This is for the guidelines -->
     <dimen name="toolbar_contentInset">72dp</dimen>
-    <dimen name="tabs_contentInset">57dp</dimen>
+    <dimen name="tabs_contentInset">60dp</dimen>
 
     <!-- Elevation of toolbar. Play with values until you find the one you want -->
     <dimen name="toolbar_elevation">4dp</dimen>

@@ -14,6 +14,7 @@
         android:elevation="@dimen/toolbar_elevation"
         android:paddingLeft="@dimen/tabs_contentInset"
         android:paddingStart="@dimen/tabs_contentInset"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         tools:ignore="NewApi,RtlSymmetry,UnusedAttribute" />
 
 

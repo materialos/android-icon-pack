@@ -15,8 +15,6 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.materialos.icons.R;
-
 
 /**
  * To be used with ViewPager to provide a tab indicator component which give constant feedback as to
@@ -123,7 +121,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
 
         mViewPager = viewPager;
         if (viewPager != null) {
-            viewPager.setOnPageChangeListener(new InternalViewPagerListener());
+            viewPager.addOnPageChangeListener(new InternalViewPagerListener());
             populateTabStrip();
         }
     }
@@ -182,7 +180,6 @@ public class SlidingTabLayout extends HorizontalScrollView {
 
             assert tabTitleView != null;
             tabTitleView.setText(adapter.getPageTitle(i));
-            tabTitleView.setTextColor(getResources().getColorStateList(R.color.tabs_text));
             tabView.setOnClickListener(tabClickListener);
             String desc = mContentDescriptions.get(i, null);
             if (desc != null) {

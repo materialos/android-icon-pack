@@ -10,8 +10,7 @@
         android:layout_centerInParent="true"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:orientation="vertical"
-        android:paddingBottom="16dp">
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="match_parent"
@@ -45,6 +44,7 @@
             android:layout_width="160dp"
             android:layout_height="54dp"
             android:layout_gravity="center|bottom"
+            android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
             android:text="RATE" />
 

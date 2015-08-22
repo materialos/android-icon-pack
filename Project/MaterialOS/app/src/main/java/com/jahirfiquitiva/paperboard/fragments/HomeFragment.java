@@ -51,8 +51,8 @@ public class HomeFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) getActivity()).getDrawer().setSelectionByIdentifier(3);
-                ((MainActivity) getActivity()).switchFragment(3, getResources().getString(R.string.apply), ApplyFragment.class);
+                ((MainActivity) getActivity()).getDrawer().setSelection(MainActivity.DRAWER_ITEM_APPLY);
+                ((MainActivity) getActivity()).switchFragment(MainActivity.DRAWER_ITEM_APPLY, getResources().getString(R.string.apply), ApplyFragment.class);
             }
         });
 

@@ -14,7 +14,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.jahirfiquitiva.paperboard.adapters.ChangelogAdapter;
@@ -28,10 +27,10 @@ import com.jahirfiquitiva.paperboard.fragments.WallpapersFragment;
 import com.jahirfiquitiva.paperboard.util.Preferences;
 import com.jahirfiquitiva.paperboard.util.Util;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
+import com.mikepenz.materialdrawer.AccountHeader;
+import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
-import com.mikepenz.materialdrawer.accountswitcher.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
@@ -43,13 +42,19 @@ import org.materialos.icons.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final int DRAWER_ITEM_HOME = 2;
+    public static final int DRAWER_ITEM_ICONS = 4;
+    public static final int DRAWER_ITEM_APPLY = 6;
+    public static final int DRAWER_ITEM_WALLPAPER = 8;
+    public static final int DRAWER_ITEM_IC_REQUEST = 10;
+    public static final int DRAWER_ITEM_CREDITS = 12;
+    public static final int DRAWER_ITEM_DONATE = 14;
     private static final boolean WITH_LICENSE_CHECKER = false;
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
-
     public String version;
     private Drawer mDrawer = null;
     private int mCurrentSelectedPosition = -1;
-    private boolean mFirstrun, mEnableFeatures;
+    private boolean mFirstRun, mEnableFeatures;
     private Preferences mPrefs;
     private Toolbar mToolbar;
 
@@ -80,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
 
         final String appName = getResources().getString(R.string.app_name);
-        String home = getResources().getString(R.string.home);
+        final String home = getResources().getString(R.string.home);
         final String previews = getResources().getString(R.string.icons);
         final String apply = getResources().getString(R.string.apply);
         final String wallpapers = getResources().getString(R.string.wallpapers);
@@ -97,48 +102,49 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         mEnableFeatures = mPrefs.isFeaturesEnabled();
-        mFirstrun = mPrefs.isFirstRun();
+        mFirstRun = mPrefs.isFirstRun();
 
         mDrawer = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(mToolbar)
                 .withAccountHeader(headerResult)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(home).withIcon(GoogleMaterial.Icon.gmd_home).withIdentifier(1),
-                        new PrimaryDrawerItem().withName(previews).withIcon(GoogleMaterial.Icon.gmd_palette).withIdentifier(2),
-                        new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(3),
+                        new PrimaryDrawerItem().withName(home).withIcon(GoogleMaterial.Icon.gmd_home).withIdentifier(DRAWER_ITEM_HOME),
+                        new PrimaryDrawerItem().withName(previews).withIcon(GoogleMaterial.Icon.gmd_palette).withIdentifier(DRAWER_ITEM_ICONS),
+                        new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(DRAWER_ITEM_APPLY),
                         new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(6),
-                        new PrimaryDrawerItem().withName(donate).withIcon(GoogleMaterial.Icon.gmd_attach_money).withIdentifier(7)
+                        new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(DRAWER_ITEM_CREDITS),
+                        new PrimaryDrawerItem().withName(donate).withIcon(GoogleMaterial.Icon.gmd_attach_money).withIdentifier(DRAWER_ITEM_DONATE)
                 ).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+
                     @Override
-                    public boolean onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
-                        if (drawerItem != null) {
-                            switch (drawerItem.getIdentifier()) {
-                                case 1:
-                                    switchFragment(1, appName, HomeFragment.class);
+                    public boolean onItemClick(View view, int i, IDrawerItem iDrawerItem) {
+                        if (iDrawerItem != null) {
+                            switch (iDrawerItem.getIdentifier()) {
+                                case DRAWER_ITEM_HOME:
+                                    switchFragment(DRAWER_ITEM_HOME, appName, HomeFragment.class);
                                     break;
-                                case 2:
-                                    switchFragment(2, previews, PreviewsFragment.class);
+                                case DRAWER_ITEM_ICONS:
+                                    switchFragment(DRAWER_ITEM_ICONS, previews, PreviewsFragment.class);
                                     break;
-                                case 3:
-                                    switchFragment(3, apply, ApplyFragment.class);
+                                case DRAWER_ITEM_APPLY:
+                                    switchFragment(DRAWER_ITEM_APPLY, apply, ApplyFragment.class);
                                     break;
-                                case 4:
+                                case DRAWER_ITEM_WALLPAPER:
                                     if (Util.hasNetwork(MainActivity.this)) {
-                                        switchFragment(4, wallpapers, WallpapersFragment.class);
+                                        switchFragment(DRAWER_ITEM_WALLPAPER, wallpapers, WallpapersFragment.class);
                                     } else {
                                         showNotConnectedDialog();
                                     }
                                     break;
-                                case 5:
-                                    switchFragment(5, iconRequest, RequestFragment.class);
+                                case DRAWER_ITEM_IC_REQUEST:
+                                    switchFragment(DRAWER_ITEM_IC_REQUEST, iconRequest, RequestFragment.class);
                                     break;
-                                case 6:
-                                    switchFragment(6, credits, CreditsFragment.class);
+                                case DRAWER_ITEM_CREDITS:
+                                    switchFragment(DRAWER_ITEM_CREDITS, credits, CreditsFragment.class);
                                     break;
-                                case 7:
-                                    switchFragment(7, donate, DonateFragment.class);
+                                case DRAWER_ITEM_DONATE:
+                                    switchFragment(DRAWER_ITEM_DONATE, donate, DonateFragment.class);
                                     break;
                             }
 
@@ -152,12 +158,12 @@ public class MainActivity extends AppCompatActivity {
                 .withSavedInstance(savedInstanceState)
                 .build();
 
-        mDrawer.getListView().setVerticalScrollBarEnabled(false);
+        //mDrawer.getRecyclerView().setVerticalScrollBarEnabled(false);
         runLicenseChecker();
 
         if (savedInstanceState == null) {
-            mCurrentSelectedPosition = -1;
-            mDrawer.setSelectionByIdentifier(1);
+            mCurrentSelectedPosition = 0;
+            mDrawer.setSelection(DRAWER_ITEM_HOME);
         } else {
             mCurrentSelectedPosition = mDrawer.getCurrentSelection();
         }
@@ -166,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mDrawer.setSelection(mCurrentSelectedPosition);
+        mDrawer.setSelectionAtPosition(mCurrentSelectedPosition);
     }
 
     public Drawer getDrawer() {
@@ -175,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void switchFragment(int itemId, String title, Class<? extends Fragment> fragment) {
 
-        mDrawer.getListView().postDelayed(new Runnable() {
+        mDrawer.getRecyclerView().postDelayed(new Runnable() {
             @Override
             public void run() {
                 if (mDrawer.isDrawerOpen()) {
@@ -186,19 +192,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if (itemId == 1 || itemId == 2) {
+            if (itemId == DRAWER_ITEM_HOME || itemId == DRAWER_ITEM_ICONS) {
                 mToolbar.setElevation(0);
             } else {
                 mToolbar.setElevation(getResources().getDimension(R.dimen.toolbar_elevation));
             }
         }
 
-        if (mCurrentSelectedPosition == mDrawer.getPositionFromIdentifier(itemId)) {
+        if (mCurrentSelectedPosition == mDrawer.getPosition(itemId)) {
             // Don't allow re-selection of the currently active item
             return;
         }
 
-        mCurrentSelectedPosition = mDrawer.getPositionFromIdentifier(itemId);
+        mCurrentSelectedPosition = mDrawer.getPosition(itemId);
 
         if (getSupportActionBar() != null)
             getSupportActionBar().setTitle(title);
@@ -283,16 +289,18 @@ public class MainActivity extends AppCompatActivity {
     private void addItemsToDrawer() {
         final String wallpapers = getResources().getString(R.string.wallpapers);
         final String iconRequest = getResources().getString(R.string.icon_request);
-        IDrawerItem walls = new PrimaryDrawerItem().withName(wallpapers).withIcon(GoogleMaterial.Icon.gmd_image).withIdentifier(4);
-        IDrawerItem request = new PrimaryDrawerItem().withName(iconRequest).withIcon(GoogleMaterial.Icon.gmd_content_paste).withIdentifier(5);
+        IDrawerItem walls = new PrimaryDrawerItem().withName(wallpapers)
+                .withIcon(GoogleMaterial.Icon.gmd_image).withIdentifier(DRAWER_ITEM_WALLPAPER);
+        IDrawerItem request = new PrimaryDrawerItem().withName(iconRequest)
+                .withIcon(GoogleMaterial.Icon.gmd_content_paste).withIdentifier(DRAWER_ITEM_IC_REQUEST);
         if (mEnableFeatures) {
-            mDrawer.addItem(walls, 3);
-            mDrawer.addItem(request, 4);
+            mDrawer.addItemAtPosition(walls, 3);
+            mDrawer.addItemAtPosition(request, 4);
         }
     }
 
     private void runLicenseChecker() {
-        if (mFirstrun) {
+        if (mFirstRun) {
             if (WITH_LICENSE_CHECKER) {
                 checkLicense();
             } else {
@@ -344,7 +352,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onPositive(MaterialDialog dialog) {
                         int nSelection = mCurrentSelectedPosition - 1;
                         if (mDrawer != null)
-                            mDrawer.setSelection(nSelection);
+                            mDrawer.setSelectionAtPosition(nSelection);
                     }
                 }).show();
     }

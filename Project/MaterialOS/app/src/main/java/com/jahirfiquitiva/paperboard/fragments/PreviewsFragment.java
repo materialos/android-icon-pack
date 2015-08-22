@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -28,14 +29,10 @@ public class PreviewsFragment extends Fragment {
         ViewPager mPager = (ViewPager) root.findViewById(R.id.pager);
         mPager.setAdapter(new MyPagerAdapter(getActivity().getFragmentManager()));
 
-        SlidingTabLayout mTabs = (SlidingTabLayout) root.findViewById(R.id.tabs);
-        mTabs.setViewPager(mPager);
-        mTabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(R.color.accent);
-            }
-        });
+        SlidingTabLayout tabLayout = (SlidingTabLayout) root.findViewById(R.id.tabs);
+        tabLayout.setCustomTabView(R.layout.sliding_tab_textview, android.R.id.text1);
+        tabLayout.setSelectedIndicatorColors(ContextCompat.getColor(getActivity(), R.color.accent));
+        tabLayout.setViewPager(mPager);
 
         return root;
     }
