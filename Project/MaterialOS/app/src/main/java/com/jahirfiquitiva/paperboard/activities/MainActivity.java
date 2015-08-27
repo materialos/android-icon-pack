@@ -37,6 +37,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.pkmmte.requestmanager.PkRequestManager;
 import com.pkmmte.requestmanager.RequestSettings;
 
+import org.materialos.icons.BuildConfig;
 import org.materialos.icons.R;
 
 
@@ -113,8 +114,7 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(previews).withIcon(GoogleMaterial.Icon.gmd_palette).withIdentifier(DRAWER_ITEM_ICONS),
                         new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(DRAWER_ITEM_APPLY),
                         new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(DRAWER_ITEM_CREDITS),
-                        new PrimaryDrawerItem().withName(donate).withIcon(GoogleMaterial.Icon.gmd_attach_money).withIdentifier(DRAWER_ITEM_DONATE)
+                        new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(DRAWER_ITEM_CREDITS)
                 ).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
 
                     @Override
@@ -157,6 +157,10 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .withSavedInstance(savedInstanceState)
                 .build();
+
+        if (BuildConfig.DEBUG) {
+            mDrawer.addItem(new PrimaryDrawerItem().withName(donate).withIcon(GoogleMaterial.Icon.gmd_attach_money).withIdentifier(DRAWER_ITEM_DONATE));
+        }
 
         //mDrawer.getRecyclerView().setVerticalScrollBarEnabled(false);
         runLicenseChecker();
