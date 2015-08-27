@@ -12,6 +12,7 @@
     android:minWidth="72dp"
     android:paddingLeft="12dp"
     android:paddingRight="12dp"
+    android:singleLine="true"
     android:textAllCaps="true"
     android:textColor="@color/sliding_tab_text_color"
     android:textSize="14sp"
