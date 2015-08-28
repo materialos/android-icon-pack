@@ -6,6 +6,70 @@
     <!-- All of your Latest icons listed here -->
     <string-array name="latest" translatable="false">
         <item>MaterialOS,Eduardo Pratti</item>
+        <item>Dialer,Daniel Hickman</item>
+        <item>Dialer Alt,Eduardo Pratti</item>
+        <item>Downloads,Daniel Hickman</item>
+        <item>Eclipse,Labib Muhammad</item>
+        <item>Email Alt,Eduardo Pratti</item>
+        <item>Firefox Alt,Erik Olson</item>
+        <item>Fruit Ninja,Createme</item>
+        <item>Gallery Alt,Eduardo Pratti</item>
+        <item>Gallery Alt 2,Eduardo Pratti</item>
+        <item>Gallery Alt 3,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Screen Recorder,genericscreenrecorder,Daniel Hickman</item>
+        <item>GIMP,Daniel Hickman</item>
+        <item>Gmail Alt,Eduardo Pratti</item>
+        <item>Go Launcher,Daniel Hickman</item>
+        <item>Google Analytics,Daniel Hickman</item>
+        <item>Google Calendar,Anjo Cerdena</item>
+        <item>Google Calendar Alt,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Google Camera,Eduardo Pratti</item>
+        <item>Google Docs,Eduardo Pratti</item>
+        <item>Google Keep Alt,Eduardo Pratti</item>
+        <item>Google Keyboard Alt,Eduardo Pratti</item>
+        <item>Google Maps,Eduardo Pratti</item>
+        <item>Google News,Eduardo Pratti</item>
+        <item>Google Now Launcher,Daniel Hickman</item>
+        <item>Google Now Launcher Alt,Daniel Hickman</item>
+        <item>Google Photos,Eduardo Pratti</item>
+        <item>Google Play Games,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Google Play Music,Eduardo Pratti</item>
+        <item>Google Play Music Alt,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Google Sheets,Eduardo Pratti</item>
+        <item>Google Slides,Eduardo Pratti</item>
+        <item>Google Translate,Eduardo Pratti</item>
+        <item>Hexlock,Daniel Hickman</item>
+        <item>Hexlock Alt,Daniel Hickman</item>
+        <item>IF,ifbyifttt,Daniel Hickman</item>
+        <item>Inbox Alt,Eduardo Pratti</item>
+        <item>Instagram Alt,Createme</item>
+        <item>KK Launcher,Daniel Hickman</item>
+        <item>KK Launcher_alt,Daniel Hickman</item>
+        <item>Legend,Daniel Hickman</item>
+        <item>Messaging,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Napster,Createme</item>
+        <item>Nova Launcher,Daniel Hickman</item>
+        <item>Nova Launcher Prime,Daniel Hickman</item>
+        <item>Nova Launcher Prime Alt,Daniel Hickman</item>
+        <item>Nova Launcher Alt,Daniel Hickman</item>
+        <item>Pushbullet Alt,Createme</item>
+        <item>RAR,Createme</item>
+        <item>San Andreas,Createme</item>
+        <item>Settings Alt,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Smart Launcher,Daniel Hickman</item>
+        <item>Smart Launcher Pro,Daniel Hickman</item>
+        <item>Solo Launcher,Daniel Hickman</item>
+        <item>Solo Launcher Alt,Daniel Hickman</item>
+        <item>Steam Alt 2,Createme</item>
+        <item>Sunrise Calendar,Daniel Hickman</item>
+        <item>Sunrise Calendar Alt,Daniel Hickman</item>
+        <item>Sync,Createme</item>
+        <item>Titanium Backup,Createme</item>
+        <item>TSF Launcher,Daniel Hickman</item>
+        <item>XOR Projects,Corbin Crutchley</item>
+        <item>XOR Projects Alt,Daniel Hickman</item>
+        <item>XOR Projects Alt 2,Daniel Hickman</item>
+        <item>XOR Projects Alt 3,Daniel Hickman</item>
     </string-array>
 
     <!-- ALL ICONS -->
@@ -17,34 +81,44 @@
         <item>Action Launcher,Jahir Fiquitiva &amp; Corbin Crutchley</item>
         <item>AdAway,Createme</item>
         <item>Adblock Plus,Greg Ives</item>
+        <item>ADW Launcher Ex,Daniel Hickman</item>
+        <item>ADW Launcher,Daniel Hickman</item>
         <item>After Effects,Alex Mueller</item>
         <item>Afterlight,Daniel Hickman</item>
         <item>Afterlight Alt,Daniel Hickman</item>
         <item>Afterlight Alt 2,Daniel Hickman</item>
+        <item>Ally,Createme</item>
         <item>Ampere,Daniel Hickman</item>
         <item>Android Studio,Wayne Kosimoto</item>
-        <item>AppLock,Gabriel Zegarra</item>
+        <item>AOSP Calendar,Anjo Cerdena &amp; Createme</item>
+        <item>Apex Launcher</item>
+        <item>App Ops,appops,Createme</item>
         <item>App Settings,Greg Ives</item>
+        <item>AppLock,Gabriel Zegarra</item>
         <item>Archive Manager,Wayne Kosimoto</item>
         <item>Astro,Gabriel Zegarra</item>
         <item>Authenticator Plus,athuplus,Daniel Hickman</item>
         <item>Authenticator Plus Alt,athuplus_alt,Daniel Hickman</item>
-        <item>Ready Steady Bang,bang,Greg Ives</item>
         <item>Barcode Scanner,Wayne Kosimoto</item>
         <item>BBM,Gabriel Zegarra</item>
-        <item>Blank File,Daniel Hickman</item>
-        <item>Blank File Alt,Wayne Kosimoto</item>
+        <item>Beatport,Createme</item>
         <item>Blank File Landscape,Daniel Hickman</item>
         <item>Blank File Square,Daniel Hickman</item>
+        <item>Blank File,Daniel Hickman</item>
+        <item>Blank File Alt,Wayne Kosimoto</item>
         <item>Blender,Wayne Kosimoto</item>
         <item>Boombox,Oscar E</item>
-        <item>Box,Daniel Hickman</item>
         <item>Box Folder,Wayne Kosimoto</item>
+        <item>Box,Daniel Hickman</item>
         <item>Brackets,Corbin Crutchley</item>
         <item>Browser,Wayne Kosimoto</item>
+        <item>Calculator Alt,Eduardo Pratti</item>
+        <item>Calculator Alt 2,Eduardo Pratti &amp; Pedro Peguero</item>
         <item>Cat Folder,Wayne Kosimoto</item>
         <item>CCleaner,Corbin Crutchley</item>
         <item>CCleaner Alt,Corbin Crutchley</item>
+        <item>Cheese,Daniel Hickman</item>
+        <item>Cheese Alt,Daniel Hickman</item>
         <item>Chrome,Eduardo Pratti</item>
         <item>Chrome Alt,Wayne Kosimoto</item>
         <item>Chrome Alt 2,Corbin Crutchley</item>
@@ -52,21 +126,30 @@
         <item>Chrome Dev Alt,chromedev_alt2,Corbin Crutchley</item>
         <item>Chromium Alt,Wayne Kosimoto</item>
         <item>Clock,Greg Ives</item>
+        <item>Clock Alt,Eduardo Pratti &amp; Pedro Peguero</item>
         <item>CM Themes,Greg Ives</item>
         <item>Code Folder,Wayne Kosimoto</item>
+        <item>ColorCons,Daniel Hickman</item>
         <item>Contacts,Niko Pennanen</item>
+        <item>Contacts Alt,Eduardo Pratti &amp; Pedro Peguero</item>
         <item>Cortana,Corbin Crutchley</item>
         <item>Cortana Alt,Daniel Hickman</item>
         <item>Cortana Alt 2,Corbin Crutchley</item>
+        <item>Craftable,Daniel Hickman</item>
         <item>Creative Cloud,Alex Mueller</item>
         <item>Cymera,Gabriel Zegarra</item>
+        <item>Dialer,Daniel Hickman</item>
+        <item>Dialer Alt,Eduardo Pratti</item>
         <item>Downloads Folder,Wayne Kosimoto</item>
-        <item>Dropbox,Gabriel Zegarra</item>
+        <item>Downloads,Daniel Hickman</item>
         <item>Dropbox Folder,Wayne Kosimoto</item>
+        <item>Dropbox,Gabriel Zegarra</item>
         <item>Duolingo,Gabriel Zegarra</item>
         <item>Easy Taxi,Gabriel Zegarra</item>
+        <item>Eclipse,Labib Muhammad</item>
         <item>Edjing,Gabriel Zegarra</item>
         <item>Email,Zachary Pierson</item>
+        <item>Email Alt,Eduardo Pratti</item>
         <item>ES File Explorer,Greg Ives</item>
         <item>ES File Explorer Alt,Gabriel Zegarra</item>
         <item>Evernote,Gabriel Zegarra</item>
@@ -74,50 +157,84 @@
         <item>Facebook,Gabriel Zegarra</item>
         <item>Facebook Alt,Greg Ives</item>
         <item>Facebook Lite,Gabriel Zegarra</item>
-        <item>Facebook Pages,Gabriel Zegarra</item>
         <item>Facebook Messenger,fbmessenger,Alex Mueller</item>
         <item>Facebook Messenger Alt,fbmessenger_alt,Greg Ives</item>
         <item>Facebook Messenger Alt 2,fbmessenger_alt2,Gabriel Zegarra</item>
+        <item>Facebook Pages,Gabriel Zegarra</item>
         <item>Feedly,Createme</item>
         <item>File Manager,Zachary Pierson</item>
         <item>Finder Folder,Wayne Kosimoto</item>
-        <item>Firefox,Wayne Kosimoto</item>
+        <item>FireFox,Wayne Kosimoto</item>
+        <item>FireFox Alt,Erik Olson</item>
         <item>Fleksy,Daniel Hickman</item>
         <item>Flipboard,Gabriel Zegarra</item>
         <item>Foursquare,Gabriel Zegarra</item>
+        <item>Fruit Ninja,Createme</item>
         <item>Galactiv,galactivlogocolor,Corbin Crutchley</item>
         <item>Gallery,Createme</item>
+        <item>Gallery Alt,Eduardo Pratti</item>
+        <item>Gallery Alt 2,Eduardo Pratti</item>
+        <item>Gallery Alt 3,Eduardo Pratti &amp; Pedro Peguero</item>
         <item>Geometry Dash,Vukasin Andelkovic</item>
+        <item>GIMP,Daniel Hickman</item>
         <item>Gmail,Eduardo Pratti</item>
+        <item>Gmail Alt,Eduardo Pratti</item>
+        <item>Go Launcher,Daniel Hickman</item>
+        <item>Google Analytics,Daniel Hickman</item>
+        <item>Google Calendar,Anjo Cerdena</item>
+        <item>Google Calendar Alt,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Google Camera,Eduardo Pratti</item>
+        <item>Google Docs,Eduardo Pratti</item>
         <item>Google Fit,Eduardo Pratti</item>
         <item>Google Keep,Corbin Crutchley</item>
+        <item>Google Keep Alt,Eduardo Pratti</item>
         <item>Google Keyboard,Eduardo Pratti</item>
+        <item>Google Keyboard Alt,Eduardo Pratti</item>
+        <item>Google Maps,Eduardo Pratti</item>
         <item>Google Messenger,Eduardo Pratti</item>
+        <item>Google News,Eduardo Pratti</item>
+        <item>Google Now Launcher,Daniel Hickman</item>
+        <item>Google Now Launcher Alt,Daniel Hickman</item>
         <item>Google Opinion Rewards,Createme</item>
         <item>Google Opinion Rewards Alt,Greg Ives</item>
+        <item>Google Photos,Eduardo Pratti</item>
+        <item>Google Play Games,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Google Play Music,Eduardo Pratti</item>
+        <item>Google Play Music Alt,Eduardo Pratti &amp; Pedro Peguero</item>
         <item>Google Plus Renamer,googleplusprofiler,Daniel Hickman</item>
         <item>Google Plus Renamer Alt,googleplusprofiler_alt,Daniel Hickman</item>
-        <item>Gooogle Drive,Daniel Hickman</item>
-        <item>Gooogle Drive Alt,Daniel Hickman</item>
-        <item>Gooogle Drive Alt 2,Daniel Hickman</item>
-        <item>Hard Drive,hardrivedefault,Daniel Hickman</item>
+        <item>Google Sheets,Eduardo Pratti</item>
+        <item>Google Slides,Eduardo Pratti</item>
+        <item>Google Translate,Eduardo Pratti</item>
+        <item>Google Drive,Daniel Hickman</item>
+        <item>Google Drive Alt,Daniel Hickman</item>
+        <item>Google Drive Alt 2,Daniel Hickman</item>
         <item>Hard Drive Windows,hardrivewindows,Daniel Hickman</item>
+        <item>Hard Drive,hardrivedefault,Daniel Hickman</item>
+        <item>Hexlock,Daniel Hickman</item>
+        <item>Hexlock Alt,Daniel Hickman</item>
         <item>Hot or Not,Daniel Hickman</item>
         <item>Hyperlapse,Alex Mueller</item>
+        <item>IF,ifbyifttt,Daniel Hickman</item>
         <item>iFunny,Daniel Hickman</item>
         <item>iHeart Radio,Daniel Hickman</item>
         <item>Illustrator,Alex Mueller</item>
         <item>Imgur,Daniel Hickman</item>
         <item>Inbox,Eduardo Pratti</item>
+        <item>Inbox Alt,Eduardo Pratti</item>
         <item>Ingress,Daniel Hickman</item>
         <item>Ingress Alt,Daniel Hickman</item>
         <item>Instagram,Gabriel Zegarra</item>
+        <item>Instagram Alt,Createme</item>
         <item>Journey,Gabriel Zegarra</item>
         <item>Journey Alt,Daniel Hickman</item>
         <item>Journey Alt 2,Daniel Hickman</item>
         <item>Kik,Christopher Bravata</item>
         <item>Kiwi,Gabriel Zegarra</item>
+        <item>KK Launcher,Daniel Hickman</item>
+        <item>KK Launcher Alt,Daniel Hickman</item>
         <item>Lapse It,Daniel Hickman</item>
+        <item>Legend,Daniel Hickman</item>
         <item>Libre Office Writer,Corbin Crutchley</item>
         <item>Line,Gabriel Zegarra</item>
         <item>Lollypop,Wayne Kosimoto</item>
@@ -132,6 +249,7 @@
         <item>MatLog,Daniel Ciao</item>
         <item>Media Monkey,Corbin Crutchley</item>
         <item>Mega,Gabriel Zegarra</item>
+        <item>Messaging,Eduardo Pratti &amp; Pedro Peguero</item>
         <item>Midori,Wayne Kosimoto</item>
         <item>MileIQ,Daniel Hickman</item>
         <item>Minecraft,Daniel Hickman</item>
@@ -142,12 +260,17 @@
         <item>Music Alt 2,Zachary Pierson</item>
         <item>Music Folder,Wayne Kosimoto</item>
         <item>MusixMatch,musicxmatch,Gabriel Zegarra</item>
-        <item>MyScript,Gabriel Zegarra</item>
         <item>My Tracks,Daniel Hickman</item>
+        <item>MyScript,Gabriel Zegarra</item>
+        <item>Napster,Createme</item>
         <item>Nautilus,Wayne Kosimoto &amp; Corbin Crutchley</item>
         <item>Netflix,Niko Pennanen</item>
         <item>Netflix Alt,Niko Pennanen</item>
         <item>Notifications Off,Greg Ives</item>
+        <item>Nova Launcher,Daniel Hickman</item>
+        <item>Nova Launcher Alt,Daniel Hickman</item>
+        <item>Nova Launcher Prime,Daniel Hickman</item>
+        <item>Nova Launcher Prime Alt,Daniel Hickman</item>
         <item>NPR One,Daniel Hickman</item>
         <item>One More Line,Greg Ives</item>
         <item>OnePlus,Alex Mueller</item>
@@ -169,20 +292,30 @@
         <item>Public Folder,Wayne Kosimoto</item>
         <item>Public Folder Alt,Wayne Kosimoto</item>
         <item>Pushbullet,Greg Ives</item>
+        <item>Pushbullet Alt,Createme</item>
         <item>Quickpic,Greg Ives</item>
         <item>Quickpic Alt,Gabriel Zegarra</item>
+        <item>RAR,Createme</item>
+        <item>Ready Steady Bang,bang,Greg Ives</item>
         <item>Retrica,Gabriel Zegarra</item>
         <item>Router,Corbin Crutchley</item>
         <item>Runtastic,Gabriel Zegarra</item>
+        <item>San Andreas,Createme</item>
+        <item>Screen Recorder,genericscreenrecorder,Daniel Hickman</item>
         <item>Settings,Corbin Crutchley</item>
+        <item>Settings Alt,Eduardo Pratti &amp; Pedro Peguero</item>
         <item>Shazam,Gabriel Zegarra</item>
         <item>SIM Toolkit,Createme</item>
         <item>Skwash,Corbin Crutchley</item>
         <item>Skwish,Corbin Crutchley</item>
         <item>Sky Konig,skykonigicon,Sky Konig</item>
         <item>Skype,Gabriel Zegarra</item>
+        <item>Smart Launcher,Daniel Hickman</item>
+        <item>Smart Launcher Pro,Daniel Hickman</item>
         <item>Snapchat,Greg Ives</item>
         <item>Snapchat Alt,Gabriel Zegarra</item>
+        <item>Solo Launcher,Daniel Hickman</item>
+        <item>Solo Launcher Alt,Daniel Hickman</item>
         <item>SoundCloud,Gabriel Zegarra</item>
         <item>SoundHound,Gabriel Zegarra</item>
         <item>Spotify,Gabriel Zegarra</item>
@@ -190,6 +323,7 @@
         <item>Star Wars Wikia,Alex Mueller</item>
         <item>Steam,Zachary Pierson</item>
         <item>Steam Alt,steam_alt,Zachary Pierson</item>
+        <item>Steam Alt 2,Createme</item>
         <item>Steam Folder,steamfolder,Wayne Kosimoto</item>
         <item>Sublime Text,Eduardo Pratti</item>
         <item>Sublime Text Alt,Eduardo Pratti</item>
@@ -199,10 +333,13 @@
         <item>Sublime Text Alt 5,Eduardo Pratti</item>
         <item>Sublime Text Alt 6,Eduardo Pratti</item>
         <item>Sublime Text Alt 7,Eduardo Pratti</item>
+        <item>Sunrise Calendar,Daniel Hickman</item>
+        <item>Sunrise Calendar Alt,Daniel Hickman</item>
         <item>Super Backup,Corbin Crutchley</item>
         <item>Super Backup Alt,Corbin Crutchley</item>
         <item>SuperSU,Daniel Hickman</item>
         <item>SuperSU Alt,Createme</item>
+        <item>Sync,Createme</item>
         <item>Sync.ME,syncme,Greg Ives</item>
         <item>Taggr,Greg Ives</item>
         <item>Target,Daniel Hickman</item>
@@ -214,11 +351,13 @@
         <item>Telegram Alt 5,Gabriel Zegarra</item>
         <item>Terminal,Corbin Crutchley</item>
         <item>Terraria,Daniel Hickman</item>
-        <item>ThemeDIY,Greg Ives</item>
         <item>The Weather Channel,Daniel Hickman</item>
+        <item>ThemeDIY,Greg Ives</item>
         <item>Tinder,Gabriel Zegarra</item>
+        <item>Titanium Backup,Createme</item>
         <item>Trash Folder,Wayne Kosimoto</item>
         <item>Trello,Gabriel Zegarra</item>
+        <item>TSF Launcher,Daniel Hickman</item>
         <item>Tumblr,Gabriel Zegarra</item>
         <item>TuneIn,Gabriel Zegarra</item>
         <item>TuneIn Alt,Createme</item>
@@ -259,50 +398,82 @@
         <item>Wikipedia Alt,Createme</item>
         <item>Wolz,Greg Ives</item>
         <item>Wunderlist,Gabriel Zegarra</item>
+        <item>XOR Projects,Corbin Crutchley</item>
+        <item>XOR Projects Alt,Daniel Hickman</item>
+        <item>XOR Projects Alt 2,Daniel Hickman</item>
+        <item>XOR Projects Alt 3,Daniel Hickman</item>
         <item>Xposed Installer,Greg Ives</item>
         <item>Yaata,Corbin Crutchley</item>
         <item>YouTube,Greg Ives</item>
+        <item>YouTube Alt,Sky Konig</item>
+        <item>YouTube Gaming,Greg Ives &amp; Daniel Hickman</item>
+        <item>YouTube Gaming Alt,Daniel Hickman</item>
+        <item>YouTube Gaming Alt 2,Daniel Hickman</item>
         <item>Zip Folder,Wayne Kosimoto</item>
     </string-array>
 
     <!-- GOOGLE ICONS -->
     <!-- All of your Google icons listed here -->
     <string-array name="google" translatable="false">
+        <item>Analytics,googleanalytics,Daniel Hickman</item>
         <item>Android Studio,Wayne Kosimoto</item>
+        <item>Calendar,googlecalendar,Anjo Cerdena</item>
+        <item>Calendar Alt,googlecalendar_alt,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Camera,googlecamera,Eduardo Pratti</item>
         <item>Chrome,Eduardo Pratti</item>
         <item>Chrome Alt,Wayne Kosimoto</item>
         <item>Chrome Alt 2,Corbin Crutchley</item>
         <item>Chrome Beta Alt 2,Corbin Crutchley</item>
         <item>Chrome Dev Alt 2,Corbin Crutchley</item>
         <item>Chromium Alt,Wayne Kosimoto</item>
-        <item>Clock,Greg Ives</item>
+        <item>Docs,googledocs,Eduardo Pratti</item>
+        <item>Fit,googlefit,Eduardo Pratti</item>
         <item>Gmail,Eduardo Pratti</item>
-        <item>Google Fit,Eduardo Pratti</item>
-        <item>Google Keep,Corbin Crutchley</item>
-        <item>Google Keyboard,Eduardo Pratti</item>
-        <item>Google Messenger,Eduardo Pratti</item>
-        <item>Google Opinion Rewards,Createme</item>
-        <item>Google Opinion Rewards Alt,Greg Ives</item>
-        <item>Gooogle Drive,Daniel Hickman</item>
-        <item>Gooogle Drive Alt,Daniel Hickman</item>
-        <item>Gooogle Drive Alt 2,Daniel Hickman</item>
+        <item>Gmail Alt,Eduardo Pratti</item>
+        <item>Drive,googledrive,Daniel Hickman</item>
+        <item>Drive Alt,googledrive_alt,Daniel Hickman</item>
+        <item>Drive Alt 2,googledrive_alt2,Daniel Hickman</item>
         <item>Inbox,Eduardo Pratti</item>
+        <item>Inbox Alt,Eduardo Pratti</item>
+        <item>Keep,googlekeep,Corbin Crutchley</item>
+        <item>Keep Alt,googlekeep_alt,Eduardo Pratti</item>
+        <item>Keyboard,googlekeyboard,Eduardo Pratti</item>
+        <item>Keyboard Alt,googlekeyboard_alt,Eduardo Pratti</item>
+        <item>Maps,googlemaps,Eduardo Pratti</item>
+        <item>Messenger,googlemessenger,Eduardo Pratti</item>
         <item>My Tracks,Daniel Hickman</item>
-        <item>Play Store,Greg Ives</item>
-        <item>Play Store Alt,Daniel Hickman</item>
-        <item>Play Store Alt 2,Daniel Hickman</item>
+        <item>News,googlenews,Eduardo Pratti</item>
+        <item>Now Launcher,googlenowlauncher,Daniel Hickman</item>
+        <item>Now Launcher Alt,googlenowlauncher_alt,Daniel Hickman</item>
+        <item>Opinion Rewards,googleopinionrewards,Createme</item>
+        <item>Opinion Rewards Alt,googleopinionrewards_alt,Greg Ives</item>
+        <item>Photos,googlephotos,Eduardo Pratti</item>
+        <item>Play Games,googleplaygames,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Play Music,googleplaymusic,Eduardo Pratti</item>
+        <item>Play Music Alt,googleplaymusic_alt,Eduardo Pratti &amp; Pedro Peguero</item>
+        <item>Play Store,playstore,Greg Ives</item>
+        <item>Play Store Alt,playstore_alt,Daniel Hickman</item>
+        <item>Play Store Alt 2,playstore_alt2,Daniel Hickman</item>
+        <item>Sheets,googlesheets,Eduardo Pratti</item>
+        <item>Slides,googleslides,Eduardo Pratti</item>
+        <item>Translate,googletranslate,Eduardo Pratti</item>
         <item>YouTube,Greg Ives</item>
+        <item>YouTube Alt,Sky Konig</item>
+        <item>YouTube Gaming,Greg Ives &amp; Daniel Hickman</item>
+        <item>YouTube Gaming Alt,Daniel Hickman</item>
+        <item>YouTube Gaming Alt 2,Daniel Hickman</item>
     </string-array>
 
     <!-- GAMES ICONS -->
     <!-- All of your Games icons listed here -->
     <string-array name="games" translatable="false">
-        <item>Ready Steady Bang,bang,Greg Ives</item>
+        <item>Fruit Ninja,Createme</item>
         <item>Geometry Dash,Vukasin Andelkovic</item>
         <item>Ingress,Daniel Hickman</item>
         <item>Ingress Alt,Daniel Hickman</item>
         <item>Minecraft,Daniel Hickman</item>
         <item>Minecraft Alt,Daniel Hickman</item>
+        <item>Ready Steady Bang,bang,Greg Ives</item>
         <item>Terraria,Daniel Hickman</item>
     </string-array>
 
