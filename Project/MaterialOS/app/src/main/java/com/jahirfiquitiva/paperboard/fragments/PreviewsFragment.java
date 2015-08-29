@@ -48,7 +48,7 @@ public class PreviewsFragment extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
-            Fragment f = new Fragment();
+            Fragment f;
             switch (position) {
                 case 0:
                     f = IconsFragment.newInstance(R.array.latest);
@@ -62,7 +62,8 @@ public class PreviewsFragment extends Fragment {
                 case 3:
                     f = IconsFragment.newInstance(R.array.games);
                     break;
-
+                default:
+                    f = IconsFragment.newInstance(R.array.latest);
             }
             return f;
         }

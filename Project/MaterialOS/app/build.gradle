@@ -17,6 +17,7 @@ android {
         targetSdkVersion 23
         versionCode 6
         versionName "1.0.0"
+        manifestPlaceholders = [appName: "@string/app_name"]
     }
 
     buildTypes {
@@ -24,6 +25,11 @@ android {
             minifyEnabled true
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-DEBUG'
+            manifestPlaceholders = [appName: "MaterialOS DEBUG"]
         }
     }
 

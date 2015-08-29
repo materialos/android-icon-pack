@@ -17,8 +17,8 @@ import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.jahirfiquitiva.paperboard.adapters.ChangelogAdapter;
+import com.jahirfiquitiva.paperboard.fragments.AboutFragment;
 import com.jahirfiquitiva.paperboard.fragments.ApplyFragment;
-import com.jahirfiquitiva.paperboard.fragments.CreditsFragment;
 import com.jahirfiquitiva.paperboard.fragments.DonateFragment;
 import com.jahirfiquitiva.paperboard.fragments.HomeFragment;
 import com.jahirfiquitiva.paperboard.fragments.PreviewsFragment;
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                                     switchFragment(DRAWER_ITEM_IC_REQUEST, iconRequest, RequestFragment.class);
                                     break;
                                 case DRAWER_ITEM_CREDITS:
-                                    switchFragment(DRAWER_ITEM_CREDITS, credits, CreditsFragment.class);
+                                    switchFragment(DRAWER_ITEM_CREDITS, credits, AboutFragment.class);
                                     break;
                                 case DRAWER_ITEM_DONATE:
                                     switchFragment(DRAWER_ITEM_DONATE, donate, DonateFragment.class);

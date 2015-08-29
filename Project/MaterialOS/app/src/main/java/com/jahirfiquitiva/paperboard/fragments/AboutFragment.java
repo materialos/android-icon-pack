@@ -22,7 +22,7 @@ import org.materialos.icons.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreditsFragment extends Fragment {
+public class AboutFragment extends Fragment {
 
     private List<Item> mItems;
 
@@ -124,13 +124,20 @@ public class CreditsFragment extends Fragment {
                 holder.actionButtonBar.setVisibility(View.VISIBLE);
                 holder.desc.setPadding(0, 0, 0, Util.convertToPixel(getActivity(), 16));
 
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(item.website));
+                        startActivity(intent);
+                    }
+                });
+
                 if (item.website != null) {
                     holder.website.setVisibility(View.VISIBLE);
                     holder.website.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Intent.ACTION_VIEW,
-                                    Uri.parse(item.website));
+                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(item.website));
                             startActivity(intent);
                         }
                     });
@@ -143,9 +150,7 @@ public class CreditsFragment extends Fragment {
                     holder.gplus.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(Intent.ACTION_SENDTO,
-                                    Uri.fromParts(
-                                            "mailto", item.gplus, null));
+                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(item.gplus));
                             startActivity(intent);
                         }
                     });
@@ -189,27 +194,6 @@ public class CreditsFragment extends Fragment {
                 website = (Button) itemView.findViewById(R.id.list_item_credits_website_button);
                 gplus = (Button) itemView.findViewById(R.id.list_item_credits_gplus_button);
                 actionButtonBar = (LinearLayout) itemView.findViewById(R.id.list_item_credits_actions);
-
-                View.OnClickListener l = new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String website = mItems.get(getLayoutPosition()).website;
-                        if (website != null) {
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(website));
-                            startActivity(i);
-                        }
-                    }
-                };
-                itemView.setOnClickListener(l);
-                website.setOnClickListener(l);
-                gplus.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String gplus = mItems.get(getLayoutPosition()).gplus;
-                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(gplus));
-                        startActivity(i);
-                    }
-                });
             }
         }
     }

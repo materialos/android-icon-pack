@@ -12,7 +12,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="${appName}"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="UnusedAttribute">
@@ -43,7 +43,6 @@
         <!-- MainActivity -->
         <activity
             android:name=".HomeActivity"
-            android:label="@string/app_name"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,9 +53,7 @@
         </activity>
 
         <!-- Icons -->
-        <activity
-            android:name="com.jahirfiquitiva.paperboard.activities.MainActivity"
-            android:label="@string/app_name">
+        <activity android:name="com.jahirfiquitiva.paperboard.activities.MainActivity">
             <!-- ADW -->
             <intent-filter>
                 <action android:name="org.adw.launcher.THEMES" />
