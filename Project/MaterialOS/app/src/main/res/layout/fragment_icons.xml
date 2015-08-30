@@ -6,10 +6,11 @@
     tools:context="com.jahirfiquitiva.paperboard.activities.MainActivity">
 
     <com.jahirfiquitiva.paperboard.views.SlidingTabLayout
-        android:id="@+id/tabs"
+        android:id="@id/fragment_icons_tablayout"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@color/primary"
+        android:clipToPadding="false"
         android:elevation="@dimen/toolbar_elevation"
         android:paddingLeft="@dimen/tabs_contentInset"
         android:paddingStart="@dimen/tabs_contentInset"

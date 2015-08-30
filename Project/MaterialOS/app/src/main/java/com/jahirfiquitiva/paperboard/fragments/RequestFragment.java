@@ -42,7 +42,7 @@ public class RequestFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_icon_request, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_request, container, false);
 
         showNewAdviceDialog();
 
@@ -179,7 +179,7 @@ public class RequestFragment extends Fragment {
 
             if (convertView == null) {
                 LayoutInflater inflater = LayoutInflater.from(getActivity());
-                convertView = inflater.inflate(R.layout.list_item_request_icon, parent, false);
+                convertView = inflater.inflate(R.layout.list_item_request, parent, false);
 
                 holder = new ViewHolder();
                 holder.imgIcon = (ImageView) convertView.findViewById(R.id.imgIcon);

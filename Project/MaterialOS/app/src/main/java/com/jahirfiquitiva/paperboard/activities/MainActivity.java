@@ -21,7 +21,7 @@ import com.jahirfiquitiva.paperboard.fragments.AboutFragment;
 import com.jahirfiquitiva.paperboard.fragments.ApplyFragment;
 import com.jahirfiquitiva.paperboard.fragments.DonateFragment;
 import com.jahirfiquitiva.paperboard.fragments.HomeFragment;
-import com.jahirfiquitiva.paperboard.fragments.PreviewsFragment;
+import com.jahirfiquitiva.paperboard.fragments.IconsFragment;
 import com.jahirfiquitiva.paperboard.fragments.RequestFragment;
 import com.jahirfiquitiva.paperboard.fragments.WallpapersFragment;
 import com.jahirfiquitiva.paperboard.util.Preferences;
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                                     switchFragment(DRAWER_ITEM_HOME, appName, HomeFragment.class);
                                     break;
                                 case DRAWER_ITEM_ICONS:
-                                    switchFragment(DRAWER_ITEM_ICONS, previews, PreviewsFragment.class);
+                                    switchFragment(DRAWER_ITEM_ICONS, previews, IconsFragment.class);
                                     break;
                                 case DRAWER_ITEM_APPLY:
                                     switchFragment(DRAWER_ITEM_APPLY, apply, ApplyFragment.class);

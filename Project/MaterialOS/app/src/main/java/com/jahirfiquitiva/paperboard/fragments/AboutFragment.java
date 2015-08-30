@@ -95,10 +95,10 @@ public class AboutFragment extends Fragment {
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             if (viewType == 1) {
-                View view = getActivity().getLayoutInflater().inflate(R.layout.list_item_credits, parent, false);
+                View view = getActivity().getLayoutInflater().inflate(R.layout.list_item_about, parent, false);
                 return new ViewHolder(view, false);
             } else {
-                View view = getActivity().getLayoutInflater().inflate(R.layout.list_item_credits_subheader, parent, false);
+                View view = getActivity().getLayoutInflater().inflate(R.layout.list_item_about_subheader, parent, false);
                 return new ViewHolder(view, true);
             }
         }
