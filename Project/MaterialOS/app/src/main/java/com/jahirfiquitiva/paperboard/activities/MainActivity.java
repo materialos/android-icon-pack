@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
     public static final int DRAWER_ITEM_ICONS = 4;
     public static final int DRAWER_ITEM_APPLY = 6;
     public static final int DRAWER_ITEM_WALLPAPER = 8;
-    public static final int DRAWER_ITEM_IC_REQUEST = 10;
-    public static final int DRAWER_ITEM_CREDITS = 12;
+    public static final int DRAWER_ITEM_REQUEST = 10;
+    public static final int DRAWER_ITEM_ABOUT = 12;
     public static final int DRAWER_ITEM_DONATE = 14;
     private static final boolean WITH_LICENSE_CHECKER = false;
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(previews).withIcon(GoogleMaterial.Icon.gmd_palette).withIdentifier(DRAWER_ITEM_ICONS),
                         new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(DRAWER_ITEM_APPLY),
                         new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(DRAWER_ITEM_CREDITS)
+                        new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(DRAWER_ITEM_ABOUT)
                 ).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
 
                     @Override
@@ -137,11 +137,11 @@ public class MainActivity extends AppCompatActivity {
                                         showNotConnectedDialog();
                                     }
                                     break;
-                                case DRAWER_ITEM_IC_REQUEST:
-                                    switchFragment(DRAWER_ITEM_IC_REQUEST, iconRequest, RequestFragment.class);
+                                case DRAWER_ITEM_REQUEST:
+                                    switchFragment(DRAWER_ITEM_REQUEST, iconRequest, RequestFragment.class);
                                     break;
-                                case DRAWER_ITEM_CREDITS:
-                                    switchFragment(DRAWER_ITEM_CREDITS, credits, AboutFragment.class);
+                                case DRAWER_ITEM_ABOUT:
+                                    switchFragment(DRAWER_ITEM_ABOUT, credits, AboutFragment.class);
                                     break;
                                 case DRAWER_ITEM_DONATE:
                                     switchFragment(DRAWER_ITEM_DONATE, donate, DonateFragment.class);
@@ -296,7 +296,7 @@ public class MainActivity extends AppCompatActivity {
         IDrawerItem walls = new PrimaryDrawerItem().withName(wallpapers)
                 .withIcon(GoogleMaterial.Icon.gmd_image).withIdentifier(DRAWER_ITEM_WALLPAPER);
         IDrawerItem request = new PrimaryDrawerItem().withName(iconRequest)
-                .withIcon(GoogleMaterial.Icon.gmd_content_paste).withIdentifier(DRAWER_ITEM_IC_REQUEST);
+                .withIcon(GoogleMaterial.Icon.gmd_content_paste).withIdentifier(DRAWER_ITEM_REQUEST);
         if (mEnableFeatures) {
             mDrawer.addItemAtPosition(walls, 3);
             mDrawer.addItemAtPosition(request, 4);

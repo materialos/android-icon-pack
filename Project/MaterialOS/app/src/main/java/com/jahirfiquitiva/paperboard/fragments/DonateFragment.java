@@ -92,6 +92,7 @@ public class DonateFragment extends Fragment {
             holder.name.setText(item.name);
             holder.subtitle.setText(item.amount);
 
+            holder.desc.removeAllViews();
             for (String donator : item.donators) {
                 View chip = LayoutInflater.from(getActivity()).inflate(R.layout.list_item_chip, holder.desc, false);
                 TextView view = (TextView) chip.findViewById(R.id.list_item_chip_text);
