@@ -13,8 +13,7 @@
         android:layout_height="40dp"
         android:layout_marginLeft="@dimen/request_item_padding_left"
         android:layout_marginStart="@dimen/request_item_padding_left"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_launcher" />
+        android:contentDescription="@null" />
 
     <TextView
         android:id="@+id/txtName"

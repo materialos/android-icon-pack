@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -29,42 +30,44 @@ import java.util.List;
 public class ApplyFragment extends Fragment {
 
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
-    private final List<Launcher> launchers = new ArrayList<>();
-    private String intentString;
+    private List<Launcher> mLaunchers;
+    private String mIntentString;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_apply, container, false);
+        mLaunchers = new ArrayList<>();
 
         // Splits all launcher arrays by the | delimiter {name}|{package}
         String[] launcherArray = getResources().getStringArray(R.array.launchers);
         for (String launcher : launcherArray)
-            launchers.add(new Launcher(launcher.split("\\|")));
+            mLaunchers.add(new Launcher(launcher.split("\\|")));
 
         ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null)
             toolbar.setTitle(R.string.apply);
 
-        ListView launcherslist = (ListView) root.findViewById(R.id.launcherslist);
+        ListView launchersList = (ListView) root.findViewById(R.id.launcherslist);
 
-        LaunchersAdapter adapter = new LaunchersAdapter(launchers);
-        launcherslist.setAdapter(adapter);
-        launcherslist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        LaunchersAdapter adapter = new LaunchersAdapter(mLaunchers);
+        launchersList.setAdapter(adapter);
+        launchersList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (launchers.get(position).name.equals("Google Now Launcher"))
+                //TODO: Hardcoded GNL Launcher name
+                if (mLaunchers.get(position).name.equals("Google Now Launcher"))
                     gnlDialog();
-                else if (LauncherIsInstalled(launchers.get(position).packageName))
-                    openLauncher(launchers.get(position).name);
+                else if (launcherIsInstalled(mLaunchers.get(position).packageName))
+                    openLauncher(mLaunchers.get(position).name);
                 else
-                    openInPlayStore(launchers.get(position));
+                    openInPlayStore(mLaunchers.get(position));
             }
         });
 
         return root;
     }
 
-    private boolean LauncherIsInstalled(String packageName) {
+    private boolean launcherIsInstalled(String packageName) {
         final PackageManager pm = getActivity().getPackageManager();
         boolean installed;
         try {
@@ -78,7 +81,7 @@ public class ApplyFragment extends Fragment {
 
 
     private void openLauncher(String name) {
-
+        //TODO: Sketchy code using reflection and whatnot
         final String className = "com.jahirfiquitiva.paperboard" + ".launchers."
                 + Character.toUpperCase(name.charAt(0))
                 + name.substring(1).toLowerCase().replace(" ", "").replace("launcher", "")
@@ -108,17 +111,17 @@ public class ApplyFragment extends Fragment {
     }
 
     private void openInPlayStore(final Launcher launcher) {
-        intentString = MARKET_URL + launcher.packageName;
+        mIntentString = MARKET_URL + launcher.packageName;
         final String LauncherName = launcher.name;
         final String cmName = "CM Theme Engine";
         String dialogContent;
 
         if (LauncherName.equals(cmName)) {
             dialogContent = launcher.name + getResources().getString(R.string.cm_dialog_content);
-            intentString = "http://download.cyanogenmod.org/";
+            mIntentString = "http://download.cyanogenmod.org/";
         } else {
             dialogContent = launcher.name + getResources().getString(R.string.lni_content);
-            intentString = MARKET_URL + launcher.packageName;
+            mIntentString = MARKET_URL + launcher.packageName;
         }
 
         new MaterialDialog.Builder(getActivity())
@@ -130,7 +133,7 @@ public class ApplyFragment extends Fragment {
                     @Override
                     public void onPositive(MaterialDialog dialog) {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(intentString));
+                        intent.setData(Uri.parse(mIntentString));
                         startActivity(intent);
                     }
                 }).show();
@@ -166,13 +169,13 @@ public class ApplyFragment extends Fragment {
         }
     }
 
-    class LaunchersAdapter extends ArrayAdapter<Launcher> {
+    private class LaunchersAdapter extends ArrayAdapter<Launcher> {
 
-        final List<Launcher> launchers;
+        private final List<Launcher> mLaunchers;
 
-        LaunchersAdapter(List<Launcher> launchers) {
+        private LaunchersAdapter(List<Launcher> launchers) {
             super(getActivity(), R.layout.list_item_launcher, R.id.launchername, launchers);
-            this.launchers = launchers;
+            this.mLaunchers = launchers;
         }
 
         @Override
@@ -190,22 +193,22 @@ public class ApplyFragment extends Fragment {
                 holder = (LauncherHolder) item.getTag();
 
             }
-            // Turns Launcher name "Something Pro" to "l_something_pro"
+            // Turns Launcher name "Something Pro" to "ic_something_pro"
             int iconResource = getActivity().getResources().getIdentifier(
-                    "ic_" + launchers.get(position).name.toLowerCase().replace(" ", "_"),
+                    "ic_" + mLaunchers.get(position).name.toLowerCase().replace(" ", "_"),
                     "drawable",
                     getActivity().getPackageName()
             );
 
             holder.icon.setImageResource(iconResource);
-            holder.launchername.setText(launchers.get(position).name);
+            holder.launchername.setText(mLaunchers.get(position).name);
 
-            if (LauncherIsInstalled(launchers.get(position).packageName)) {
+            if (launcherIsInstalled(mLaunchers.get(position).packageName)) {
                 holder.isInstalled.setText(R.string.installed);
-                holder.isInstalled.setTextColor(getResources().getColor(R.color.launcher_installed_text));
+                holder.isInstalled.setTextColor(ContextCompat.getColor(getActivity(), R.color.launcher_installed_text));
             } else {
                 holder.isInstalled.setText(R.string.noninstalled);
-                holder.isInstalled.setTextColor(getResources().getColor(R.color.launcher_not_installed_text));
+                holder.isInstalled.setTextColor(ContextCompat.getColor(getActivity(), R.color.launcher_not_installed_text));
             }
 
             return item;
