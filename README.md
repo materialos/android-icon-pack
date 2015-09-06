@@ -3,7 +3,7 @@
 
 ## Description:
 
-[materialos/Android-Icon-Pack](https://github.com/materialos/Android-Icon-Pack) is our Android icon pack based off of [materialos/Icons](https://github.com/materialos/Icons). Last commit merdged into drawables: [6a74ee8](https://github.com/materialos/Icons/commit/6a74ee88829938faf12c7be7a6a172bb0547f54a).
+[materialos/Android-Icon-Pack](https://github.com/materialos/Android-Icon-Pack) is our Android icon pack based off of [materialos/Icons](https://github.com/materialos/Icons). Last commit merdged into drawables: [c01fab9](https://github.com/materialos/Icons/commit/c01fab90791400d0cafdd0086baa21df7d0cdc31).
 
 ## Wiki:
 
