@@ -19,7 +19,6 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.jahirfiquitiva.paperboard.adapters.ChangelogAdapter;
 import com.jahirfiquitiva.paperboard.fragments.AboutFragment;
 import com.jahirfiquitiva.paperboard.fragments.ApplyFragment;
-import com.jahirfiquitiva.paperboard.fragments.DonateFragment;
 import com.jahirfiquitiva.paperboard.fragments.HomeFragment;
 import com.jahirfiquitiva.paperboard.fragments.IconsFragment;
 import com.jahirfiquitiva.paperboard.fragments.RequestFragment;
@@ -49,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     public static final int DRAWER_ITEM_WALLPAPER = 8;
     public static final int DRAWER_ITEM_REQUEST = 10;
     public static final int DRAWER_ITEM_ABOUT = 12;
-    public static final int DRAWER_ITEM_DONATE = 14;
     private static final boolean WITH_LICENSE_CHECKER = false;
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
     public String version;
@@ -92,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
         final String wallpapers = getResources().getString(R.string.wallpapers);
         final String iconRequest = getResources().getString(R.string.icon_request);
         final String credits = getResources().getString(R.string.about);
-        final String donate = getResources().getString(R.string.donate);
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -143,9 +140,6 @@ public class MainActivity extends AppCompatActivity {
                                 case DRAWER_ITEM_ABOUT:
                                     switchFragment(DRAWER_ITEM_ABOUT, credits, AboutFragment.class);
                                     break;
-                                case DRAWER_ITEM_DONATE:
-                                    switchFragment(DRAWER_ITEM_DONATE, donate, DonateFragment.class);
-                                    break;
                             }
 
                         } else {
@@ -157,10 +151,6 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .withSavedInstance(savedInstanceState)
                 .build();
-
-        if (BuildConfig.DEBUG) {
-            mDrawer.addItem(new PrimaryDrawerItem().withName(donate).withIcon(GoogleMaterial.Icon.gmd_attach_money).withIdentifier(DRAWER_ITEM_DONATE));
-        }
 
         //mDrawer.getRecyclerView().setVerticalScrollBarEnabled(false);
         runLicenseChecker();

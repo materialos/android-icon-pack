@@ -136,7 +136,7 @@
     <!-- Wallpapers Stuff -->
     <string name="no_conn_title">No Connection Found</string>
     <string name="no_conn_content">Wallpapers are stored on Cloud Server. Please connect to Internet and try again.</string>
-    <string name="download">DOWNLOAD</string>
+    <string name="download">Download</string>
     <string name="download_done">Download completed successfully Picture is located at </string>
     <string name="set_as">Crop picture and set as…</string>
     <string name="set_wall_title">Wallpaper set</string>
