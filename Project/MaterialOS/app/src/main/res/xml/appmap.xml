@@ -693,7 +693,7 @@
         class="co.vine.android.StartActivity"
         name="vine" />
     <item
-        class=""
+        class="com.metropcs.service.vvm/com.metropcs.service.vvm.activity.setup.WelcomeActivity"
         name="visualvoicemail" />
     <item
         class="org.videolan.vlc.betav7neon.gui.MainActivity"

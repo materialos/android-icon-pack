@@ -701,7 +701,7 @@
         component="ComponentInfo{co.vine.android/co.vine.android.StartActivity}"
         drawable="vine" />
     <item
-        component="ComponentInfo{}"
+        component="ComponentInfo{com.metropcs.service.vvm/com.metropcs.service.vvm.activity.setup.WelcomeActivity}"
         drawable="visualvoicemail" />
     <item
         component="ComponentInfo{org.videolan.vlc.betav7neon/org.videolan.vlc.betav7neon.gui.MainActivity}"

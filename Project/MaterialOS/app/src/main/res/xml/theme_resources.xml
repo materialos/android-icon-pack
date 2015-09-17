@@ -705,7 +705,7 @@
         name="co.vine.android/co.vine.android.StartActivity"
         image="vine" />
     <AppIcon
-        name=""
+        name="com.metropcs.service.vvm/com.metropcs.service.vvm.activity.setup.WelcomeActivity"
         image="visualvoicemail" />
     <AppIcon
         name="org.videolan.vlc.betav7neon/org.videolan.vlc.betav7neon.gui.MainActivity"
