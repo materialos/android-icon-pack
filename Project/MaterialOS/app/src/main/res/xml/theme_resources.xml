@@ -400,6 +400,9 @@
         name="com.ventismedia.android.mediamonkey/com.ventismedia.android.mediamonkey.StartActivity"
         image="mediamonkey" />
     <AppIcon
+        name="com.ventismedia.android.mediamonkeybeta/com.ventismedia.android.mediamonkey.StartActivity"
+        image="mediamonkey" />
+    <AppIcon
         name="nz.mega.android/nz.mega.android.ManagerActivity"
         image="mega" />
     <AppIcon

@@ -396,6 +396,9 @@
         component="ComponentInfo{com.ventismedia.android.mediamonkey/com.ventismedia.android.mediamonkey.StartActivity}"
         drawable="mediamonkey" />
     <item
+        component="ComponentInfo{com.ventismedia.android.mediamonkeybeta/com.ventismedia.android.mediamonkey.StartActivity}"
+        drawable="mediamonkey" />
+    <item
         component="ComponentInfo{nz.mega.android/nz.mega.android.ManagerActivity}"
         drawable="mega" />
     <item

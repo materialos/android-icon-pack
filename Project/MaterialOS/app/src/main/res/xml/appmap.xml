@@ -391,6 +391,9 @@
         class="com.ventismedia.android.mediamonkey.StartActivity"
         name="mediamonkey" />
     <item
+        class="com.ventismedia.android.mediamonkey.StartActivity"
+        name="mediamonkey" />
+    <item
         class="nz.mega.android.ManagerActivity"
         name="mega" />
     <item
