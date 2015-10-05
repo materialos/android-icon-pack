@@ -51,7 +51,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:src="@drawable/ic_send"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
         fab:fab_colorNormal="@color/accent"
-        fab:fab_colorRipple="@color/semitransparent_white" />
+        fab:fab_colorRipple="?colorControlNormal" />
 
 </RelativeLayout>

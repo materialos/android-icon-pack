@@ -14,7 +14,7 @@
         android:layout_marginBottom="24dp" />
 
 
-    <com.jahirfiquitiva.paperboard.views.SquareImageView
+    <org.materialos.icons.views.SquareImageView
         android:id="@+id/wall"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

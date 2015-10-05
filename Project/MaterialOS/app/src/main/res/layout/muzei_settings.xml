@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jahirfiquitiva.paperboard.muzei.Settings">
+    tools:context="org.materialos.icons.muzei.Settings">
 
     <include
         android:id="@+id/toolbar"
@@ -67,7 +67,6 @@
                 android:lineSpacingMultiplier="1.2"
                 android:padding="@dimen/dialog_margin"
                 android:text="@string/muzei_info"
-                android:textColor="@color/dark_grey"
                 android:textSize="@dimen/text_med" />
 
         </LinearLayout>

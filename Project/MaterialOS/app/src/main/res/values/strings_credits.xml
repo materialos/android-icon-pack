@@ -17,12 +17,12 @@
     <string name="credits_item2_subtitle">Daniel Ciao</string>
     <string name="credits_item2_website">http://www.pluscubed.com/</string>
     <string name="credits_item2_gplus">https://www.google.com/+DanielCiao</string>
-    <string name="credits_item2_desc">Modified and built the MaterialOS dashboard on top of Paperboard.</string>
+    <string name="credits_item2_desc">Developed the MaterialOS dashboard.</string>
 
     <string name="credits_item3">Open Source Libraries:</string>
 
     <string name="credits_item4">Paperboard</string>
-    <string name="credits_item4_subtitle">Jahir Fiquitiva\n(Collaborators: Aidan Follestad and Joaquin Cuitiño)</string>
+    <string name="credits_item4_subtitle">Jahir Fiquitiva</string>
     <string name="credits_item4_website">http://www.jahirfiquitiva.net/</string>
     <string name="credits_item4_gplus">https://www.google.com/+JahirFiquitivaJDev</string>
     <string name="credits_item4_desc">

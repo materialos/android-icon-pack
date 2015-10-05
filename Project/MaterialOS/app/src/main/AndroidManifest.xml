@@ -17,29 +17,6 @@
         android:theme="@style/AppTheme"
         tools:ignore="UnusedAttribute">
 
-        <uses-library
-            android:name="com.sec.android.app.multiwindow"
-            android:required="false" />
-
-        <meta-data
-            android:name="com.sec.android.support.multiwindow"
-            android:value="true" />
-        <meta-data
-            android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W"
-            android:value="632.0dip" />
-        <meta-data
-            android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H"
-            android:value="598.0dip" />
-        <meta-data
-            android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W"
-            android:value="632.0dip" />
-        <meta-data
-            android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H"
-            android:value="598.0dip" />
-        <meta-data
-            android:name="com.lge.support.SPLIT_WINDOW"
-            android:value="true" />
-
         <!-- MainActivity -->
         <activity
             android:name=".HomeActivity"
@@ -53,7 +30,7 @@
         </activity>
 
         <!-- Icons -->
-        <activity android:name="com.jahirfiquitiva.paperboard.activities.MainActivity">
+        <activity android:name=".activities.MainActivity">
             <!-- ADW -->
             <intent-filter>
                 <action android:name="org.adw.launcher.THEMES" />
@@ -178,16 +155,16 @@
 
         <!-- Wallpapers Activity -->
         <activity
-            android:name="com.jahirfiquitiva.paperboard.activities.DetailedWallpaperActivity"
+            android:name=".activities.DetailedWallpaperActivity"
             android:label="@string/title_activity_detailed_wallpaper"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.jahirfiquitiva.paperboard.activities.DetailedWallpaperActivity" />
+                android:value=".activities.DetailedWallpaperActivity" />
         </activity>
 
         <service
-            android:name="com.jahirfiquitiva.paperboard.muzei.ArtSource"
+            android:name=".muzei.ArtSource"
             android:description="@string/artsource_desc"
             android:icon="@drawable/ic_muzei_logo"
             android:label="@string/artsource_name">
@@ -204,7 +181,7 @@
         </service>
 
         <activity
-            android:name="com.jahirfiquitiva.paperboard.muzei.Settings"
+            android:name=".muzei.Settings"
             android:exported="true"
             android:label="@string/muzei_settings"
             android:theme="@style/AppTheme"

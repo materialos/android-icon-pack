@@ -1,15 +1,24 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
+    }
+}
+
 apply plugin: 'com.android.application'
-// This does not break the build when Android Studio is missing the JRebel for Android plugin.
-apply plugin: 'com.zeroturnaround.jrebel.android'
+apply plugin: 'com.github.ben-manes.versions'
 
 repositories {
     jcenter()
-    maven { url 'https://dl.bintray.com/drummer-aidan/maven' }
+    maven { url "https://jitpack.io" }
 }
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    buildToolsVersion "23.0.1"
 
     defaultConfig {
         applicationId "org.materialos.icons"
@@ -24,12 +33,21 @@ android {
         release {
             minifyEnabled true
             shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             applicationIdSuffix '.debug'
             versionNameSuffix '-DEBUG'
             manifestPlaceholders = [appName: "MaterialOS DEBUG"]
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/icons'
+            ]
         }
     }
 
@@ -39,16 +57,18 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
-    compile 'com.android.support:support-v13:23.0.0'
-    compile 'com.android.support:appcompat-v7:23.0.0'
-    compile 'com.android.support:support-v4:23.0.0'
-    compile 'com.android.support:cardview-v7:23.0.0'
-    compile 'com.android.support:palette-v7:23.0.0'
-    compile 'com.android.support:recyclerview-v7:23.0.0'
-    compile 'com.android.support:design:23.0.0'
+    compile 'com.android.support:support-v13:23.0.1'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:support-v4:23.0.1'
+    compile 'com.android.support:cardview-v7:23.0.1'
+    compile 'com.android.support:palette-v7:23.0.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.android.support:design:23.0.1'
 
-    compile 'com.afollestad:material-dialogs:0.7.9.1'
-    compile('com.mikepenz:materialdrawer:4.0.3@aar') {
+    compile('com.github.afollestad.material-dialogs:core:0.8.2.0@aar') {
+        transitive = true
+    }
+    compile('com.mikepenz:materialdrawer:4.3.2@aar') {
         transitive = true
     }
     compile 'com.mikepenz:google-material-typeface:1.2.0.1@aar'
@@ -60,5 +80,5 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
     compile 'com.google.android.apps.muzei:muzei-api:2.0'
     compile 'com.makeramen:roundedimageview:2.2.0'
-    compile 'org.apmem.tools:layouts:1.9'
+    compile 'org.apmem.tools:layouts:1.10'
 }

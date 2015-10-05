@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.jahirfiquitiva.paperboard.activities.MainActivity">
+    tools:context="org.materialos.icons.activities.MainActivity">
 
-    <com.jahirfiquitiva.paperboard.views.SlidingTabLayout
+    <org.materialos.icons.views.SlidingTabLayout
         android:id="@id/fragment_icons_tablayout"
         android:layout_width="match_parent"
         android:layout_height="48dp"
