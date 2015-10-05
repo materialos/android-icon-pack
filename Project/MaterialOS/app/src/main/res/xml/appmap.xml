@@ -662,6 +662,9 @@
     <item
         class="tv.twitch.android.apps.SplashScreenActivity"
         name="twitch" />
+    <item
+        class="tv.twitch.android.apps.LandingActivity"
+        name="twitch" />
     <!-- <item class="tv.twitch.android.apps.SplashScreenActivity" name="twitch_alt"/> -->
     <!-- <item class="tv.twitch.android.apps.SplashScreenActivity" name="twitch_alt2"/> -->
     <!-- <item class="tv.twitch.android.apps.SplashScreenActivity" name="twitter_alt"/> -->

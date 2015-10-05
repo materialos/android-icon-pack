@@ -674,6 +674,9 @@
     <AppIcon
         name="tv.twitch.android.app/tv.twitch.android.apps.SplashScreenActivity"
         image="twitch" />
+    <AppIcon
+        name="tv.twitch.android.app/tv.twitch.android.apps.LandingActivity"
+        image="twitch" />
     <!-- <AppIcon name="tv.twitch.android.viewer/tv.twitch.android.apps.SplashScreenActivity" image="twitch_alt"/> -->
     <!-- <AppIcon name="tv.twitch.android.viewer/tv.twitch.android.apps.SplashScreenActivity" image="twitch_alt2"/> -->
     <!-- <AppIcon name="tv.twitch.android.viewer/tv.twitch.android.apps.SplashScreenActivity" image="twitter_alt"/> -->

@@ -670,6 +670,9 @@
     <item
         component="ComponentInfo{tv.twitch.android.app/tv.twitch.android.apps.SplashScreenActivity}"
         drawable="twitch" />
+    <item
+        component="ComponentInfo{tv.twitch.android.app/tv.twitch.android.apps.LandingActivity}"
+        drawable="twitch" />
     <!-- <item component="ComponentInfo{tv.twitch.android.viewer/tv.twitch.android.apps.SplashScreenActivity}" drawable="twitch_alt"/> -->
     <!-- <item component="ComponentInfo{tv.twitch.android.viewer/tv.twitch.android.apps.SplashScreenActivity}" drawable="twitch_alt2"/> -->
     <!-- <item component="ComponentInfo{tv.twitch.android.viewer/tv.twitch.android.apps.SplashScreenActivity}" drawable="twitter_alt"/> -->

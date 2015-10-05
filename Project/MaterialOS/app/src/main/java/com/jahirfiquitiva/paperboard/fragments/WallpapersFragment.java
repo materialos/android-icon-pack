@@ -91,11 +91,20 @@ public class WallpapersFragment extends Fragment {
                         arraylist.add(map);
                     }
                 } catch (JSONException e) {
-                    Toast.makeText(getActivity(), getString(R.string.json_error_toast), Toast.LENGTH_LONG).show();
+                    //TODO: Remove Errors for JSON
+//                    runOnUiThread(new Runnable() {
+//                        public void run() {
+                            Toast.makeText(getActivity(), getString(R.string.json_error_toast), Toast.LENGTH_LONG).show();
+//                        }
+//                    });
                     e.printStackTrace();
                 }
             } else {
-                Toast.makeText(getActivity(), getString(R.string.json_error_toast), Toast.LENGTH_LONG).show();
+//                runOnUiThread(new Runnable() {
+//                    public void run() {
+                        Toast.makeText(getActivity(), getString(R.string.json_error_toast), Toast.LENGTH_LONG).show();
+//                    }
+//                });
             }
             return null;
         }
