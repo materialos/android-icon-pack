@@ -109,7 +109,7 @@
     <string name="send_via">Send via</string>
     <string name="rate">Rate theme</string>
     <string name="sendemail">Email developer</string>
-    <string name="changelog">See changelog</string>
+    <string name="see_changelog">See changelog</string>
 
     <!-- Sharing theme -->
     <string name="share_one">"Check out this awesome icon pack by "</string>
@@ -131,7 +131,6 @@
 
     <!-- Changelog Dialog Content -->
     <string name="changelog_dialog_title">Changelog</string>
-    <string name="nice">great</string>
 
     <!-- Wallpapers Stuff -->
     <string name="no_conn_title">No Connection Found</string>
@@ -152,11 +151,6 @@
     <string name="error">Error</string>
     <string name="wall_error">Sorry, previous action wasn\'t actually applied, because it seems there\'s no picture. Check your Internet connection and try again.</string>
     <string name="json_error_toast">Error while downloading wallpapers info. Try again later.</string>
-
-    <!-- License Check Dialog -->
-    <string name="license_failed_title">License Check Failed</string>
-    <string name="license_success_title">License Check Success</string>
-    <string name="exit">Exit App</string>
 
     <!-- Some texts for Dialogs and Cards -->
     <string name="close">Close</string>

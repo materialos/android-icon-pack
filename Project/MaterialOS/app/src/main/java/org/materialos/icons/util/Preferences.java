@@ -7,7 +7,6 @@ public class Preferences {
 
     private static final String
             PREFERENCES_NAME = "DASHBOARD_PREFERENCES",
-            PREF_ENABLE_FEATURES = "enable_features",
             PREF_INIT_SETUP = "firstrun",
             PREF_SAVED_VERSION = "pref_saved_version";
 
@@ -31,14 +30,6 @@ public class Preferences {
 
     public boolean isFirstRun() {
         return getSharedPreferences().getBoolean(PREF_INIT_SETUP, true);
-    }
-
-    public boolean isFeaturesEnabled() {
-        return getSharedPreferences().getBoolean(PREF_ENABLE_FEATURES, true);
-    }
-
-    public void setFeaturesEnabled(boolean bool) {
-        getSharedPreferences().edit().putBoolean(PREF_ENABLE_FEATURES, bool).apply();
     }
 
     public boolean isRotateMinute() {

@@ -1,7 +1,6 @@
 package org.materialos.icons.activities;
 
 import android.app.Fragment;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -28,9 +27,9 @@ import com.pkmmte.requestmanager.PkRequestManager;
 import com.pkmmte.requestmanager.RequestSettings;
 
 import org.materialos.icons.R;
-import org.materialos.icons.adapters.ChangelogAdapter;
 import org.materialos.icons.fragments.AboutFragment;
 import org.materialos.icons.fragments.ApplyFragment;
+import org.materialos.icons.fragments.ChangelogDialogFragment;
 import org.materialos.icons.fragments.HomeFragment;
 import org.materialos.icons.fragments.IconsFragment;
 import org.materialos.icons.fragments.RequestFragment;
@@ -40,29 +39,22 @@ import org.materialos.icons.util.Util;
 
 
 public class MainActivity extends AppCompatActivity {
-
-    public static final int DRAWER_ITEM_HOME = 2;
-    public static final int DRAWER_ITEM_ICONS = 4;
-    public static final int DRAWER_ITEM_APPLY = 6;
-    public static final int DRAWER_ITEM_WALLPAPER = 8;
-    public static final int DRAWER_ITEM_REQUEST = 10;
-    public static final int DRAWER_ITEM_ABOUT = 12;
-    private static final boolean WITH_LICENSE_CHECKER = false;
+    public static final int DRAWER_ITEM_HOME = 1234;
+    public static final int DRAWER_ITEM_ICONS = 6434;
+    public static final int DRAWER_ITEM_APPLY = 9650;
+    public static final int DRAWER_ITEM_WALLPAPER = 3462;
+    public static final int DRAWER_ITEM_REQUEST = 1284;
+    public static final int DRAWER_ITEM_ABOUT = 3255;
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
-    public String version;
     private Drawer mDrawer = null;
     private int mCurrentSelectedPosition = -1;
-    private boolean mFirstRun, mEnableFeatures;
     private Preferences mPrefs;
     private Toolbar mToolbar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // Uncomment this for custom themeing
-        // setTheme(R.style.CustomTheme);
 
         // Grab a reference to the manager and store it in a variable. This helps make code shorter.
         PkRequestManager requestManager = PkRequestManager.getInstance(this);
@@ -73,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 .emailSubject(getResources().getString(R.string.email_request_subject))
                 .emailPrecontent(getResources().getString(R.string.request_precontent))
                 .saveLocation(Environment.getExternalStorageDirectory().getAbsolutePath() + getResources().getString(R.string.request_save_location))
-                .appfilterName("themed.xml")
                 .build());
         requestManager.loadAppsIfEmptyAsync();
 
@@ -98,9 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 .withSavedInstance(savedInstanceState)
                 .build();
 
-        mEnableFeatures = mPrefs.isFeaturesEnabled();
-        mFirstRun = mPrefs.isFirstRun();
-
         mDrawer = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(mToolbar)
@@ -108,11 +96,12 @@ public class MainActivity extends AppCompatActivity {
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(home).withIcon(GoogleMaterial.Icon.gmd_home).withIdentifier(DRAWER_ITEM_HOME),
                         new PrimaryDrawerItem().withName(previews).withIcon(GoogleMaterial.Icon.gmd_palette).withIdentifier(DRAWER_ITEM_ICONS),
+                        new PrimaryDrawerItem().withName(wallpapers).withIcon(GoogleMaterial.Icon.gmd_image).withIdentifier(DRAWER_ITEM_WALLPAPER),
                         new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(DRAWER_ITEM_APPLY),
+                        new PrimaryDrawerItem().withName(iconRequest).withIcon(GoogleMaterial.Icon.gmd_content_paste).withIdentifier(DRAWER_ITEM_REQUEST),
                         new DividerDrawerItem(),
                         new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(DRAWER_ITEM_ABOUT)
                 ).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-
                     @Override
                     public boolean onItemClick(View view, int i, IDrawerItem iDrawerItem) {
                         if (iDrawerItem != null) {
@@ -140,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
                                     switchFragment(DRAWER_ITEM_ABOUT, credits, AboutFragment.class);
                                     break;
                             }
-
                         } else {
                             return false;
                         }
@@ -151,21 +139,23 @@ public class MainActivity extends AppCompatActivity {
                 .withSavedInstance(savedInstanceState)
                 .build();
 
-        //mDrawer.getRecyclerView().setVerticalScrollBarEnabled(false);
-        runLicenseChecker();
+        if (mPrefs.isFirstRun()) {
+            showChangelogDialog();
+        }
 
         if (savedInstanceState == null) {
             mCurrentSelectedPosition = 0;
             mDrawer.setSelection(DRAWER_ITEM_HOME);
         } else {
-            mCurrentSelectedPosition = mDrawer.getCurrentSelection();
+            mCurrentSelectedPosition = mDrawer.getCurrentSelectedPosition();
+            updateToolbarElevation(mDrawer.getCurrentSelection());
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mDrawer.setSelectionAtPosition(mCurrentSelectedPosition);
+        //mDrawer.setSelectionAtPosition(mCurrentSelectedPosition);
     }
 
     public Drawer getDrawer() {
@@ -184,13 +174,7 @@ public class MainActivity extends AppCompatActivity {
         }, 50);
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if (itemId == DRAWER_ITEM_HOME || itemId == DRAWER_ITEM_ICONS) {
-                mToolbar.setElevation(0);
-            } else {
-                mToolbar.setElevation(getResources().getDimension(R.dimen.toolbar_elevation));
-            }
-        }
+        updateToolbarElevation(itemId);
 
         if (mCurrentSelectedPosition == mDrawer.getPosition(itemId)) {
             // Don't allow re-selection of the currently active item
@@ -207,6 +191,16 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
 
 
+    }
+
+    private void updateToolbarElevation(int itemId) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if (itemId == DRAWER_ITEM_HOME || itemId == DRAWER_ITEM_ICONS) {
+                mToolbar.setElevation(0);
+            } else {
+                mToolbar.setElevation(getResources().getDimension(R.dimen.toolbar_elevation));
+            }
+        }
     }
 
     @Override
@@ -279,54 +273,9 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void addItemsToDrawer() {
-        final String wallpapers = getResources().getString(R.string.wallpapers);
-        final String iconRequest = getResources().getString(R.string.icon_request);
-        IDrawerItem walls = new PrimaryDrawerItem().withName(wallpapers)
-                .withIcon(GoogleMaterial.Icon.gmd_image).withIdentifier(DRAWER_ITEM_WALLPAPER);
-        IDrawerItem request = new PrimaryDrawerItem().withName(iconRequest)
-                .withIcon(GoogleMaterial.Icon.gmd_content_paste).withIdentifier(DRAWER_ITEM_REQUEST);
-        if (mEnableFeatures) {
-            mDrawer.addItemAtPosition(walls, 3);
-            mDrawer.addItemAtPosition(request, 4);
-        }
-    }
-
-    private void runLicenseChecker() {
-        if (mFirstRun) {
-            if (WITH_LICENSE_CHECKER) {
-                checkLicense();
-            } else {
-                mPrefs.setFeaturesEnabled(true);
-                addItemsToDrawer();
-                showChangelogDialog();
-            }
-        } else {
-            if (WITH_LICENSE_CHECKER) {
-                if (!mEnableFeatures) {
-                    showNotLicensedDialog();
-                } else {
-                    addItemsToDrawer();
-                    showChangelogDialog();
-                }
-            } else {
-                addItemsToDrawer();
-                showChangelogDialog();
-            }
-        }
-    }
-
     private void showChangelog() {
-        new MaterialDialog.Builder(this)
-                .title(R.string.changelog_dialog_title)
-                .adapter(new ChangelogAdapter(this, R.array.fullchangelog), null)
-                .positiveText(R.string.nice)
-                .callback(new MaterialDialog.ButtonCallback() {
-                    @Override
-                    public void onPositive(MaterialDialog dialog) {
-                        mPrefs.setNotFirstrun();
-                    }
-                }).show();
+        new ChangelogDialogFragment().show(getFragmentManager(), "changelog_dialog");
+        mPrefs.setNotFirstrun();
     }
 
     private void showChangelogDialog() {
@@ -349,66 +298,4 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).show();
     }
-
-    private void checkLicense() {
-        String installer = getPackageManager().getInstallerPackageName(getPackageName());
-        try {
-            if (installer.equals("com.google.android.feedback")
-                    || installer.equals("com.android.vending")
-                    || installer.equals("com.amazon.venezia")) {
-                new MaterialDialog.Builder(this)
-                        .title(R.string.license_success_title)
-                        .content(R.string.license_success)
-                        .positiveText(R.string.close)
-                        .callback(new MaterialDialog.ButtonCallback() {
-                            @Override
-                            public void onPositive(MaterialDialog dialog) {
-                                mEnableFeatures = true;
-                                mPrefs.setFeaturesEnabled(true);
-                                addItemsToDrawer();
-                                showChangelogDialog();
-                            }
-                        }).show();
-            } else {
-                showNotLicensedDialog();
-            }
-        } catch (Exception e) {
-            showNotLicensedDialog();
-        }
-    }
-
-    private void showNotLicensedDialog() {
-        mEnableFeatures = false;
-        mPrefs.setFeaturesEnabled(false);
-        new MaterialDialog.Builder(this)
-                .title(R.string.license_failed_title)
-                .content(R.string.license_failed)
-                .positiveText(R.string.download)
-                .negativeText(R.string.exit)
-                .callback(new MaterialDialog.ButtonCallback() {
-                    @Override
-                    public void onPositive(MaterialDialog dialog) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + getPackageName()));
-                        startActivity(browserIntent);
-                    }
-
-                    @Override
-                    public void onNegative(MaterialDialog dialog) {
-                        finish();
-                    }
-                })
-                .cancelListener(new DialogInterface.OnCancelListener() {
-                    @Override
-                    public void onCancel(DialogInterface dialog) {
-                        finish();
-                    }
-                })
-                .dismissListener(new DialogInterface.OnDismissListener() {
-                    @Override
-                    public void onDismiss(DialogInterface dialog) {
-                        finish();
-                    }
-                }).show();
-    }
-
 }

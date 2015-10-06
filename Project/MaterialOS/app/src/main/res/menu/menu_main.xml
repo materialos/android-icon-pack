@@ -15,6 +15,6 @@
     <item
         android:id="@+id/changelog"
         android:orderInCategory="300"
-        android:title="@string/changelog"
+        android:title="@string/see_changelog"
         app:showAsAction="never" />
 </menu>

@@ -28,20 +28,23 @@ import java.util.HashMap;
 
 public class WallpapersFragment extends Fragment {
 
+    //TODO: Get rid of this entire mess and rewrite using Retrofit and RxJava (and maybe Glide instead of Picasso).
+    //TODO: Shared Element Transition
+
     public static final String NAME = "name";
     public static final String WALL = "wall";
     private static final int DEFAULT_COLUMNS_PORTRAIT = 2;
     private static final int DEFAULT_COLUMNS_LANDSCAPE = 3;
-    private ArrayList<HashMap<String, String>> arraylist;
-    private ViewGroup root;
+    private ArrayList<HashMap<String, String>> mImageUrlData;
+    private ViewGroup mRoot;
     private ProgressBar mProgress;
     private int mColumnCount;
-    private int numColumns = 1;
+    private int mNumColumns = 1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        root = (ViewGroup) inflater.inflate(R.layout.fragment_wallpapers, container, false);
-        mProgress = (ProgressBar) root.findViewById(R.id.progress);
+        mRoot = (ViewGroup) inflater.inflate(R.layout.fragment_wallpapers, container, false);
+        mProgress = (ProgressBar) mRoot.findViewById(R.id.progress);
 
         final ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null)
@@ -53,11 +56,11 @@ public class WallpapersFragment extends Fragment {
         int newColumnCount = isLandscape ? mColumnCountLandscape : mColumnCountPortrait;
         if (mColumnCount != newColumnCount) {
             mColumnCount = newColumnCount;
-            numColumns = mColumnCount;
+            mNumColumns = mColumnCount;
         }
 
         new DownloadJSON().execute();
-        return root;
+        return mRoot;
     }
 
     private boolean isLandscape() {
@@ -65,12 +68,11 @@ public class WallpapersFragment extends Fragment {
     }
 
     // DownloadJSON AsyncTask
-    private class DownloadJSON extends AsyncTask<Void, Void, Void> {
+    private class DownloadJSON extends AsyncTask<Void, Void, Boolean> {
 
         @Override
-        protected Void doInBackground(Void... params) {
-            // Create an array
-            arraylist = new ArrayList<>();
+        protected Boolean doInBackground(Void... params) {
+            mImageUrlData = new ArrayList<>();
             // Retrieve JSON Objects from the given URL address
             JSONObject json = JSONParser
                     .getJSONfromURL(getResources().getString(R.string.json_file_url));
@@ -87,32 +89,27 @@ public class WallpapersFragment extends Fragment {
                         map.put("author", json.getString("author"));
                         map.put("wall", json.getString("url"));
                         // Set the JSON Objects into the array
-                        arraylist.add(map);
+                        mImageUrlData.add(map);
                     }
                 } catch (JSONException e) {
-                    //TODO: Remove Errors for JSON
-//                    runOnUiThread(new Runnable() {
-//                        public void run() {
-                    Toast.makeText(getActivity(), getString(R.string.json_error_toast), Toast.LENGTH_LONG).show();
-//                        }
-//                    });
                     e.printStackTrace();
+                    return false;
                 }
             } else {
-//                runOnUiThread(new Runnable() {
-//                    public void run() {
-                Toast.makeText(getActivity(), getString(R.string.json_error_toast), Toast.LENGTH_LONG).show();
-//                    }
-//                });
+                return false;
             }
-            return null;
+            return true;
         }
 
         @Override
-        protected void onPostExecute(Void args) {
-            final GridView gridView = (GridView) root.findViewById(R.id.gridView);
-            gridView.setNumColumns(numColumns);
-            final WallsGridAdapter mGridAdapter = new WallsGridAdapter(getActivity(), arraylist, numColumns);
+        protected void onPostExecute(Boolean result) {
+            if(!result){
+                Toast.makeText(getActivity(), getString(R.string.json_error_toast), Toast.LENGTH_LONG).show();
+            }
+
+            final GridView gridView = (GridView) mRoot.findViewById(R.id.gridView);
+            gridView.setNumColumns(mNumColumns);
+            final WallsGridAdapter mGridAdapter = new WallsGridAdapter(getActivity(), mImageUrlData, mNumColumns);
             gridView.setAdapter(mGridAdapter);
             if (mProgress != null)
                 mProgress.setVisibility(View.GONE);
@@ -120,7 +117,7 @@ public class WallpapersFragment extends Fragment {
             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    final HashMap<String, String> data = arraylist.get(position);
+                    final HashMap<String, String> data = mImageUrlData.get(position);
                     final String wallurl = data.get((WallpapersFragment.WALL));
                     final Intent intent = new Intent(getActivity(), DetailedWallpaperActivity.class)
                             .putExtra("wall", wallurl);
