@@ -1,7 +1,9 @@
-# Android Icon Pack
+# Material Open Source Icon Pack - Android
 ![largeshowcase-dark](https://cloud.githubusercontent.com/assets/5341898/9100839/4076791e-3b94-11e5-8dc3-f7e7f9f40549.png)
 
 ## Description:
+
+[![Get it on Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=org.materialos.icons)
 
 [materialos/Android-Icon-Pack](https://github.com/materialos/Android-Icon-Pack) is our Android icon pack based off of [materialos/Icons](https://github.com/materialos/Icons). Last commit merdged into drawables: [c01fab9](https://github.com/materialos/Icons/commit/c01fab90791400d0cafdd0086baa21df7d0cdc31).
 
@@ -26,6 +28,3 @@ If your interested in helping out or would like to request an icon, see our [wik
 All product icon graphics are under the license found at [http://materialos.com/license](http://materialos.com/license) as well as below. For sublicensing for your app or product as well as all other questions, [create an issue](https://github.com/materialos/Icons/issues/new?title=[Licensing]%20My%20Question%20Here&body=Please%20leave%20us%20more%20information%20about%20your%20question%20here.) or email [materialos@gmail.com](mailto:materialos@gmail.com?Subject=Licensing%20Question).
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">Material Design Iconography</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/materialos/Icons" property="cc:attributionName" rel="cc:attributionURL">the MOS Contributors</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-
-#### App
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Paperboard</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Jahir Fiquitiva</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/jahirfiquitiva/PaperBoard-Final" rel="dct:source">https://github.com/jahirfiquitiva/PaperBoard-Final</a>.
