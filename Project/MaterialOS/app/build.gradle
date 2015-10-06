@@ -1,19 +1,23 @@
 buildscript {
     repositories {
         jcenter()
+        maven { url 'https://maven.fabric.io/public' }
     }
 
     dependencies {
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
+        classpath 'io.fabric.tools:gradle:1.20.1'
     }
 }
 
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
 apply plugin: 'com.github.ben-manes.versions'
 
 repositories {
     jcenter()
     maven { url "https://jitpack.io" }
+    maven { url 'https://maven.fabric.io/public' }
 }
 
 android {
@@ -34,6 +38,7 @@ android {
             minifyEnabled true
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
         debug {
             applicationIdSuffix '.debug'
@@ -68,7 +73,7 @@ dependencies {
     compile('com.github.afollestad.material-dialogs:core:0.8.2.0@aar') {
         transitive = true
     }
-    compile('com.mikepenz:materialdrawer:4.3.2@aar') {
+    compile('com.mikepenz:materialdrawer:4.3.3@aar') {
         transitive = true
     }
     compile 'com.mikepenz:google-material-typeface:1.2.0.1@aar'
@@ -81,4 +86,7 @@ dependencies {
     compile 'com.google.android.apps.muzei:muzei-api:2.0'
     compile 'com.makeramen:roundedimageview:2.2.0'
     compile 'org.apmem.tools:layouts:1.10'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
+        transitive = true;
+    }
 }

@@ -80,3 +80,5 @@ hs_err_pid*
 gradle-app.setting
 
 *.DS_Store
+
+fabric.properties
