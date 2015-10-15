@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.crashlytics.android.Crashlytics;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -26,6 +27,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.pkmmte.requestmanager.PkRequestManager;
 import com.pkmmte.requestmanager.RequestSettings;
 
+import org.materialos.icons.BuildConfig;
 import org.materialos.icons.R;
 import org.materialos.icons.fragments.AboutFragment;
 import org.materialos.icons.fragments.ApplyFragment;
@@ -36,6 +38,8 @@ import org.materialos.icons.fragments.RequestFragment;
 import org.materialos.icons.fragments.WallpapersFragment;
 import org.materialos.icons.util.Preferences;
 import org.materialos.icons.util.Util;
+
+import io.fabric.sdk.android.Fabric;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -53,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
+
+        if (!BuildConfig.DEBUG) {
+            Fabric.with(this, new Crashlytics());
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

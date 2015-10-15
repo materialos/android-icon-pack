@@ -41,6 +41,9 @@ android {
             signingConfig signingConfigs.debug
         }
         debug {
+            minifyEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             applicationIdSuffix '.debug'
             versionNameSuffix '-DEBUG'
             manifestPlaceholders = [appName: "MaterialOS DEBUG"]
@@ -70,7 +73,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
 
-    compile('com.github.afollestad.material-dialogs:core:0.8.2.0@aar') {
+    compile('com.afollestad.material-dialogs:core:0.8.3.0@aar') {
         transitive = true
     }
     compile('com.mikepenz:materialdrawer:4.3.3@aar') {
