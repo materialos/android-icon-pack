@@ -2,53 +2,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary">
+    tools:context=".activities.MainActivity">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:src="@drawable/icons_banner"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:text="@string/welcome_title"
-            android:textColor="@color/primary_text_default_material_dark"
-            android:textSize="@dimen/text_big" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:lineSpacingMultiplier="1.2"
-            android:text="@string/theme_description"
-            android:textColor="@color/secondary_text_default_material_dark"
-            android:textSize="@dimen/text_small" />
-
-        <Button
-            android:id="@+id/rate_button"
-            android:layout_width="160dp"
-            android:layout_height="54dp"
-            android:layout_gravity="center|bottom"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            android:text="RATE" />
-
-    </LinearLayout>
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/theme_description"
+        android:textColor="@color/secondary_text_default_material_dark"
+        android:textSize="@dimen/text_small" />
 
     <com.melnykov.fab.FloatingActionButton
         android:id="@+id/apply_btn"
@@ -57,7 +25,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="104dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:src="@drawable/ic_apply_icons" />

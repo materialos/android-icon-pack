@@ -8,11 +8,13 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.crashlytics.android.Crashlytics;
@@ -54,10 +56,11 @@ public class MainActivity extends AppCompatActivity {
     private int mCurrentSelectedPosition = -1;
     private Preferences mPrefs;
     private Toolbar mToolbar;
+    private TextView mToolbarCenterTitle;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme);
+        //setTheme(R.style.AppTheme);
 
         if (!BuildConfig.DEBUG) {
             Fabric.with(this, new Crashlytics());
@@ -81,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         mPrefs = new Preferences(MainActivity.this);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbarCenterTitle = (TextView) mToolbar.findViewById(R.id.app_bar_title);
         setSupportActionBar(mToolbar);
 
         final String appName = getResources().getString(R.string.app_name);
@@ -159,7 +163,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             mCurrentSelectedPosition = mDrawer.getCurrentSelectedPosition();
             updateToolbarElevation(mDrawer.getCurrentSelection());
+            updateForHome(mDrawer.getCurrentSelection());
         }
+    }
+
+    public void setCenterTitle(int resId) {
+        mToolbarCenterTitle.setText(resId);
     }
 
     @Override
@@ -185,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         updateToolbarElevation(itemId);
+        updateForHome(itemId);
 
         if (mCurrentSelectedPosition == mDrawer.getPosition(itemId)) {
             // Don't allow re-selection of the currently active item
@@ -210,6 +220,16 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 mToolbar.setElevation(getResources().getDimension(R.dimen.toolbar_elevation));
             }
+        }
+    }
+
+    private void updateForHome(int itemId) {
+        if (itemId == DRAWER_ITEM_HOME) {
+            getWindow().getDecorView().setBackgroundResource(R.drawable.launch_screen);
+            mToolbarCenterTitle.setText(R.string.welcome_title);
+        } else {
+            getWindow().getDecorView().setBackgroundColor(ContextCompat.getColor(this, R.color.background_material_light));
+            mToolbarCenterTitle.setText("");
         }
     }
 

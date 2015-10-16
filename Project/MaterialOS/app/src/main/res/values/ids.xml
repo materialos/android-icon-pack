@@ -17,4 +17,5 @@
     <item name="list_item_chip_image" type="id" />
     <item name="list_item_chip_image_initial" type="id" />
     <item name="fragment_icons_tablayout" type="id" />
+    <item name="app_bar_title" type="id" />
 </resources>
