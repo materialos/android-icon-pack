@@ -15,30 +15,14 @@ import org.materialos.icons.activities.MainActivity;
 
 public class HomeFragment extends Fragment {
 
-    private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
-
-    private String mPlayStoreListing;
-
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_home, container, false);
 
-        mPlayStoreListing = getActivity().getPackageName();
-
         ActionBar toolbar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if (toolbar != null) {
             toolbar.setTitle("");
-
         }
-
-        /*TextView ratebtn = (TextView) root.findViewById(R.id.rate_button);
-        ratebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent rate = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + mPlayStoreListing));
-                startActivity(rate);
-            }
-        });*/
 
         FloatingActionButton fab = (FloatingActionButton) root.findViewById(R.id.apply_btn);
         fab.setColorNormalResId(R.color.accent);

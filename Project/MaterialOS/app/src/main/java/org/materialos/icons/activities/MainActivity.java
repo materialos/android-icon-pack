@@ -41,6 +41,8 @@ import org.materialos.icons.fragments.WallpapersFragment;
 import org.materialos.icons.util.Preferences;
 import org.materialos.icons.util.Util;
 
+import java.lang.reflect.Field;
+
 import io.fabric.sdk.android.Fabric;
 
 
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int DRAWER_ITEM_WALLPAPER = 3462;
     public static final int DRAWER_ITEM_REQUEST = 1284;
     public static final int DRAWER_ITEM_ABOUT = 3255;
+    public static final int DRAWER_ITEM_CHANGELOG = 1337;
     private static final String MARKET_URL = "https://play.google.com/store/apps/details?id=";
     private Drawer mDrawer = null;
     private int mCurrentSelectedPosition = -1;
@@ -60,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
-        //setTheme(R.style.AppTheme);
-
         if (!BuildConfig.DEBUG) {
             Fabric.with(this, new Crashlytics());
         }
@@ -87,13 +88,14 @@ public class MainActivity extends AppCompatActivity {
         mToolbarCenterTitle = (TextView) mToolbar.findViewById(R.id.app_bar_title);
         setSupportActionBar(mToolbar);
 
-        final String appName = getResources().getString(R.string.app_name);
-        final String home = getResources().getString(R.string.home);
-        final String previews = getResources().getString(R.string.icons);
-        final String apply = getResources().getString(R.string.apply);
-        final String wallpapers = getResources().getString(R.string.wallpapers);
-        final String iconRequest = getResources().getString(R.string.icon_request);
-        final String credits = getResources().getString(R.string.about);
+        final String appName = getString(R.string.app_name);
+        final String home = getString(R.string.home);
+        final String previews = getString(R.string.icons);
+        final String apply = getString(R.string.apply);
+        final String wallpapers = getString(R.string.wallpapers);
+        final String iconRequest = getString(R.string.icon_request);
+        final String credits = getString(R.string.about);
+        final String changelog = getString(R.string.changelog);
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -114,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(DRAWER_ITEM_APPLY),
                         new PrimaryDrawerItem().withName(iconRequest).withIcon(GoogleMaterial.Icon.gmd_content_paste).withIdentifier(DRAWER_ITEM_REQUEST),
                         new DividerDrawerItem(),
+                        new PrimaryDrawerItem().withName(changelog).withIcon(GoogleMaterial.Icon.gmd_trending_up).withIdentifier(DRAWER_ITEM_CHANGELOG).withSelectable(false),
                         new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(DRAWER_ITEM_ABOUT)
                 ).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -139,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
                                 case DRAWER_ITEM_REQUEST:
                                     switchFragment(DRAWER_ITEM_REQUEST, iconRequest, RequestFragment.class);
                                     break;
+                                case DRAWER_ITEM_CHANGELOG:
+                                    showChangelog();
+                                    break;
                                 case DRAWER_ITEM_ABOUT:
                                     switchFragment(DRAWER_ITEM_ABOUT, credits, AboutFragment.class);
                                     break;
@@ -154,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         if (mPrefs.isFirstRun()) {
-            showChangelogDialog();
+            showChangelogDialogIfNeeded();
         }
 
         if (savedInstanceState == null) {
@@ -274,8 +280,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.sendemail:
                 StringBuilder emailBuilder = new StringBuilder();
 
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + getResources().getString(R.string.email_id)));
-                intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.email_subject));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + getString(R.string.email_id)));
+                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject));
 
                 emailBuilder.append("\n \n \nOS Version: ").append(System.getProperty("os.version")).append("(").append(Build.VERSION.INCREMENTAL).append(")");
                 emailBuilder.append("\nOS API Level: ").append(Build.VERSION.SDK_INT);
@@ -295,9 +301,9 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_TEXT, emailBuilder.toString());
                 startActivity(Intent.createChooser(intent, (getResources().getString(R.string.send_via))));
                 break;
-
-            case R.id.changelog:
-                showChangelog();
+            case R.id.rate:
+                Intent rate = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + getPackageName()));
+                startActivity(rate);
                 break;
         }
         return true;
@@ -308,7 +314,7 @@ public class MainActivity extends AppCompatActivity {
         mPrefs.setNotFirstrun();
     }
 
-    private void showChangelogDialog() {
+    private void showChangelogDialogIfNeeded() {
         if (mPrefs.getSavedVersion() < Util.getAppVersionCode(this))
             showChangelog();
         mPrefs.saveVersion();
@@ -327,5 +333,23 @@ public class MainActivity extends AppCompatActivity {
                             mDrawer.setSelectionAtPosition(nSelection);
                     }
                 }).show();
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        setIconsVisibleInOverflow(menu);
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    public void setIconsVisibleInOverflow(final Menu menu) {
+        if (menu != null && menu.getClass().getSimpleName().equals("MenuBuilder")) {
+            try {
+                Field field = menu.getClass().getDeclaredField("mOptionalIconsVisible");
+                field.setAccessible(true);
+                field.setBoolean(menu, true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

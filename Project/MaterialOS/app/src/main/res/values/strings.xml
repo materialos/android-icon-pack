@@ -91,6 +91,7 @@
     <string name="icon_request">Icon Request</string>
     <string name="about">About</string>
     <string name="donate">Donate</string>
+    <string name="changelog">Changelog</string>
 
     <!-- Wallpapers Activity -->
     <string name="title_activity_detailed_wallpaper">Detailed Wallpaper</string>
@@ -109,7 +110,6 @@
     <string name="send_via">Send via</string>
     <string name="rate">Rate theme</string>
     <string name="sendemail">Email developer</string>
-    <string name="see_changelog">See changelog</string>
 
     <!-- Sharing theme -->
     <string name="share_one">"Check out this awesome icon pack by "</string>
@@ -160,7 +160,6 @@
     <string name="web">WEBSITE</string>
     <string name="github">GITHUB</string>
     <string name="gplus">GOOGLE+</string>
-    <string name="ratebtn">RATE</string>
 
     <!-- Requests -->
     <string name="loading_unthemed_apps">Loading unthemed apps. This may take a while…</string>

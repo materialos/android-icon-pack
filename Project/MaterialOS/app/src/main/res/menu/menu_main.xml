@@ -3,18 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="org.materialos.icons.activities.MainActivity">
     <item
+        android:id="@+id/rate"
+        android:icon="@drawable/ic_star_half_24dp"
+        android:orderInCategory="100"
+        android:title="@string/rate"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/share"
+        android:icon="@drawable/ic_share_24dp"
         android:orderInCategory="100"
         android:title="@string/share"
         app:showAsAction="never" />
     <item
         android:id="@+id/sendemail"
+        android:icon="@drawable/ic_mail_24dp"
         android:orderInCategory="200"
         android:title="@string/sendemail"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/changelog"
-        android:orderInCategory="300"
-        android:title="@string/see_changelog"
         app:showAsAction="never" />
 </menu>
