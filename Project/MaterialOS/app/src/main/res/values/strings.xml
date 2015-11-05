@@ -135,13 +135,13 @@
     <!-- Wallpapers Stuff -->
     <string name="no_conn_title">No Connection Found</string>
     <string name="no_conn_content">Wallpapers are stored on Cloud Server. Please connect to Internet and try again.</string>
-    <string name="download">Download</string>
-    <string name="download_done">Download completed successfully Picture is located at </string>
+    <string name="download">Save</string>
+    <string name="download_done">Saved to </string>
     <string name="set_as">Crop picture and set as…</string>
-    <string name="set_wall_title">Wallpaper set</string>
-    <string name="set_wall_content">Please, choose an option. Would you like to crop the picture? Or do you prefer to set it in its actual size?</string>
+    <string name="set_wall_title">Set wallpaper</string>
+    <string name="set_wall_content">Would you like to crop it? Or do you prefer to set the full wallpaper?</string>
     <string name="crop_wall">Crop Wall</string>
-    <string name="set_it">Set it now!</string>
+    <string name="set_it">Set Full Wall</string>
     <string name="save">Save</string>
     <string name="done">Done!</string>
     <string name="progress_dialog_title">Downloading wallpaper</string>

@@ -7,7 +7,8 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/app_bar" />
+        layout="@layout/app_bar"
+        android:elevation="4dp" />
 
     <ScrollView
         android:layout_width="match_parent"
