@@ -4,11 +4,13 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -113,8 +115,8 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(home).withIcon(GoogleMaterial.Icon.gmd_home).withIdentifier(DRAWER_ITEM_HOME),
                         new PrimaryDrawerItem().withName(previews).withIcon(GoogleMaterial.Icon.gmd_palette).withIdentifier(DRAWER_ITEM_ICONS),
                         new PrimaryDrawerItem().withName(wallpapers).withIcon(GoogleMaterial.Icon.gmd_image).withIdentifier(DRAWER_ITEM_WALLPAPER),
-                        new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_style).withIdentifier(DRAWER_ITEM_APPLY),
-                        new PrimaryDrawerItem().withName(iconRequest).withIcon(GoogleMaterial.Icon.gmd_content_paste).withIdentifier(DRAWER_ITEM_REQUEST),
+                        new PrimaryDrawerItem().withName(apply).withIcon(GoogleMaterial.Icon.gmd_labels).withIdentifier(DRAWER_ITEM_APPLY),
+                        new PrimaryDrawerItem().withName(iconRequest).withIcon(GoogleMaterial.Icon.gmd_paste).withIdentifier(DRAWER_ITEM_REQUEST),
                         new DividerDrawerItem(),
                         new PrimaryDrawerItem().withName(changelog).withIcon(GoogleMaterial.Icon.gmd_trending_up).withIdentifier(DRAWER_ITEM_CHANGELOG).withSelectable(false),
                         new PrimaryDrawerItem().withName(credits).withIcon(GoogleMaterial.Icon.gmd_info).withIdentifier(DRAWER_ITEM_ABOUT)
@@ -149,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
                                     switchFragment(DRAWER_ITEM_ABOUT, credits, AboutFragment.class);
                                     break;
                             }
+                            invalidateOptionsMenu();
                         } else {
                             return false;
                         }
@@ -257,6 +260,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        for (int i = 0; i < menu.size(); i++) {
+            final boolean home = mDrawer.getCurrentSelection() == DRAWER_ITEM_HOME;
+            MenuItemCompat.setShowAsAction(menu.getItem(i), home ?
+                    MenuItemCompat.SHOW_AS_ACTION_NEVER :
+                    MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
+            menu.getItem(i).getIcon().setColorFilter(ContextCompat.getColor(this, home ? R.color.md_light_primary_text : R.color.md_dark_primary_text),
+                    PorterDuff.Mode.SRC_IN);
+        }
         return true;
     }
 
