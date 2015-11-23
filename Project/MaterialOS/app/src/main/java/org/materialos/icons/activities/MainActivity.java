@@ -265,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
             MenuItemCompat.setShowAsAction(menu.getItem(i), home ?
                     MenuItemCompat.SHOW_AS_ACTION_NEVER :
                     MenuItemCompat.SHOW_AS_ACTION_ALWAYS);
-            menu.getItem(i).getIcon().setColorFilter(ContextCompat.getColor(this, home ? R.color.md_light_primary_text : R.color.md_dark_primary_text),
+            menu.getItem(i).getIcon().setColorFilter(ContextCompat.getColor(this, home ? R.color.md_black_1000 : R.color.md_white_1000),
                     PorterDuff.Mode.SRC_IN);
         }
         return true;
