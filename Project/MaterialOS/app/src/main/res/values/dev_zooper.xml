@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- This info is used in the available skins list in Zooper -->
+    <string name="zooper_pack_name">@string/app_name</string>
+    <string name="zooper_pack_desc">Beautiful Zooper widgets for your home screen, powered by Polar.</string>
+    <string name="zooper_pack_author">Unnamed</string>
+
+    <!-- If set to 0, the user will not be allowed to save this template in Zooper -->
+    <integer name="zooper_pack_allowsave">0</integer>
+
+    <!-- This is the icon that will be shown in the plugin list in Zooper -->
+    <drawable name="zooper_pack_icon">@mipmap/ic_launcher</drawable>
+
+
+    <!-- Leave empty to disable the Zooper page in Polar -->
+    <integer-array name="zooper_widget_previews">
+        <!--<item>@drawable/widget_one</item>-->
+        <!--<item>@drawable/widget_two</item>-->
+        <!--<item>@drawable/widget_three</item>-->
+        <!--<item>@drawable/widget_four</item>-->
+    </integer-array>
+
+    <!-- Names for each preview in the array above, must have same number of items -->
+    <string-array name="zooper_widget_names">
+        <!--<item>Widget One</item>-->
+        <!--<item>Widget Two</item>-->
+        <!--<item>Widget Three</item>-->
+        <!--<item>Widget Four</item>-->
+    </string-array>
+
+</resources>

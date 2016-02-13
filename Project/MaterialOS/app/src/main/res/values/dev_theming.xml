@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+
+    <!-- OPTIONS -->
+
+    <!-- When allow_theme_switching is true, users can switch between the light and dark theme from the overflow menu -->
+    <bool name="allow_theme_switching">false</bool>
+    <bool name="dark_theme_default">false</bool>
+
+    <!-- LIGHT THEME -->
+
+    <!-- "primary_1_light" dictates the toolbar color, and "primary_2_light" dictates the status bar color -->
+    <color name="primary_1_light">@color/default_primary_lighttheme</color>
+    <color name="primary_2_light">@color/default_primarydark_lighttheme</color>
+    <!-- "accent_1_light" dictates the standard accent color, "accent_2_light" dictates the color for pressed states  -->
+    <color name="accent_1_light">@color/default_accent_lighttheme</color>
+    <color name="accent_2_light">@color/default_accentdark_lighttheme</color>
+    <color name="window_bg_cards_light">@color/default_window_bg_cards_lighttheme</color>
+    <color name="tab_indicator_color_light">@color/default_tab_indicator_color_lighttheme</color>
+    <color name="tab_icon_color_light">@color/default_tab_icon_color_lighttheme</color>
+    <color name="card_background_light">@color/default_card_background_lighttheme</color>
+    <color name="toolbar_title_color_light">@color/default_toolbar_title_color_lighttheme</color>
+    <color name="toolbar_icons_color_light">@color/default_toolbar_icons_color_lighttheme</color>
+    <!--
+        When not forced (false), light status bar mode (dark icons) is used on Marshmallow when your status bar color is light
+    -->
+    <bool name="force_light_statusbar_icons_light">false</bool>
+    <bool name="disable_auto_light_statusbar_icons_light">false</bool>
+
+    <!-- DARK THEME -->
+
+    <color name="primary_1_dark">@color/default_primary_darktheme</color>
+    <color name="primary_2_dark">@color/default_primarydark_darktheme</color>
+    <color name="accent_1_dark">@color/default_accent_darktheme</color>
+    <color name="accent_2_dark">@color/default_accentdark_darktheme</color>
+    <color name="window_bg_cards_dark">@color/default_window_bg_cards_darktheme</color>
+    <color name="tab_indicator_color_dark">@color/default_tab_indicator_color_darktheme</color>
+    <color name="tab_icon_color_dark">@color/default_tab_icon_color_darktheme</color>
+    <color name="card_background_dark">@color/default_card_background_darktheme</color>
+    <color name="toolbar_title_color_dark">@color/default_toolbar_title_color_darktheme</color>
+    <color name="toolbar_icons_color_dark">@color/default_toolbar_icons_color_darktheme</color>
+    <!--
+        When not forced (false), light status bar mode (dark icons) is used on Marshmallow when your status bar color is light
+    -->
+    <bool name="force_light_statusbar_icons_dark">false</bool>
+    <bool name="disable_auto_light_statusbar_icons_dark">false</bool>
+
+    <!-- Default theme colors, don't change these -->
+
+    <color name="default_primary_lighttheme">#2196F3</color>
+    <color name="default_primarydark_lighttheme">#1976D2</color>
+    <color name="default_accent_lighttheme">#FF5252</color>
+    <color name="default_accentdark_lighttheme">#FF1744</color>
+    <color name="default_window_bg_cards_lighttheme">#EAEAEA</color>
+    <color name="default_tab_indicator_color_lighttheme">#FFEBEE</color>
+    <color name="default_tab_icon_color_lighttheme">#F5F5F5</color>
+    <color name="default_card_background_lighttheme">#FFFFFF</color>
+    <color name="default_toolbar_title_color_lighttheme">#fff</color>
+    <color name="default_toolbar_icons_color_lighttheme">#fff</color>
+
+    <color name="default_primary_darktheme">#607D8B</color>
+    <color name="default_primarydark_darktheme">#546E7A</color>
+    <color name="default_accent_darktheme">#4DB6AC</color>
+    <color name="default_accentdark_darktheme">#009688</color>
+    <color name="default_window_bg_cards_darktheme">#546E7A</color>
+    <color name="default_tab_indicator_color_darktheme">#F5F5F5</color>
+    <color name="default_tab_icon_color_darktheme">#F5F5F5</color>
+    <color name="default_card_background_darktheme">#607D8B</color>
+    <color name="default_toolbar_title_color_darktheme">#fff</color>
+    <color name="default_toolbar_icons_color_darktheme">#fff</color>
+
+</resources>

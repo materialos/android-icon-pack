@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/circular_reveal_bg_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?window_background_cards"
+        android:transitionName="@string/transition_name_circular_reveal"
+        tools:ignore="UnusedAttribute" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:clipToPadding="false"
+        android:padding="@dimen/grid_margin"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideOverlay" />
+
+    <LinearLayout
+        android:transitionName="@string/transition_name_circular_reveal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UnusedAttribute">
+
+        <include layout="@layout/toolbar_appbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?toolbar_shadow" />
+
+    </LinearLayout>
+
+</FrameLayout>

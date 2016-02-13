@@ -1,34 +1,42 @@
 <resources>
-    <!-- Toolbar dimensions -->
-    <!-- This is for the guidelines -->
-    <dimen name="toolbar_contentInset">72dp</dimen>
-    <dimen name="tabs_contentInset">52dp</dimen>
 
-    <!-- Elevation of toolbar. Play with values until you find the one you want -->
+    <dimen name="nav_drawer_item_hor_pad">24dp</dimen>
+
+    <dimen name="card_elevation">2dp</dimen>
+
+    <dimen name="icons_header_height">48dp</dimen>
+
+    <dimen name="content_inset_quarter">4dp</dimen>
+    <!-- Minus 2 for negative margin on cards -->
+    <dimen name="content_inset_half_card">6dp</dimen>
+    <dimen name="content_inset_half">8dp</dimen>
+
+    <dimen name="content_inset_less">12dp</dimen>
+    <dimen name="content_inset">16dp</dimen>
+    <dimen name="content_inset_more">24dp</dimen>
+
+    <dimen name="fab_bottom_margin">16dp</dimen>
+    <dimen name="fab_bottom_margin_list">84dp</dimen>
+
     <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="grid_margin">4dp</dimen>
 
-    <!-- Some Margins -->
-    <dimen name="margin_medium_sm">8dp</dimen>
-    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="card_sides_margin">1.41dp</dimen>
+    <dimen name="card_vertical_margin">0.41dp</dimen>
 
-    <!-- Dimensions for some dialogs -->
-    <dimen name="dialog_margin">24dp</dimen>
-    <dimen name="dialog_icon_size">144dp</dimen>
+    <dimen name="toolbar_inset_smaller">56dp</dimen>
 
-    <!-- Grids -->
-    <dimen name="iconcolumn">80dp</dimen>
-    <dimen name="grid_padding_vertical">8dp</dimen>
+    <dimen name="empty_text_size">24sp</dimen>
 
-    <!-- Lists -->
-    <dimen name="list_item_height">@dimen/iconcolumn</dimen>
-    <dimen name="list_item_height_mini">40dp</dimen>
-    <dimen name="list_margin">20dp</dimen>
-    <dimen name="app_icon_size">36dp</dimen>
-    <dimen name="request_item_padding_left">18dp</dimen>
+    <dimen name="header_text_size">22sp</dimen>
+    <dimen name="title_text_size">18sp</dimen>
+    <dimen name="content_text_size">16sp</dimen>
+    <dimen name="body_text_size">14sp</dimen>
 
-    <!-- Texts Sizes -->
-    <dimen name="text_big">20sp</dimen>
-    <dimen name="text_med">18sp</dimen>
-    <dimen name="text_small">16sp</dimen>
+    <dimen name="quickapply_card_minheight">64dp</dimen>
+    <dimen name="apply_title_minheight">44dp</dimen>
+
+    <dimen name="drawer_header_height">196dp</dimen>
+    <dimen name="landing_page_icon_size">236dp</dimen>
 
 </resources>

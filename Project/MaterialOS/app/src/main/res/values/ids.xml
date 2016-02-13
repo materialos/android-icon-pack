@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="list_item_credits_website_button" type="id" />
-    <item name="list_item_credits_gplus_button" type="id" />
-    <item name="list_item_credits_desc" type="id" />
-    <item name="list_item_credits_subtitle" type="id" />
-    <item name="list_item_credits_title" type="id" />
-    <item name="list_item_credits_actions" type="id" />
-    <item name="dialog_icon_designer_text" type="id" />
-    <item name="dialog_icon_image" type="id"/>
-    <item name="list_item_icon_name_text" type="id" />
-    <item name="list_item_donate_subtitle" type="id" />
-    <item name="list_item_donate_title" type="id" />
-    <item name="list_item_donate_button" type="id" />
-    <item name="list_item_donate_donators_flow" type="id" />
-    <item name="list_item_chip_text" type="id" />
-    <item name="list_item_chip_image" type="id" />
-    <item name="list_item_chip_image_initial" type="id" />
-    <item name="fragment_icons_tablayout" type="id" />
-    <item name="app_bar_title" type="id" />
+
+    <item name="drawer_home" type="id" />
+    <item name="drawer_icons" type="id" />
+    <item name="drawer_wallpapers" type="id" />
+    <item name="drawer_requestIcons" type="id" />
+    <item name="drawer_apply" type="id" />
+    <item name="drawer_zooper" type="id" />
+    <item name="drawer_about" type="id" />
+
 </resources>

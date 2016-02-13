@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="translucent_nav">false</bool>
+    <bool name="translucent_nav_viewer">false</bool>
+
+</resources>

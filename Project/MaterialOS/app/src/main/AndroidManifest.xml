@@ -1,31 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="org.materialos.icons"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.afollestad.polar">
 
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="${appName}"
+        android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="UnusedAttribute">
+        android:theme="@style/AppTheme.Light"
+        android:vmSafeMode="true"
+        tools:ignore="GoogleAppIndexingWarning,RtlEnabled,UnusedAttribute">
+        <service
+            android:name="org.materialos.icons.services.GaufrerWallpaperSource"
+            android:description="@string/muzei_description"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.android.apps.muzei.api.MuzeiArtSource" />
+            </intent-filter>
 
-        <!-- Icons -->
+            <meta-data
+                android:name="color"
+                android:value="@color/primary_1_light" />
+            <!-- <meta-data -->
+            <!-- android:name="settingsActivity" -->
+            <!-- android:value=".ExampleSettingsActivity" /> -->
+        </service>
+
         <activity
-            android:name=".activities.MainActivity"
-            android:theme="@style/AppTheme.Main">
+            android:name="org.materialos.icons.ui.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.INFO" />
+            </intent-filter>
+
+            <!-- Makes the app available in the launcher's wallpaper chooser -->
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.materialos.icons.ui.IconPickerActivity"
+            android:exported="true"
+            android:label="@string/app_name">
 
             <!-- ADW -->
             <intent-filter>
@@ -61,12 +99,8 @@
             </intent-filter>
             <!-- Next Launcher -->
             <intent-filter>
-                <action android:name="com.gtp.nextlauncher.MAIN"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.gtp.nextlauncher.trial.MAIN"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.gtp.nextlauncher.theme" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <!-- TSF Shell -->
             <intent-filter>
@@ -147,41 +181,26 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
+            <!-- Uncomment for Zooper -->
+            <!--<intent-filter>-->
+                <!--<action android:name="org.zooper.zw.TEMPLATES" />-->
+            <!--</intent-filter>-->
+
         </activity>
-
-        <!-- Wallpapers Activity -->
         <activity
-            android:name=".activities.DetailedWallpaperActivity"
-            android:label="@string/title_activity_detailed_wallpaper"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.DetailedWallpaperActivity" />
-        </activity>
-
-        <service
-            android:name=".muzei.ArtSource"
-            android:description="@string/artsource_desc"
-            android:icon="@drawable/ic_muzei_logo"
-            android:label="@string/artsource_name">
-            <intent-filter>
-                <action android:name="com.google.android.apps.muzei.api.MuzeiArtSource" />
-            </intent-filter>
-
-            <meta-data
-                android:name="color"
-                android:value="@color/primary" />
-            <meta-data
-                android:name="settingsActivity"
-                android:value="com.jahirfiquitiva.paperboard.muzei.Settings" />
-        </service>
-
+            android:name="org.materialos.icons.ui.IconMoreActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Light.Translucent" />
         <activity
-            android:name=".muzei.Settings"
-            android:exported="true"
-            android:label="@string/muzei_settings"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="stateHidden" />
+            android:name="org.materialos.icons.viewer.ViewerActivity"
+            android:label="@string/app_name_wallpaper"
+            android:theme="@style/AppTheme.Viewer" />
+
+        <!-- Uncomment for Zooper -->
+        <!-- MAKE SURE YOU RENAME COM.AFOLLESTAD.POLAR TO BE UNIQUE TO YOUR PACK -->
+        <!--<provider-->
+            <!--android:name=".zooper.TemplateProvider"-->
+            <!--android:authorities="com.afollestad.polar.zwprovider"/>-->
 
     </application>
 

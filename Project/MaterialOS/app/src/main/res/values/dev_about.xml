@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- DO NOT REMOVE THE BOTTOM 3 ITEMS OF EACH ARRAY, OTHERWISE TERMS ARE VIOLATED. -->
+
+    <string-array name="about_images" formatted="false" tools:ignore="TypographyDashes">
+        <item>https://lh5.googleusercontent.com/-EEu76aKCKAs/VoZmvzGhwbI/AAAAAAAAg30/pSRFPCRuqkI/s548/me2.png</item>
+        <item>https://lh4.googleusercontent.com/-qzjaLCFo3ek/VcJSPP6tgsI/AAAAAAAA7qM/Q6PHCH_LJVs/s472-no/rainbowprofilepicture.png</item>
+        <item>https://lh5.googleusercontent.com/-eYZLtlmJZfc/VcafmLrqTuI/AAAAAAAAAco/24_0aOisb8o/s472-no/material_os_logo.png</item>
+        <item>https://lh3.googleusercontent.com/-mMe9cCCcm3Q/AAAAAAAAAAI/AAAAAAAAh2g/900TLdhn7dA/s120-c/photo.jpg</item>
+        <item>https://lh6.googleusercontent.com/-O7dc0DGPAqI/Vg32sOXsX3I/AAAAAAAAhZY/BjJsYr56mU4/s1134-no/902e6ff9-0742-4454-9100-f8fad3a3d94c</item>
+        <item>https://lh3.googleusercontent.com/-uRfg9FW83s4/AAAAAAAAAAI/AAAAAAAAKts/0FaBag1wvds/s120-c/photo.jpg</item>
+    </string-array>
+
+    <string-array name="about_covers" formatted="false" tools:ignore="TypographyDashes">
+        <item>https://lh3.googleusercontent.com/n_b_r_8_6eCbfjFsd8rhY7q2X8UGrHpboZqUhVeXpEmnR4lsjQ4qk61YZP_3ldufvhlkNA=s630-fcrop64=1,1b752cf58787bef0</item>
+        <item>https://lh3.googleusercontent.com/zC_tkMjB1wKLSpJgeT3Dj_2gdtmr0gyNAVXJCjOnEG5jU641YNHVnm2wrMoEqwVX6Vh0UQ=s630-fcrop64=1,00000000ffa4ffff</item>
+        <item>https://lh3.googleusercontent.com/s2NPQJq9_fTwOXMl2IUbV5W9tPDifH8RX_DtghO8f25TXtvaGxFGTxCXzH3pwQnzIIWB=s630-fcrop64=1,00002774ffffb714</item>
+        <item>https://lh3.googleusercontent.com/8fKdUOrpAMr6MKZ3SFDDBWgi1XqRPiGhu6dDwqAHMtoL=s630-fcrop64=1,00002492ffffe6d0</item>
+        <item>https://lh5.googleusercontent.com/-Dm3-UxmIOnQ/ViuobTLiMmI/AAAAAAAAjDQ/MC9Z2tL4eb8/w1914-h1078-no/Valiant%2B%252B%2BWellingtomWorks.png</item>
+        <item>https://lh3.googleusercontent.com/yxKzdHQl92pYtMFHg9yLXsomPAmhjnQeAgIVh6qOT4jvqcChDrVlUazobAuaC00V4JFl=s640-fcrop64=1,002d0000ffd1ffff</item>
+    </string-array>
+
+    <string-array name="about_titles">
+        <item>Corbin Crutchley</item>
+        <item>Daniel Hickman</item>
+        <item>MaterialOS Contributors</item>
+        <item>Aidan Follestad</item>
+        <item>Tom Wellington</item>
+        <item>Daniel Ciao</item>
+    </string-array>
+
+    <string-array name="about_descriptions">
+        <item formatted="false"><![CDATA[I like long walks on the beach and heavy metal<br><i>Co-founder, Icon Designer</i>]]></item>
+        <item formatted="false"><![CDATA[Always another side project<br><i>Co-founder, Icon Designer</i>]]></item>
+        <item formatted="false"><![CDATA[We could not have done it without these great people<br><i>The icon pack consists of all of their fine work</i>]]></item>
+        <item formatted="false"><![CDATA[I like rock/metal, programming, &amp; cars<br/><i>I made the dashboard happen &amp; helped design it</i>]]></item>
+        <item formatted="false"><![CDATA[I like rap, coffee, &amp; UI design<br/><i>I designed the dashboard</i>]]></item>
+        <item formatted="false"><![CDATA[I like playing piano, doing puzzles, &amp; making apps<br/><i>I primarily helped with animations and UI</i>]]></item>
+    </string-array>
+
+    <string-array name="about_buttons_names">
+        <item>Website|Google+|GitHub</item>
+        <item>Website|Google+|GitHub</item>
+        <item>Website|GitHub</item>
+        <item>Website|Google+|LinkedIn</item>
+        <item>Dribbble|Google+</item>
+        <item>Website|Google+|GitHub</item>
+    </string-array>
+
+    <string-array name="about_buttons_links">
+        <item>http://corbincrutchley.com|https://google.com/+CorbinCrutchley|https://github.com/crutchcorn</item>
+        <item>http://danielhickman.com|https://google.com/+DanielHickman|https://github.com/danielhickman</item>
+        <item>http://materialos.com|https://github.com/materialos/Icons</item>
+        <item>http://aidanfollestad.com|https://google.com/+AidanFollestad|https://www.linkedin.com/in/afollestad</item>
+        <item>https://dribbble.com/tomwellington|https://google.com/+TomWellington24</item>
+        <item>http://wwww.pluscubed.com|https://plus.google.com/+DanielCiao|https://github.com/plusCubed</item>
+    </string-array>
+
+</resources>

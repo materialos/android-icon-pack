@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- True enables the nav drawer layout -->
+    <bool name="nav_drawer_mode_default">false</bool>
+    <!-- Good for testing to switch between tabs and nav drawer, true shows a checkbox option in the overflow menu -->
+    <bool name="allow_nav_drawer_mode_switch">false</bool>
+
+    <!-- True enables the homepage -->
+    <bool name="homepage_enabled">true</bool>
+    <string name="homepage_description">
+        MaterialOS is a free and open source Material Design icon pack.
+    </string>
+    <!-- The large icon displayed in the home page -->
+    <drawable name="homepage_landing_icon">@drawable/ic_web</drawable>
+
+    <!-- URL to JSON file containing a map of wallpapers, leave empty to disable wallpapers. -->
+    <string name="wallpapers_json_url" formatted="false">
+        https://raw.githubusercontent.com/materialos/Android-Icon-Pack/master/Wallpapers/wallpapers.json
+    </string>
+
+    <!-- Email used to send icon requests, leave empty to disable this feature. -->
+    <string name="icon_request_email">materialopensource@gmail.com</string>
+
+    <!-- Public Base64 from the developer console for license checking, optional -->
+    <string name="licensing_public_key"></string>
+
+    <!-- When true, the app will open the last selected page during restarts -->
+    <bool name="persist_selected_page">true</bool>
+
+    <!-- Email used to send feedback, leave empty to disable this feature. -->
+    <string name="feedback_email"></string>
+
+    <!-- %1$s gets replaced with the name of your icon pack -->
+    <string name="feedback_subject_line"></string>
+
+    <!--
+        License key from Services & APIs on the Developer Console. Same as what's used for license checking.
+        Leave empty to disable the donation function.
+    -->
+    <string name="donate_license_key">
+    </string>
+
+    <!-- Names of donation options, e.g. "Buy me a pizza!" -->
+    <string-array name="donate_option_names">
+    </string-array>
+
+    <!-- Names of donation option IDs, taken from the Developer Console -->
+    <string-array name="donate_option_ids">
+    </string-array>
+
+</resources>

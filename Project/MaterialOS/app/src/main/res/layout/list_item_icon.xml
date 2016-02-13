@@ -1,30 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="80dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?selectableItemBackground"
-    android:orientation="vertical">
+    android:foreground="?selectableItemBackground"
+    android:padding="@dimen/grid_margin">
 
-    <ImageView
-        android:id="@+id/icon_img"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:paddingLeft="@dimen/margin_medium_sm"
-        android:paddingRight="@dimen/margin_medium_sm"
-        tools:ignore="ContentDescription"
-        tools:src="@drawable/matlog" />
+    <org.materialos.icons.views.SquareImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription" />
 
-    <TextView
-        android:id="@id/list_item_icon_name_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:ellipsize="end"
-        android:fontFamily="sans-serif-condensed"
-        android:paddingBottom="8dp"
-        android:singleLine="true"
-        android:textSize="12sp"
-        tools:text="MatLog Alt 2345678" />
-
-</LinearLayout>
+</FrameLayout>

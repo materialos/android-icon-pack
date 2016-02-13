@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="changelog_enabled">true</bool>
+
+    <string-array name="changelog" translatable="false">
+        <item><![CDATA[ <b>v2.0.0 - 2/12/2016</b> ]]></item>
+        <item><![CDATA[ <b>MAJOR UPDATE:</b> New dashboard, redone appfilter, and over 100+ new icons added! This release also removes unneeded Linux icons ]]></item>
+        <item><![CDATA[ <b>v1.0.1 - 10/5/2015</b> ]]></item>
+        <item><![CDATA[ <b>FIX:</b> Twitch, Twitch Alt, and Youtube Alt icons ]]></item>
+        <item><![CDATA[ <b>v1.0.0 - 8/27/15</b> ]]></item>
+        <item><![CDATA[ <b>Initial release!</b> ]]></item>
+    </string-array>
+
+</resources>

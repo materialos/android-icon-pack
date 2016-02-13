@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="primary">#2196F3</color>
-    <color name="primary_dark">#1976D2</color>
-    <color name="accent">#FF5252</color>
+    <!-- See dev_theming for Polar theming colors -->
 
-    <color name="launcher_not_installed_text">#f44336</color>
-    <color name="launcher_installed_text">#4caf50</color>
+    <color name="viewer_overlay">#40000000</color>
 
-    <color name="material_drawer_background">#FAFAFA</color>
-    <color name="material_drawer_selected_text">#2196F3</color>
+    <color name="navigationview_normalicon_light">#606060</color>
+    <color name="navigationview_normalicon_dark">#9F9F9F</color>
+    <color name="navigationview_normaltext_light">#191919</color>
+    <color name="navigationview_normaltext_dark">#E6E6E6</color>
+    <color name="navigationview_selectedbg_light">#e2e2e2</color>
+    <color name="navigationview_selectedbg_dark">#474747</color>
 
 </resources>
