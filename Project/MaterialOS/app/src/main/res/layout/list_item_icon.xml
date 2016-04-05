@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<org.materialos.icons.views.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:foreground="?selectableItemBackground"
-    android:padding="@dimen/grid_margin">
+    android:padding="@dimen/grid_margin_icons">
 
     <org.materialos.icons.views.SquareImageView
         android:id="@+id/image"
@@ -13,4 +13,4 @@
         android:scaleType="fitXY"
         tools:ignore="ContentDescription" />
 
-</FrameLayout>
+</org.materialos.icons.views.SquareFrameLayout>

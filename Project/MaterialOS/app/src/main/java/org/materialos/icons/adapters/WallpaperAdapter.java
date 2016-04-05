@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.util.WallpaperUtils;
 import org.materialos.icons.views.WallpaperAuthorView;
 import org.materialos.icons.views.WallpaperBgFrame;
@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import butterknife.ButterKnife;
-
 
 public class WallpaperAdapter extends RecyclerView.Adapter<WallpaperAdapter.WallpaperViewHolder> {
 
@@ -133,21 +132,24 @@ public class WallpaperAdapter extends RecyclerView.Adapter<WallpaperAdapter.Wall
 
         holder.progress.setVisibility(View.VISIBLE);
         if (wallpaper.isPaletteComplete()) {
-            Log.d("WallpaperAdapter", "Wallpaper " + index + ", palette is complete!");
+            Log.d("WallpaperAdapter", String.format("Wallpaper %d (%s) palette is complete!",
+                    index, wallpaper.getListingImageUrl()));
             holder.name.setTextColor(wallpaper.getPaletteNameColor());
             holder.author.setTextColor(wallpaper.getPaletteAuthorColor());
             holder.colorFrame.setBackgroundColor(wallpaper.getPaletteBgColor());
             Glide.with(holder.itemView.getContext())
-                    .load(wallpaper.url)
+                    .load(wallpaper.getListingImageUrl())
                     .into(holder.image);
         } else {
-            Log.d("WallpaperAdapter", "Wallpaper " + index + ", palette is not complete...");
+            Log.d("WallpaperAdapter", String.format("Wallpaper %d (%s) palette is not complete...",
+                    index, wallpaper.getListingImageUrl()));
             holder.name.setTextColor(Color.WHITE, false);
             holder.author.setTextColor(Color.WHITE, false);
             holder.colorFrame.setBackgroundColor(Color.DKGRAY, false);
+            //noinspection unchecked
             Glide.with(holder.itemView.getContext())
-                    .load(wallpaper.url)
-                    .listener(GlidePalette.with(wallpaper.url)
+                    .load(wallpaper.getListingImageUrl())
+                    .listener(GlidePalette.with(wallpaper.getListingImageUrl())
                             .use(GlidePalette.Profile.VIBRANT)
                             .intoBackground(holder.colorFrame)
                             .intoTextColor(holder.name, GlidePalette.Swatch.TITLE_TEXT_COLOR)

@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.pluscubed.insetsdispatcher.view.InsetsDispatcherLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
@@ -7,26 +7,36 @@
     android:orientation="vertical"
     tools:paddingTop="24dp">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
+        android:layout_height="wrap_content"
         android:background="?colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:elevation="@dimen/toolbar_elevation"
-        app:contentInsetStart="@dimen/content_inset"
-        tools:ignore="NewApi,Overdraw,UnusedAttribute">
+        android:orientation="vertical"
+        app:layout_windowInsets="top"
+        tools:ignore="UnusedAttribute">
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            app:tabMinWidth="72dp"
-            tools:ignore="NewApi,RtlSymmetry,UnusedAttribute" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            tools:ignore="NewApi,Overdraw,UnusedAttribute">
 
-    </android.support.v7.widget.Toolbar>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                app:tabMinWidth="72dp"
+                tools:ignore="NewApi,RtlSymmetry,UnusedAttribute" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </LinearLayout>
+
 
     <include layout="@layout/activity_main_content" />
 
-</LinearLayout>
+</com.pluscubed.insetsdispatcher.view.InsetsDispatcherLinearLayout>

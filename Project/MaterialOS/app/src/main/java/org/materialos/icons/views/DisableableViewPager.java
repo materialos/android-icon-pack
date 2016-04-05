@@ -1,14 +1,15 @@
 package org.materialos.icons.views;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+
+import com.pluscubed.insetsdispatcher.view.InsetsDispatcherViewPager;
 
 /**
  * @author Aidan Follestad (afollestad)
  */
-public class DisableableViewPager extends ViewPager {
+public class DisableableViewPager extends InsetsDispatcherViewPager {
 
     private boolean isPagingEnabled = true;
 
@@ -33,4 +34,5 @@ public class DisableableViewPager extends ViewPager {
     public void setPagingEnabled(boolean b) {
         this.isPagingEnabled = b;
     }
+
 }

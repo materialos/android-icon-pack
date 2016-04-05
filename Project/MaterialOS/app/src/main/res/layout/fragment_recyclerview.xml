@@ -1,4 +1,5 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,19 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:fitsSystemWindows="true"
         android:padding="@dimen/grid_margin"
         android:scrollbarStyle="outsideOverlay"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        app:layout_windowInsets="bottom" />
 
     <LinearLayout
         android:id="@android:id/progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:fitsSystemWindows="true"
         android:orientation="vertical"
         android:visibility="gone"
+        app:layout_windowInsets="bottom"
         tools:visibility="visible">
 
         <ProgressBar
@@ -57,15 +58,15 @@
         android:layout_marginLeft="@dimen/content_inset_more"
         android:layout_marginRight="@dimen/content_inset_more"
         android:layout_marginTop="@dimen/content_inset_more"
-        android:fitsSystemWindows="true"
         android:fontFamily="sans-serif-light"
         android:gravity="center"
         android:lineSpacingMultiplier="1.4"
         android:textColor="?android:textColorSecondary"
         android:textSize="@dimen/empty_text_size"
         android:textStyle="italic"
+        app:layout_windowInsets="bottom"
         tools:ignore="UnusedAttribute"
         tools:text="No results"
         tools:visibility="gone" />
 
-</FrameLayout>
+</com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout>

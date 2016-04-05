@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/drawer_header_height"
+    android:background="?colorAccent"
     android:contentDescription="Navigation drawer header"
     android:orientation="vertical"
     android:scaleType="fitXY"

@@ -9,20 +9,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.util.DrawableXmlParser;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class IconMoreAdapter extends RecyclerView.Adapter<IconMoreAdapter.MainViewHolder> {
 
+    final Context mContext;
+    final ClickListener mListener;
     private final int mIconsInAnimation;
-
-    public interface ClickListener {
-        void onClick(View view, int index);
-    }
+    private final List<DrawableXmlParser.Icon> mIcons;
 
     public IconMoreAdapter(ClickListener listener, int gridWidth, Context context) {
         mListener = listener;
@@ -38,30 +40,10 @@ public class IconMoreAdapter extends RecyclerView.Adapter<IconMoreAdapter.MainVi
         return mIcons.get(position).getUniqueId();
     }
 
-    final Context mContext;
-    final ClickListener mListener;
-    private final List<DrawableXmlParser.Icon> mIcons;
-
     public void set(List<DrawableXmlParser.Icon> icons) {
         mIcons.clear();
         mIcons.addAll(icons);
         notifyDataSetChanged();
-    }
-
-    public class MainViewHolder extends RecyclerView.ViewHolder {
-
-        public MainViewHolder(View itemView) {
-            super(itemView);
-            image = (ImageView) itemView.findViewById(R.id.image);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mListener.onClick(v, getAdapterPosition());
-                }
-            });
-        }
-
-        final ImageView image;
     }
 
     public DrawableXmlParser.Icon getIcon(int index) {
@@ -80,7 +62,7 @@ public class IconMoreAdapter extends RecyclerView.Adapter<IconMoreAdapter.MainVi
     }
 
     @Override
-    public void onBindViewHolder(MainViewHolder holder, int position) {
+    public void onBindViewHolder(final MainViewHolder holder, int position) {
         final Context c = holder.itemView.getContext();
         final int res = mIcons.get(position).getDrawableId(c);
 
@@ -94,9 +76,33 @@ public class IconMoreAdapter extends RecyclerView.Adapter<IconMoreAdapter.MainVi
         } else {
             holder.image.setBackground(null);
             Glide.with(c)
-                    .fromResource()
                     .load(res)
-                    .into(holder.image);
+                    .into(new SimpleTarget<GlideDrawable>() {
+                        @Override
+                        public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
+                            holder.image.setImageDrawable(resource);
+                        }
+                    });
+        }
+    }
+
+    public interface ClickListener {
+        void onClick(View view, int index);
+    }
+
+    public class MainViewHolder extends RecyclerView.ViewHolder {
+
+        final ImageView image;
+
+        public MainViewHolder(View itemView) {
+            super(itemView);
+            image = (ImageView) itemView.findViewById(R.id.image);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mListener.onClick(v, getAdapterPosition());
+                }
+            });
         }
     }
 }

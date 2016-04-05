@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
@@ -19,10 +18,8 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.OnApplyWindowInsetsListener;
-import android.support.v4.view.ViewCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.WindowInsetsCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.RecyclerView;
@@ -30,13 +27,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.view.WindowInsets;
+import android.widget.LinearLayout;
 
 import com.afollestad.bridge.Bridge;
 import com.afollestad.inquiry.Inquiry;
 import com.afollestad.materialdialogs.util.DialogUtils;
-import com.afollestad.polar.BuildConfig;
-import com.afollestad.polar.R;
+import org.materialos.icons.BuildConfig;
+import org.materialos.icons.R;
 import org.materialos.icons.adapters.MainPagerAdapter;
 import org.materialos.icons.config.Config;
 import org.materialos.icons.dialogs.ChangelogDialog;
@@ -69,29 +68,35 @@ import static org.materialos.icons.viewer.ViewerActivity.STATE_CURRENT_POSITION;
 /**
  * @author Aidan Follestad (afollestad)
  */
-public class MainActivity extends BaseDonateActivity implements LicensingUtils.LicensingCallback, NavigationView.OnNavigationItemSelectedListener {
-
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
-    @Nullable
-    @Bind(R.id.tabs)
-    TabLayout mTabs;
-    @Nullable
-    @Bind(R.id.navigation_view)
-    NavigationView mNavView;
-    @Bind(R.id.pager)
-    DisableableViewPager mPager;
+public class MainActivity extends BaseDonateActivity implements
+        LicensingUtils.LicensingCallback, NavigationView.OnNavigationItemSelectedListener {
 
     public RecyclerView mRecyclerView;
 
+    @Bind(R.id.toolbar)
+    Toolbar mToolbar;
+
+    @Nullable
+    @Bind(R.id.tabs)
+    TabLayout mTabs;
+
+    @Nullable
+    @Bind(R.id.navigation_view)
+    NavigationView mNavView;
+    @Nullable
+    @Bind(R.id.drawer)
+    DrawerLayout mDrawer;
+
+    @Bind(R.id.pager)
+    DisableableViewPager mPager;
+
+    @Nullable
+    @Bind(R.id.app_bar)
+    LinearLayout mAppBarLinear;
+
     int mDrawerModeTopInset;
-    int mBottomInset;
 
     private PagesBuilder mPages;
-
-//    public int getBottomInset() {
-//        return mBottomInset;
-//    }
 
     @Override
     public Toolbar getToolbar() {
@@ -114,7 +119,8 @@ public class MainActivity extends BaseDonateActivity implements LicensingUtils.L
         setupPager();
         if (useNavDrawer)
             setupNavDrawer();
-        else setupTabs();
+        else
+            setupTabs();
 
         // Restore last selected page, tab/nav-drawer-item
         if (Config.get().persistSelectedPage()) {
@@ -123,6 +129,7 @@ public class MainActivity extends BaseDonateActivity implements LicensingUtils.L
             mPager.setCurrentItem(lastPage);
             if (mNavView != null) invalidateNavViewSelection(lastPage);
         }
+        dispatchFragmentUpdateTitle(!useNavDrawer);
 
         processIntent(getIntent());
     }
@@ -235,32 +242,28 @@ public class MainActivity extends BaseDonateActivity implements LicensingUtils.L
 
     private void setupNavDrawer() {
         assert mNavView != null;
+        assert mDrawer != null;
         mNavView.getMenu().clear();
         for (PagesBuilder.Page page : mPages)
             page.addToMenu(mNavView.getMenu());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             getWindow().setStatusBarColor(Color.TRANSPARENT);
-        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            drawer.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
+            mDrawer.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
 
                 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
                 @Override
                 public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
-
                     //TODO: Check if NavigationView needs bottom padding
-
                     WindowInsets drawerLayoutInsets = insets.replaceSystemWindowInsets(
                             insets.getSystemWindowInsetLeft(),
                             insets.getSystemWindowInsetTop(),
                             insets.getSystemWindowInsetRight(),
                             0
                     );
-
                     mDrawerModeTopInset = drawerLayoutInsets.getSystemWindowInsetTop();
-
                     ((DrawerLayout) v).setChildInsets(drawerLayoutInsets,
                             drawerLayoutInsets.getSystemWindowInsetTop() > 0);
                     return insets;
@@ -274,8 +277,8 @@ public class MainActivity extends BaseDonateActivity implements LicensingUtils.L
         menuIcon = TintUtils.createTintedDrawable(menuIcon, DialogUtils.resolveColor(this, R.attr.tab_icon_color));
         getSupportActionBar().setHomeAsUpIndicator(menuIcon);
 
-        drawer.setDrawerListener(new ActionBarDrawerToggle(this, drawer, mToolbar, R.string.drawer_open, R.string.drawer_close));
-        drawer.setStatusBarBackgroundColor(DialogUtils.resolveColor(this, R.attr.colorPrimaryDark));
+        mDrawer.addDrawerListener(new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.drawer_open, R.string.drawer_close));
+        mDrawer.setStatusBarBackgroundColor(DialogUtils.resolveColor(this, R.attr.colorPrimaryDark));
         mNavView.setNavigationItemSelectedListener(this);
 
         final ColorDrawable navBg = (ColorDrawable) mNavView.getBackground();
@@ -312,18 +315,18 @@ public class MainActivity extends BaseDonateActivity implements LicensingUtils.L
         bgDrawable.addState(new int[]{android.R.attr.state_checked}, new ColorDrawable(selectedBg));
         mNavView.setItemBackground(bgDrawable);
 
-        mNavView.getHeaderView(0).setBackgroundColor(DialogUtils.resolveColor(this, R.attr.colorAccent));
         mPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
-                final BasePageFragment frag = (BasePageFragment) getFragmentManager().findFragmentByTag("page:" + position);
-                if (frag != null) frag.updateTitle();
+                dispatchFragmentUpdateTitle(false);
                 invalidateNavViewSelection(position);
             }
         });
+
+        mToolbar.setContentInsetsRelative(getResources().getDimensionPixelSize(R.dimen.second_keyline), 0);
     }
 
-    private void invalidateNavViewSelection(int position) {
+    void invalidateNavViewSelection(int position) {
         assert mNavView != null;
         final int selectedId = mPages.get(position).drawerId;
         mNavView.post(new Runnable() {
@@ -334,6 +337,7 @@ public class MainActivity extends BaseDonateActivity implements LicensingUtils.L
         });
     }
 
+    @Override
     public int getLastStatusBarInsetHeight() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             return 0;
@@ -362,26 +366,62 @@ public class MainActivity extends BaseDonateActivity implements LicensingUtils.L
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                final BasePageFragment frag = (BasePageFragment) getFragmentManager().findFragmentByTag("page:" + position);
-                if (frag != null) frag.updateTitle();
+                dispatchFragmentUpdateTitle(false);
             }
         });
 
         for (PagesBuilder.Page page : mPages)
             addTab(page.iconRes);
         mTabs.setSelectedTabIndicatorColor(DialogUtils.resolveColor(this, R.attr.tab_indicator_color));
+    }
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.root), new OnApplyWindowInsetsListener() {
+    void dispatchFragmentUpdateTitle(final boolean checkTabsLocation) {
+        //First set the presumed title, then let fragment do anything specific.
+        setTitle(mPages.get(mPager.getCurrentItem()).titleRes);
+
+        mPager.post(new Runnable() {
             @Override
-            public WindowInsetsCompat onApplyWindowInsets(View v, WindowInsetsCompat insets) {
-                int systemWindowInsetTop = insets.getSystemWindowInsetTop();
-                v.setPaddingRelative(0, systemWindowInsetTop, 0, v.getPaddingBottom());
+            public void run() {
+                final BasePageFragment frag = (BasePageFragment) getFragmentManager().findFragmentByTag("page:" + mPager.getCurrentItem());
+                if (frag != null) frag.updateTitle();
 
-                mBottomInset = insets.getSystemWindowInsetBottom();
-
-                return insets;
+                if (checkTabsLocation) {
+                    moveTabsIfNeeded();
+                }
             }
         });
+    }
+
+    void moveTabsIfNeeded() {
+        final CharSequence currentTitle = getTitle();
+
+        String longestTitle = null;
+        for (PagesBuilder.Page page : mPages) {
+            String title = getString(page.titleRes);
+            if (longestTitle == null || title.length() > longestTitle.length()) {
+                longestTitle = title;
+            }
+        }
+        setTitle(longestTitle);
+
+        if (mTabs != null) {
+            ViewTreeObserver vto = mToolbar.getViewTreeObserver();
+            vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @SuppressWarnings("deprecation")
+                @Override
+                public void onGlobalLayout() {
+                    if (mToolbar.isTitleTruncated() && mTabs.getParent() == mToolbar) {
+                        mToolbar.removeView(mTabs);
+                        //noinspection ConstantConditions
+                        mAppBarLinear.addView(mTabs);
+                    }
+
+                    setTitle(currentTitle);
+
+                    mToolbar.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                }
+            });
+        }
     }
 
     @Override
@@ -389,15 +429,18 @@ public class MainActivity extends BaseDonateActivity implements LicensingUtils.L
         ((DrawerLayout) findViewById(R.id.drawer)).closeDrawers();
         final int index = mPages.findPositionForItem(item);
         if (index > -1)
-            mPager.setCurrentItem(index);
+            mPager.setCurrentItem(index, false);
         return false;
     }
 
     private void addTab(@DrawableRes int icon) {
         assert mTabs != null;
         TabLayout.Tab tab = mTabs.newTab().setIcon(icon);
-        if (tab.getIcon() != null)
-            tab.getIcon().setColorFilter(DialogUtils.resolveColor(this, R.attr.tab_icon_color), PorterDuff.Mode.SRC_ATOP);
+        if (tab.getIcon() != null) {
+            Drawable tintedIcon = DrawableCompat.wrap(tab.getIcon());
+            DrawableCompat.setTint(tintedIcon, DialogUtils.resolveColor(this, R.attr.tab_icon_color));
+            tab.setIcon(tintedIcon);
+        }
         mTabs.addTab(tab);
     }
 
@@ -405,16 +448,6 @@ public class MainActivity extends BaseDonateActivity implements LicensingUtils.L
     protected void onDestroy() {
         super.onDestroy();
         ButterKnife.unbind(this);
-    }
-
-    @Override
-    public void setTitle(CharSequence title) {
-        mToolbar.setTitle(title);
-    }
-
-    @Override
-    public void setTitle(int titleId) {
-        mToolbar.setTitle(titleId);
     }
 
     @Override
@@ -454,7 +487,11 @@ public class MainActivity extends BaseDonateActivity implements LicensingUtils.L
             WallpapersFragment.showToast(this, R.string.wallpaper_set);
             WallpaperUtils.resetOptionCache(true);
         } else if (requestCode == RQ_VIEWWALLPAPER) {
-            if (data != null && mRecyclerView != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && mDrawer != null) {
+                getWindow().setStatusBarColor(Color.TRANSPARENT);
+                mDrawer.setStatusBarBackgroundColor(DialogUtils.resolveColor(this, R.attr.colorPrimaryDark));
+            }
+            if (mRecyclerView != null) {
                 mRecyclerView.requestFocus();
                 final int currentPos = data.getIntExtra(STATE_CURRENT_POSITION, 0);
                 mRecyclerView.post(new Runnable() {

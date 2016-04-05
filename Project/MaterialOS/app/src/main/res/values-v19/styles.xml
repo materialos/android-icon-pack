@@ -4,15 +4,15 @@
     <!-- Light Theme -->
 
     <style name="AppTheme.Light" parent="Base.AppTheme.Light">
-        <item name="button_accent_selector">@drawable/selector_button_accent_light</item>
         <item name="android:windowTranslucentNavigation">@bool/translucent_nav</item>
+        <item name="android:windowTranslucentStatus">@bool/translucent_status</item>
     </style>
 
     <!-- Dark Theme -->
 
     <style name="AppTheme.Dark" parent="Base.AppTheme.Dark">
-        <item name="button_accent_selector">@drawable/selector_button_accent_dark</item>
         <item name="android:windowTranslucentNavigation">@bool/translucent_nav</item>
+        <item name="android:windowTranslucentStatus">@bool/translucent_status</item>
     </style>
 
     <!-- Misc -->

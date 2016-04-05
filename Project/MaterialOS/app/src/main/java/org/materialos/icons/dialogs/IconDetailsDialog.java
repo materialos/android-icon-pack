@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.util.DialogUtils;
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.util.DrawableXmlParser;
 
 

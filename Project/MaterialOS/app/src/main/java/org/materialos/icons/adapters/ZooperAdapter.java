@@ -2,6 +2,7 @@ package org.materialos.icons.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -13,10 +14,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
+import org.materialos.icons.fragments.ZooperFragment;
 import org.materialos.icons.util.Utils;
 import com.bumptech.glide.Glide;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -31,31 +34,49 @@ public class ZooperAdapter extends RecyclerView.Adapter<ZooperAdapter.ZooperVH> 
     private final static String ZOOPER_PRO_PKG = "org.zooper.zwpro";
     public final static int SEARCH_RESULT_LIMIT = 10;
 
-    private final int[] mWidgetPreviews;
-    private final String[] mWidgetNames;
-    private ArrayList<Integer> mFilteredPreviews;
+    private final Object LOCK = new Object();
+
+    private String[] mWidgetNames;
+    private final boolean mZooperInstalled;
+
+    private Drawable mWallpaper;
+    private ArrayList<ZooperFragment.PreviewItem> mPreviews;
+    private ArrayList<ZooperFragment.PreviewItem> mPreviewsFiltered;
     private ArrayList<String> mFilteredNames;
 
     public ZooperAdapter(Context context) {
-        mWidgetPreviews = Utils.resolveResourceIds(context, R.array.zooper_widget_previews);
         mWidgetNames = context.getResources().getStringArray(R.array.zooper_widget_names);
-        if (mWidgetPreviews.length != mWidgetNames.length)
-            throw new IllegalStateException("Zooper widget previews and names arrays must have the same number of items.");
+        mZooperInstalled = Utils.isPkgInstalled(context, ZOOPER_PRO_PKG);
+    }
+
+    public void setPreviews(ArrayList<ZooperFragment.PreviewItem> previewFiles, Drawable wallpaper) {
+        this.mPreviews = previewFiles;
+        if (mWidgetNames == null || mWidgetNames.length == 0) {
+            mWidgetNames = new String[previewFiles.size()];
+            for (int i = 0; i < previewFiles.size(); i++)
+                mWidgetNames[i] = previewFiles.get(i).name;
+        }
+        this.mWallpaper = wallpaper;
+        notifyDataSetChanged();
     }
 
     public void filter(String name) {
         if (name == null || name.trim().isEmpty()) {
-            synchronized (mWidgetNames) {
-                mFilteredPreviews.clear();
-                mFilteredPreviews = null;
-                mFilteredNames.clear();
-                mFilteredNames = null;
+            synchronized (LOCK) {
+                if (mPreviewsFiltered != null) {
+                    mPreviewsFiltered.clear();
+                    mPreviewsFiltered = null;
+                }
+                if (mFilteredNames != null) {
+                    mFilteredNames.clear();
+                    mFilteredNames = null;
+                }
                 return;
             }
         }
 
-        synchronized (mWidgetNames) {
-            mFilteredPreviews = new ArrayList<>();
+        synchronized (LOCK) {
+            mPreviewsFiltered = new ArrayList<>();
             mFilteredNames = new ArrayList<>();
             name = name.toLowerCase(Locale.getDefault());
             for (int i = 0; i < mWidgetNames.length; i++) {
@@ -64,19 +85,19 @@ public class ZooperAdapter extends RecyclerView.Adapter<ZooperAdapter.ZooperVH> 
                 if (mWidgetNames[i].toLowerCase(Locale.getDefault())
                         .contains(name)) {
                     mFilteredNames.add(mWidgetNames[i]);
-                    mFilteredPreviews.add(mWidgetPreviews[i]);
+                    mPreviewsFiltered.add(mPreviews.get(i));
                 }
             }
             if (mFilteredNames.size() == 0) {
                 mFilteredNames = null;
-                mFilteredPreviews = null;
+                mPreviewsFiltered = null;
             }
         }
     }
 
     @Override
     public int getItemViewType(int position) {
-        if (position == 0)
+        if (position == 0 && !mZooperInstalled)
             return 1;
         return 0;
     }
@@ -91,14 +112,17 @@ public class ZooperAdapter extends RecyclerView.Adapter<ZooperAdapter.ZooperVH> 
     @Override
     public void onBindViewHolder(ZooperVH holder, int position) {
         if (holder.image != null) {
-            position--;
+            if (getItemViewType(0) == 1) position--;
+            final ZooperFragment.PreviewItem preview = mPreviewsFiltered != null ?
+                    mPreviewsFiltered.get(position) : mPreviews.get(position);
             Glide.with(holder.itemView.getContext())
-                    .load(mWidgetPreviews[position])
+                    .load(new File(preview.path))
                     .into(holder.image);
+            holder.background.setImageDrawable(mWallpaper);
             if (position < mWidgetNames.length) {
                 holder.name.setText(mWidgetNames[position]);
                 holder.name.setVisibility(View.VISIBLE);
-            } else holder.name.setVisibility(View.GONE);
+            } else holder.name.setText(preview.name);
         } else {
             StaggeredGridLayoutManager.LayoutParams lp = (StaggeredGridLayoutManager.LayoutParams) holder.itemView.getLayoutParams();
             lp.setFullSpan(true);
@@ -109,17 +133,23 @@ public class ZooperAdapter extends RecyclerView.Adapter<ZooperAdapter.ZooperVH> 
 
     @Override
     public int getItemCount() {
-        return mWidgetPreviews.length + 1;
+        if (mPreviewsFiltered != null)
+            return mPreviewsFiltered.size() + (!mZooperInstalled ? 1 : 0);
+        else if (mPreviews != null && mPreviews.size() > 0)
+            return mPreviews.size() + (!mZooperInstalled ? 1 : 0);
+        else return 0;
     }
 
     public static class ZooperVH extends RecyclerView.ViewHolder implements View.OnClickListener {
 
+        final ImageView background;
         final ImageView image;
         final TextView name;
         final CardView card;
 
         public ZooperVH(View itemView, boolean listenForClick) {
             super(itemView);
+            background = ButterKnife.findById(itemView, R.id.background);
             image = ButterKnife.findById(itemView, R.id.image);
             name = ButterKnife.findById(itemView, R.id.name);
             card = ButterKnife.findById(itemView, R.id.card);

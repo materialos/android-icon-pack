@@ -1,8 +1,10 @@
 package org.materialos.icons.zooper;
 
 import android.app.Activity;
+import android.app.WallpaperManager;
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.graphics.drawable.Drawable;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,8 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.afollestad.bridge.BridgeUtil;
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.dialogs.ProgressDialogFragment;
+import org.materialos.icons.fragments.ZooperFragment;
+import org.materialos.icons.util.Utils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -21,6 +25,10 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
 /**
  * @author Aidan Follestad (afollestad)
@@ -64,6 +72,7 @@ public class ZooperUtil {
             // So, say it is installed.
             return true;
         }
+        if (files == null || files.length == 0) return false;
         for (String filename : files) {
             final File file = new File(getZooperWidgetDir(folder), filename);
             if (!file.exists()) return false;
@@ -205,6 +214,113 @@ public class ZooperUtil {
                         result.onInstallResult(null);
                     }
                 });
+            }
+        }).start();
+    }
+
+    public interface PreviewCallback {
+        void onPreviewsLoaded(ArrayList<ZooperFragment.PreviewItem> previews, Drawable wallpaper, Exception error);
+    }
+
+    public static File getWidgetPreviewCache(@NonNull Context context) {
+        return new File(context.getExternalCacheDir(), "WidgetPreviews");
+    }
+
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    public static void getPreviews(final Activity context, final PreviewCallback cb) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    final AssetManager am = context.getAssets();
+                    final String[] templates = am.list("templates");
+                    if (templates == null || templates.length == 0) {
+                        post(context, new Runnable() {
+                            @Override
+                            public void run() {
+                                cb.onPreviewsLoaded(null, null, null);
+                            }
+                        });
+                        return;
+                    }
+
+                    final File cacheDir = getWidgetPreviewCache(context);
+                    Utils.wipe(cacheDir);
+                    cacheDir.mkdirs();
+                    final ArrayList<ZooperFragment.PreviewItem> results = new ArrayList<>();
+
+                    for (String file : templates) {
+                        final File zwFileCache = new File(cacheDir, file);
+                        InputStream is = null;
+                        OutputStream os = null;
+                        try {
+                            is = am.open("templates/" + file);
+                            os = new FileOutputStream(zwFileCache);
+                            Utils.copy(is, os);
+                            BridgeUtil.closeQuietly(is);
+                            BridgeUtil.closeQuietly(os);
+
+                            if (zwFileCache.exists()) {
+                                final String widgetName = Utils.removeExtension(zwFileCache.getName());
+                                final File pngFile = new File(cacheDir, widgetName + ".png");
+
+                                final ZipFile zipFile = new ZipFile(zwFileCache);
+                                final Enumeration<? extends ZipEntry> entryEnum = zipFile.entries();
+                                ZipEntry entry;
+                                while ((entry = entryEnum.nextElement()) != null) {
+                                    if (entry.getName().endsWith("screen.png")) {
+                                        InputStream zis = null;
+                                        OutputStream zos = null;
+                                        try {
+                                            zis = zipFile.getInputStream(entry);
+                                            zos = new FileOutputStream(pngFile);
+                                            Utils.copy(zis, zos);
+                                        } finally {
+                                            BridgeUtil.closeQuietly(zis);
+                                            BridgeUtil.closeQuietly(zos);
+                                        }
+                                        break;
+                                    }
+                                }
+
+                                results.add(new ZooperFragment.PreviewItem(widgetName, pngFile.getAbsolutePath()));
+                            }
+                        } catch (final Exception e) {
+                            if (cb != null) {
+                                post(context, new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        cb.onPreviewsLoaded(null, null, e);
+                                    }
+                                });
+                            }
+                            break;
+                        } finally {
+                            zwFileCache.delete();
+                            BridgeUtil.closeQuietly(is);
+                            BridgeUtil.closeQuietly(os);
+                        }
+                    }
+
+                    if (cb != null) {
+                        final Drawable wallpaperDrawable = WallpaperManager.getInstance(context).getDrawable();
+                        post(context, new Runnable() {
+                            @Override
+                            public void run() {
+                                cb.onPreviewsLoaded(results, wallpaperDrawable, null);
+                            }
+                        });
+                    }
+                } catch (final Exception e) {
+                    if (cb != null) {
+                        post(context, new Runnable() {
+                            @Override
+                            public void run() {
+                                cb.onPreviewsLoaded(null, null, e);
+                            }
+                        });
+                    }
+                }
             }
         }).start();
     }

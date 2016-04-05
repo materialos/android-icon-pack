@@ -6,11 +6,14 @@ import android.app.FragmentManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -22,24 +25,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.afollestad.assent.Assent;
+import com.afollestad.assent.AssentCallback;
+import com.afollestad.assent.PermissionResultSet;
+import com.afollestad.bridge.BridgeUtil;
 import com.afollestad.materialdialogs.util.DialogUtils;
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.adapters.IconAdapter;
 import org.materialos.icons.config.Config;
 import org.materialos.icons.dialogs.IconDetailsDialog;
+import org.materialos.icons.dialogs.ProgressDialogFragment;
 import org.materialos.icons.fragments.base.BasePageFragment;
-import org.materialos.icons.ui.IconPickerActivity;
-import org.materialos.icons.ui.MainActivity;
+import org.materialos.icons.ui.base.BaseThemedActivity;
+import org.materialos.icons.ui.base.ISelectionMode;
 import org.materialos.icons.util.DrawableXmlParser;
 import org.materialos.icons.util.TintUtils;
 import org.materialos.icons.util.Utils;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.List;
 import java.util.TimerTask;
 
 import butterknife.ButterKnife;
-
 
 public class IconsFragment extends BasePageFragment implements
         SearchView.OnQueryTextListener, SearchView.OnCloseListener {
@@ -48,6 +58,89 @@ public class IconsFragment extends BasePageFragment implements
     RecyclerView mRecyclerView;
 
     public IconsFragment() {
+    }
+
+    private static Activity mContext;
+    private static Fragment mContext2;
+    private static DrawableXmlParser.Icon mIcon;
+
+    public static IconsFragment create(boolean selectionMode) {
+        IconsFragment frag = new IconsFragment();
+        Bundle args = new Bundle();
+        args.putBoolean("selection_mode", selectionMode);
+        frag.setArguments(args);
+        return frag;
+    }
+
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    public static void selectItem(final Activity context, Fragment context2, final DrawableXmlParser.Icon icon) {
+        final Bitmap bmp;
+        if (icon.getDrawableId(context) != 0) {
+            //noinspection ConstantConditions
+            bmp = ((BitmapDrawable) ResourcesCompat.getDrawable(context.getResources(),
+                    icon.getDrawableId(context), null)).getBitmap();
+        } else {
+            return;
+        }
+        if (context instanceof ISelectionMode && ((ISelectionMode) context).inSelectionMode()) {
+            if (!Assent.isPermissionGranted(Assent.WRITE_EXTERNAL_STORAGE)) {
+                mContext = context;
+                mContext2 = context2;
+                mIcon = icon;
+                Assent.requestPermissions(new AssentCallback() {
+                    @Override
+                    public void onPermissionResult(PermissionResultSet permissionResultSet) {
+                        if (permissionResultSet.allPermissionsGranted())
+                            selectItem(mContext, mContext2, mIcon);
+                        else
+                            Toast.makeText(context, R.string.write_storage_permission_denied, Toast.LENGTH_LONG).show();
+                        mContext = null;
+                        mContext2 = null;
+                        mIcon = null;
+                    }
+                }, 79, Assent.WRITE_EXTERNAL_STORAGE);
+                return;
+            }
+
+            final ProgressDialogFragment progress = ProgressDialogFragment.show((AppCompatActivity) context, R.string.please_wait);
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    File dest = new File(Environment.getExternalStorageDirectory(), "IconCache");
+                    dest.mkdirs();
+                    dest = new File(dest, icon.getName() + ".png");
+                    FileOutputStream os = null;
+                    try {
+                        os = new FileOutputStream(dest);
+                        bmp.compress(Bitmap.CompressFormat.PNG, 100, os);
+                        final Uri uri = Uri.fromFile(dest);
+                        context.setResult(Activity.RESULT_OK, new Intent()
+                                .putExtra(Intent.EXTRA_STREAM, uri)
+                                .setData(uri));
+                        context.finish();
+                    } catch (final Exception e) {
+                        dest.delete();
+                        progress.dismiss();
+                        if (!context.isFinishing()) {
+                            context.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Utils.showError(context, e);
+                                }
+                            });
+                        }
+                    } finally {
+                        progress.dismiss();
+                        BridgeUtil.closeQuietly(os);
+                    }
+                }
+            }).start();
+        } else {
+            FragmentManager fm;
+            if (context2 != null) fm = context2.getChildFragmentManager();
+            else fm = context.getFragmentManager();
+            IconDetailsDialog.create(bmp, icon).show(fm, "ICON_DETAILS_DIALOG");
+        }
     }
 
     @Override
@@ -68,7 +161,7 @@ public class IconsFragment extends BasePageFragment implements
         mSearchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
 
         if (getActivity() != null) {
-            final MainActivity act = (MainActivity) getActivity();
+            final BaseThemedActivity act = (BaseThemedActivity) getActivity();
             TintUtils.themeSearchView(act.getToolbar(), mSearchView, DialogUtils.resolveColor(act, R.attr.tab_icon_color));
         }
     }
@@ -97,24 +190,6 @@ public class IconsFragment extends BasePageFragment implements
         return v;
     }
 
-    public static void selectItem(Activity context, Fragment context2, DrawableXmlParser.Icon icon) {
-        Bitmap bmp = null;
-        if (icon.getDrawableId(context) != 0) {
-            //noinspection ConstantConditions
-            bmp = ((BitmapDrawable) ResourcesCompat.getDrawable(context.getResources(),
-                    icon.getDrawableId(context), null)).getBitmap();
-        }
-        if (context instanceof IconPickerActivity) {
-            context.setResult(Activity.RESULT_OK, new Intent().putExtra("icon", bmp));
-            context.finish();
-        } else {
-            FragmentManager fm;
-            if (context2 != null) fm = context2.getChildFragmentManager();
-            else fm = context.getFragmentManager();
-            IconDetailsDialog.create(bmp, icon).show(fm, "ICON_DETAILS_DIALOG");
-        }
-    }
-
     void setListShown(boolean shown) {
         final View v = getView();
         if (v != null) {
@@ -136,8 +211,6 @@ public class IconsFragment extends BasePageFragment implements
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (getActivity() != null) load();
-
-        setBottomPadding(mRecyclerView, Utils.getNavBarHeight(getActivity()), R.dimen.grid_margin);
     }
 
     private void load() {

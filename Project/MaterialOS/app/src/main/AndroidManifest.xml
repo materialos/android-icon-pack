@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.afollestad.polar">
+    package="org.materialos.icons">
 
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
@@ -20,7 +20,7 @@
         android:vmSafeMode="true"
         tools:ignore="GoogleAppIndexingWarning,RtlEnabled,UnusedAttribute">
         <service
-            android:name="org.materialos.icons.services.GaufrerWallpaperSource"
+            android:name=".services.GaufrerWallpaperSource"
             android:description="@string/muzei_description"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"
@@ -39,7 +39,7 @@
         </service>
 
         <activity
-            android:name="org.materialos.icons.ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
@@ -61,7 +61,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="org.materialos.icons.ui.IconPickerActivity"
+            android:name=".ui.IconPickerActivity"
             android:exported="true"
             android:label="@string/app_name">
 
@@ -181,26 +181,36 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
+            <!-- Image picker -->
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.OPENABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+
             <!-- Uncomment for Zooper -->
             <!--<intent-filter>-->
-                <!--<action android:name="org.zooper.zw.TEMPLATES" />-->
+            <!--<action android:name="org.zooper.zw.TEMPLATES" />-->
             <!--</intent-filter>-->
 
         </activity>
         <activity
-            android:name="org.materialos.icons.ui.IconMoreActivity"
+            android:name=".ui.IconMoreActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.Light.Translucent" />
         <activity
-            android:name="org.materialos.icons.viewer.ViewerActivity"
+            android:name=".viewer.ViewerActivity"
             android:label="@string/app_name_wallpaper"
             android:theme="@style/AppTheme.Viewer" />
 
-        <!-- Uncomment for Zooper -->
-        <!-- MAKE SURE YOU RENAME COM.AFOLLESTAD.POLAR TO BE UNIQUE TO YOUR PACK -->
+        <!-- Uncomment for Zooper, MAKE SURE YOU RENAME COM.AFOLLESTAD.POLAR TO BE UNIQUE TO YOUR PACK -->
         <!--<provider-->
-            <!--android:name=".zooper.TemplateProvider"-->
-            <!--android:authorities="com.afollestad.polar.zwprovider"/>-->
+        <!--android:name=".zooper.TemplateProvider"-->
+        <!--android:authorities="org.materialos.icons.zwprovider"/>-->
 
     </application>
 

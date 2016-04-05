@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:layout_width="match_parent"
@@ -20,23 +21,33 @@
         android:layout_marginTop="?actionBarSize"
         android:clipToPadding="false"
         android:padding="@dimen/grid_margin"
+        android:scrollbarStyle="outsideOverlay"
         android:scrollbars="vertical"
-        android:scrollbarStyle="outsideOverlay" />
+        app:layout_windowInsets="bottom|top" />
 
-    <LinearLayout
-        android:transitionName="@string/transition_name_circular_reveal"
-        android:orientation="vertical"
+    <com.pluscubed.insetsdispatcher.view.InsetsDispatcherLinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:transitionName="@string/transition_name_circular_reveal"
         tools:ignore="UnusedAttribute">
 
-        <include layout="@layout/toolbar_appbar" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorPrimary"
+            android:elevation="@dimen/toolbar_elevation"
+            app:layout_windowInsets="top">
+
+            <include layout="@layout/toolbar" />
+
+        </FrameLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:background="?toolbar_shadow" />
 
-    </LinearLayout>
+    </com.pluscubed.insetsdispatcher.view.InsetsDispatcherLinearLayout>
 
-</FrameLayout>
+</com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout>

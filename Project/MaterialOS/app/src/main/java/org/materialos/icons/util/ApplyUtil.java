@@ -1,8 +1,10 @@
 package org.materialos.icons.util;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -11,9 +13,12 @@ import android.os.Handler;
 import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.Html;
 import android.widget.Toast;
 
-import com.afollestad.polar.R;
+import com.afollestad.materialdialogs.MaterialDialog;
+import org.materialos.icons.BuildConfig;
+import org.materialos.icons.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -21,7 +26,7 @@ import java.lang.annotation.RetentionPolicy;
 
 public class ApplyUtil {
 
-    @IntDef({UNKNOWN, APEX, NOVA, AVIATE, ADW, ACTION, SMART, NEXT, GO, HOLO, SOLO, KK, ATOM, INSPIRE, CMTE})
+    @IntDef({UNKNOWN, APEX, NOVA, AVIATE, ADW, ACTION, SMART, NEXT, GO, HOLO, SOLO, KK, ATOM, INSPIRE, CMTE, LGHOME})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Launcher {
     }
@@ -41,6 +46,7 @@ public class ApplyUtil {
     public static final int ATOM = 11;
     public static final int INSPIRE = 12;
     public static final int CMTE = 13;
+    public static final int LGHOME = 14;
 
     @Launcher
     public static int launcherIdFromPkg(String pkg) {
@@ -76,20 +82,48 @@ public class ApplyUtil {
                 return ATOM;
             case "com.bam.android.inspirelauncher":
                 return INSPIRE;
+            case "com.cyngn.theme.chooser":
             case "org.cyanogenmod.theme.chooser":
                 return CMTE;
+            case "com.lge.launcher2":
+                return LGHOME;
             default:
                 return UNKNOWN;
         }
     }
 
-    public static boolean apply(@NonNull final Context context, @NonNull String launcherPkg) {
-        final int id = launcherIdFromPkg(launcherPkg);
-        if (id == -1) throw new RuntimeException("Unsupported launcher: " + launcherPkg);
-        return apply(context, id);
+    public interface ApplyCallback {
+        void onNotInstalled();
     }
 
-    public static boolean apply(@NonNull final Context context, @Launcher int launcher) {
+    public static void apply(@NonNull final Context context, @NonNull String launcherPkg, @NonNull ApplyCallback cb) {
+        final int id = launcherIdFromPkg(launcherPkg);
+        if (id == -1) throw new RuntimeException("Unsupported launcher: " + launcherPkg);
+        apply(context, id, cb);
+    }
+
+    @SuppressLint("SwitchIntDef")
+    public static void apply(@NonNull final Context context, @Launcher final int launcher, @NonNull final ApplyCallback cb) {
+        switch (launcher) {
+            case GO:
+                new MaterialDialog.Builder(context)
+                        .title(R.string.go_launcher)
+                        .content(Html.fromHtml(context.getString(R.string.go_launcher_notice)))
+                        .positiveText(android.R.string.ok)
+                        .dismissListener(new DialogInterface.OnDismissListener() {
+                            @Override
+                            public void onDismiss(DialogInterface dialogInterface) {
+                                applyFinish(context, launcher, cb);
+                            }
+                        }).show();
+                break;
+            default:
+                applyFinish(context, launcher, cb);
+                break;
+        }
+    }
+
+    private static void applyFinish(@NonNull final Context context, @Launcher int launcher, @NonNull ApplyCallback cb) {
         final String ACTION_APPLY_ICON_THEME = "com.teslacoilsw.launcher.APPLY_ICON_THEME";
         final String NOVA_PACKAGE = "com.teslacoilsw.launcher";
         final String EXTRA_ICON_THEME_PACKAGE = "com.teslacoilsw.launcher.extra.ICON_THEME_PACKAGE";
@@ -111,7 +145,7 @@ public class ApplyUtil {
             switch (launcher) {
                 case APEX: {
                     Intent apex = new Intent(APEX_ACTION_SET_THEME)
-                            .putExtra(APEX_EXTRA_PACKAGE_NAME, context.getPackageName())
+                            .putExtra(APEX_EXTRA_PACKAGE_NAME, BuildConfig.APPLICATION_ID)
                             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(apex);
                     Toast.makeText(context, R.string.finish_apply, Toast.LENGTH_LONG).show();
@@ -121,21 +155,21 @@ public class ApplyUtil {
                     Intent nova = new Intent(ACTION_APPLY_ICON_THEME)
                             .setPackage(NOVA_PACKAGE)
                             .putExtra(EXTRA_ICON_THEME_TYPE, "GO")
-                            .putExtra(EXTRA_ICON_THEME_PACKAGE, context.getPackageName())
+                            .putExtra(EXTRA_ICON_THEME_PACKAGE, BuildConfig.APPLICATION_ID)
                             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(nova);
                     break;
                 }
                 case AVIATE: {
                     Intent intent = new Intent(AVIATE_ACTION_SET_THEME)
-                            .putExtra(AVIATE_EXTRA_PACKAGE_NAME, context.getPackageName())
+                            .putExtra(AVIATE_EXTRA_PACKAGE_NAME, BuildConfig.APPLICATION_ID)
                             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                     break;
                 }
                 case ADW: {
                     Intent adw = new Intent("org.adw.launcher.SET_THEME")
-                            .putExtra("org.adw.launcher.theme.NAME", context.getPackageName())
+                            .putExtra("org.adw.launcher.theme.NAME", BuildConfig.APPLICATION_ID)
                             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(adw);
                     break;
@@ -144,14 +178,14 @@ public class ApplyUtil {
                     Intent al = pm.getLaunchIntentForPackage(
                             "com.actionlauncher.playstore");
                     if (al != null) {
-                        al.putExtra("apply_icon_pack", context.getPackageName())
+                        al.putExtra("apply_icon_pack", BuildConfig.APPLICATION_ID)
                                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(al);
                     } else {
                         al = pm.getLaunchIntentForPackage(
                                 "com.chrislacy.actionlauncher.pro");
                         if (al != null) {
-                            al.putExtra("apply_icon_pack", context.getPackageName())
+                            al.putExtra("apply_icon_pack", BuildConfig.APPLICATION_ID)
                                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             context.startActivity(al);
                         } else {
@@ -165,11 +199,11 @@ public class ApplyUtil {
                     Intent smartpro = context.getPackageManager().getLaunchIntentForPackage("ginlemon.flowerpro");
                     if (smart != null) {
                         Intent smartlauncherIntent = new Intent("ginlemon.smartlauncher.setGSLTHEME");
-                        smartlauncherIntent.putExtra("package", context.getPackageName());
+                        smartlauncherIntent.putExtra("package", BuildConfig.APPLICATION_ID);
                         context.startActivity(smartlauncherIntent);
                     } else if (smartpro != null) {
                         Intent smartlauncherIntent = new Intent("ginlemon.smartlauncher.setGSLTHEME");
-                        smartlauncherIntent.putExtra("package", context.getPackageName());
+                        smartlauncherIntent.putExtra("package", BuildConfig.APPLICATION_ID);
                         context.startActivity(smartlauncherIntent);
                     } else {
                         throw new ActivityNotFoundException();
@@ -182,7 +216,7 @@ public class ApplyUtil {
                     if (nextApply != null) {
                         Intent go = new Intent("com.gau.go.launcherex.MyThemes.mythemeaction")
                                 .putExtra("type", 1)
-                                .putExtra("pkgname", context.getPackageName())
+                                .putExtra("pkgname", BuildConfig.APPLICATION_ID)
                                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(nextApply);
                         context.sendBroadcast(go);
@@ -193,18 +227,21 @@ public class ApplyUtil {
                     break;
                 }
                 case GO: {
-                    Intent intent = context.getPackageManager().getLaunchIntentForPackage(
-                            "com.gau.go.launcherex");
+                    Intent intent = context.getPackageManager().getLaunchIntentForPackage("com.gau.go.launcherex");
                     if (intent != null) {
-                        Intent go = new Intent("com.gau.go.launcherex.MyThemes.mythemeaction")
-                                .putExtra("type", 1)
-                                .putExtra("pkgname", context.getPackageName());
-                        context.startActivity(intent);
-                        context.sendBroadcast(go);
-                        Toast.makeText(context, R.string.finish_go_apply, Toast.LENGTH_SHORT).show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Intent go = new Intent("com.gau.go.launcherex.MyThemes.mythemeaction")
+                                        .putExtra("type", 1)
+                                        .putExtra("pkgname", context.getPackageName());
+                                context.sendBroadcast(go);
+                            }
+                        }, 250);
                     } else {
                         throw new ActivityNotFoundException();
                     }
+                    context.startActivity(intent);
                     break;
                 }
                 case HOLO:
@@ -230,18 +267,18 @@ public class ApplyUtil {
                         @Override
                         public void run() {
                             Intent solo = new Intent(ACTION_APPLY_SOLO_THEME)
-                                    .putExtra(SOLO_EXTRA_APPLY_THEME_PACKAGE, context.getPackageName())
+                                    .putExtra(SOLO_EXTRA_APPLY_THEME_PACKAGE, BuildConfig.APPLICATION_ID)
                                     .putExtra(SOLO_EXTRA_APPLY_THEME_NAME, res.getString(R.string.app_name));
                             context.sendBroadcast(solo);
                         }
-                    }, 1000);
+                    }, 250);
                     break;
                 case KK:
                     Intent kkApply = context.getPackageManager().getLaunchIntentForPackage("com.kk.launcher");
                     if (kkApply != null) {
                         Intent kk = new Intent("com.gridappsinc.launcher.action.THEME")
                                 .putExtra("com.kk.launcher.theme.EXTRA_NAME", "theme_name")
-                                .putExtra("com.kk.launcher.theme.EXTRA_PKG", context.getPackageName());
+                                .putExtra("com.kk.launcher.theme.EXTRA_PKG", BuildConfig.APPLICATION_ID);
                         context.startActivity(kkApply);
                         context.sendBroadcast(kk);
                     } else {
@@ -251,7 +288,7 @@ public class ApplyUtil {
                 case ATOM:
                     Intent atom = new Intent("com.dlto.atom.launcher.intent.action.ACTION_VIEW_THEME_SETTINGS")
                             .setPackage("com.dlto.atom.launcher")
-                            .putExtra("packageName", context.getPackageName())
+                            .putExtra("packageName", BuildConfig.APPLICATION_ID)
                             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(atom);
                     break;
@@ -259,7 +296,7 @@ public class ApplyUtil {
                     Intent inspireMain = context.getPackageManager().getLaunchIntentForPackage("com.bam.android.inspirelauncher");
                     if (inspireMain != null) {
                         Intent inspire = new Intent("com.bam.android.inspirelauncher.action.ACTION_SET_THEME")
-                                .putExtra("theme_name", context.getPackageName());
+                                .putExtra("theme_name", BuildConfig.APPLICATION_ID);
                         context.startActivity(inspireMain);
                         context.sendBroadcast(inspire);
                     } else {
@@ -270,18 +307,26 @@ public class ApplyUtil {
                     try {
                         Intent cmteMain = new Intent(Intent.ACTION_MAIN);
                         cmteMain.setClassName("org.cyanogenmod.theme.chooser", "org.cyanogenmod.theme.chooser.ChooserActivity");
-                        cmteMain.putExtra("pkgName", context.getPackageName());
+                        cmteMain.putExtra("pkgName", BuildConfig.APPLICATION_ID);
                         context.startActivity(cmteMain);
-                    } catch (Throwable t) {
+                    } catch (ActivityNotFoundException e) {
                         Toast.makeText(context, R.string.cmte_unavailable, Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                case LGHOME:
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
+                        intent.setComponent(new ComponentName("com.lge.launcher2", "com.lge.launcher2.homesettings.HomeSettingsPrefActivity"));
+                        context.startActivity(intent);
+                    } catch (ActivityNotFoundException e) {
+                        Toast.makeText(context, R.string.lghome_unavailable, Toast.LENGTH_SHORT).show();
                     }
                     break;
                 case UNKNOWN:
                     break;
             }
-            return true;
         } catch (Throwable t) {
-            return false;
+            cb.onNotInstalled();
         }
     }
 
@@ -300,15 +345,4 @@ public class ApplyUtil {
         if (launcherIdFromPkg(pkg) == -1) return null;
         return pkg;
     }
-
-//    public static void quickApply(@NonNull Context context) throws Exception {
-//        final String pkg = getDefaultLauncher(context);
-//        if (pkg.equalsIgnoreCase("com.google.android.googlequicksearchbox"))
-//            throw new Exception("Google Now Launcher does not support theming!");
-//        try {
-//            apply(context, pkg);
-//        } catch (RuntimeException e) {
-//            throw new Exception(e.getMessage(), e);
-//        }
-//    }
 }

@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.afollestad.assent.AssentFragment;
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.util.WallpaperUtils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;

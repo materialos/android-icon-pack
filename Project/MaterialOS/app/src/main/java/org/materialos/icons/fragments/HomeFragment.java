@@ -9,10 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.afollestad.polar.BuildConfig;
-import com.afollestad.polar.R;
+import org.materialos.icons.BuildConfig;
+import org.materialos.icons.R;
 import org.materialos.icons.fragments.base.BasePageFragment;
-import org.materialos.icons.util.Utils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -23,8 +22,8 @@ import butterknife.OnClick;
  */
 public class HomeFragment extends BasePageFragment {
 
-    @Bind(R.id.fab)
-    FloatingActionButton mFab;
+//    @Bind(R.id.fab)
+//    FloatingActionButton mFab;
 
     @Nullable
     @Override
@@ -36,7 +35,6 @@ public class HomeFragment extends BasePageFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
-        setBottomMargin(mFab, Utils.getNavBarHeight(getActivity()), R.dimen.content_inset);
     }
 
     @Override

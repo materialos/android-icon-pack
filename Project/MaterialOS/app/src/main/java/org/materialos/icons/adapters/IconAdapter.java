@@ -18,9 +18,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.ui.IconMoreActivity;
-import org.materialos.icons.ui.MainActivity;
+import org.materialos.icons.ui.base.BaseThemedActivity;
+import org.materialos.icons.ui.base.ISelectionMode;
 import org.materialos.icons.util.DrawableXmlParser;
 import org.materialos.icons.util.Utils;
 import com.afollestad.sectionedrecyclerview.SectionedRecyclerViewAdapter;
@@ -58,7 +59,7 @@ public class IconAdapter extends SectionedRecyclerViewAdapter<IconAdapter.MainVi
                     mFiltered.get(index) : mCategories.get(index);
 
 
-            int topPadding = ((MainActivity) mContext).getLastStatusBarInsetHeight();
+            int topPadding = ((BaseThemedActivity) mContext).getLastStatusBarInsetHeight();
             float[] pressedLocation = new float[]{
                     event.getRawX(),
                     event.getRawY() - topPadding};
@@ -70,6 +71,9 @@ public class IconAdapter extends SectionedRecyclerViewAdapter<IconAdapter.MainVi
                     .putExtra(IconMoreActivity.EXTRA_CATEGORY, category)
                     .putExtra(IconMoreActivity.EXTRA_REVEAL_ANIM_LOCATION, pressedLocation);
 
+            if (mContext instanceof ISelectionMode) {
+                intent.putExtra("selection_mode", ((ISelectionMode) mContext).inSelectionMode());
+            }
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 mTransitionSection = index;
@@ -79,17 +83,17 @@ public class IconAdapter extends SectionedRecyclerViewAdapter<IconAdapter.MainVi
                 Utils.waitForLayout(mRecyclerView, new Utils.LayoutCallback<RecyclerView>() {
                     @Override
                     public void onLayout(RecyclerView view) {
-
                         List<Pair<View, String>> pairs = asList(mTransitionViews);
+                        //noinspection unchecked
                         final Bundle activityOptions =
                                 ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) mContext,
                                         pairs.toArray(new Pair[pairs.size()])).toBundle();
 
-                        mContext.startActivity(intent, activityOptions);
+                        ((Activity) mContext).startActivityForResult(intent, 6969, activityOptions);
                     }
                 });
             } else {
-                mContext.startActivity(intent);
+                ((Activity) mContext).startActivityForResult(intent, 6969);
             }
         }
         return true;
@@ -157,9 +161,6 @@ public class IconAdapter extends SectionedRecyclerViewAdapter<IconAdapter.MainVi
             }
             if (include != null) mFiltered.add(include);
         }
-
-        if (mFiltered.size() == 0)
-            mFiltered = null;
         notifyDataSetChanged();
     }
 
@@ -197,7 +198,8 @@ public class IconAdapter extends SectionedRecyclerViewAdapter<IconAdapter.MainVi
     @Override
     public int getItemCount(int section) {
         int count = mFiltered != null ? mFiltered.get(section).size() : mCategories.get(section).size();
-        if (count > mIconsPerSection) return mIconsPerSection;
+        if (mCategories.size() > 1 && count > mIconsPerSection)
+            return mIconsPerSection;
         return count;
     }
 
@@ -214,7 +216,7 @@ public class IconAdapter extends SectionedRecyclerViewAdapter<IconAdapter.MainVi
                 mFiltered.get(section) : mCategories.get(section);
         holder.title.setText(category.getName());
 
-        if (category.size() > mIconsPerSection) {
+        if (mCategories.size() > 1 && category.size() > mIconsPerSection) {
             holder.moreButton.setVisibility(View.VISIBLE);
             holder.moreButton.setTag(section);
             holder.moreButton.setOnTouchListener(this);

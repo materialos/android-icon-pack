@@ -3,14 +3,11 @@ package org.materialos.icons.config;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
-import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 
 /**
  * @author Aidan Follestad (afollestad)
@@ -108,20 +105,6 @@ public class Config implements IConfig {
 
     @Nullable
     @Override
-    public String homepageDescription() {
-        if (mR == null) return null;
-        return mR.getString(R.string.homepage_description);
-    }
-
-    @DrawableRes
-    @Override
-    public Drawable homepageLandingIcon() {
-        if (mR == null) return null;
-        return ContextCompat.getDrawable(mContext, R.drawable.homepage_landing_icon);
-    }
-
-    @Nullable
-    @Override
     public String wallpapersJsonUrl() {
         if (mR == null) return null;
         return mR.getString(R.string.wallpapers_json_url);
@@ -135,7 +118,7 @@ public class Config implements IConfig {
 
     @Override
     public boolean zooperEnabled() {
-        return mR != null && mR.getIntArray(R.array.zooper_widget_previews).length > 0;
+        return mR != null && mR.getBoolean(R.bool.enable_zooper_page);
     }
 
     @Nullable
@@ -237,5 +220,29 @@ public class Config implements IConfig {
     public int gridWidthRequests() {
         if (mR == null) return 3;
         return mR.getInteger(R.integer.requests_grid_width);
+    }
+
+    @Override
+    public int gridWidthZooper() {
+        if (mR == null) return 2;
+        return mR.getInteger(R.integer.zooper_grid_width);
+    }
+
+    @Override
+    public int iconRequestMaxCount() {
+        if (mR == null) return -1;
+        return mR.getInteger(R.integer.icon_request_maxcount);
+    }
+
+    @Override
+    public String polarBackendHost() {
+        if (mR == null) return null;
+        return mR.getString(R.string.polar_backend_host);
+    }
+
+    @Override
+    public String polarBackendApiKey() {
+        if (mR == null) return null;
+        return mR.getString(R.string.polar_backend_apikey);
     }
 }

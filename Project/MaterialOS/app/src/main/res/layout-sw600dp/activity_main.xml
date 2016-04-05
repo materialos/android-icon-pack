@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.pluscubed.insetsdispatcher.view.InsetsDispatcherLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
@@ -8,11 +8,12 @@
     tools:paddingTop="24dp">
 
     <LinearLayout
-        android:elevation="@dimen/toolbar_elevation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorPrimary"
+        android:elevation="@dimen/toolbar_elevation"
         android:orientation="vertical"
+        app:layout_windowInsets="top"
         tools:targetApi="lollipop">
 
         <include layout="@layout/toolbar" />
@@ -27,4 +28,4 @@
 
     <include layout="@layout/activity_main_content" />
 
-</LinearLayout>
+</com.pluscubed.insetsdispatcher.view.InsetsDispatcherLinearLayout>

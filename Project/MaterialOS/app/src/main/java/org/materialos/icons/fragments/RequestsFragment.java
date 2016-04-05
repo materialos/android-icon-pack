@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -26,17 +27,19 @@ import com.afollestad.dragselectrecyclerview.DragSelectRecyclerViewAdapter;
 import com.afollestad.iconrequest.App;
 import com.afollestad.iconrequest.AppsLoadCallback;
 import com.afollestad.iconrequest.AppsSelectionListener;
+import com.afollestad.iconrequest.BackendConfig;
 import com.afollestad.iconrequest.IconRequest;
 import com.afollestad.iconrequest.RequestSendCallback;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.util.DialogUtils;
-import com.afollestad.polar.BuildConfig;
-import com.afollestad.polar.R;
+import org.materialos.icons.BuildConfig;
+import org.materialos.icons.R;
 import org.materialos.icons.adapters.RequestsAdapter;
 import org.materialos.icons.config.Config;
 import org.materialos.icons.fragments.base.BasePageFragment;
 import org.materialos.icons.ui.MainActivity;
+import org.materialos.icons.util.RequestLimiter;
 import org.materialos.icons.util.TintUtils;
 import org.materialos.icons.util.Utils;
 import org.materialos.icons.views.DisableableViewPager;
@@ -55,14 +58,7 @@ public class RequestsFragment extends BasePageFragment implements
         DragSelectRecyclerViewAdapter.SelectionListener, RequestsAdapter.SelectionChangedListener {
 
     private static final Object LOCK = new Object();
-
     private final static int PERM_RQ = 69;
-
-    private RequestsAdapter mAdapter;
-    private MaterialDialog mDialog;
-
-    private int mInitialSelection = -1;
-    private boolean mAppsLoaded = false;
 
     @Bind(android.R.id.list)
     DragSelectRecyclerView list;
@@ -74,7 +70,27 @@ public class RequestsFragment extends BasePageFragment implements
     TextView emptyText;
     @Bind(R.id.fab)
     FloatingActionButton fab;
-    DisableableViewPager mPager;
+
+    private DisableableViewPager mPager;
+    private RequestsAdapter mAdapter;
+    private MaterialDialog mDialog;
+    private int mInitialSelection = -1;
+    private boolean mAppsLoaded = false;
+
+    private final Runnable mInvalidateLimitRunnable = new Runnable() {
+        @Override
+        public void run() {
+            final Activity act = getActivity();
+            if (!isAdded() || act == null || act.isFinishing()) return;
+            mAdapter.invalidateAllowRequest(act);
+            if (!isAdded() || act.isFinishing()) return;
+            long nextCheck = RequestLimiter.get(act).intervalMs();
+            if (nextCheck < (1000 * 60 * 60))
+                nextCheck = 1000; // if less than a hour, update every second.
+            mHandler.postDelayed(this, nextCheck);
+        }
+    };
+    private Handler mHandler;
 
     public RequestsFragment() {
     }
@@ -108,7 +124,6 @@ public class RequestsFragment extends BasePageFragment implements
             if (act != null) {
                 if (fab == null) {
                     act.setTitle(R.string.request_icons);
-                    invalidateOptionsMenu();
                     return;
                 }
 
@@ -126,7 +141,7 @@ public class RequestsFragment extends BasePageFragment implements
                 // Work around for the icon sometimes being invisible?
                 fab.setImageResource(R.drawable.ic_action_apply);
                 // Update toolbar items
-                invalidateOptionsMenu();
+                //invalidateOptionsMenu();
             }
         }
     }
@@ -191,12 +206,6 @@ public class RequestsFragment extends BasePageFragment implements
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
 
-        final int offset = Utils.getNavBarHeight(getActivity());
-        setBottomMargin(fab, offset, R.dimen.fab_bottom_margin);
-        setBottomMargin(progressText, offset, 0);
-        setBottomPadding(list, offset, R.dimen.fab_bottom_margin_list);
-        setBottomMargin(emptyText, Utils.getNavBarHeight(getActivity()), R.dimen.nav_drawer_item_hor_pad);
-
         GridLayoutManager lm = new GridLayoutManager(getActivity(), Config.get().gridWidthRequests());
         lm.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
@@ -207,8 +216,9 @@ public class RequestsFragment extends BasePageFragment implements
             }
         });
 
-        mAdapter = new RequestsAdapter(this);
+        mAdapter = new RequestsAdapter(getActivity(), this);
         mAdapter.setSelectionListener(this);
+        mAdapter.setMaxSelectionCount(Config.get().iconRequestMaxCount());
 
         list.setLayoutManager(lm);
         list.setAdapter(mAdapter);
@@ -264,6 +274,11 @@ public class RequestsFragment extends BasePageFragment implements
         reload();
         if (getActivity() != null)
             ((MainActivity) getActivity()).showChangelogIfNecessary(false);
+        if (RequestLimiter.needed(getActivity())) {
+            if (mHandler == null)
+                mHandler = new Handler();
+            mHandler.post(mInvalidateLimitRunnable);
+        }
     }
 
     @Override
@@ -288,6 +303,12 @@ public class RequestsFragment extends BasePageFragment implements
             if (IconRequest.get() == null) {
                 final File saveFolder = new File(Environment.getExternalStorageDirectory(), getString(R.string.app_name));
                 Utils.wipe(new File(saveFolder, "files"));
+
+                BackendConfig remoteConfig = null;
+                String remoteHost = Config.get().polarBackendHost();
+                if (remoteHost != null && !remoteHost.trim().isEmpty())
+                    remoteConfig = new BackendConfig(remoteHost, Config.get().polarBackendApiKey());
+
                 IconRequest.start(getActivity())
                         .toEmail(getString(R.string.icon_request_email))
                         .withSubject(String.format("%s %s", getString(R.string.app_name), getString(R.string.icon_request)))
@@ -295,12 +316,18 @@ public class RequestsFragment extends BasePageFragment implements
                         .loadCallback(this)
                         .selectionCallback(this)
                         .sendCallback(this)
-                        .withFooter(getString(R.string.x_version_x, getString(R.string.app_name), BuildConfig.VERSION_NAME))
+                        .remoteConfig(remoteConfig)
+                        .withFooter(getString(R.string.x_version_x, getString(R.string.app_name),
+                                BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE))
                         .includeDeviceInfo(true)
                         .build();
             }
-            if (!IconRequest.get().isAppsLoaded())
+            if (!IconRequest.get().isAppsLoaded()) {
+                showProgress();
                 IconRequest.get().loadApps();
+            } else {
+                onAppsLoaded(IconRequest.get().getApps(), null);
+            }
         }
     }
 
@@ -313,57 +340,54 @@ public class RequestsFragment extends BasePageFragment implements
             if (mDialog != null)
                 mDialog.dismiss();
         }
+        if (mHandler != null) {
+            mHandler.removeCallbacks(mInvalidateLimitRunnable);
+            mHandler = null;
+        }
     }
 
     // Icon Requests
+
+    private void showProgress() {
+        emptyText.setVisibility(View.VISIBLE);
+        emptyText.setVisibility(View.GONE);
+        progress.setVisibility(View.VISIBLE);
+        list.setVisibility(View.GONE);
+        progressText.setText(R.string.please_wait);
+    }
 
     @Override
     public void onLoadingFilter() {
         if (progressText == null) return;
         mAppsLoaded = false;
-        progressText.post(new Runnable() {
-            @Override
-            public void run() {
-                emptyText.setVisibility(View.GONE);
-                progress.setVisibility(View.VISIBLE);
-                list.setVisibility(View.GONE);
-                progressText.setText(R.string.loading_filter);
-            }
-        });
+        showProgress();
+        progressText.setText(R.string.loading_filter);
     }
 
     @Override
     public void onAppsLoadProgress(final int percent) {
         if (progressText == null) return;
-        progressText.post(new Runnable() {
-            @Override
-            public void run() {
-                if (!isAdded() || getActivity() == null) return;
-                // Percent isn't used here since it happens so fast anyways
-                progressText.setText(R.string.loading);
-            }
-        });
+        else if (!isAdded() || getActivity() == null) return;
+        // Percent isn't used here since it happens so fast anyways
+        progressText.setText(R.string.loading);
     }
 
     @Override
     public void onAppsLoaded(ArrayList<App> arrayList, Exception e) {
         synchronized (LOCK) {
             if (progressText == null || IconRequest.get() == null) return;
+            emptyText.setVisibility(arrayList == null || arrayList.isEmpty() ?
+                    View.VISIBLE : View.GONE);
             mAppsLoaded = true;
-            progressText.post(new Runnable() {
-                @Override
-                public void run() {
-                    if (IconRequest.get() == null) return;
-                    invalidateOptionsMenu();
-                    mAdapter.setApps(IconRequest.get().getApps());
-                    mAdapter.notifyDataSetChanged();
-                    emptyText.setVisibility(mAdapter.getItemCount() == 0 ?
-                            View.VISIBLE : View.GONE);
-                    progress.setVisibility(View.GONE);
-                    list.setVisibility(mAdapter.getItemCount() == 0 ?
-                            View.GONE : View.VISIBLE);
-                }
-            });
+            if (IconRequest.get() == null) return;
+            getActivity().invalidateOptionsMenu();
+            mAdapter.setApps(IconRequest.get().getApps());
+            mAdapter.notifyDataSetChanged();
+            emptyText.setVisibility(mAdapter.getItemCount() == 0 ?
+                    View.VISIBLE : View.GONE);
+            progress.setVisibility(View.GONE);
+            list.setVisibility(mAdapter.getItemCount() == 0 ?
+                    View.GONE : View.VISIBLE);
         }
     }
 
@@ -381,16 +405,11 @@ public class RequestsFragment extends BasePageFragment implements
     @Override
     public void onRequestPreparing() {
         if (getActivity() == null) return;
-        progressText.post(new Runnable() {
-            @Override
-            public void run() {
-                mDialog = new MaterialDialog.Builder(getActivity())
-                        .content(R.string.preparing_icon_request)
-                        .progress(true, -1)
-                        .cancelable(false)
-                        .show();
-            }
-        });
+        mDialog = new MaterialDialog.Builder(getActivity())
+                .content(R.string.preparing_icon_request)
+                .progress(true, -1)
+                .cancelable(false)
+                .show();
     }
 
     @Override
@@ -402,16 +421,23 @@ public class RequestsFragment extends BasePageFragment implements
     @Override
     public void onRequestSent() {
         if (getActivity() == null) return;
-        progressText.post(new Runnable() {
-            @Override
-            public void run() {
-                mDialog.dismiss();
-                fab.hide();
-                IconRequest.get().unselectAllApps();
-                mAdapter.clearSelected();
-                mAdapter.notifyDataSetChanged();
-            }
-        });
+        final Activity act = getActivity();
+        RequestLimiter.get(act).update(IconRequest.get().getSelectedApps().size());
+        if (RequestLimiter.needed(getActivity())) {
+            if (mHandler != null)
+                mHandler.removeCallbacks(mInvalidateLimitRunnable);
+            else mHandler = new Handler();
+            mHandler.post(mInvalidateLimitRunnable);
+        }
+        mDialog.dismiss();
+        fab.hide();
+        IconRequest.get().unselectAllApps();
+        mAdapter.clearSelected();
+        mAdapter.notifyDataSetChanged();
+
+        final String backendHost = Config.get().polarBackendHost();
+        if (backendHost != null && !backendHost.trim().isEmpty())
+            Toast.makeText(getActivity(), R.string.request_uploaded, Toast.LENGTH_LONG).show();
     }
 
     @OnClick(R.id.fab)
@@ -422,7 +448,7 @@ public class RequestsFragment extends BasePageFragment implements
         } else if (!Assent.isPermissionGranted(Assent.WRITE_EXTERNAL_STORAGE)) {
             new MaterialDialog.Builder(getActivity())
                     .title(R.string.permission_needed)
-                    .content(Html.fromHtml(getString(R.string.permission_needed_desc, getString(R.string.app_name))))
+                    .content(Html.fromHtml(getString(R.string.permission_needed_request_desc, getString(R.string.app_name))))
                     .positiveText(android.R.string.ok)
                     .onPositive(new MaterialDialog.SingleButtonCallback() {
                         @Override
@@ -451,7 +477,7 @@ public class RequestsFragment extends BasePageFragment implements
     @Override
     public void onDragSelectionChanged(int count) {
         updateTitle();
-        invalidateOptionsMenu();
+        getActivity().invalidateOptionsMenu();
     }
 
     @Override

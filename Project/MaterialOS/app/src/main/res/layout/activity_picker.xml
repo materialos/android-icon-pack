@@ -1,25 +1,46 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.pluscubed.insetsdispatcher.view.InsetsDispatcherLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_actionbar"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
+        android:layout_height="wrap_content"
         android:background="?colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:transitionName="Toolbar"
-        app:contentInsetStart="72dp"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        tools:ignore="UnusedAttribute" />
+        android:elevation="@dimen/toolbar_elevation"
+        app:layout_windowInsets="top"
+        tools:ignore="UnusedAttribute">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:transitionName="Toolbar"
+            app:contentInsetStart="@dimen/second_keyline"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            tools:ignore="UnusedAttribute" />
+
+    </FrameLayout>
+
 
     <FrameLayout
-        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
-</LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?toolbar_shadow" />
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+</com.pluscubed.insetsdispatcher.view.InsetsDispatcherLinearLayout>

@@ -1,4 +1,5 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,13 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingBottom="@dimen/fab_bottom_margin_list"
+        android:paddingBottom="@dimen/list_with_fab_bottom_margin"
         android:paddingLeft="@dimen/grid_margin"
         android:paddingRight="@dimen/grid_margin"
         android:paddingTop="@dimen/grid_margin"
-        android:scrollbars="vertical"
         android:scrollbarStyle="outsideOverlay"
-        android:fitsSystemWindows="true" />
+        android:scrollbars="vertical"
+        app:layout_windowInsets="bottom" />
 
     <LinearLayout
         android:id="@android:id/progress"
@@ -23,7 +24,7 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:visibility="gone"
-        android:fitsSystemWindows="true"
+        app:layout_windowInsets="bottom"
         tools:visibility="visible">
 
         <ProgressBar
@@ -65,7 +66,7 @@
         android:textColor="?android:textColorSecondary"
         android:textSize="@dimen/empty_text_size"
         android:textStyle="italic"
-        android:fitsSystemWindows="true"
+        app:layout_windowInsets="bottom"
         tools:ignore="UnusedAttribute"
         tools:text="No results"
         tools:visibility="gone" />
@@ -76,9 +77,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_marginBottom="@dimen/fab_bottom_margin"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:src="@drawable/ic_action_apply"
-        android:visibility="gone" />
+        android:layout_marginLeft="@dimen/fab_horizontal_margin"
+        android:layout_marginRight="@dimen/fab_horizontal_margin"
+        android:visibility="gone"
+        app:layout_windowInsets="bottom"
+        app:layout_windowInsetsUseMargin="true"
+        app:srcCompat="@drawable/ic_action_apply" />
 
-</FrameLayout>
+</com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout>

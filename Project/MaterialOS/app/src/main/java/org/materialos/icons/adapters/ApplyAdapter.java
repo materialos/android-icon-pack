@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.util.DialogUtils;
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.util.ApplyUtil;
 import org.materialos.icons.util.TintUtils;
 

@@ -5,15 +5,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
-import android.support.annotation.ArrayRes;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatImageView;
@@ -23,10 +20,12 @@ import android.view.ViewTreeObserver;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.util.DialogUtils;
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.config.Config;
 
 import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 
@@ -61,46 +60,46 @@ public abstract class Utils {
 
     public static boolean isPkgInstalled(@NonNull Context context, @NonNull String targetPackage) {
         final PackageManager pm = context.getPackageManager();
+        boolean installed = false;
         try {
-            return pm.getPackageInfo(targetPackage, PackageManager.GET_META_DATA) != null;
+            installed = pm.getPackageInfo(targetPackage, PackageManager.GET_META_DATA) != null;
         } catch (Throwable ignored) {
         }
-        return true;
+        return installed;
     }
 
-    public static int getStatusBarHeight(Context context) {
-        final Resources r = context.getResources();
-        int resourceId = r.getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0)
-            return r.getDimensionPixelSize(resourceId);
-        return 0;
-    }
-
-    public static int getNavBarHeight(Activity context) {
-        if (context == null || context.isFinishing()) {
-            return 0;
-        } else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT ||
-                !context.getResources().getBoolean(R.bool.translucent_nav)) {
-            // Translucent nav is disabled
-            return 0;
-        }
-        final Resources r = context.getResources();
-        int resourceId = r.getIdentifier("navigation_bar_height", "dimen", "android");
-        if (resourceId > 0)
-            return r.getDimensionPixelSize(resourceId);
-        return 0;
-    }
-
-    public static int[] resolveResourceIds(@NonNull Context context, @ArrayRes int integerArray) {
-        TypedArray ar = context.getResources().obtainTypedArray(integerArray);
-        int len = ar.length();
-        int[] resIds = new int[len];
-        for (int i = 0; i < len; i++)
-            resIds[i] = ar.getResourceId(i, 0);
-        ar.recycle();
-        return resIds;
-    }
-
+//    public static int getStatusBarHeight(Context context) {
+//        final Resources r = context.getResources();
+//        int resourceId = r.getIdentifier("status_bar_height", "dimen", "android");
+//        if (resourceId > 0)
+//            return r.getDimensionPixelSize(resourceId);
+//        return 0;
+//    }
+//
+//    public static int getNavBarHeight(Activity context) {
+//        if (context == null || context.isFinishing()) {
+//            return 0;
+//        } else if (!context.getResources().getBoolean(R.bool.translucent_nav)) {
+//            // Translucent nav is disabled
+//            return 0;
+//        }
+//        final Resources r = context.getResources();
+//        int resourceId = r.getIdentifier("navigation_bar_height", "dimen", "android");
+//        if (resourceId > 0)
+//            return r.getDimensionPixelSize(resourceId);
+//        return 0;
+//    }
+//
+//    public static int[] resolveResourceIds(@NonNull Context context, @ArrayRes int integerArray) {
+//        TypedArray ar = context.getResources().obtainTypedArray(integerArray);
+//        int len = ar.length();
+//        int[] resIds = new int[len];
+//        for (int i = 0; i < len; i++)
+//            resIds[i] = ar.getResourceId(i, 0);
+//        ar.recycle();
+//        return resIds;
+//    }
+//
 //    @Size(2)
 //    public static int[] getScreenDimensions(Activity activity) {
 //        final Display display = activity.getWindowManager().getDefaultDisplay();
@@ -108,10 +107,6 @@ public abstract class Utils {
 //        display.getSize(size);
 //        return new int[]{size.x, size.y};
 //    }
-
-    public interface LayoutCallback<VT extends View> {
-        void onLayout(VT view);
-    }
 
     public static <VT extends View> void waitForLayout(@NonNull final VT view, @NonNull final LayoutCallback<VT> cb) {
         ViewTreeObserver viewTreeObserver = view.getViewTreeObserver();
@@ -171,5 +166,29 @@ public abstract class Utils {
         baseSelector.addState(new int[]{}, new ColorDrawable(Color.TRANSPARENT));
         baseSelector.addState(new int[]{android.R.attr.state_pressed}, new ColorDrawable(pressed));
         return baseSelector;
+    }
+
+//    public static void recycleQuietely(@Nullable Bitmap bitmap) {
+//        if (bitmap == null || bitmap.isRecycled()) return;
+//        bitmap.recycle();
+//    }
+
+    public static void copy(InputStream is, OutputStream os) throws Exception {
+        byte[] buffer = new byte[2048];
+        int read;
+        while ((read = is.read(buffer)) != -1)
+            os.write(buffer, 0, read);
+        os.flush();
+    }
+
+    public static String removeExtension(String name) {
+        if (name.startsWith(".")) return name;
+        int dot = name.lastIndexOf('.');
+        if (dot == -1) return name;
+        return name.substring(0, dot);
+    }
+
+    public interface LayoutCallback<VT extends View> {
+        void onLayout(VT view);
     }
 }

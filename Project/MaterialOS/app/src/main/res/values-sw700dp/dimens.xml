@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="fab_bottom_margin">72dp</dimen>
+    <dimen name="button_height">56dp</dimen>
 
-    <dimen name="toolbar_inset_smaller">36dp</dimen>
+    <dimen name="fab_bottom_margin">56dp</dimen>
 
 </resources>

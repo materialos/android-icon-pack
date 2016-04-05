@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 
 import butterknife.ButterKnife;
 

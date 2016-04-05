@@ -5,6 +5,9 @@ import android.content.res.XmlResourceParser;
 import android.support.annotation.NonNull;
 import android.support.annotation.XmlRes;
 
+import org.materialos.icons.BuildConfig;
+import org.materialos.icons.R;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -98,7 +101,7 @@ public class DrawableXmlParser {
         public int getDrawableId(Context context) {
             if (mDrawable == null)
                 return 0;
-            return context.getResources().getIdentifier(mDrawable, "drawable", context.getPackageName());
+            return context.getResources().getIdentifier(mDrawable, "drawable", BuildConfig.APPLICATION_ID);
         }
 
         @Override
@@ -153,6 +156,10 @@ public class DrawableXmlParser {
                             mCurrentCategory = new Category(parser.getAttributeValue(null, "title"));
                             mCategories.add(mCurrentCategory);
                         } else if (tagName.equalsIgnoreCase("item")) {
+                            if (mCurrentCategory == null) {
+                                mCurrentCategory = new Category(context.getString(R.string.default_category));
+                                mCategories.add(mCurrentCategory);
+                            }
                             mCurrentCategory.addItem(new Icon(parser.getAttributeValue(null, "drawable"), mCurrentCategory));
                         }
                         break;

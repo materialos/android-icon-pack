@@ -19,7 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.util.DialogUtils;
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.config.Config;
 import org.materialos.icons.util.TintUtils;
 import org.materialos.icons.views.SplitButtonsLayout;

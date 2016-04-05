@@ -16,7 +16,7 @@
         android:layout_gravity="center"
         android:fontFamily="sans-serif-light"
         android:gravity="center"
-        android:text="@string/tap_apps_to_select_them"
+        android:text="@string/tap_to_select_app"
         android:textSize="@dimen/title_text_size"
         android:textStyle="italic"
         tools:ignore="UnusedAttribute" />

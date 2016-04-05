@@ -12,16 +12,10 @@
     <!-- This is the icon that will be shown in the plugin list in Zooper -->
     <drawable name="zooper_pack_icon">@mipmap/ic_launcher</drawable>
 
+    <!-- Setting to true will display your Zooper Widget templates within Polar -->
+    <bool name="enable_zooper_page">false</bool>
 
-    <!-- Leave empty to disable the Zooper page in Polar -->
-    <integer-array name="zooper_widget_previews">
-        <!--<item>@drawable/widget_one</item>-->
-        <!--<item>@drawable/widget_two</item>-->
-        <!--<item>@drawable/widget_three</item>-->
-        <!--<item>@drawable/widget_four</item>-->
-    </integer-array>
-
-    <!-- Names for each preview in the array above, must have same number of items -->
+    <!-- Optional names of each widget in /assets/templates -->
     <string-array name="zooper_widget_names">
         <!--<item>Widget One</item>-->
         <!--<item>Widget Two</item>-->

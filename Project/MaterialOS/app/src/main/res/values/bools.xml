@@ -3,6 +3,7 @@
 
     <bool name="translucent_nav">false</bool>
     <bool name="translucent_nav_viewer">false</bool>
+    <bool name="translucent_status">false</bool>
 
     <bool name="use_drawer_icons_bg">false</bool>
     <bool name="config_uiABBg">false</bool>

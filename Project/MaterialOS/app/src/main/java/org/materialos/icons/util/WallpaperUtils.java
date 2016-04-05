@@ -32,8 +32,8 @@ import com.afollestad.inquiry.Inquiry;
 import com.afollestad.inquiry.annotations.Column;
 import com.afollestad.inquiry.callbacks.RunCallback;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.afollestad.polar.BuildConfig;
-import com.afollestad.polar.R;
+import org.materialos.icons.BuildConfig;
+import org.materialos.icons.R;
 import org.materialos.icons.fragments.WallpapersFragment;
 
 import java.io.File;
@@ -45,7 +45,7 @@ import java.util.Locale;
  */
 public class WallpaperUtils {
 
-    public static final String TABLE_NAME = "wallpapers";
+    public static final String TABLE_NAME = "polar_wallpapers";
     public static final String DATABASE_NAME = "data_cache";
     public static final int DATABASE_VERSION = 1;
 
@@ -92,6 +92,13 @@ public class WallpaperUtils {
         @Body
         @Column
         public String name;
+        @Body
+        @Column
+        public String thumbnail;
+
+        public String getListingImageUrl() {
+            return thumbnail != null ? thumbnail : url;
+        }
 
         @Column
         private int paletteNameColor;
@@ -247,6 +254,13 @@ public class WallpaperUtils {
                                 return;
                             }
                             try {
+                                for (Wallpaper wallpaper : holder.wallpapers) {
+                                    if (wallpaper.name == null)
+                                        wallpaper.name = "";
+                                    if (wallpaper.author == null)
+                                        wallpaper.author = "";
+                                }
+
                                 Log.d("WallpaperUtils", String.format("Loaded %d wallpapers from web.", holder.length()));
                                 if (holder.length() > 0) {
                                     try {
@@ -259,9 +273,10 @@ public class WallpaperUtils {
                                     }
                                 }
                                 callback.onRetrievedWallpapers(holder, null, false);
-                            } catch (Exception e1) {
+                            } catch (Throwable e1) {
                                 Log.d("WallpaperUtils", String.format("Failed to load wallpapers... %s", e1.getMessage()));
-                                callback.onRetrievedWallpapers(null, e1, false);
+                                if (e1 instanceof Exception)
+                                    callback.onRetrievedWallpapers(null, (Exception) e1, false);
                             } finally {
                                 Inquiry.deinit();
                             }

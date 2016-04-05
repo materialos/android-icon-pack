@@ -1,13 +1,15 @@
 package org.materialos.icons.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.afollestad.materialdialogs.util.DialogUtils;
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.fragments.IconsFragment;
 import org.materialos.icons.ui.base.BaseThemedActivity;
+import org.materialos.icons.ui.base.ISelectionMode;
 import org.materialos.icons.util.TintUtils;
 
 import butterknife.Bind;
@@ -17,7 +19,7 @@ import butterknife.ButterKnife;
 /**
  * @author Aidan Follestad (afollestad)
  */
-public class IconPickerActivity extends BaseThemedActivity {
+public class IconPickerActivity extends BaseThemedActivity implements ISelectionMode {
 
     @Bind(R.id.toolbar)
     Toolbar toolbar;
@@ -34,6 +36,7 @@ public class IconPickerActivity extends BaseThemedActivity {
 
         ButterKnife.bind(this);
 
+        toolbar.setTitle(R.string.select_icon);
         setSupportActionBar(toolbar);
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -44,7 +47,7 @@ public class IconPickerActivity extends BaseThemedActivity {
                     DialogUtils.resolveColor(this, R.attr.tab_icon_color)));
         }
 
-        getFragmentManager().beginTransaction().replace(R.id.container, new IconsFragment()).commit();
+        getFragmentManager().beginTransaction().replace(R.id.container, IconsFragment.create(true)).commit();
     }
 
     @Override
@@ -54,11 +57,25 @@ public class IconPickerActivity extends BaseThemedActivity {
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            setResult(resultCode, data);
+            finish();
+        }
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             finish();
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean inSelectionMode() {
+        return true;
     }
 }

@@ -9,7 +9,7 @@ import android.text.Html;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.afollestad.polar.R;
+import org.materialos.icons.R;
 import org.materialos.icons.ui.MainActivity;
 
 /**

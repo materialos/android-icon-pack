@@ -9,8 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.afollestad.polar.BuildConfig;
-import com.afollestad.polar.R;
+import org.materialos.icons.BuildConfig;
+import org.materialos.icons.R;
+import org.materialos.icons.config.Config;
 import org.materialos.icons.dialogs.ProgressDialogFragment;
 import com.google.android.vending.licensing.AESObfuscator;
 import com.google.android.vending.licensing.LicenseChecker;
@@ -91,8 +92,8 @@ public class LicensingUtils {
     }
 
     public static boolean check(@NonNull AppCompatActivity context, @NonNull LicensingCallback cb) {
-        final String key = context.getString(R.string.licensing_public_key).trim();
-        if (key.trim().isEmpty()) {
+        final String key = Config.get().licensingPublicKey();
+        if (key == null || key.trim().isEmpty()) {
             LOG("License checking is disabled.");
             return true;
         } else if (PreferenceManager.getDefaultSharedPreferences(context).getBoolean(KEY_VALID, false)) {
@@ -117,7 +118,7 @@ public class LicensingUtils {
         // Construct the LicenseChecker with a policy.
         mChecker = new LicenseChecker(
                 context, new ServerManagedPolicy(context,
-                new AESObfuscator(getSalt(context), context.getPackageName(), deviceId)),
+                new AESObfuscator(getSalt(context), BuildConfig.APPLICATION_ID, deviceId)),
                 key);
         mChecker.checkAccess(mLicenseCheckerCallback);
         return false;

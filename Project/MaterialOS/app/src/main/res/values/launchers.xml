@@ -13,6 +13,7 @@
         <item>KK</item>
         <item>Atom</item>
         <item>CMTE</item>
+        <item>LG</item>
     </string-array>
 
     <string-array name="launcher_colors_primary">
@@ -27,6 +28,7 @@
         <item>#00AFCC</item>
         <item>#EAEAEA</item>
         <item>#1BBBD3</item>
+        <item>#c30452</item>
     </string-array>
 
     <string-array name="launcher_packages">
@@ -40,7 +42,8 @@
         <item>home.solo.launcher.free</item>
         <item>com.kk.launcher</item>
         <item>com.dlto.atom.launcher</item>
-        <item>org.cyanogenmod.theme.chooser</item>
+        <item>org.cyanogenmod.theme.chooser|com.cyngn.theme.chooser</item>
+        <item>com.lge.launcher2</item>
     </string-array>
 
     <integer-array name="launcher_icons">
@@ -55,6 +58,7 @@
         <item>@drawable/ic_launcher_kk</item>
         <item>@drawable/ic_launcher_atom</item>
         <item>@drawable/ic_launcher_cmte</item>
+        <item>@drawable/ic_launcher_lg</item>
     </integer-array>
 
 </resources>

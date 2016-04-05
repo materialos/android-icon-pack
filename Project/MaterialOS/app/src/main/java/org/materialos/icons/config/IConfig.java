@@ -1,6 +1,5 @@
 package org.materialos.icons.config;
 
-import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 
 /**
@@ -23,12 +22,6 @@ public interface IConfig {
     boolean navDrawerModeAllowSwitch();
 
     boolean homepageEnabled();
-
-    @Nullable
-    String homepageDescription();
-
-    @Nullable
-    Drawable homepageLandingIcon();
 
     @Nullable
     String wallpapersJsonUrl();
@@ -75,4 +68,12 @@ public interface IConfig {
     int gridWidthIcons();
 
     int gridWidthRequests();
+
+    int gridWidthZooper();
+
+    int iconRequestMaxCount();
+
+    String polarBackendHost();
+
+    String polarBackendApiKey();
 }

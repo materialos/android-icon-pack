@@ -13,7 +13,7 @@
     <attr name="window_background_cards" format="color" />
     <attr name="card_background" format="color" />
 
-    <attr name="button_accent_selector" format="reference" />
+    <attr name="accent_button_theme" format="reference" />
     <attr name="activatable_card_selector" format="reference" />
 
     <attr name="force_light_status_bar" format="boolean" />

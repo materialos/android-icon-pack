@@ -13,15 +13,27 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="ContentDescription">
 
-            <org.materialos.icons.views.WallpaperImageView
-                android:id="@+id/image"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                tools:background="#80000000"
-                tools:ignore="ContentDescription" />
+                android:layout_height="match_parent">
+
+                <org.materialos.icons.views.SquareImageView
+                    android:id="@+id/background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <org.materialos.icons.views.SquareImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/content_inset"
+                    android:scaleType="centerInside" />
+
+            </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
