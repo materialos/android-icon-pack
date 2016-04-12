@@ -199,57 +199,57 @@
     <!-- Cymera -->
     <item component="ComponentInfo{com.cyworld.camera/com.cyworld.cymera.CameraMain}" drawable="cymera" />
 
-    <!-- Dailer -->
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.activities.DialtactsActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.activities.PhoneFrontDoor}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.activities.TwelveKeyDialer}" drawable="dailer"/>
+    <!-- Dialer -->
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.activities.DialtactsActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.activities.PhoneFrontDoor}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.activities.TwelveKeyDialer}" drawable="dialer"/>
     <item component="ComponentInfo{com.android.contacts/com.android.contacts.BbDialtactsMainFrameActivity}" drawable="dialer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.CallDialtactsActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.dialer.DialerPhoneActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialerActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsCallListEntryActivity}" drawable="dailer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.CallDialtactsActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.dialer.DialerPhoneActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialerActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsCallListEntryActivity}" drawable="dialer"/>
     <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsCallLogActivity}" drawable="dialer"/>
     <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsContactsEntryActivityForDialpad}" drawable="dialer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsDialerEntryActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsEntryActivity}" drawable="dailer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsDialerEntryActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsEntryActivity}" drawable="dialer"/>
     <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsPhoneEntryActivity}" drawable="dialer"/>
     <item component="ComponentInfo{com.android.contacts/com.android.contacts.DialtactsRecentEntryActivity}" drawable="dialer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.PhoneDialtactsActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.SmartDailerActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.contacts.TwelveKeyDialer}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.android.dialer.DialtactsActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.oppo.contacts.OppoDialtactsActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.contacts/com.sec.android.app.contacts.DialerEntryActivity}" drawable="dailer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.PhoneDialtactsActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.SmartDialerActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.contacts.TwelveKeyDialer}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.android.dialer.DialtactsActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.contacts/com.oppo.contacts.OppoDialtactsActivity}" drawable="dialer"/>
     <item component="ComponentInfo{com.android.contacts/com.sec.android.app.contacts.DialerEntryActivity}" drawable="dialer"/>
-    <item component="ComponentInfo{com.android.dialer/com.android.dialer.DialtactsActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.htccontacts/com.android.htccontacts.ContactsSearch}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.htccontacts/com.android.htccontacts.ContactsTabActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.htccontacts/com.android.htccontacts.DialerTabActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.phone/com.android.phone.DialerSClass}" drawable="dailer"/>
+    <item component="ComponentInfo{com.android.contacts/com.sec.android.app.contacts.DialerEntryActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.dialer/com.android.dialer.DialtactsActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.htccontacts/com.android.htccontacts.ContactsSearch}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.htccontacts/com.android.htccontacts.ContactsTabActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.htccontacts/com.android.htccontacts.DialerTabActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.phone/com.android.phone.DialerSClass}" drawable="dialer"/>
     <item component="ComponentInfo{com.android.phone/com.android.phone.DialtactsCallLogActivity}" drawable="dialer"/>
     <item component="ComponentInfo{com.android.phone/com.android.phone.DialtactsContactsEntryActivity}" drawable="dialer"/>
-    <item component="ComponentInfo{com.android.phone/com.android.phone.firewall.PhoneFireWall}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.phone/com.android.phone.LaunchCallInterface}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.phone/com.android.phone.PhoneApp}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.phone/com.android.phone.Settings}" drawable="dailer"/>
-    <item component="ComponentInfo{com.android.phone/com.android.phone.TwDialer}" drawable="dailer"/>
-    <item component="ComponentInfo{com.cootek.smartdialer/com.cootek.smartdialer.TDialer}" drawable="dailer"/>
-    <item component="ComponentInfo{com.google.android.dialer/com.google.android.dialer.extensions.GoogleDialtactsActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.htc.contacts/com.htc.contacts.DialerTabActivity}" drawable="dailer"/>
+    <item component="ComponentInfo{com.android.phone/com.android.phone.firewall.PhoneFireWall}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.phone/com.android.phone.LaunchCallInterface}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.phone/com.android.phone.PhoneApp}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.phone/com.android.phone.Settings}" drawable="dialer"/>
+    <item component="ComponentInfo{com.android.phone/com.android.phone.TwDialer}" drawable="dialer"/>
+    <item component="ComponentInfo{com.cootek.smartdialer/com.cootek.smartdialer.TDialer}" drawable="dialer"/>
+    <item component="ComponentInfo{com.google.android.dialer/com.google.android.dialer.extensions.GoogleDialtactsActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.htc.contacts/com.htc.contacts.DialerTabActivity}" drawable="dialer"/>
     <item component="ComponentInfo{com.huawei.android.dialer/com.huawei.android.dialer.TwelveKeyDialer}" drawable="dialer"/>
-    <item component="ComponentInfo{com.lenovo.ideafriend/com.lenovo.ideafriend.alias.DialtactsActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.motorola.blur/com.motorola.blur.ViewIdentitiesFacetActivity}" drawable="dailer"/>
+    <item component="ComponentInfo{com.lenovo.ideafriend/com.lenovo.ideafriend.alias.DialtactsActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.motorola.blur/com.motorola.blur.ViewIdentitiesFacetActivity}" drawable="dialer"/>
     <item component="ComponentInfo{com.motorola.dialer/com.motorola.dialer.CallLogShortcut}" drawable="dialer"/>
-    <item component="ComponentInfo{com.motorola.dialer/com.motorola.dialer.DialtactsContactsEntryActivity}" drawable="dailer"/>
+    <item component="ComponentInfo{com.motorola.dialer/com.motorola.dialer.DialtactsContactsEntryActivity}" drawable="dialer"/>
     <item component="ComponentInfo{com.samsung.android.app.dialertab/com.samsung.android.app.dialertab.DialerTabActivity}" drawable="dialer"/>
     <item component="ComponentInfo{com.samsung.dialer/com.samsung.dialer.SplashScreen}" drawable="dialer"/>
-    <item component="ComponentInfo{com.sec.android.app.dialertab/com.sec.android.app.dialertab.DialerTabActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.sec.android.app.dialertab/com.sec.android.app.dialertab.DialerTabDialerActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.simpler.dialer/com.simpler.ui.activities.DialerActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.sonyericsson.android.socialphonebook/com.sonyericsson.android.socialphonebook.DialerEntryActivity}" drawable="dailer"/>
-    <item component="ComponentInfo{com.asus.contacts/com.android.contacts.activities.DialtactsActivity}" drawable="dailer" />
+    <item component="ComponentInfo{com.sec.android.app.dialertab/com.sec.android.app.dialertab.DialerTabActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.sec.android.app.dialertab/com.sec.android.app.dialertab.DialerTabDialerActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.simpler.dialer/com.simpler.ui.activities.DialerActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.sonyericsson.android.socialphonebook/com.sonyericsson.android.socialphonebook.DialerEntryActivity}" drawable="dialer"/>
+    <item component="ComponentInfo{com.asus.contacts/com.android.contacts.activities.DialtactsActivity}" drawable="dialer" />
 
     <!-- Dropbox -->
     <item component="ComponentInfo{com.dropbox.android/com.dropbox.android.activity.DropboxBrowser}" drawable="dropbox" />
