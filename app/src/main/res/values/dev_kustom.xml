@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- This info is used in the available skins list in Zooper -->
+    <string name="kustom_pack_title">@string/app_name</string>
+    <string name="kustom_pack_description">Awesome Kustom powered by Polar</string>
+
+    <!-- Setting to true will display your Kustom Wallpaper templates within Polar -->
+    <bool name="enable_kustom_wallpapers_page">false</bool>
+
+    <!-- Setting to true will display your Kustom Widgets templates within Polar -->
+    <bool name="enable_kustom_widgets_page">false</bool>
+
+</resources>

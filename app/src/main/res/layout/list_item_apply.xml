@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        style="@style/Card"
+        android:layout_marginLeft="@dimen/card_sides_margin"
+        android:layout_marginRight="@dimen/card_sides_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:background="#2a3238">
+
+            <com.afollestad.polar.views.SquareImageView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/content_inset_half"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_launcher_action"
+                tools:ignore="ContentDescription" />
+
+            <!-- Text size, text color, etc. is set from the class -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="12dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:minHeight="@dimen/apply_title_minheight"
+                android:textColor="#fff"
+                android:textSize="@dimen/content_text_size"
+                tools:background="#21292E"
+                tools:ignore="UnusedAttribute"
+                tools:text="Action Launcher" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+
+    <string name="theme_feature">ic_launcher</string>
+    <string name="theme_title">MaterialOS</string>
+    <string name="authorName">MaterialOS contributors</string>
+    <string name="developerName">MaterialOS contributors</string>
+    <string name="developer_name">MaterialOS contributors</string>
+    <string name="developer_link">https://github.com/materialos/Android-Icon-Pack</string>
+    <string name="theme_description">MaterialOS is a free and open source Material Design icon pack.</string>
+    <string name="theme_preview1">preview1</string>
+
+</resources>

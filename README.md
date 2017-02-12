@@ -24,6 +24,10 @@ If your interested in helping out or would like to request an icon, see our [wik
 * [MaterialUp](http://www.materialup.com/materialos)
 
 ## License:
+
+### Dashboard
+The Android code for the dashboard is distributed by Aidan Follestad under [this license](https://github.com/afollestad/polar-dashboard/blob/master/LICENSE.txt). The license is also distributed as `POLAR DASHBOARD LICENSE` to reduce confusion with the graphics license.
+
 #### Icons
 All product icon graphics are under the license found at [http://materialos.com/license](http://materialos.com/license) as well as below. For sublicensing for your app or product as well as all other questions, [create an issue](https://github.com/materialos/Icons/issues/new?title=[Licensing]%20My%20Question%20Here&body=Please%20leave%20us%20more%20information%20about%20your%20question%20here.) or email [materialos@gmail.com](mailto:materialos@gmail.com?Subject=Licensing%20Question).
 

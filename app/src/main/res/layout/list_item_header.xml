@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/content_inset_half"
+    android:paddingLeft="@dimen/content_inset"
+    android:paddingRight="@dimen/content_inset"
+    android:paddingTop="@dimen/content_inset_half">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="@string/tap_to_select_app"
+        android:textSize="@dimen/title_text_size"
+        android:textStyle="italic"
+        tools:ignore="UnusedAttribute" />
+
+</FrameLayout>

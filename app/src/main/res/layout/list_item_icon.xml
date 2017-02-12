@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.afollestad.polar.views.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="?selectableItemBackground"
+    android:padding="@dimen/grid_margin_icons">
+
+    <com.afollestad.polar.views.SquareImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription" />
+
+</com.afollestad.polar.views.SquareFrameLayout>

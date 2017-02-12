@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="drawer_home" type="id" />
+    <item name="drawer_icons" type="id" />
+    <item name="drawer_wallpapers" type="id" />
+    <item name="drawer_requestIcons" type="id" />
+    <item name="drawer_apply" type="id" />
+    <item name="drawer_kwgt" type="id" />
+    <item name="drawer_klwp" type="id" />
+    <item name="drawer_zooper" type="id" />
+    <item name="drawer_about" type="id" />
+
+</resources>

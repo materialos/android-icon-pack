@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?selectableItemBackground"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        style="@style/Card"
+        android:layout_marginLeft="@dimen/content_inset_half_card"
+        android:layout_marginRight="@dimen/content_inset_half_card">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/toolbar_elevation"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:id="@+id/cover"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:scaleType="centerCrop"
+                tools:background="#80000000"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/cardFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.afollestad.polar.views.AboutProfileImageView
+                    android:id="@+id/image"
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    app:riv_border_color="#fff"
+                    app:riv_border_width="4dp"
+                    app:riv_oval="true"
+                    app:srcCompat="@drawable/ic_launcher_action"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/content_inset_half"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="@dimen/content_inset"
+                    android:paddingRight="@dimen/content_inset"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/header_text_size"
+                    tools:text="Aidan Follestad" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingMultiplier="1.1"
+                    android:paddingLeft="@dimen/content_inset"
+                    android:paddingRight="@dimen/content_inset"
+                    android:textColor="?android:textColorSecondary"
+                    android:textSize="@dimen/content_text_size"
+                    tools:text="Android and Backend Engineer, SkillFitness.\nLives in Minneapolis, MN" />
+
+                <com.afollestad.polar.views.SplitButtonsLayout
+                    android:id="@+id/buttonsFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_inset_quarter"
+                    android:gravity="center_vertical|end"
+                    android:orientation="horizontal" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

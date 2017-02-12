@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MergeRootFrame">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/viewer_overlay"
+        android:transitionGroup="true"
+        app:layout_windowInsets="top|left|right"
+        tools:ignore="UnusedAttribute">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStart="@dimen/second_keyline"
+            app:popupTheme="@style/ThemeOverlay.AppCompat"
+            tools:ignore="UnusedAttribute" />
+
+    </FrameLayout>
+
+</com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Light Theme -->
+
+    <style name="AppTheme.SplashLight.Parent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:navigationBarColor">@color/splash_light_status</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+</resources>
