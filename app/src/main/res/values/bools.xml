@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+
+    <bool name="translucent_nav">false</bool>
+    <bool name="translucent_nav_viewer">false</bool>
+    <bool name="translucent_status">false</bool>
+
+    <bool name="use_drawer_icons_bg">false</bool>
+    <bool name="config_uiABBg">false</bool>
+    <bool name="config_new_selectors">false</bool>
+    <bool name="config_drawerLabels">true</bool>
+    <bool name="config_fadeDrawerLabels">false</bool>
+    <bool name="config_desktop_indicator">false</bool>
+
+    <!-- Apex Theme settings -->
+    <bool name="config_apexskin">true</bool>
+    <bool name="config_iconpack">true</bool>
+
+    <!-- GO LAUNCHER -->
+    <bool name="enableIconPack">true</bool>
+    <bool name="enableDockPack">false</bool>
+
+    <!-- THEME MANAGER -->
+    <bool name="manager_action">true</bool>
+    <bool name="manager_adw">true</bool>
+    <bool name="manager_apex">true</bool>
+    <bool name="manager_atom">true</bool>
+    <bool name="manager_go">false</bool>
+    <bool name="manager_nova">true</bool>
+    <bool name="manager_smart">true</bool>
+    <bool name="manager_solo">true</bool>
+
+</resources>

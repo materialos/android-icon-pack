@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/activity_main">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?toolbar_shadow" />
+
+    <com.afollestad.polar.views.DisableableViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="#80000000" />
+
+</com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout>

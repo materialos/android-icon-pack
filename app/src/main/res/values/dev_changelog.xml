@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="changelog_enabled">true</bool>
+
+    <string-array name="changelog" translatable="false">
+        <item><![CDATA[ <b>Polar Dashboard upgrade to 1.8.1</b> ]]></item>
+        <item><![CDATA[ Removed entries for icons that were removed from drawables (don\'t worry, they weren\'t for Android apps) ]]></item>
+    </string-array>
+
+</resources>

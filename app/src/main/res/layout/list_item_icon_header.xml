@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/button_height"
+    android:paddingEnd="@dimen/content_inset_half"
+    android:paddingStart="@dimen/content_inset_less">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/moreButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/moreButton"
+        android:layout_toStartOf="@+id/moreButton"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="start|center_vertical"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/title_text_size"
+        tools:text="Header Text" />
+
+    <Button
+        android:id="@+id/moreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/content_inset_half"
+        android:layout_marginTop="@dimen/content_inset_half"
+        android:clickable="true"
+        android:ellipsize="none"
+        android:lines="1"
+        android:maxLength="48"
+        android:singleLine="true"
+        android:text="@string/more"
+        android:textColor="#fff"
+        android:theme="?accent_button_theme" />
+
+</RelativeLayout>

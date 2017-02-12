@@ -1,0 +1,9 @@
+<resources>
+
+    <dimen name="button_height">56dp</dimen>
+
+    <dimen name="fab_bottom_margin">0dp</dimen>
+
+    <dimen name="landing_page_icon_size">236dp</dimen>
+
+</resources>

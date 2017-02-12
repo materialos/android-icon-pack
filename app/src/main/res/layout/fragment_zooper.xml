@@ -1,0 +1,86 @@
+<com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="@dimen/grid_margin"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        app:layout_windowInsets="bottom" />
+
+    <LinearLayout
+        android:id="@android:id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_windowInsets="bottom"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+        <!--suppress AndroidDomInspection -->
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/content_inset"
+            android:layout_marginTop="@dimen/content_inset"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/header_text_size"
+            android:textStyle="italic"
+            android:visibility="gone"
+            tools:ignore="UnusedAttribute"
+            tools:text="Loading apps…"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/content_inset_more"
+        android:layout_marginLeft="@dimen/content_inset_more"
+        android:layout_marginRight="@dimen/content_inset_more"
+        android:layout_marginTop="@dimen/content_inset_more"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.4"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="@dimen/empty_text_size"
+        android:textStyle="italic"
+        app:layout_windowInsets="bottom"
+        tools:ignore="UnusedAttribute"
+        tools:text="No results"
+        tools:visibility="gone" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabInstall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/content_inset"
+        android:layout_marginEnd="@dimen/content_inset"
+        android:layout_marginStart="@dimen/content_inset"
+        app:backgroundTint="?colorAccent"
+        app:layout_windowInsets="bottom"
+        app:layout_windowInsetsUseMargin="true"
+        app:srcCompat="@drawable/ic_action_download" />
+
+</com.pluscubed.insetsdispatcher.view.InsetsDispatcherFrameLayout>

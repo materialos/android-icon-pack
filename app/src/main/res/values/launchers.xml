@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="launcher_names">
+        <item>Nova</item>
+        <item>Action</item>
+        <item>Apex</item>
+        <item>Aviate</item>
+        <item>Smart</item>
+        <item>Next</item>
+        <item>Go</item>
+        <item>Solo</item>
+        <item>KK</item>
+        <item>Atom</item>
+        <item>CMTE</item>
+        <item>LG</item>
+        <item>ADW</item>
+    </string-array>
+
+    <string-array name="launcher_colors_primary">
+        <item>#C9171F</item>
+        <item>#252525</item>
+        <item>#157EF4</item>
+        <item>#7B009C</item>
+        <item>#1CA4F7</item>
+        <item>#1C9888</item>
+        <item>#349433</item>
+        <item>#E33F4D</item>
+        <item>#00AFCC</item>
+        <item>#EAEAEA</item>
+        <item>#1BBBD3</item>
+        <item>#c30452</item>
+        <item>#ff9800</item>
+    </string-array>
+
+    <string-array name="launcher_packages">
+        <item>com.teslacoilsw.launcher</item>
+        <item>com.actionlauncher.playstore|com.chrislacy.actionlauncher.pro</item>
+        <item>com.anddoes.launcher</item>
+        <item>com.tul.aviate</item>
+        <item>ginlemon.flowerpro|ginlemon.flowerfree</item>
+        <item>com.gtp.nextlauncher</item>
+        <item>com.gau.go.launcherex</item>
+        <item>home.solo.launcher.free</item>
+        <item>com.kk.launcher</item>
+        <item>com.dlto.atom.launcher</item>
+        <item>org.cyanogenmod.theme.chooser|com.cyngn.theme.chooser</item>
+        <item>com.lge.launcher2</item>
+        <item>org.adw.launcher</item>
+    </string-array>
+
+    <integer-array name="launcher_icons">
+        <item>@drawable/ic_launcher_nova</item>
+        <item>@drawable/ic_launcher_action</item>
+        <item>@drawable/ic_launcher_apex</item>
+        <item>@drawable/ic_launcher_aviate</item>
+        <item>@drawable/ic_launcher_smart</item>
+        <item>@drawable/ic_launcher_next</item>
+        <item>@drawable/ic_launcher_go</item>
+        <item>@drawable/ic_launcher_solo</item>
+        <item>@drawable/ic_launcher_kk</item>
+        <item>@drawable/ic_launcher_atom</item>
+        <item>@drawable/ic_launcher_cmte</item>
+        <item>@drawable/ic_launcher_lg</item>
+        <item>@drawable/ic_launcher_adw</item>
+    </integer-array>
+
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Light -->
+
+    <style name="Base.AppTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_1_light</item>
+        <item name="colorPrimaryDark">@color/primary_2_light</item>
+        <item name="colorAccent">@color/accent_1_light</item>
+
+        <item name="colorAccentDark">@color/accent_2_light</item>
+
+        <item name="toolbar_shadow">@drawable/toolbar_shadow</item>
+
+        <item name="window_background_cards">@color/window_bg_cards_light</item>
+        <item name="card_background">@color/card_background_light</item>
+        <item name="android:windowBackground">@color/window_bg_cards_light</item>
+        <item name="colorControlHighlight">@color/accent_1_light</item>
+
+        <item name="toolbar_title_color">@color/toolbar_title_color_light</item>
+        <item name="toolbar_icons_color">@color/toolbar_icons_color_light</item>
+        <item name="tab_indicator_color">@color/tab_indicator_color_light</item>
+        <item name="tab_icon_color">@color/tab_icon_color_light</item>
+        <item name="tab_ripple_color">@color/tab_ripple_color_light</item>
+        <item name="tab_ripple_mask">@color/tab_ripple_color_light</item>
+
+        <item name="force_light_status_bar">@bool/force_light_statusbar_icons_light</item>
+        <item name="disable_auto_light_status_bar">@bool/disable_auto_light_statusbar_icons_light</item>
+
+        <item name="android:textColorPrimary">@color/primary_text_selector_light</item>
+        <item name="android:textColorSecondary">@color/secondary_text_selector_light</item>
+        <item name="android:textColorPrimaryInverse">@color/primary_text_selector_dark</item>
+        <item name="android:textColorSecondaryInverse">@color/secondary_text_selector_dark</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="toolbarStyle">@style/Widget.Responsive.Toolbar</item>
+        <item name="toolbarNavigationButtonStyle">
+            @style/Widget.Responsive.Toolbar.Button.Navigation
+        </item>
+        <item name="actionOverflowButtonStyle">@style/Widget.Responsive.ActionButton.Overflow</item>
+
+        <item name="accent_button_theme">@style/AccentButtonLight</item>
+    </style>
+
+    <!-- Dark -->
+
+    <style name="Base.AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary_1_dark</item>
+        <item name="colorPrimaryDark">@color/primary_2_dark</item>
+        <item name="colorAccent">@color/accent_1_dark</item>
+
+        <item name="colorAccentDark">@color/accent_2_dark</item>
+
+        <item name="window_background_cards">@color/window_bg_cards_dark</item>
+        <item name="android:windowBackground">@color/window_bg_cards_dark</item>
+        <item name="colorControlHighlight">@color/accent_1_dark</item>
+        <item name="card_background">@color/card_background_dark</item>
+
+        <item name="toolbar_title_color">@color/toolbar_title_color_dark</item>
+        <item name="toolbar_icons_color">@color/toolbar_icons_color_dark</item>
+        <item name="tab_indicator_color">@color/tab_indicator_color_dark</item>
+        <item name="tab_icon_color">@color/tab_icon_color_dark</item>
+        <item name="tab_ripple_color">@color/tab_ripple_color_dark</item>
+        <item name="tab_ripple_mask">@color/tab_ripple_color_dark</item>
+
+        <item name="toolbar_shadow">@drawable/toolbar_shadow</item>
+
+        <item name="force_light_status_bar">@bool/force_light_statusbar_icons_dark</item>
+        <item name="disable_auto_light_status_bar">@bool/disable_auto_light_statusbar_icons_dark</item>
+
+        <item name="android:textColorPrimary">@color/primary_text_selector_dark</item>
+        <item name="android:textColorSecondary">@color/secondary_text_selector_dark</item>
+        <item name="android:textColorPrimaryInverse">@color/primary_text_selector_light</item>
+        <item name="android:textColorSecondaryInverse">@color/secondary_text_selector_light</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="toolbarStyle">@style/Widget.Responsive.Toolbar</item>
+        <item name="toolbarNavigationButtonStyle">
+            @style/Widget.Responsive.Toolbar.Button.Navigation
+        </item>
+        <item name="actionOverflowButtonStyle">@style/Widget.Responsive.ActionButton.Overflow</item>
+
+        <item name="accent_button_theme">@style/AccentButtonDark</item>
+    </style>
+
+    <!--Correct responsive toolbar layout according to specs, see
+        https://medium.com/@lucasurbas/making-android-toolbar-responsive-2627d4e07129-->
+
+    <style name="Widget.Responsive.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="maxButtonHeight">48dp</item>
+        <item name="android:paddingLeft">@dimen/toolbar_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/toolbar_horizontal_padding</item>
+        <item name="contentInsetStart">@dimen/content_inset</item>
+    </style>
+
+    <style name="Widget.Responsive.Toolbar.Button.Navigation" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">48dp</item>
+    </style>
+
+    <style name="Widget.Responsive.ActionButton.Overflow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+
+</resources>

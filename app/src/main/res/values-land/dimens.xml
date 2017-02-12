@@ -1,0 +1,8 @@
+<resources>
+
+    <dimen name="fab_bottom_margin">8dp</dimen>
+    <dimen name="list_with_fab_bottom_margin">88dp</dimen>
+
+    <dimen name="landing_page_icon_size">112dp</dimen>
+
+</resources>

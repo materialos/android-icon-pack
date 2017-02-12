@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="colorAccentDark" format="color" />
+
+    <attr name="toolbar_shadow" format="reference" />
+
+    <attr name="toolbar_title_color" format="color" />
+    <attr name="toolbar_icons_color" format="color" />
+    <attr name="tab_indicator_color" format="color" />
+    <attr name="tab_icon_color" format="color" />
+    <attr name="tab_ripple_color" format="color" />
+    <attr name="tab_ripple_mask" format="color" />
+
+    <attr name="window_background_cards" format="color" />
+    <attr name="card_background" format="color" />
+
+    <attr name="accent_button_theme" format="reference" />
+    <attr name="activatable_card_selector" format="reference" />
+
+    <attr name="force_light_status_bar" format="boolean" />
+    <attr name="disable_auto_light_status_bar" format="boolean" />
+
+</resources>
