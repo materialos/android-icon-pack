@@ -774,6 +774,7 @@
 
 	<!-- VLC -->
 	<AppIcon name="org.videolan.vlc.betav7neon/org.videolan.vlc.betav7neon.gui.MainActivity" image="___vlc" />
+	<AppIcon name="org.videolan.vlc/.StartActivity" image="___vlc" />
 
 	<!-- VNC -->
 	<AppIcon name="com.realvnc.viewer.android/com.realvnc.viewer.android.ConnectionChooserActivity" image="___vnc" />

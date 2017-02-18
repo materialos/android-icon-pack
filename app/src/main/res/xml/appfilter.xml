@@ -772,6 +772,7 @@
 
 	<!-- VLC -->
 	<item component="ComponentInfo{org.videolan.vlc.betav7neon/org.videolan.vlc.betav7neon.gui.MainActivity}" drawable="___vlc" />
+	<item component="ComponentInfo{org.videolan.vlc/.StartActivity}" drawable="___vlc" />
 
 	<!-- VNC -->
 	<item component="ComponentInfo{com.realvnc.viewer.android/com.realvnc.viewer.android.ConnectionChooserActivity}" drawable="___vnc" />
