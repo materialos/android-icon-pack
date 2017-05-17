@@ -12,6 +12,7 @@
         <item>https://lh3.googleusercontent.com/-uRfg9FW83s4/AAAAAAAAAAI/AAAAAAAAKts/0FaBag1wvds/s120-c/photo.jpg</item>
         <item>https://lh3.googleusercontent.com/-sWY2UEBfmYI/AAAAAAAAAAI/AAAAAAAAAF0/ONAr2FRl0b4/s120-p-rw-no/photo.jpg</item>
         <item>https://lh3.googleusercontent.com/-fVJr6Ogxhfo/AAAAAAAAAAI/AAAAAAAADRM/tA6Rg3GuoTY/s120-p-rw-no/photo.jpg</item>
+        <item>https://lh3.googleusercontent.com/-rahyUOpOAjs/T8J3h9PQHBI/AAAAAAAAAF8/za06YOTisKciLhV-sb25N2zQtcwaP3GAQCEw/w140-h139-p/2012-05-22%2B12.02.31.jpg</item>
     </string-array>
 
     <string-array name="about_covers" formatted="false" tools:ignore="TypographyDashes">
@@ -23,6 +24,7 @@
         <item>https://lh3.googleusercontent.com/yxKzdHQl92pYtMFHg9yLXsomPAmhjnQeAgIVh6qOT4jvqcChDrVlUazobAuaC00V4JFl=s640-fcrop64=1,002d0000ffd1ffff</item>
         <item>https://lh3.googleusercontent.com/-WzTjh0Yrvf0/Vfl4BHgOTJI/AAAAAAAABBY/3FazURJIOlkTbUNT1D2VMyGYAnD6ELp3wCL0B/s1000-fcrop64=1,0a7218a8fd17c487/5-%2BCorvair%2BMonza%2BGT%2Band%2BSS%2B1962.jpg</item>
         <item>https://lh3.googleusercontent.com/-Rn8CmYM8n_I/UTdoCQB99BI/AAAAAAAADoI/rYRH2mclRksSePhj71N7jQVQfKapiC-SwCL0B/s1000-fcrop64=1,203b28c4df63d6a1/End-of-the-World.jpg</item>
+        <item>https://lh3.googleusercontent.com/QmaSBCWIIsP9W1B9H0haxnR26uWvuxEQxqC56Nu291uUnw67LxvecsOX5HbzhEN3rZHIwAN_gw=w176-h176-n-o-rw</item>
     </string-array>
 
     <string-array name="about_titles">
@@ -34,6 +36,7 @@
         <item>Daniel Ciao</item>
         <item>Frank Monza</item>
         <item>Ander Webbs</item>
+        <item>Ibad Ur Rahman</item>
     </string-array>
 
     <string-array name="about_descriptions">
@@ -45,6 +48,7 @@
         <item formatted="false"><![CDATA[I like playing piano, doing puzzles, &amp; making apps<br/><i>I primarily helped with animations and UI</i>]]></item>
         <item><![CDATA[The creator of KLWP!<br/><i>I added support for KLWP and KWGT.</i>]]></item>
         <item><![CDATA[The creator of ADW.Launcher!<br/><i>I added support for ADW Launcher 2.0.</i>]]></item>
+        <item><![CDATA[The creator of Suma!<br/><i>I added support for Suma Launcher.</i>]]></item>
     </string-array>
 
     <string-array name="about_buttons_names">
@@ -55,6 +59,7 @@
         <item>Dribbble|Google+</item>
         <item>Website|Google+|GitHub</item>
         <item>Google+|Google Play</item>
+        <item>Google+|Website</item>
         <item>Google+|Website</item>
     </string-array>
 
@@ -67,6 +72,7 @@
         <item>http://www.pluscubed.com|https://plus.google.com/+DanielCiao|https://github.com/plusCubed</item>
         <item>https://plus.google.com/+FrankMonzas|https://play.google.com/store/apps/dev?id=5300483087872269403</item>
         <item>https://plus.google.com/+AnderWebbs|http://adwthings.com/launcher/</item>
+        <item>https://plus.google.com/u/0/+IBADURRAHMAN|http://sumadroid.com/suma-launcher/</item>
     </string-array>
 
 </resources>

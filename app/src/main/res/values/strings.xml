@@ -72,6 +72,7 @@
     <string name="permission_needed_zooper_desc"><![CDATA[ <b>%1$s</b> needs permission to access your phone\'s storage in order to save Zooper assets!]]></string>
     <string name="download_cancelled">Download cancelled!</string>
     <string name="cmte_unavailable">CyanogenMod Theme Engine is not available to this device.</string>
+    <string name="suma_unavailable">Suma Launcher Engine is not available to this device.</string>
     <string name="lghome_unavailable">LG Home is not available to this device.</string>
     <string name="feedback">Feedback</string>
     <string name="donate">Donate</string>

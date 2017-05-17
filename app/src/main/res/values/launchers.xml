@@ -15,6 +15,7 @@
         <item>CMTE</item>
         <item>LG</item>
         <item>ADW</item>
+        <item>Suma</item>
     </string-array>
 
     <string-array name="launcher_colors_primary">
@@ -31,6 +32,7 @@
         <item>#1BBBD3</item>
         <item>#c30452</item>
         <item>#ff9800</item>
+        <item>#8965ef</item>
     </string-array>
 
     <string-array name="launcher_packages">
@@ -47,6 +49,7 @@
         <item>org.cyanogenmod.theme.chooser|com.cyngn.theme.chooser</item>
         <item>com.lge.launcher2</item>
         <item>org.adw.launcher</item>
+        <item>suma.launcher</item>
     </string-array>
 
     <integer-array name="launcher_icons">
@@ -63,6 +66,7 @@
         <item>@drawable/ic_launcher_cmte</item>
         <item>@drawable/ic_launcher_lg</item>
         <item>@drawable/ic_launcher_adw</item>
+        <item>@drawable/ic_launcher_suma</item>
     </integer-array>
 
 </resources>
