@@ -26,7 +26,7 @@ import java.lang.annotation.RetentionPolicy;
 
 public class ApplyUtil {
 
-    @IntDef({UNKNOWN, APEX, NOVA, AVIATE, ADW, ACTION, SMART, NEXT, GO, HOLO, SOLO, KK, ATOM, INSPIRE, CMTE, LGHOME})
+    @IntDef({UNKNOWN, APEX, NOVA, AVIATE, ADW, ACTION, SMART, NEXT, GO, HOLO, SOLO, KK, ATOM, INSPIRE, CMTE, LGHOME,SUMA})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Launcher {
     }
@@ -47,6 +47,7 @@ public class ApplyUtil {
     public static final int INSPIRE = 12;
     public static final int CMTE = 13;
     public static final int LGHOME = 14;
+    public static final int SUMA = 15;
 
     @Launcher
     public static int launcherIdFromPkg(String pkg) {
@@ -87,6 +88,8 @@ public class ApplyUtil {
                 return CMTE;
             case "com.lge.launcher2":
                 return LGHOME;
+            case "suma.launcher":
+                return SUMA;
             default:
                 return UNKNOWN;
         }
@@ -137,6 +140,7 @@ public class ApplyUtil {
         final String SOLO_EXTRA_APPLY_THEME_PACKAGE = "home.solo.launcher.free.extra.PACKAGE";
         final String SOLO_LAUNCHER_PACKAGENAME = "home.solo.launcher.free";
         final String SOLO_LAUNCHER_CLASSNAME = "home.solo.launcher.free.Launcher";
+
 
         final Resources res = context.getResources();
         final PackageManager pm = context.getPackageManager();
@@ -322,6 +326,17 @@ public class ApplyUtil {
                         Toast.makeText(context, R.string.lghome_unavailable, Toast.LENGTH_SHORT).show();
                     }
                     break;
+
+                case SUMA:
+                    try {
+                        Intent intent = new Intent();
+                        intent.setComponent(new ComponentName("suma.launcher", "suma.launcher.addons.settings.ThemeLanding"));
+                        intent.putExtra("icon_pack", BuildConfig.APPLICATION_ID);
+                        context.startActivity(intent);
+                    } catch (ActivityNotFoundException e) {
+                        Toast.makeText(context, R.string.suma_unavailable, Toast.LENGTH_SHORT).show();
+                    }
+
                 case UNKNOWN:
                     break;
             }
