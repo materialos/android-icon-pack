@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Handler;
 import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
@@ -334,7 +335,11 @@ public class ApplyUtil {
                         intent.putExtra("icon_pack", BuildConfig.APPLICATION_ID);
                         context.startActivity(intent);
                     } catch (ActivityNotFoundException e) {
-                        Toast.makeText(context, R.string.suma_unavailable, Toast.LENGTH_SHORT).show();
+                        Intent adwMarket = new Intent(Intent.ACTION_VIEW);
+                        adwMarket.setData(Uri
+                                .parse("suma.launcher"));
+                        context.startActivity(adwMarket);
+                        Toast.makeText(context, "Suma Launcher not install", Toast.LENGTH_SHORT).show();
                     }
 
                 case UNKNOWN:
