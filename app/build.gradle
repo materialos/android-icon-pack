@@ -99,5 +99,5 @@ dependencies {
     compile 'com.anjlab.android.iab.v3:library:1.0.32'
     compile 'com.pluscubed:insets-dispatcher:0.1.3'
 
-    compile 'org.bitbucket.frankmonza:kustomapi:+'
+    compile 'org.bitbucket.frankmonza:kustomapi:1.1'
 }
