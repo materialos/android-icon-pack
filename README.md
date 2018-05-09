@@ -3,7 +3,10 @@
 
 ## Description:
 
-[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=org.materialos.icons)
+<a href="https://play.google.com/store/apps/details?id=org.materialos.icons" target="_blank">
+<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80"/></a>
+<a href="https://f-droid.org/packages/org.materialos.icons/" target="_blank">
+<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a>
 
 [materialos/Android-Icon-Pack](https://github.com/materialos/Android-Icon-Pack) is our Android icon pack based off of [materialos/Icons](https://github.com/materialos/Icons). Last commit merdged into drawables: [c01fab9](https://github.com/materialos/Icons/commit/c01fab90791400d0cafdd0086baa21df7d0cdc31).
 
