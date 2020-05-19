@@ -1,9 +1,10 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:3.6.3'
     }
 }
 
@@ -12,6 +13,8 @@ allprojects {
         jcenter()
         maven { url "https://jitpack.io" }
         maven { url 'https://maven.google.com' }
+        maven { url "https://dl.bintray.com/drummer-aidan/maven" }
+        maven { url "https://repo.spring.io/plugins-release/" }
     }
 }
 

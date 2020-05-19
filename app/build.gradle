@@ -3,17 +3,17 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'com.neenbedankt.android-apt'
 
 ext {
-    TARGET_SDK = 25
-    BUILD_TOOLS = "25.0.1"
-    GOOGLE_LIBS = "25.1.0"
+    TARGET_SDK = 28
+    BUILD_TOOLS = "28.0.3"
+    GOOGLE_LIBS = "28.0.3"
 }
 
 android {
@@ -21,9 +21,8 @@ android {
     buildToolsVersion BUILD_TOOLS
 
     applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            output.outputFile = new File(
-                    output.outputFile.parent, "${variant.applicationId}-${variant.versionName}.apk")
+        variant.outputs.all {
+            outputFileName = "${variant.name}-${variant.versionName}.apk"
         }
     }
 
@@ -68,36 +67,36 @@ repositories {
 }
 
 dependencies {
-    compile project(path: ':licensing')
+    implementation 'com.android.support:support-v13:27.+'
+    implementation 'com.android.support:palette-v7:27.+'
+    implementation 'com.android.support:recyclerview-v7:27.+'
+    implementation 'com.android.support:appcompat-v7:27.+'
+    implementation 'com.android.support:cardview-v7:27.+'
+    implementation 'com.android.support:design:27.+'
+    implementation project(':licensing')
 
-    compile 'com.afollestad.material-dialogs:core:0.9.2.2'
-    compile 'com.afollestad:drag-select-recyclerview:0.3.6'
-    compile 'com.afollestad:bridge:3.2.5'
-    compile 'com.afollestad:sectioned-recyclerview:0.2.3'
-    compile 'com.afollestad:assent:0.2.5'
-    compile 'com.afollestad:icon-request:1.5.2'
-    compile 'com.afollestad:inquiry:4.1.2'
+    implementation 'com.afollestad.material-dialogs:core:0.9.2.2'
+    implementation 'com.afollestad:drag-select-recyclerview:0.3.6'
+    implementation 'com.afollestad:bridge:3.2.5'
+    implementation 'com.afollestad:sectioned-recyclerview:0.2.3'
+    implementation 'com.afollestad:assent:0.2.5'
+    implementation 'com.afollestad:icon-request:1.5.2'
+    implementation 'com.afollestad:inquiry:4.1.2'
 
-    compile 'me.zhanghai.android.materialprogressbar:library:1.3.0'
+    implementation 'me.zhanghai.android.materialprogressbar:library:1.3.0'
 
-    compile "com.android.support:appcompat-v7:$GOOGLE_LIBS"
-    compile "com.android.support:recyclerview-v7:$GOOGLE_LIBS"
-    compile "com.android.support:support-v13:$GOOGLE_LIBS"
-    compile "com.android.support:design:$GOOGLE_LIBS"
-    compile "com.android.support:cardview-v7:$GOOGLE_LIBS"
-    compile "com.android.support:palette-v7:$GOOGLE_LIBS"
 
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.github.florent37:glidepalette:1.0.6@aar'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.florent37:glidepalette:1.0.6@aar'
 
-    compile 'com.jakewharton:butterknife:8.1.0'
-    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+    implementation 'com.jakewharton:butterknife:8.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.1.0'
 
-    compile 'com.google.android.apps.muzei:muzei-api:2.0'
-    compile 'com.makeramen:roundedimageview:2.2.1'
+    implementation 'com.google.android.apps.muzei:muzei-api:2.0'
+    implementation 'com.makeramen:roundedimageview:2.2.1'
 
-    compile 'com.anjlab.android.iab.v3:library:1.0.32'
-    compile 'com.pluscubed:insets-dispatcher:0.1.3'
+    implementation 'com.anjlab.android.iab.v3:library:1.0.32'
+    implementation 'com.pluscubed:insets-dispatcher:0.1.3'
 
-    compile 'org.bitbucket.frankmonza:kustomapi:1.1'
+    implementation 'org.bitbucket.frankmonza:kustomapi:1.1'
 }
