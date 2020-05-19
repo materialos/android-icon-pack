@@ -33,7 +33,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "mobi.shkspr.android.boringicons"
+        applicationId "org.materialos.icons"
         minSdkVersion 19
         targetSdkVersion TARGET_SDK
         versionCode 10
